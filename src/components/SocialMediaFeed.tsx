@@ -20,7 +20,7 @@ interface SocialMediaFeedProps {
   showHeader?: boolean;
 }
 
-export default function SocialMediaFeed({ maxPosts = 6, showHeader = true }: SocialMediaFeedProps) {
+export default function SocialMediaFeed({ maxPosts = 3, showHeader = true }: SocialMediaFeedProps) {
   const [posts, setPosts] = useState<InstagramPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -98,8 +98,8 @@ export default function SocialMediaFeed({ maxPosts = 6, showHeader = true }: Soc
             </div>
           )}
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[...Array(6)].map((_, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[...Array(3)].map((_, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -136,10 +136,13 @@ export default function SocialMediaFeed({ maxPosts = 6, showHeader = true }: Soc
               href="https://www.instagram.com/drjaishreesharad"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 px-4 py-2 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition-colors"
+              className="group inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-pastel-green to-pastel-green/90 text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105 border border-pastel-green/20 shadow-md"
             >
-              <Instagram className="w-4 h-4" />
-              <span>Visit Instagram</span>
+              <div className="relative">
+                <Instagram className="w-5 h-5 text-gray-700 group-hover:text-pastel-pink transition-colors duration-300" />
+                <div className="absolute inset-0 bg-pastel-pink/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+              </div>
+              <span className="text-gray-700 group-hover:text-pastel-pink transition-colors duration-300">Visit Instagram</span>
             </a>
           </div>
         </div>
@@ -170,7 +173,7 @@ export default function SocialMediaFeed({ maxPosts = 6, showHeader = true }: Soc
           </motion.div>
         )}
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {posts.map((post, index) => (
             <motion.div
               key={post.id}
@@ -259,10 +262,14 @@ export default function SocialMediaFeed({ maxPosts = 6, showHeader = true }: Soc
             href="https://www.instagram.com/drjaishreesharad"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="group inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-pastel-green to-pastel-green/90 text-gray-800 font-semibold rounded-full hover:shadow-xl transition-all duration-300 hover:scale-105 border border-pastel-green/20 shadow-lg"
           >
-            <Instagram className="w-5 h-5" />
-            <span>Follow on Instagram</span>
+            <div className="relative">
+              <Instagram className="w-6 h-6 text-gray-700 group-hover:text-pastel-pink transition-colors duration-300" />
+              <div className="absolute inset-0 bg-pastel-pink/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+            </div>
+            <span className="text-gray-700 group-hover:text-pastel-pink transition-colors duration-300">Follow on Instagram</span>
+            <div className="w-2 h-2 bg-pastel-pink rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </a>
         </motion.div>
       </div>

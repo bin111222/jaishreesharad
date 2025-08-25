@@ -146,15 +146,11 @@ export default function LiquidFaceliftPage() {
               className="relative"
             >
               <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-square flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-6">
-                      <span className="text-white font-display font-bold text-4xl">LF</span>
-                    </div>
-                    <p className="text-gray-600">Treatment Image</p>
-                    <p className="text-sm text-gray-500">Liquid Facelift</p>
-                  </div>
-                </div>
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/liquidfacelift/1.webp"
+                  alt="Liquid Facelift Treatment - Dr. Jaishree Sharad"
+                  className="w-full h-full object-cover rounded-xl"
+                />
               </div>
             </motion.div>
           </div>
@@ -168,53 +164,53 @@ export default function LiquidFaceliftPage() {
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {/* Before/After Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">1</span>
-                    </div>
-                    <span className="text-gray-500 text-xs font-medium">Before/After</span>
-                    <p className="text-gray-400 text-xs mt-1">Full Face Lift</p>
-                  </div>
+              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/liquidfacelift/2.webp"
+                  alt="Liquid Facelift Before/After - Full Face Lift Results"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-2 left-2 bg-white/90 rounded-lg px-2 py-1">
+                  <span className="text-gray-700 text-xs font-medium">Before/After</span>
+                  <p className="text-gray-600 text-xs">Full Face Lift</p>
                 </div>
               </div>
               
               {/* Before/After Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">2</span>
-                    </div>
-                    <span className="text-gray-500 text-xs font-medium">Before/After</span>
-                    <p className="text-gray-400 text-xs mt-1">Mid Face Lift</p>
-                  </div>
+              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/liquidfacelift/3.webp"
+                  alt="Liquid Facelift Before/After - Mid Face Lift Results"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-2 left-2 bg-white/90 rounded-lg px-2 py-1">
+                  <span className="text-gray-700 text-xs font-medium">Before/After</span>
+                  <p className="text-gray-600 text-xs">Mid Face Lift</p>
                 </div>
               </div>
               
               {/* Treatment Process Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">3</span>
-                    </div>
-                    <span className="text-gray-500 text-xs font-medium">Treatment</span>
-                    <p className="text-gray-400 text-xs mt-1">Process</p>
-                  </div>
+              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/liquidfacelift/4.webp"
+                  alt="Liquid Facelift Treatment Process"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-2 left-2 bg-white/90 rounded-lg px-2 py-1">
+                  <span className="text-gray-700 text-xs font-medium">Treatment</span>
+                  <p className="text-gray-600 text-xs">Process</p>
                 </div>
               </div>
               
               {/* Treatment Process Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden relative">
+                <div className="w-full h-full bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">4</span>
+                      <span className="text-white text-sm font-bold">+</span>
                     </div>
-                    <span className="text-gray-500 text-xs font-medium">Results</span>
-                    <p className="text-gray-400 text-xs mt-1">Youthful Look</p>
+                    <span className="text-gray-700 text-xs font-medium">More</span>
+                    <p className="text-gray-600 text-xs">Results</p>
                   </div>
                 </div>
               </div>

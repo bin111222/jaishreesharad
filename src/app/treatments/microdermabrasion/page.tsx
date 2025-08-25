@@ -156,24 +156,11 @@ export default function MicrodermabrasionPage() {
                   className="absolute inset-4 border-2 border-pastel-pink/20 rounded-2xl"
                 />
                 <div className="relative z-10 flex items-center justify-center h-full">
-                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                    <div className="text-center space-y-6">
-                      <motion.div
-                        animate={{ 
-                          scale: [1, 1.1, 1],
-                          rotate: [0, 5, -5, 0]
-                        }}
-                        transition={{ duration: 3, repeat: Infinity }}
-                        className="w-40 h-40 bg-gradient-to-br from-pastel-pink to-orange-500 rounded-full flex items-center justify-center mx-auto"
-                      >
-                        <RefreshCw className="w-16 h-16 text-white" />
-                      </motion.div>
-                      <div>
-                        <p className="text-gray-600 font-medium">Treatment Image</p>
-                        <p className="text-sm text-gray-500">Microdermabrasion</p>
-                      </div>
-                    </div>
-                  </div>
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/microdermabrasion/1.webp"
+                    alt="Microdermabrasion Treatment - Dr. Jaishree Sharad"
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
                 </div>
               </div>
             </motion.div>
@@ -188,53 +175,53 @@ export default function MicrodermabrasionPage() {
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {/* Before/After Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">1</span>
-                    </div>
-                    <span className="text-gray-500 text-xs font-medium">Before/After</span>
-                    <p className="text-gray-400 text-xs mt-1">Skin Texture</p>
-                  </div>
+              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/microdermabrasion/2.webp"
+                  alt="Microdermabrasion Before/After - Skin Texture Results"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-2 left-2 bg-white/90 rounded-lg px-2 py-1">
+                  <span className="text-gray-700 text-xs font-medium">Before/After</span>
+                  <p className="text-gray-600 text-xs">Skin Texture</p>
                 </div>
               </div>
               
               {/* Before/After Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">2</span>
-                    </div>
-                    <span className="text-gray-500 text-xs font-medium">Before/After</span>
-                    <p className="text-gray-400 text-xs mt-1">Pore Refinement</p>
-                  </div>
+              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/microdermabrasion/3.webp"
+                  alt="Microdermabrasion Before/After - Pore Refinement Results"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-2 left-2 bg-white/90 rounded-lg px-2 py-1">
+                  <span className="text-gray-700 text-xs font-medium">Before/After</span>
+                  <p className="text-gray-600 text-xs">Pore Refinement</p>
                 </div>
               </div>
               
               {/* Treatment Process Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">3</span>
-                    </div>
-                    <span className="text-gray-500 text-xs font-medium">Treatment</span>
-                    <p className="text-gray-400 text-xs mt-1">Process</p>
-                  </div>
+              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/microdermabrasion/4.webp"
+                  alt="Microdermabrasion Treatment Process"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-2 left-2 bg-white/90 rounded-lg px-2 py-1">
+                  <span className="text-gray-700 text-xs font-medium">Treatment</span>
+                  <p className="text-gray-600 text-xs">Process</p>
                 </div>
               </div>
               
               {/* Treatment Process Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden relative">
+                <div className="w-full h-full bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">4</span>
+                      <span className="text-white text-sm font-bold">+</span>
                     </div>
-                    <span className="text-gray-500 text-xs font-medium">Results</span>
-                    <p className="text-gray-400 text-xs mt-1">Smooth Skin</p>
+                    <span className="text-gray-700 text-xs font-medium">More</span>
+                    <p className="text-gray-600 text-xs">Results</p>
                   </div>
                 </div>
               </div>

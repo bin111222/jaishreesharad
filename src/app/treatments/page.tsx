@@ -19,7 +19,7 @@ const allTreatments = [
     duration: "15-30 min",
     downtime: "Minimal",
     benefits: ["Reduces fine lines", "Prevents wrinkles", "Natural results"],
-    image: "/treatments/botox.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/1.webp",
     href: "/treatments/botox",
     featured: true
   },
@@ -34,7 +34,7 @@ const allTreatments = [
     duration: "30-60 min",
     downtime: "1-2 days",
     benefits: ["Restores volume", "Enhances contours", "Natural look"],
-    image: "/treatments/fillers.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/dermalfillers/1.webp",
     href: "/treatments/fillers",
     featured: true
   },
@@ -49,7 +49,7 @@ const allTreatments = [
     duration: "60-90 min",
     downtime: "2-3 days",
     benefits: ["Lifts sagging skin", "Restores youth", "No surgery"],
-    image: "/treatments/liquid-facelift.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/liquidfacelift/1.webp",
     href: "/treatments/liquid-facelift",
     featured: true
   },
@@ -64,7 +64,7 @@ const allTreatments = [
     duration: "30-45 min",
     downtime: "3-7 days",
     benefits: ["Improves texture", "Reduces acne", "Brightens skin"],
-    image: "/treatments/chemical-peels.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/chemicalpeels/1.webp",
     href: "/treatments/chemical-peels",
     featured: false
   },
@@ -79,7 +79,7 @@ const allTreatments = [
     duration: "15-60 min",
     downtime: "Minimal to 1 week",
     benefits: ["Precise treatment", "Effective results", "Minimal downtime"],
-    image: "/treatments/laser-treatments.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/chemicalpeels/3.webp",
     href: "/treatments/laser-treatments",
     featured: false
   },
@@ -94,7 +94,7 @@ const allTreatments = [
     duration: "45-60 min",
     downtime: "1-2 days",
     benefits: ["Natural treatment", "Stimulates growth", "No side effects"],
-    image: "/treatments/prp-therapy.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/prptherapy/1.webp",
     href: "/treatments/prp-therapy",
     featured: false
   },
@@ -109,7 +109,7 @@ const allTreatments = [
     duration: "45-60 min",
     downtime: "2-3 days",
     benefits: ["Immediate lift", "Natural results", "Minimal invasion"],
-    image: "/treatments/thread-lifts.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/threadlifts/1.webp",
     href: "/treatments/thread-lifts",
     featured: false
   },
@@ -124,7 +124,7 @@ const allTreatments = [
     duration: "30-90 min",
     downtime: "Minimal",
     benefits: ["Deep tissue tightening", "No surgery", "Long-lasting results"],
-    image: "/treatments/hifu.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hifutreatment/1.webp",
     href: "/treatments/hifu",
     featured: false
   },
@@ -139,7 +139,7 @@ const allTreatments = [
     duration: "30-60 min",
     downtime: "3-7 days",
     benefits: ["Reduces scars", "Improves texture", "Boosts confidence"],
-    image: "/treatments/acne-scars.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/acnescars/1.webp",
     href: "/treatments/acne-scars",
     featured: false
   },
@@ -154,7 +154,7 @@ const allTreatments = [
     duration: "30-45 min",
     downtime: "Minimal",
     benefits: ["Tightens skin", "Stimulates collagen", "No downtime"],
-    image: "/treatments/endymed.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/endymed/1.webp",
     href: "/treatments/endymed",
     featured: false
   },
@@ -169,7 +169,7 @@ const allTreatments = [
     duration: "30-60 min",
     downtime: "Minimal",
     benefits: ["Reduces fat", "Tightens skin", "No surgery"],
-    image: "/treatments/exilis.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/exilis/1.webp",
     href: "/treatments/exilis",
     featured: false
   },
@@ -184,7 +184,7 @@ const allTreatments = [
     duration: "35-60 min",
     downtime: "Minimal",
     benefits: ["Targeted fat reduction", "No surgery", "Permanent results"],
-    image: "/treatments/cryolipolysis.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/cryolipolysis/1.webp",
     href: "/treatments/cryolipolysis",
     featured: false
   },
@@ -199,7 +199,7 @@ const allTreatments = [
     duration: "30-45 min",
     downtime: "3-5 days",
     benefits: ["Even skin tone", "Reduces dark spots", "Brightens complexion"],
-    image: "/treatments/pigmentation.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/pigmentation/1.webp",
     href: "/treatments/pigmentation",
     featured: false
   },
@@ -214,7 +214,7 @@ const allTreatments = [
     duration: "30-45 min",
     downtime: "1-2 days",
     benefits: ["No surgery", "Immediate results", "Reversible"],
-    image: "/treatments/non-surgical-nose.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/nonsurgicalnosejob/1.webp",
     href: "/treatments/non-surgical-nose",
     featured: false
   },
@@ -229,7 +229,7 @@ const allTreatments = [
     duration: "30-45 min",
     downtime: "1-2 days",
     benefits: ["Improves texture", "Hydrates skin", "Natural glow"],
-    image: "/treatments/skin-boosters.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/skinboosters/1.webp",
     href: "/treatments/skin-boosters",
     featured: false
   },
@@ -244,7 +244,7 @@ const allTreatments = [
     duration: "30-45 min",
     downtime: "Minimal",
     benefits: ["Improves texture", "Removes dead skin", "Brightens complexion"],
-    image: "/treatments/microdermabrasion.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/microdermabrasion/1.webp",
     href: "/treatments/microdermabrasion",
     featured: false
   },
@@ -259,7 +259,7 @@ const allTreatments = [
     duration: "45-90 min",
     downtime: "1-3 days",
     benefits: ["Enhances features", "Balances proportions", "Natural results"],
-    image: "/treatments/facial-contouring.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/facialcontouring/1.webp",
     href: "/treatments/facial-contouring",
     featured: false
   },
@@ -274,7 +274,7 @@ const allTreatments = [
     duration: "60-120 min",
     downtime: "3-7 days",
     benefits: ["Comprehensive results", "Long-lasting effects", "Natural rejuvenation"],
-    image: "/treatments/anti-aging.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/antiaging/1.webp",
     href: "/treatments/anti-aging",
     featured: false
   },
@@ -289,7 +289,7 @@ const allTreatments = [
     duration: "30-60 min",
     downtime: "Varies",
     benefits: ["Targeted treatment", "Improves condition", "Long-term results"],
-    image: "/treatments/skin.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/skintreatments/1.webp",
     href: "/treatments/skin",
     featured: false
   },
@@ -304,7 +304,7 @@ const allTreatments = [
     duration: "30-90 min",
     downtime: "Minimal",
     benefits: ["Stimulates growth", "Improves scalp health", "Thicker hair"],
-    image: "/treatments/hair.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hairtreatments/1.webp",
     href: "/treatments/hair",
     featured: false
   },
@@ -319,7 +319,7 @@ const allTreatments = [
     duration: "45-90 min",
     downtime: "1-3 days",
     benefits: ["Improves texture", "Reduces cellulite", "Tightens skin"],
-    image: "/treatments/body.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/bodytreatments/1.webp",
     href: "/treatments/body",
     featured: false
   },
@@ -334,7 +334,7 @@ const allTreatments = [
     duration: "Varies",
     downtime: "Varies",
     benefits: ["Comprehensive care", "Radiant glow", "Confidence boost"],
-    image: "/treatments/bridal.jpg",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/bridalpackages/1.webp",
     href: "/treatments/bridal",
     featured: false
   }
@@ -509,17 +509,18 @@ export default function TreatmentsPage() {
                 >
                   <Link href={treatment.href}>
                     <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 overflow-hidden group-hover:scale-102">
-                      <div className="h-48 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 flex items-center justify-center relative">
+                      <div className="h-48 relative overflow-hidden">
+                        <img 
+                          src={treatment.image}
+                          alt={`${treatment.title} - Dr. Jaishree Sharad`}
+                          className="w-full h-full object-cover opacity-80"
+                        />
                         <div className="absolute top-4 left-4 bg-pastel-pink text-white px-3 py-1 rounded-full text-sm font-semibold">
                           Featured
                         </div>
-                        <div className="text-center">
-                          <div className="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span className="text-white font-display font-bold text-xl">
-                              {treatment.title.split(' ')[0][0]}
-                            </span>
-                          </div>
-                          <h3 className="font-display text-xl font-semibold text-gray-800">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
+                        <div className="absolute bottom-4 left-4 right-4">
+                          <h3 className="font-display text-2xl font-bold text-white drop-shadow-xl leading-tight">
                             {treatment.title}
                           </h3>
                         </div>
@@ -585,19 +586,20 @@ export default function TreatmentsPage() {
                 >
                   <Link href={treatment.href}>
                     <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 overflow-hidden group-hover:scale-102 border border-gray-100">
-                      <div className="h-48 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 flex items-center justify-center relative">
+                      <div className="h-48 relative overflow-hidden">
+                        <img 
+                          src={treatment.image}
+                          alt={`${treatment.title} - Dr. Jaishree Sharad`}
+                          className="w-full h-full object-cover opacity-80"
+                        />
                         {treatment.featured && (
                           <div className="absolute top-4 left-4 bg-pastel-pink text-white px-3 py-1 rounded-full text-sm font-semibold">
                             Featured
                           </div>
                         )}
-                        <div className="text-center">
-                          <div className="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span className="text-white font-display font-bold text-xl">
-                              {treatment.title.split(' ')[0][0]}
-                            </span>
-                          </div>
-                          <h3 className="font-display text-xl font-semibold text-gray-800">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
+                        <div className="absolute bottom-4 left-4 right-4">
+                          <h3 className="font-display text-2xl font-bold text-white drop-shadow-xl leading-tight">
                             {treatment.title}
                           </h3>
                         </div>

@@ -154,14 +154,12 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-6">
-                    <span className="text-white font-display font-bold text-4xl">JS</span>
-                  </div>
-                  <p className="text-gray-600">Portrait Image</p>
-                  <p className="text-sm text-gray-500">Dr. Jaishree Sharad</p>
-                </div>
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%203.webp" 
+                  alt="Dr. Jaishree Sharad - Professional Portrait" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </motion.div>
           </div>
@@ -187,17 +185,13 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-2xl flex items-center justify-center overflow-hidden"
+                className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-white text-xl font-bold">1</span>
-                    </div>
-                    <span className="text-gray-500 text-sm font-medium">Dr. Jaishree Working</span>
-                    <p className="text-gray-400 text-xs mt-1">Patient Consultation</p>
-                  </div>
-                </div>
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%201.webp" 
+                  alt="Dr. Jaishree Sharad - Patient Consultation" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </motion.div>
               
               {/* Image 2 */}
@@ -205,17 +199,13 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-2xl flex items-center justify-center overflow-hidden"
+                className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-white text-xl font-bold">2</span>
-                    </div>
-                    <span className="text-gray-500 text-sm font-medium">Clinic Interior</span>
-                    <p className="text-gray-400 text-xs mt-1">Treatment Room</p>
-                  </div>
-                </div>
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%202.webp" 
+                  alt="Dr. Jaishree Sharad - Clinic Interior" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </motion.div>
               
               {/* Image 3 */}
@@ -223,17 +213,13 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-2xl flex items-center justify-center overflow-hidden"
+                className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-white text-xl font-bold">3</span>
-                    </div>
-                    <span className="text-gray-500 text-sm font-medium">Clinic Exterior</span>
-                    <p className="text-gray-400 text-xs mt-1">Skinfinitii Building</p>
-                  </div>
-                </div>
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%206.webp" 
+                  alt="Dr. Jaishree Sharad - Professional Portrait" 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
               </motion.div>
             </div>
             

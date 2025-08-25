@@ -189,28 +189,11 @@ export default function AntiAgingPage() {
                   className="absolute inset-8 border-2 border-purple-400/20 rounded-xl"
                 />
                 <div className="relative z-10 flex items-center justify-center h-full">
-                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                    <div className="text-center space-y-6">
-                      <motion.div
-                        animate={{ 
-                          scale: [1, 1.2, 1],
-                          boxShadow: [
-                            "0 0 0 0 rgba(147, 51, 234, 0.4)",
-                            "0 0 0 20px rgba(147, 51, 234, 0)",
-                            "0 0 0 0 rgba(147, 51, 234, 0)"
-                          ]
-                        }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                        className="w-40 h-40 bg-gradient-to-br from-pastel-pink to-purple-500 rounded-full flex items-center justify-center mx-auto"
-                      >
-                        <Sparkles className="w-16 h-16 text-white" />
-                      </motion.div>
-                      <div>
-                        <p className="text-gray-600 font-medium">Treatment Image</p>
-                        <p className="text-sm text-gray-500">Anti-Aging & Rejuvenation</p>
-                      </div>
-                    </div>
-                  </div>
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/antiaging/1.webp"
+                    alt="Anti-Aging Treatments - Dr. Jaishree Sharad"
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
                 </div>
               </div>
             </motion.div>
@@ -225,53 +208,53 @@ export default function AntiAgingPage() {
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {/* Before/After Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">1</span>
-                    </div>
-                    <span className="text-gray-500 text-xs font-medium">Before/After</span>
-                    <p className="text-gray-400 text-xs mt-1">Wrinkle Reduction</p>
-                  </div>
+              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/antiaging/2.webp"
+                  alt="Anti-Aging Before/After - Wrinkle Reduction Results"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-2 left-2 bg-white/90 rounded-lg px-2 py-1">
+                  <span className="text-gray-700 text-xs font-medium">Before/After</span>
+                  <p className="text-gray-600 text-xs">Wrinkle Reduction</p>
                 </div>
               </div>
               
               {/* Before/After Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">2</span>
-                    </div>
-                    <span className="text-gray-500 text-xs font-medium">Before/After</span>
-                    <p className="text-gray-400 text-xs mt-1">Skin Firming</p>
-                  </div>
+              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/antiaging/3.webp"
+                  alt="Anti-Aging Before/After - Skin Firming Results"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-2 left-2 bg-white/90 rounded-lg px-2 py-1">
+                  <span className="text-gray-700 text-xs font-medium">Before/After</span>
+                  <p className="text-gray-600 text-xs">Skin Firming</p>
                 </div>
               </div>
               
               {/* Treatment Process Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">3</span>
-                    </div>
-                    <span className="text-gray-500 text-xs font-medium">Treatment</span>
-                    <p className="text-gray-400 text-xs mt-1">Process</p>
-                  </div>
+              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/antiaging/4.webp"
+                  alt="Anti-Aging Treatment Process"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-2 left-2 bg-white/90 rounded-lg px-2 py-1">
+                  <span className="text-gray-700 text-xs font-medium">Treatment</span>
+                  <p className="text-gray-600 text-xs">Process</p>
                 </div>
               </div>
               
               {/* Treatment Process Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden relative">
+                <div className="w-full h-full bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">4</span>
+                      <span className="text-white text-sm font-bold">+</span>
                     </div>
-                    <span className="text-gray-500 text-xs font-medium">Results</span>
-                    <p className="text-gray-400 text-xs mt-1">Youthful Glow</p>
+                    <span className="text-gray-700 text-xs font-medium">More</span>
+                    <p className="text-gray-600 text-xs">Results</p>
                   </div>
                 </div>
               </div>

@@ -43,7 +43,7 @@ export async function GET() {
     }
 
     // Fetch posts from Instagram API
-    const url = `https://graph.instagram.com/me/media?fields=id,media_url,permalink,caption,media_type,timestamp,like_count,comments_count&access_token=${accessToken}&limit=12`;
+    const url = `https://graph.instagram.com/me/media?fields=id,media_url,permalink,caption,media_type,timestamp,like_count,comments_count&access_token=${accessToken}&limit=3`;
     
     const response = await fetch(url);
     
@@ -79,7 +79,7 @@ function getMockPosts(): InstagramPost[] {
   return [
     {
       id: "1",
-      media_url: "/images/instagram/post1.jpg",
+      media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/1.webp",
       permalink: "https://www.instagram.com/p/example1/",
       caption: "Transform your skin with our advanced treatments. Book your consultation today! ✨ #Dermatology #SkinCare #DrJaishreeSharad",
       media_type: "IMAGE",
@@ -89,7 +89,7 @@ function getMockPosts(): InstagramPost[] {
     },
     {
       id: "2",
-      media_url: "/images/instagram/post2.jpg",
+      media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/fillers/1.webp",
       permalink: "https://www.instagram.com/p/example2/",
       caption: "Natural beauty starts with healthy skin. Our PRP therapy stimulates your body's own healing factors. 🌟 #PRPTherapy #NaturalHealing",
       media_type: "IMAGE",
@@ -99,43 +99,13 @@ function getMockPosts(): InstagramPost[] {
     },
     {
       id: "3",
-      media_url: "/images/instagram/post3.jpg",
+      media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/threadlifts/1.webp",
       permalink: "https://www.instagram.com/p/example3/",
       caption: "Laser treatments for precise skin rejuvenation. Advanced technology for optimal results. 🔬 #LaserTreatment #SkinRejuvenation",
       media_type: "IMAGE",
       timestamp: "2024-01-13T12:20:00Z",
       like_count: 1567,
       comments_count: 123
-    },
-    {
-      id: "4",
-      media_url: "/images/instagram/post4.jpg",
-      permalink: "https://www.instagram.com/p/example4/",
-      caption: "Chemical peels for radiant skin. From gentle exfoliation to intensive resurfacing. ✨ #ChemicalPeels #SkinCare",
-      media_type: "IMAGE",
-      timestamp: "2024-01-12T09:15:00Z",
-      like_count: 743,
-      comments_count: 45
-    },
-    {
-      id: "5",
-      media_url: "/images/instagram/post5.jpg",
-      permalink: "https://www.instagram.com/p/example5/",
-      caption: "Botox and fillers for natural-looking results. Expert techniques for facial rejuvenation. 💉 #Botox #DermalFillers",
-      media_type: "IMAGE",
-      timestamp: "2024-01-11T14:30:00Z",
-      like_count: 1123,
-      comments_count: 78
-    },
-    {
-      id: "6",
-      media_url: "/images/instagram/post6.jpg",
-      permalink: "https://www.instagram.com/p/example6/",
-      caption: "Your journey to beautiful skin starts here. Professional care, proven results. 🌸 #Dermatologist #SkinHealth",
-      media_type: "IMAGE",
-      timestamp: "2024-01-10T11:00:00Z",
-      like_count: 987,
-      comments_count: 56
     }
   ];
 }

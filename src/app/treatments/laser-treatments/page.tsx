@@ -207,26 +207,11 @@ export default function LaserTreatmentsPage() {
                   className="absolute inset-8 border-2 border-blue-400/20 rounded-xl"
                 />
                 <div className="relative z-10 flex items-center justify-center h-full">
-                  <div className="text-center space-y-6">
-                    <motion.div
-                      animate={{ 
-                        scale: [1, 1.2, 1],
-                        boxShadow: [
-                          "0 0 0 0 rgba(215, 167, 160, 0.4)",
-                          "0 0 0 20px rgba(215, 167, 160, 0)",
-                          "0 0 0 0 rgba(215, 167, 160, 0)"
-                        ]
-                      }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                      className="w-40 h-40 bg-gradient-to-br from-pastel-pink to-blue-500 rounded-full flex items-center justify-center mx-auto"
-                    >
-                      <Zap className="w-16 h-16 text-white" />
-                    </motion.div>
-                    <div>
-                      <p className="text-gray-600 font-medium">Treatment Image</p>
-                      <p className="text-sm text-gray-500">Laser Treatments</p>
-                    </div>
-                  </div>
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/lasertreatments/1.webp"
+                    alt="Laser Treatments - Dr. Jaishree Sharad"
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
                 </div>
               </div>
             </motion.div>
