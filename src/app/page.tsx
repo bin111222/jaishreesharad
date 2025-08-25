@@ -94,44 +94,73 @@ const mediaHighlights = [
 export default function HomePage() {
   return (
     <Layout>
-      {/* Hero Section - Minimal */}
-      <section className="relative min-h-screen flex items-center justify-center bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-12"
-          >
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight">
-              The Best
-              <span className="block text-gray-800">Aesthetic</span>
-              <span className="block text-pastel-pink">and Laser Clinic</span>
-              <span className="block text-gray-800">in Mumbai</span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Welcome to Skinfinitii – where advanced skincare meets a personal touch. Led by Dr. Jaishree Sharad – a globally renowned dermatologist – our clinic brings you the latest in aesthetic treatments with an unwavering dedication to safety and patient confidence. Get Radiant, Get Happy, Get Glowing… It's your time now…
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-pastel-pink text-white font-semibold rounded-full hover:bg-pastel-pink/90 transition-all duration-200 text-base shadow-md"
-              >
-                <span>Book Appointment</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+      {/* Hero Section - Left Aligned & Minimal */}
+      <section className="relative min-h-screen flex items-center bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-8"
+            >
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight text-left">
+                Science.
+                <span className="block text-gray-800">Skin.</span>
+                <span className="block text-pastel-pink">Sophistication.</span>
+              </h1>
               
-              <Link
-                href="/treatments"
-                className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-gray-800 text-gray-800 font-semibold rounded-full hover:bg-gray-800 hover:text-white transition-all duration-200 text-base"
-              >
-                <span>Explore Treatments</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </motion.div>
+              <p className="text-lg text-gray-600 leading-relaxed text-left max-w-lg">
+                Welcome to Skinfinitii – where advanced skincare meets personal excellence. Led by Dr. Jaishree Sharad, we bring you the latest in aesthetic treatments with unwavering dedication to safety and results.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center space-x-2 px-8 py-4 bg-pastel-pink text-white font-semibold rounded-full hover:bg-pastel-pink/90 transition-all duration-200 text-base shadow-md"
+                >
+                  <span>Book Appointment</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                
+                <Link
+                  href="/treatments"
+                  className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-gray-800 text-gray-800 font-semibold rounded-full hover:bg-gray-800 hover:text-white transition-all duration-200 text-base"
+                >
+                  <span>Explore Treatments</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Right Gallery Placeholder */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-2xl flex items-center justify-center">
+                    <span className="text-gray-500 text-sm font-medium">Gallery Image 1</span>
+                  </div>
+                  <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-2xl flex items-center justify-center">
+                    <span className="text-gray-500 text-sm font-medium">Gallery Image 2</span>
+                  </div>
+                </div>
+                <div className="space-y-4 pt-8">
+                  <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-2xl flex items-center justify-center">
+                    <span className="text-gray-500 text-sm font-medium">Gallery Image 3</span>
+                  </div>
+                  <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-2xl flex items-center justify-center">
+                    <span className="text-gray-500 text-sm font-medium">Gallery Image 4</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
