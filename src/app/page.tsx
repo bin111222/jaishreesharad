@@ -94,43 +94,41 @@ const mediaHighlights = [
 export default function HomePage() {
   return (
     <Layout>
-      {/* Hero Section - Fixed */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-pastel-green/10 via-white to-pastel-pink/10" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Hero Section - Minimal */}
+      <section className="relative min-h-screen flex items-center justify-center bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-12"
           >
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-gray-800 leading-tight">
-              The Best Aesthetic
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-gray-800 leading-tight">
+              The Best
+              <span className="block text-gray-800">Aesthetic</span>
               <span className="block text-pastel-pink">and Laser Clinic</span>
               <span className="block text-gray-800">in Mumbai</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Welcome to Skinfinitii – where advanced skincare meets a personal touch. Led by Dr. Jaishree Sharad – a globally renowned dermatologist – our clinic brings you the latest in aesthetic treatments with an unwavering dedication to safety and patient confidence. Get Radiant, Get Happy, Get Glowing… It's your time now…
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center space-x-3 px-10 py-5 bg-gray-800 text-white font-semibold rounded-full hover:bg-gray-700 transition-all duration-200 hover:scale-105 text-lg shadow-lg"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-pastel-pink text-white font-semibold rounded-full hover:bg-pastel-pink/90 transition-all duration-200 text-base shadow-md"
               >
                 <span>Book Appointment</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
               
               <Link
                 href="/treatments"
-                className="inline-flex items-center space-x-3 px-10 py-5 border-2 border-pastel-pink text-pastel-pink font-semibold rounded-full hover:bg-pastel-pink hover:text-white transition-all duration-200 text-lg"
+                className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-gray-800 text-gray-800 font-semibold rounded-full hover:bg-gray-800 hover:text-white transition-all duration-200 text-base"
               >
                 <span>Explore Treatments</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </motion.div>
