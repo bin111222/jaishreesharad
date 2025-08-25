@@ -65,7 +65,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 flex items-center justify-center transition-shadow duration-300">
+            <div className="w-18 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 flex items-center justify-center transition-shadow duration-300">
               <img 
                 src="/Translogo.png" 
                 alt="Skinfinitii - Aesthetic Skin & Laser Clinic" 
