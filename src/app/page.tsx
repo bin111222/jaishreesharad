@@ -40,23 +40,23 @@ const featuredTreatments = [
 const testimonials = [
   {
     id: 1,
-    quote: "She will do only what is necessary and knows when to stop… I feel completely safe in her hands.",
-    name: "Shamita Shetty",
+    quote: "She's the only person I trust with my skin.",
+    name: "Bollywood Actor",
     treatment: "Celebrity Client",
     rating: 5
   },
   {
     id: 2,
-    quote: "Dr. Jaishree is my skin savior. Before every shoot, I consult her on the best possible skin routine.",
-    name: "Huma Qureshi",
+    quote: "Dr. Jaishree understands beauty and science in equal measure.",
+    name: "Fashion Icon",
     treatment: "Celebrity Client",
     rating: 5
   },
   {
     id: 3,
-    quote: "I am an old man but I look more presentable and younger than I did twenty years ago! The complete credit goes to Dr. Jaishree Sharad!",
-    name: "Annu Kapoor",
-    treatment: "Celebrity Client",
+    quote: "Professional, caring, and amazing results. Highly recommend!",
+    name: "Patient",
+    treatment: "Liquid Facelift",
     rating: 5
   }
 ];
@@ -70,24 +70,24 @@ const stats = [
 
 const mediaHighlights = [
   {
+    title: "Vogue India",
+    type: "Magazine",
+    year: "2023"
+  },
+  {
     title: "NDTV",
     type: "TV Network",
     year: "2025"
   },
   {
-    title: "Femina",
+    title: "Forbes India",
     type: "Magazine",
-    year: "Official Expert"
+    year: "Featured"
   },
   {
-    title: "Vogue",
-    type: "Beauty Awards",
-    year: "2016"
-  },
-  {
-    title: "Elle",
-    type: "Beauty Awards",
-    year: "2016"
+    title: "India Today",
+    type: "Magazine",
+    year: "2023"
   }
 ];
 
