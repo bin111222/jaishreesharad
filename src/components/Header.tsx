@@ -62,10 +62,10 @@ export default function Header() {
   return (
     <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200/50" : "bg-white/90 backdrop-blur-sm")}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 lg:h-24">
+        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-25 h-24 flex items-center justify-center transition-shadow duration-300">
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 flex items-center justify-center transition-shadow duration-300">
               <img 
                 src="/Translogo.png" 
                 alt="Skinfinitii - Aesthetic Skin & Laser Clinic" 

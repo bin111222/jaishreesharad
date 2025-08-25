@@ -63,8 +63,8 @@ const testimonials = [
 
 const stats = [
   { number: "26+", label: "Years Experience", icon: Award },
-  { number: "10,000+", label: "Happy Patients", icon: Users },
-  { number: "3", label: "Published Books", icon: BookOpen },
+  { number: "20,000+", label: "Happy Patients", icon: Users },
+  { number: "4", label: "Published Books", icon: BookOpen },
   { number: "500+", label: "Global Lectures", icon: Star }
 ];
 
@@ -94,31 +94,31 @@ const mediaHighlights = [
 export default function HomePage() {
   return (
     <Layout>
-      {/* Hero Section - Left Aligned & Minimal */}
-      <section className="relative min-h-screen flex items-center bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
+      {/* Hero Section - Mobile Optimized */}
+      <section className="relative min-h-screen flex items-center bg-white px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Left Content - Mobile Optimized */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-8"
+              className="space-y-6 lg:space-y-8 text-center lg:text-left"
             >
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight text-left">
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
                 Science.
                 <span className="block text-gray-800">Skin.</span>
                 <span className="block text-pastel-pink">Sophistication.</span>
               </h1>
               
-              <p className="text-lg text-gray-600 leading-relaxed text-left max-w-lg">
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Welcome to Skinfinitii – where advanced skincare meets personal excellence. Led by Dr. Jaishree Sharad, we bring you the latest in aesthetic treatments with unwavering dedication to safety and results.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 items-start">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center lg:items-start justify-center lg:justify-start">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center space-x-2 px-8 py-4 bg-pastel-pink text-white font-semibold rounded-full hover:bg-pastel-pink/90 transition-all duration-200 text-base shadow-md"
+                  className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 bg-pastel-pink text-white font-semibold rounded-full hover:bg-pastel-pink/90 transition-all duration-200 text-sm sm:text-base shadow-md"
                 >
                   <span>Book Appointment</span>
                   <ArrowRight className="w-4 h-4" />
@@ -126,7 +126,7 @@ export default function HomePage() {
                 
                 <Link
                   href="/treatments"
-                  className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-gray-800 text-gray-800 font-semibold rounded-full hover:bg-gray-800 hover:text-white transition-all duration-200 text-base"
+                  className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 border-2 border-gray-800 text-gray-800 font-semibold rounded-full hover:bg-gray-800 hover:text-white transition-all duration-200 text-sm sm:text-base"
                 >
                   <span>Explore Treatments</span>
                   <ArrowRight className="w-4 h-4" />
@@ -134,28 +134,28 @@ export default function HomePage() {
               </div>
             </motion.div>
 
-            {/* Right Gallery Placeholder */}
+            {/* Right Gallery Placeholder - Mobile Optimized */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+              className="relative mt-8 lg:mt-0"
             >
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-4">
-                  <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-2xl flex items-center justify-center">
-                    <span className="text-gray-500 text-sm font-medium">Gallery Image 1</span>
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl sm:rounded-2xl flex items-center justify-center">
+                    <span className="text-gray-500 text-xs sm:text-sm font-medium px-2 text-center">Gallery Image 1</span>
                   </div>
-                  <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-2xl flex items-center justify-center">
-                    <span className="text-gray-500 text-sm font-medium">Gallery Image 2</span>
+                  <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl sm:rounded-2xl flex items-center justify-center">
+                    <span className="text-gray-500 text-xs sm:text-sm font-medium px-2 text-center">Gallery Image 2</span>
                   </div>
                 </div>
-                <div className="space-y-4 pt-8">
-                  <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-2xl flex items-center justify-center">
-                    <span className="text-gray-500 text-sm font-medium">Gallery Image 3</span>
+                <div className="space-y-3 sm:space-y-4 pt-4 sm:pt-8">
+                  <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl sm:rounded-2xl flex items-center justify-center">
+                    <span className="text-gray-500 text-xs sm:text-sm font-medium px-2 text-center">Gallery Image 3</span>
                   </div>
-                  <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-2xl flex items-center justify-center">
-                    <span className="text-gray-500 text-sm font-medium">Gallery Image 4</span>
+                  <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl sm:rounded-2xl flex items-center justify-center">
+                    <span className="text-gray-500 text-xs sm:text-sm font-medium px-2 text-center">Gallery Image 4</span>
                   </div>
                 </div>
               </div>
@@ -164,15 +164,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Authority Bar */}
-      <section className="py-16 bg-white border-b border-gray-200">
+      {/* Authority Bar - Mobile Optimized */}
+      <section className="py-12 sm:py-16 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Featured on</h2>
-            <p className="text-gray-600 text-lg">Featured on leading TV channels and publications</p>
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">Featured on</h2>
+            <p className="text-gray-600 text-base sm:text-lg">Featured on leading TV channels and publications</p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 items-center">
             {mediaHighlights.map((media, index) => (
               <motion.div
                 key={index}
@@ -181,8 +181,8 @@ export default function HomePage() {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 className="text-center group"
               >
-                <div className="h-16 bg-gray-100 rounded-lg mb-3 flex items-center justify-center group-hover:bg-gray-200 transition-colors">
-                  <span className="text-gray-700 font-semibold text-sm">{media.title}</span>
+                <div className="h-12 sm:h-16 bg-gray-100 rounded-lg mb-2 sm:mb-3 flex items-center justify-center group-hover:bg-gray-200 transition-colors">
+                  <span className="text-gray-700 font-semibold text-xs sm:text-sm px-2">{media.title}</span>
                 </div>
                 <p className="text-xs text-gray-500">{media.type}</p>
               </motion.div>
@@ -191,14 +191,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Stats Section - Mobile Optimized */}
+      <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -208,11 +208,11 @@ export default function HomePage() {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-gray-800 mb-2">{stat.number}</div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div className="text-2xl sm:text-3xl font-bold text-gray-800 mb-1 sm:mb-2">{stat.number}</div>
+                <div className="text-sm sm:text-base text-gray-600">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
