@@ -170,7 +170,7 @@ export default function AboutPage() {
 
       {/* Philosophy Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -180,6 +180,62 @@ export default function AboutPage() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800">
               Philosophy of Care
             </h2>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+              {/* Image 1 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-2xl flex items-center justify-center overflow-hidden"
+              >
+                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-white text-xl font-bold">1</span>
+                    </div>
+                    <span className="text-gray-500 text-sm font-medium">Dr. Jaishree Working</span>
+                    <p className="text-gray-400 text-xs mt-1">Patient Consultation</p>
+                  </div>
+                </div>
+              </motion.div>
+              
+              {/* Image 2 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-2xl flex items-center justify-center overflow-hidden"
+              >
+                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-white text-xl font-bold">2</span>
+                    </div>
+                    <span className="text-gray-500 text-sm font-medium">Clinic Interior</span>
+                    <p className="text-gray-400 text-xs mt-1">Treatment Room</p>
+                  </div>
+                </div>
+              </motion.div>
+              
+              {/* Image 3 */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-2xl flex items-center justify-center overflow-hidden"
+              >
+                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-3">
+                      <span className="text-white text-xl font-bold">3</span>
+                    </div>
+                    <span className="text-gray-500 text-sm font-medium">Clinic Exterior</span>
+                    <p className="text-gray-400 text-xs mt-1">Skinfinitii Building</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
             
             <div className="prose prose-lg mx-auto text-gray-600">
               <p className="text-xl leading-relaxed">

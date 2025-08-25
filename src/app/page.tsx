@@ -117,10 +117,10 @@ export default function HomePage() {
               
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center lg:items-start justify-center lg:justify-start">
                 <Link
-                  href="/contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 bg-pastel-pink text-white font-semibold rounded-full hover:bg-pastel-pink/90 transition-all duration-200 text-sm sm:text-base shadow-md"
+                  href="/about"
+                  className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 bg-pastel-green text-black font-semibold rounded-full hover:bg-pastel-pink/90 transition-all duration-200 text-sm sm:text-base shadow-md"
                 >
-                  <span>Book Appointment</span>
+                  <span>About Dr. Jaishree</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 
@@ -134,28 +134,83 @@ export default function HomePage() {
               </div>
             </motion.div>
 
-            {/* Right Gallery Placeholder - Mobile Optimized */}
+            {/* Right Gallery Placeholder - Enhanced */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative mt-8 lg:mt-0"
             >
-              <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                <div className="space-y-3 sm:space-y-4">
-                  <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl sm:rounded-2xl flex items-center justify-center">
-                    <span className="text-gray-500 text-xs sm:text-sm font-medium px-2 text-center">Gallery Image 1</span>
+              <div className="grid grid-cols-3 gap-2 sm:gap-3">
+                {/* Row 1 */}
+                <div className="space-y-2 sm:space-y-3">
+                  <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl sm:rounded-2xl flex items-center justify-center overflow-hidden">
+                    <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2">
+                          <span className="text-white text-xs sm:text-sm font-bold">1</span>
+                        </div>
+                        <span className="text-gray-500 text-xs font-medium px-1 text-center block">Before/After</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl sm:rounded-2xl flex items-center justify-center">
-                    <span className="text-gray-500 text-xs sm:text-sm font-medium px-2 text-center">Gallery Image 2</span>
+                  <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl sm:rounded-2xl flex items-center justify-center overflow-hidden">
+                    <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2">
+                          <span className="text-white text-xs sm:text-sm font-bold">2</span>
+                        </div>
+                        <span className="text-gray-500 text-xs font-medium px-1 text-center block">Clinic</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="space-y-3 sm:space-y-4 pt-4 sm:pt-8">
-                  <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl sm:rounded-2xl flex items-center justify-center">
-                    <span className="text-gray-500 text-xs sm:text-sm font-medium px-2 text-center">Gallery Image 3</span>
+                
+                {/* Row 2 */}
+                <div className="space-y-2 sm:space-y-3 pt-4 sm:pt-6">
+                  <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl sm:rounded-2xl flex items-center justify-center overflow-hidden">
+                    <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2">
+                          <span className="text-white text-xs sm:text-sm font-bold">3</span>
+                        </div>
+                        <span className="text-gray-500 text-xs font-medium px-1 text-center block">Consultation</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl sm:rounded-2xl flex items-center justify-center">
-                    <span className="text-gray-500 text-xs sm:text-sm font-medium px-2 text-center">Gallery Image 4</span>
+                  <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl sm:rounded-2xl flex items-center justify-center overflow-hidden">
+                    <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2">
+                          <span className="text-white text-xs sm:text-sm font-bold">4</span>
+                        </div>
+                        <span className="text-gray-500 text-xs font-medium px-1 text-center block">Results</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Row 3 */}
+                <div className="space-y-2 sm:space-y-3 pt-8 sm:pt-12">
+                  <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl sm:rounded-2xl flex items-center justify-center overflow-hidden">
+                    <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2">
+                          <span className="text-white text-xs sm:text-sm font-bold">5</span>
+                        </div>
+                        <span className="text-gray-500 text-xs font-medium px-1 text-center block">Treatment</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl sm:rounded-2xl flex items-center justify-center overflow-hidden">
+                    <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-1 sm:mb-2">
+                          <span className="text-white text-xs sm:text-sm font-bold">6</span>
+                        </div>
+                        <span className="text-gray-500 text-xs font-medium px-1 text-center block">Team</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

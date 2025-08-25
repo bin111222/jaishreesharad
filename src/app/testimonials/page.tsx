@@ -172,6 +172,88 @@ export default function TestimonialsPage() {
               <Users className="w-6 h-6" />
               <span className="text-lg">1000+ Happy Patients</span>
             </div>
+            
+            {/* Celebrity Gallery */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mt-12"
+            >
+              <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
+                {/* Celebrity 1 */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-10 h-10 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                        <span className="text-white text-xs font-bold">SS</span>
+                      </div>
+                      <span className="text-gray-500 text-xs font-medium">Shamita</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Celebrity 2 */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-10 h-10 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
+                        <span className="text-white text-xs font-bold">HQ</span>
+                      </div>
+                      <span className="text-gray-500 text-xs font-medium">Huma</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Celebrity 3 */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-10 h-10 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                        <span className="text-white text-xs font-bold">AK</span>
+                      </div>
+                      <span className="text-gray-500 text-xs font-medium">Annu</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Celebrity 4 */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-10 h-10 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
+                        <span className="text-white text-xs font-bold">HK</span>
+                      </div>
+                      <span className="text-gray-500 text-xs font-medium">Harsh</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Celebrity 5 */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-10 h-10 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                        <span className="text-white text-xs font-bold">AS</span>
+                      </div>
+                      <span className="text-gray-500 text-xs font-medium">Athiya</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Celebrity 6 */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-10 h-10 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
+                        <span className="text-white text-xs font-bold">AD</span>
+                      </div>
+                      <span className="text-gray-500 text-xs font-medium">Amyra</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>

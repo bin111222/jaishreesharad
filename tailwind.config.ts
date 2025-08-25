@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         // Custom color palette from roadmap
         'pastel-pink': '#D7A7A0',
-        'pastel-green': '#F2F4ED',
+        'pastel-green': '#BACEB0',
         
         // Brand colors
         primary: {

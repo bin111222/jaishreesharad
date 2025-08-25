@@ -372,9 +372,9 @@ export default function TreatmentsPage() {
       <section className="relative py-20 bg-gradient-to-br from-pastel-green/20 via-white to-pastel-pink/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className="text-center space-y-6"
           >
             <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-800">
@@ -425,7 +425,7 @@ export default function TreatmentsPage() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
                 className="grid grid-cols-1 md:grid-cols-4 gap-4 pt-4 border-t border-gray-200"
               >
                 <div>
@@ -502,13 +502,13 @@ export default function TreatmentsPage() {
               {featuredTreatments.map((treatment, index) => (
                 <motion.div
                   key={treatment.id}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.25, delay: index * 0.05 }}
                   className="group"
                 >
                   <Link href={treatment.href}>
-                    <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group-hover:scale-105">
+                    <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 overflow-hidden group-hover:scale-102">
                       <div className="h-48 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 flex items-center justify-center relative">
                         <div className="absolute top-4 left-4 bg-pastel-pink text-white px-3 py-1 rounded-full text-sm font-semibold">
                           Featured
@@ -538,7 +538,7 @@ export default function TreatmentsPage() {
                         
                         <div className="flex items-center justify-between">
                           <span className="text-pastel-pink font-semibold">Learn More</span>
-                          <ArrowRight className="w-4 h-4 text-pastel-pink group-hover:translate-x-1 transition-transform" />
+                          <ArrowRight className="w-4 h-4 text-pastel-pink group-hover:translate-x-1 transition-transform duration-200" />
                         </div>
                       </div>
                     </div>
@@ -578,13 +578,13 @@ export default function TreatmentsPage() {
               {filteredTreatments.map((treatment, index) => (
                 <motion.div
                   key={treatment.id}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.25, delay: index * 0.03 }}
                   className="group"
                 >
                   <Link href={treatment.href}>
-                    <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group-hover:scale-105 border border-gray-100">
+                    <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 overflow-hidden group-hover:scale-102 border border-gray-100">
                       <div className="h-48 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 flex items-center justify-center relative">
                         {treatment.featured && (
                           <div className="absolute top-4 left-4 bg-pastel-pink text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -640,7 +640,7 @@ export default function TreatmentsPage() {
                         
                         <div className="flex items-center justify-between">
                           <span className="text-pastel-pink font-semibold">Learn More</span>
-                          <ArrowRight className="w-4 h-4 text-pastel-pink group-hover:translate-x-1 transition-transform" />
+                          <ArrowRight className="w-4 h-4 text-pastel-pink group-hover:translate-x-1 transition-transform duration-200" />
                         </div>
                       </div>
                     </div>
@@ -680,9 +680,9 @@ export default function TreatmentsPage() {
       <section className="py-20 bg-gradient-to-r from-pastel-green/30 to-pastel-pink/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className="space-y-8"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800">
@@ -697,14 +697,14 @@ export default function TreatmentsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/quiz"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-200 hover:scale-105"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-150 hover:scale-102"
               >
                 <span>Take Skin Quiz</span>
               </Link>
               
               <Link
                 href="/contact"
-                className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-pastel-pink text-pastel-pink font-semibold rounded-full hover:bg-pastel-pink hover:text-white transition-all duration-200"
+                className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-pastel-pink text-pastel-pink font-semibold rounded-full hover:bg-pastel-pink hover:text-white transition-all duration-150"
               >
                 <span>Book Consultation</span>
               </Link>

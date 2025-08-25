@@ -187,7 +187,7 @@ export default function PRPTherapyPage() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="relative"
             >
-              <div className="relative bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-3xl p-8 aspect-square">
+              <div className="relative bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-3xl p-8 aspect-square overflow-hidden">
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -199,30 +199,94 @@ export default function PRPTherapyPage() {
                   className="absolute inset-8 border-2 border-red-400/20 rounded-xl"
                 />
                 <div className="relative z-10 flex items-center justify-center h-full">
-                  <div className="text-center space-y-6">
-                    <motion.div
-                      animate={{ 
-                        scale: [1, 1.2, 1],
-                        boxShadow: [
-                          "0 0 0 0 rgba(220, 38, 38, 0.4)",
-                          "0 0 0 20px rgba(220, 38, 38, 0)",
-                          "0 0 0 0 rgba(220, 38, 38, 0)"
-                        ]
-                      }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                      className="w-40 h-40 bg-gradient-to-br from-pastel-pink to-red-500 rounded-full flex items-center justify-center mx-auto"
-                    >
-                      <Droplets className="w-16 h-16 text-white" />
-                    </motion.div>
-                    <div>
-                      <p className="text-gray-600 font-medium">Treatment Image</p>
-                      <p className="text-sm text-gray-500">PRP Therapy</p>
+                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                    <div className="text-center space-y-6">
+                      <motion.div
+                        animate={{ 
+                          scale: [1, 1.2, 1],
+                          boxShadow: [
+                            "0 0 0 0 rgba(220, 38, 38, 0.4)",
+                            "0 0 0 20px rgba(220, 38, 38, 0)",
+                            "0 0 0 0 rgba(220, 38, 38, 0)"
+                          ]
+                        }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                        className="w-40 h-40 bg-gradient-to-br from-pastel-pink to-red-500 rounded-full flex items-center justify-center mx-auto"
+                      >
+                        <Droplets className="w-16 h-16 text-white" />
+                      </motion.div>
+                      <div>
+                        <p className="text-gray-600 font-medium">Treatment Image</p>
+                        <p className="text-sm text-gray-500">PRP Therapy</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </motion.div>
           </div>
+          
+          {/* Treatment Gallery */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="mt-16"
+          >
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {/* Before/After Image 1 */}
+              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                      <span className="text-white text-sm font-bold">1</span>
+                    </div>
+                    <span className="text-gray-500 text-xs font-medium">Before/After</span>
+                    <p className="text-gray-400 text-xs mt-1">Hair Growth</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Before/After Image 2 */}
+              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
+                      <span className="text-white text-sm font-bold">2</span>
+                    </div>
+                    <span className="text-gray-500 text-xs font-medium">Before/After</span>
+                    <p className="text-gray-400 text-xs mt-1">Skin Rejuvenation</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Treatment Process Image 1 */}
+              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                      <span className="text-white text-sm font-bold">3</span>
+                    </div>
+                    <span className="text-gray-500 text-xs font-medium">Treatment</span>
+                    <p className="text-gray-400 text-xs mt-1">Process</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Treatment Process Image 2 */}
+              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
+                      <span className="text-white text-sm font-bold">4</span>
+                    </div>
+                    <span className="text-gray-500 text-xs font-medium">Results</span>
+                    <p className="text-gray-400 text-xs mt-1">Natural Healing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

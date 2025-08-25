@@ -121,6 +121,42 @@ export default function ContactPage() {
               and take the first step towards beautiful, healthy skin.
             </p>
           </motion.div>
+          
+          {/* Clinic Images */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="mt-12"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Bandra Clinic */}
+              <div className="aspect-video bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-2xl flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white text-xl font-bold">B</span>
+                    </div>
+                    <span className="text-gray-500 text-lg font-medium">Bandra Clinic</span>
+                    <p className="text-gray-400 text-sm mt-2">Khar, Mumbai</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Vashi Clinic */}
+              <div className="aspect-video bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-2xl flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-white text-xl font-bold">V</span>
+                    </div>
+                    <span className="text-gray-500 text-lg font-medium">Vashi Clinic</span>
+                    <p className="text-gray-400 text-sm mt-2">Navi Mumbai</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

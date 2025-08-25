@@ -137,17 +137,81 @@ export default function EndyMedPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-square flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Zap className="w-16 h-16 text-white" />
+              <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-square flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-32 h-32 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Zap className="w-16 h-16 text-white" />
+                    </div>
+                    <p className="text-gray-600">Treatment Image</p>
+                    <p className="text-sm text-gray-500">EndyMed Treatment</p>
                   </div>
-                  <p className="text-gray-600">Treatment Image</p>
-                  <p className="text-sm text-gray-500">EndyMed Treatment</p>
                 </div>
               </div>
             </motion.div>
           </div>
+          
+          {/* Treatment Gallery */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-16"
+          >
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {/* Before/After Image 1 */}
+              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                      <span className="text-white text-sm font-bold">1</span>
+                    </div>
+                    <span className="text-gray-500 text-xs font-medium">Before/After</span>
+                    <p className="text-gray-400 text-xs mt-1">Skin Tightening</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Before/After Image 2 */}
+              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
+                      <span className="text-white text-sm font-bold">2</span>
+                    </div>
+                    <span className="text-gray-500 text-xs font-medium">Before/After</span>
+                    <p className="text-gray-400 text-xs mt-1">Body Contouring</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Treatment Process Image 1 */}
+              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                      <span className="text-white text-sm font-bold">3</span>
+                    </div>
+                    <span className="text-gray-500 text-xs font-medium">Treatment</span>
+                    <p className="text-gray-400 text-xs mt-1">Process</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Treatment Process Image 2 */}
+              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
+                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
+                      <span className="text-white text-sm font-bold">4</span>
+                    </div>
+                    <span className="text-gray-500 text-xs font-medium">Results</span>
+                    <p className="text-gray-400 text-xs mt-1">Firm & Tight</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

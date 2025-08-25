@@ -163,8 +163,15 @@ export default function TeamPage() {
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-start space-x-6">
-                    <div className="w-24 h-24 bg-gradient-to-br from-pastel-pink to-pastel-green rounded-full flex items-center justify-center flex-shrink-0">
-                      <GraduationCap className="w-12 h-12 text-white" />
+                    <div className="w-24 h-24 bg-gradient-to-br from-pastel-pink to-pastel-green rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+                      <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                        <div className="text-center">
+                          <div className="w-8 h-8 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-1">
+                            <span className="text-white text-xs font-bold">{member.name.split(' ').map(n => n[0]).join('')}</span>
+                          </div>
+                          <span className="text-gray-500 text-xs font-medium">Photo</span>
+                        </div>
+                      </div>
                     </div>
                     <div className="flex-1 space-y-3">
                       <div>
@@ -182,6 +189,64 @@ export default function TeamPage() {
                 </motion.div>
               ))}
             </div>
+            
+            {/* Additional Team Images */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mt-12"
+            >
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {/* Team Working Image 1 */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                        <span className="text-white text-sm font-bold">1</span>
+                      </div>
+                      <span className="text-gray-500 text-xs font-medium">Team Working</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Team Working Image 2 */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
+                        <span className="text-white text-sm font-bold">2</span>
+                      </div>
+                      <span className="text-gray-500 text-xs font-medium">Consultation</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Team Working Image 3 */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                        <span className="text-white text-sm font-bold">3</span>
+                      </div>
+                      <span className="text-gray-500 text-xs font-medium">Treatment</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Team Working Image 4 */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
+                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
+                        <span className="text-white text-sm font-bold">4</span>
+                      </div>
+                      <span className="text-gray-500 text-xs font-medium">Care</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
