@@ -12,7 +12,7 @@ const teamMembers = [
     expertise: "Cosmetic Dermatology, Anti-aging, Celebrity Care",
     experience: "23+ years",
     image: "/team/dr-jaishree.jpg",
-    description: "India's leading celebrity cosmetic dermatologist with international training and recognition. Board Member of ISDS, International Mentor for ASDS, and author of three bestselling books."
+    description: "India's leading celebrity cosmetic dermatologist with international training and recognition. Board Member of ISDS, International Mentor for ASDS, and author of four bestselling books."
   },
   {
     name: "Dr. Poonam Semlani",

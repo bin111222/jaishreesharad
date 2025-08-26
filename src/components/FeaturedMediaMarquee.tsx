@@ -141,3 +141,4 @@ export function FeaturedMediaMarquee() {
     </section>
   );
 }
+

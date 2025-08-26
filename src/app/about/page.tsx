@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { Award, GraduationCap, Users, BookOpen, Play, Star } from "lucide-react";
 import Link from "next/link";
+import AwardsSection from "@/components/AwardsSection";
 
 const credentials = [
   {
@@ -38,38 +39,7 @@ const credentials = [
   }
 ];
 
-const awards = [
-  {
-    title: "Best Celebrity Cosmetic Dermatologist in India",
-    organization: "Industry Recognition",
-    year: "2021"
-  },
-  {
-    title: "Crossword Popular Book Award",
-    organization: "Health & Fitness Category - Skin Rules",
-    year: "2020"
-  },
-  {
-    title: "Vogue Beauty Award",
-    organization: "Best Skin Expert",
-    year: "2016"
-  },
-  {
-    title: "Elle Beauty Award",
-    organization: "Best Skin Expert",
-    year: "2016"
-  },
-  {
-    title: "50 Outstanding Women in Healthcare",
-    organization: "World Health & Wellness Congress",
-    year: "2017"
-  },
-  {
-    title: "Rising Star Award",
-    organization: "World Congress of Dermatology, Vancouver",
-    year: "2015"
-  }
-];
+
 
 const memberships = [
   "Board of Directors Member - International Society of Dermatologic and Aesthetic Surgery (ISDS)",
@@ -226,7 +196,7 @@ export default function AboutPage() {
             <div className="prose prose-lg mx-auto text-gray-600">
               <p className="text-xl leading-relaxed">
                 Dr. Jaishree's work combines cutting-edge dermatology with a warm, patient-first approach. 
-                She has authored three bestselling books including <em>Skin Rules</em>, <em>Skin Talks</em>, and <em>The Skincare Answer Book</em>, 
+                She has authored four bestselling books including <em>Skin Rules</em>, <em>Skin Talks</em>, <em>The Skincare Answer Book</em>, and <em>Aesthetic Dermatology</em>, 
                 sharing her expertise with readers worldwide.
               </p>
               
@@ -286,46 +256,7 @@ export default function AboutPage() {
       </section>
 
       {/* Awards Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Awards & Recognition
-            </h2>
-            <p className="text-xl text-gray-600">
-              Recognized for excellence in dermatology and aesthetic medicine
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {awards.map((award, index) => (
-              <motion.div
-                key={award.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl"
-              >
-                <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center flex-shrink-0">
-                  <Award className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="font-display text-lg font-semibold text-gray-800 mb-1">
-                    {award.title}
-                  </h3>
-                  <p className="text-gray-600 mb-1">{award.organization}</p>
-                  <p className="text-pastel-pink font-semibold">{award.year}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AwardsSection />
 
       {/* Memberships Section */}
       <section className="py-20 bg-gray-50">
@@ -430,7 +361,7 @@ export default function AboutPage() {
             </h2>
             
             <p className="text-xl text-gray-600">
-              Dr. Jaishree has authored multiple books including <em>Skin Rules</em> and <em>The Skincare Answer Book</em>, 
+                              Dr. Jaishree has authored four bestselling books including <em>Skin Rules</em>, <em>Skin Talks</em>, <em>The Skincare Answer Book</em>, and <em>Aesthetic Dermatology</em>, 
               sharing her expertise with readers worldwide.
             </p>
             

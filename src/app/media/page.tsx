@@ -369,7 +369,7 @@ export default function MediaPage() {
               {
                 title: "Author & Educator",
                 outlet: "Penguin Random House",
-                description: "Three bestselling books on skincare"
+                description: "Four bestselling books on skincare"
               }
             ].map((highlight, index) => (
               <motion.div

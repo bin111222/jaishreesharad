@@ -2,11 +2,12 @@
 
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { ArrowRight, Play, Star, Award, Users, BookOpen } from "lucide-react";
+import { ArrowRight, Play, Star, Award, Users, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import SocialMediaFeed from "@/components/SocialMediaFeed";
-import { FeaturedMediaMarquee } from "@/components/FeaturedMediaMarquee";
 import { CircularTestimonials } from "@/components/ui/circular-testimonials";
+import AwardsSection from "@/components/AwardsSection";
+import { useState, useEffect } from "react";
 
 // Real data from content bible
 const featuredTreatments = [
@@ -156,105 +157,372 @@ const mediaHighlights = [
   }
 ];
 
+
+
+const featuredVideos = [
+  {
+    id: 1,
+    title: "Stop Wasting Money on Skincare! Do THIS Instead",
+    description: "Expert advice on smart skincare spending",
+    thumbnail: "https://img.youtube.com/vi/iVmnobqE3G8/maxresdefault.jpg",
+    videoId: "iVmnobqE3G8",
+    category: "Skincare Tips",
+    duration: "8:45"
+  },
+  {
+    id: 2,
+    title: "The Changing Paradigms of Skincare in India",
+    description: "Dr. Jaishree discusses evolving skincare trends",
+    thumbnail: "https://img.youtube.com/vi/Xj5VJNHrSCc/maxresdefault.jpg",
+    videoId: "Xj5VJNHrSCc",
+    category: "Expert Talk",
+    duration: "12:30"
+  },
+  {
+    id: 3,
+    title: "TEDx – The Mind–Skin Connection: Healing from Within",
+    description: "Groundbreaking TEDx talk on mind-skin relationship",
+    thumbnail: "https://img.youtube.com/vi/1BCr1LNA10U/maxresdefault.jpg",
+    videoId: "1BCr1LNA10U",
+    category: "TEDx Talk",
+    duration: "18:22"
+  },
+  {
+    id: 4,
+    title: "Don't Do This With Your Skin!",
+    description: "Common skincare mistakes to avoid",
+    thumbnail: "https://img.youtube.com/vi/SMaSfrrBGc8/maxresdefault.jpg",
+    videoId: "SMaSfrrBGc8",
+    category: "What's Your Mantra?",
+    duration: "6:15"
+  },
+  {
+    id: 5,
+    title: "Bollywood Celebrity Skin Care Secrets",
+    description: "Exclusive insights into celebrity skincare routines",
+    thumbnail: "https://img.youtube.com/vi/DCofgfHdBUI/maxresdefault.jpg",
+    videoId: "DCofgfHdBUI",
+    category: "Celebrity Secrets",
+    duration: "10:45"
+  },
+  {
+    id: 6,
+    title: "Figuring Out Podcast – Skin Care Secrets, Fillers, Botox, Acne & Sunscreen",
+    description: "Comprehensive discussion on popular treatments",
+    thumbnail: "https://img.youtube.com/vi/g93IhHW600U/maxresdefault.jpg",
+    videoId: "g93IhHW600U",
+    category: "Podcast",
+    duration: "45:20"
+  }
+];
+
+const whyChooseUs = [
+  {
+    icon: "👩‍⚕️",
+    title: "26+ Years Experience",
+    description: "Dr. Jaishree Sharad brings over two decades of expertise in aesthetic dermatology, making her one of India's most trusted skin specialists."
+  },
+  {
+    icon: "🔬",
+    title: "Latest Technology",
+    description: "State-of-the-art equipment and cutting-edge treatments ensure the best possible results with maximum safety and minimal downtime."
+  },
+  {
+    icon: "🎯",
+    title: "Personalized Care",
+    description: "Every treatment plan is customized to your unique skin type, concerns, and goals for optimal, natural-looking results."
+  },
+  {
+    icon: "🏆",
+    title: "Celebrity Trusted",
+    description: "Trusted by leading Bollywood celebrities and public figures who demand the highest standards of care and discretion."
+  },
+  {
+    icon: "🛡️",
+    title: "Safety First",
+    description: "Rigorous safety protocols, certified products, and sterile environments ensure your well-being is our top priority."
+  },
+  {
+    icon: "💎",
+    title: "Premium Experience",
+    description: "Luxurious clinic environment with personalized attention, ensuring your comfort and satisfaction throughout your journey."
+  }
+];
+
+const heroSlideshow = [
+  {
+    id: 1,
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%201.webp",
+    testimonial: "Dr. Jaishree is a pioneer in the field of aesthetic dermatology, her expertise and dedication to patient care are truly remarkable.",
+    author: "Amitabh Bachchan",
+    rating: "4.9"
+  },
+  {
+    id: 2,
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%202.webp",
+    testimonial: "She's the only person I trust with my skin. Her attention to detail and results are unmatched.",
+    author: "Shamita Shetty",
+    rating: "4.9"
+  },
+  {
+    id: 3,
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%203.webp",
+    testimonial: "Dr. Jaishree understands beauty and science in equal measure. Her treatments are transformative.",
+    author: "Neha Dhupia",
+    rating: "4.9"
+  },
+  {
+    id: 4,
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%204.webp",
+    testimonial: "Professional, caring, and amazing results. Dr. Jaishree's expertise is truly world-class.",
+    author: "Celebrity Client",
+    rating: "4.9"
+  }
+];
+
 export default function HomePage() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto-advance slideshow
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlideshow.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroSlideshow.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroSlideshow.length) % heroSlideshow.length);
+  };
+
   return (
     <Layout>
-      {/* Hero Section - Clean Design with Higher Text */}
-      <section className="relative py-12 sm:py-16 lg:py-20 bg-white px-4 sm:px-6 lg:px-8">
-        <div className="w-full max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start pt-8 lg:pt-12">
-            {/* Left Content - Mobile Optimized */}
+      {/* Hero Section - Redesigned for Maximum Impact */}
+      <section className="relative min-h-screen bg-gradient-to-br from-white via-gray-50 to-pastel-pink/5 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-pastel-pink/20 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-pastel-green/20 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-pastel-pink/5 to-pastel-green/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            {/* Left Content - Enhanced Typography & Layout */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6 lg:space-y-8 text-center lg:text-left"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="lg:col-span-7 space-y-8"
             >
-              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
-                Science.
-                <span className="block text-gray-800">Skin.</span>
-                <span className="block text-pastel-pink">Sophistication.</span>
-              </h1>
-              
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                Welcome to Skinfinitii – where advanced skincare meets personal excellence. Led by Dr. Jaishree Sharad, we bring you the latest in aesthetic treatments with unwavering dedication to safety and results.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-center lg:items-start justify-center lg:justify-start">
+              {/* Badge */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 border border-pastel-pink/20 px-4 py-2 rounded-full"
+              >
+                <div className="w-2 h-2 bg-pastel-pink rounded-full"></div>
+                <span className="text-sm font-medium text-gray-700">India's Premier Aesthetic Dermatologist</span>
+              </motion.div>
+
+              {/* Main Headline */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                className="space-y-4"
+              >
+                <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.9]">
+                  <span className="block text-gray-800">Science.</span>
+                  <span className="block text-gray-800">Skin.</span>
+                  <span className="block bg-gradient-to-r from-pastel-pink via-pink-500 to-pastel-green bg-clip-text text-transparent">
+                    Confidence.
+                  </span>
+                </h1>
+              </motion.div>
+
+              {/* Subtitle */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="text-xl sm:text-2xl text-gray-600 leading-relaxed max-w-2xl"
+              >
+                Experience the perfect blend of <span className="font-semibold text-gray-800">medical expertise</span> and <span className="font-semibold text-pastel-pink">artistic vision</span> with Dr. Jaishree Sharad's revolutionary approach to aesthetic dermatology.
+              </motion.p>
+
+              {/* Stats Row */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                className="flex flex-wrap gap-8 pt-4"
+              >
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-gray-800">26+</div>
+                  <div className="text-sm text-gray-600">Years Experience</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-gray-800">50K+</div>
+                  <div className="text-sm text-gray-600">Happy Patients</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-gray-800">15+</div>
+                  <div className="text-sm text-gray-600">Awards Won</div>
+                </div>
+              </motion.div>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.9 }}
+                className="flex flex-col sm:flex-row gap-4 pt-4"
+              >
                 <Link
-                  href="/about"
-                  className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 bg-pastel-green text-black font-semibold rounded-full hover:bg-pastel-pink/90 transition-all duration-200 text-sm sm:text-base shadow-md"
+                  href="/contact"
+                  className="group inline-flex items-center justify-center space-x-3 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-500 text-white font-semibold rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
                 >
-                  <span>About Dr. Jaishree</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <span>Book Consultation</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
                 
                 <Link
                   href="/treatments"
-                  className="w-full sm:w-auto inline-flex items-center justify-center space-x-2 px-6 sm:px-8 py-3 sm:py-4 border-2 border-gray-800 text-gray-800 font-semibold rounded-full hover:bg-gray-800 hover:text-white transition-all duration-200 text-sm sm:text-base"
+                  className="group inline-flex items-center justify-center space-x-3 px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-full hover:border-pastel-pink hover:text-pastel-pink hover:bg-pastel-pink/5 transition-all duration-300 text-lg"
                 >
                   <span>Explore Treatments</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
-              </div>
+              </motion.div>
+
+              {/* Trust Indicators */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 1.1 }}
+                className="flex items-center space-x-6 pt-8"
+              >
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-pastel-green rounded-full flex items-center justify-center">
+                    <Star className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-sm text-gray-600">Celebrity Trusted</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-pastel-pink rounded-full flex items-center justify-center">
+                    <Award className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-sm text-gray-600">Award Winning</span>
+                </div>
+              </motion.div>
             </motion.div>
 
-            {/* Optimized Image Gallery - Better Proportions */}
+            {/* Right Content - Hero Image with Floating Elements */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative mt-6 lg:mt-0"
+              transition={{ duration: 1, delay: 0.4 }}
+              className="lg:col-span-5 relative"
             >
-              <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                {/* Featured Image - Smaller */}
-                <div className="col-span-2 aspect-[3/2] rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%201.webp" 
-                    alt="Dr. Jaishree Sharad - Featured Image" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
+              <div className="relative">
+                {/* Main Hero Image Slideshow */}
+                <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+                  {heroSlideshow.map((slide, index) => (
+                    <motion.img
+                      key={slide.id}
+                      src={slide.image}
+                      alt={`Dr. Jaishree Sharad - ${slide.author}`}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: index === currentSlide ? 1 : 0 }}
+                      transition={{ duration: 0.8 }}
+                    />
+                  ))}
+                  
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                  
+                  {/* Navigation Arrows */}
+                  <button
+                    onClick={prevSlide}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-700 hover:bg-white transition-all duration-200 shadow-lg"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  
+                  <button
+                    onClick={nextSlide}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-700 hover:bg-white transition-all duration-200 shadow-lg"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                  
+                  {/* Slide Indicators */}
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    {heroSlideshow.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentSlide(index)}
+                        className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                          index === currentSlide ? 'bg-white w-6' : 'bg-white/50'
+                        }`}
+                      />
+                    ))}
+                  </div>
                 </div>
-                
-                {/* Two Medium Images - Smaller */}
-                <div className="aspect-square rounded-lg overflow-hidden shadow-md">
-                  <img 
-                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%202.webp" 
-                    alt="Dr. Jaishree Sharad - Clinic Interior" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="aspect-square rounded-lg overflow-hidden shadow-md">
-                  <img 
-                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%204.webp" 
-                    alt="Dr. Jaishree Sharad - Treatment Results" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                
-                {/* Bottom Row - Smaller Images */}
-                <div className="aspect-square rounded-lg overflow-hidden shadow-md">
-                  <img 
-                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%205.webp" 
-                    alt="Dr. Jaishree Sharad - Treatment Session" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="aspect-square rounded-lg overflow-hidden shadow-md">
-                  <img 
-                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%206.webp" 
-                    alt="Dr. Jaishree Sharad - Medical Team" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
+
+                {/* Floating Testimonial Card */}
+                <motion.div
+                  key={currentSlide}
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 max-w-xs"
+                >
+                  <div className="flex items-start space-x-3">
+                    <div className="w-10 h-10 bg-gradient-to-br from-pastel-pink to-pink-400 rounded-full flex items-center justify-center">
+                      <Star className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-700 font-medium">"{heroSlideshow[currentSlide].testimonial}"</p>
+                      <p className="text-xs text-gray-500 mt-1">- {heroSlideshow[currentSlide].author}</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Floating Stats Card */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 1.4 }}
+                  className="absolute -top-6 -right-6 bg-gradient-to-r from-pastel-green to-green-400 text-white rounded-2xl p-4 shadow-xl"
+                >
+                  <div className="text-center">
+                    <div className="text-2xl font-bold">{heroSlideshow[currentSlide].rating}</div>
+                    <div className="text-xs opacity-90">Patient Rating</div>
+                    <div className="flex justify-center mt-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-3 h-3 fill-current" />
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Featured Media Marquee */}
-      <FeaturedMediaMarquee />
+      {/* Awards & Recognition Section */}
+      <AwardsSection />
 
       {/* Stats Section - Enhanced with Animations */}
       <section className="py-16 sm:py-20 bg-gray-50 relative overflow-hidden">
@@ -422,6 +690,100 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Video Testimonials Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Featured Videos
+              </h2>
+              <p className="text-xl text-gray-600">
+                Watch Dr. Jaishree's expert insights on TEDx, podcasts, and media features
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredVideos.map((video, index) => (
+                <motion.div
+                  key={video.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.2, duration: 0.6 }}
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className="group cursor-pointer"
+                >
+                  <a 
+                    href={`https://www.youtube.com/watch?v=${video.videoId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                  >
+                    <div className="aspect-video relative overflow-hidden">
+                      <img 
+                        src={video.thumbnail}
+                        alt={video.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div>
+                      
+                      {/* Play Button */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-pastel-pink group-hover:scale-110 transition-all duration-300">
+                          <Play className="w-8 h-8 text-gray-800 group-hover:text-white ml-1" />
+                        </div>
+                      </div>
+                      
+                      {/* Duration Badge */}
+                      <div className="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm font-medium">
+                        {video.duration}
+                      </div>
+                      
+                      {/* Category Badge */}
+                      <div className="absolute bottom-4 left-4">
+                        <span className="bg-pastel-pink text-white px-3 py-1 rounded-full text-xs font-medium">
+                          {video.category}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div className="p-6">
+                      <h3 className="font-display text-lg font-semibold text-gray-800 mb-2 group-hover:text-pastel-pink transition-colors">
+                        {video.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {video.description}
+                      </p>
+                    </div>
+                  </a>
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* View More Videos Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+              className="text-center pt-8"
+            >
+              <Link
+                href="/media"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-500 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
+              >
+                <span>View More Videos</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Social Media Feed */}
       <SocialMediaFeed maxPosts={6} showHeader={true} />
 
@@ -462,6 +824,83 @@ export default function HomePage() {
                 }}
               />
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Choose Skinfinitii Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Why Choose Skinfinitii?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Experience the perfect blend of medical expertise, cutting-edge technology, and personalized care that sets us apart
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {whyChooseUs.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.6 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  className="group"
+                >
+                  <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 h-full">
+                    <div className="text-center space-y-4">
+                      <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                        {feature.icon}
+                      </div>
+                      
+                      <h3 className="font-display text-xl font-semibold text-gray-800 group-hover:text-pastel-pink transition-colors">
+                        {feature.title}
+                      </h3>
+                      
+                      <p className="text-gray-600 leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
+                    
+                    {/* Subtle gradient overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-pastel-pink/5 to-pastel-green/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* Additional CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+              className="text-center pt-8"
+            >
+              <div className="bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 rounded-2xl p-8">
+                <h3 className="font-display text-2xl font-bold text-gray-800 mb-4">
+                  Ready to Experience the Difference?
+                </h3>
+                <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                  Join thousands of satisfied patients who have transformed their skin and confidence with Dr. Jaishree's expertise
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-500 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
+                >
+                  <span>Book Your Consultation</span>
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>

@@ -12,7 +12,7 @@ const contactMethods = [
     description: "Speak directly with our team",
     icon: Phone,
     action: "Call Now",
-    href: "tel:+919223219419",
+    href: "tel:+912241819000",
     color: "bg-green-500",
     hoverColor: "hover:bg-green-600"
   },
@@ -21,7 +21,7 @@ const contactMethods = [
     description: "Quick consultation via WhatsApp",
     icon: MessageCircle,
     action: "Message Us",
-    href: "https://wa.me/919223219419?text=Hi%20Dr.%20Jaishree,%20I%20would%20like%20to%20book%20a%20consultation",
+    href: "https://wa.me/919769691952?text=Hi%20Dr.%20Jaishree,%20I%20would%20like%20to%20book%20a%20consultation",
     color: "bg-green-500",
     hoverColor: "hover:bg-green-600"
   },
@@ -30,7 +30,7 @@ const contactMethods = [
     description: "Send us a detailed message",
     icon: Mail,
     action: "Send Email",
-    href: "mailto:contactus@skinfiniticlinic.com",
+    href: "mailto:doctorjaishree@gmail.com",
     color: "bg-pastel-pink",
     hoverColor: "hover:bg-pastel-pink/90"
   },
@@ -48,35 +48,35 @@ const contactMethods = [
 const clinicLocations = [
   {
     name: "Skinfinitii (Khar, Mumbai) - Aesthetic Skin and Laser Clinic",
-    address: "601–604, Prabhat Chambers (6th Floor), Plot No. 92, S.V. Road, Khar (West), Mumbai – 400052, India",
-    phone: "+91 9223219419 / 022-41819000",
-    whatsapp: "+91 9223219419",
-    email: "contactus@skinfiniticlinic.com",
-    hours: "Mon-Sat: 10:30 AM - 7:30 PM",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.5!2d72.8347!3d19.0596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8b0b0b0b0b0%3A0x0!2sSkinfinitii+Khar!5e0!3m2!1sen!2sin!4v1234567890",
+    address: "601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052",
+    phone: "+91 22 4181 9000",
+    whatsapp: "+91 97 6969 1952",
+    email: "doctorjaishree@gmail.com",
+    hours: "Mon-Sat: 9:00 AM - 7:00 PM",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.5!2d72.8347!3d19.0596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8b0b0b0b0b0%3A0x0!2sPrabhat+Chambers%2C+S+V+Road%2C+Khar+West%2C+Mumbai%2C+Maharashtra+400052!5e0!3m2!1sen!2sin!4v1234567890",
     coordinates: { lat: 19.0596, lng: 72.8347 },
-    description: "Our flagship center with all laser facilities. Easily accessible via Linking Road or S.V. Road, near Khar Railway Station (West). Parking available in the building."
+    description: "Our flagship center with all laser facilities. Easily accessible via S.V. Road, near Khar Railway Station (West). Parking available in the building."
   },
   {
     name: "Skinfinitii (Vashi, Navi Mumbai) - Aesthetic Skin and Laser Clinic",
-    address: "G-62, Ground Floor, Satra Plaza, Sector-19D, Palm Beach Road, Vashi, Navi Mumbai – 400703, India",
-    phone: "+91 9769691957 / 022-42832000",
-    whatsapp: "+91 9769691957",
-    email: "contactus@skinfiniticlinic.com",
-    hours: "Mon-Sat: 10:30 AM - 7:30 PM",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.5!2d72.9989!3d19.0759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8b0b0b0b0b0%3A0x0!2sSkinfinitii+Vashi!5e0!3m2!1sen!2sin!4v1234567890",
+    address: "G-62, Satra Plaza, Palm Beach Road, Sector 19D, Vashi, Navi Mumbai 400 703",
+    phone: "+91 22 4283 2000",
+    whatsapp: "+91 97 6969 1952",
+    email: "doctorjaishree@gmail.com",
+    hours: "Mon-Sat: 9:00 AM - 7:00 PM",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.5!2d72.9989!3d19.0759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8b0b0b0b0b0%3A0x0!2sSatra+Plaza%2C+Palm+Beach+Road%2C+Sector+19D%2C+Vashi%2C+Navi+Mumbai%2C+Maharashtra+400703!5e0!3m2!1sen!2sin!4v1234567890",
     coordinates: { lat: 19.0759, lng: 72.9989 },
     description: "Our Navi Mumbai branch offers the same range of services for patients based in Thane/Navi Mumbai. It's in the Satra Plaza mall complex with ample parking."
   }
 ];
 
 const clinicHours = [
-  { day: "Monday", hours: "10:30 AM - 7:30 PM" },
-  { day: "Tuesday", hours: "10:30 AM - 7:30 PM" },
-  { day: "Wednesday", hours: "10:30 AM - 7:30 PM" },
-  { day: "Thursday", hours: "10:30 AM - 7:30 PM" },
-  { day: "Friday", hours: "10:30 AM - 7:30 PM" },
-  { day: "Saturday", hours: "10:30 AM - 7:30 PM" },
+  { day: "Monday", hours: "9:00 AM - 7:00 PM" },
+  { day: "Tuesday", hours: "9:00 AM - 7:00 PM" },
+  { day: "Wednesday", hours: "9:00 AM - 7:00 PM" },
+  { day: "Thursday", hours: "9:00 AM - 7:00 PM" },
+  { day: "Friday", hours: "9:00 AM - 7:00 PM" },
+  { day: "Saturday", hours: "9:00 AM - 7:00 PM" },
   { day: "Sunday", hours: "Closed (Dr. Jaishree strongly believes Sunday is family time!)" }
 ];
 
@@ -296,13 +296,16 @@ export default function ContactPage() {
                 </h3>
                 <div className="space-y-3 text-gray-600">
                   <p>
-                    <strong>Parking:</strong> Available at Shopper's Stop parking lot (opposite the clinic)
+                    <strong>Khar Branch:</strong> Parking available in Prabhat Chambers building
                   </p>
                   <p>
-                    <strong>Nearest Metro:</strong> Bandra West Metro Station (10 minutes walk)
+                    <strong>Vashi Branch:</strong> Ample parking available in Satra Plaza mall complex
                   </p>
                   <p>
-                    <strong>Landmark:</strong> Opposite Shopper's Stop, Linking Road
+                    <strong>Nearest Railway:</strong> Khar Railway Station (West) for Khar branch
+                  </p>
+                  <p>
+                    <strong>Landmarks:</strong> S.V. Road for Khar, Palm Beach Road for Vashi
                   </p>
                 </div>
               </div>

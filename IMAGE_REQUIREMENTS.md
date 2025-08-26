@@ -130,3 +130,4 @@ About Page: 4 images
 Team Page: 10 images
 Testimonials Page: 6 images
 Contact Page: 2 images
+

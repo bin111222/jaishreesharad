@@ -10,7 +10,7 @@ const books = [
     id: 1,
     title: "Skin Talks",
     subtitle: "A Lifestyle Guide to Skincare",
-    cover: "/books/skin-talks.jpg",
+    cover: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/books/skintalks.webp",
     description: "A lifestyle guide on skincare that became a bestseller. The foreword was written by legendary actor Amitabh Bachchan, who praised Dr. Sharad's ability to make skincare approachable.",
     keyTakeaways: [
       "Lifestyle-focused skincare approach",
@@ -25,8 +25,7 @@ const books = [
       "A comprehensive lifestyle guide for healthy skin - Reader Reviews"
     ],
     buyLinks: [
-      { label: "Amazon India", url: "https://amazon.in/skin-talks" },
-      { label: "Flipkart", url: "https://flipkart.com/skin-talks" }
+      { label: "Buy Now", url: "https://www.amazon.in/Skin-Talks-Secrets-Glowing-Women/dp/8184005202/ref=sr_1_4?s=books&sr=1-4" }
     ],
     mediaKit: "/books/skin-talks-media-kit.pdf",
     featured: false,
@@ -37,7 +36,7 @@ const books = [
     id: 2,
     title: "Skin Rules",
     subtitle: "Your 6-Week Plan to Radiant Skin",
-    cover: "/books/skin-rules.jpg",
+    cover: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/books/skinrules.webp",
     description: "Launched on 24th October 2018 by Amitabh Bachchan and Shweta Bachchan Nanda in a grand event, this book distills Dr. Jaishree's advice into a six-week routine for healthy skin. Winner of the popular award in the Health & Fitness category at the Crossword Book Awards 2020.",
     keyTakeaways: [
       "6-week structured skincare plan",
@@ -53,8 +52,7 @@ const books = [
       "Top-selling skincare book in India"
     ],
     buyLinks: [
-      { label: "Amazon India", url: "https://amazon.in/skin-rules" },
-      { label: "Flipkart", url: "https://flipkart.com/skin-rules" }
+      { label: "Buy Now", url: "https://www.amazon.in/Skin-Rules-Your-6-week-Radiant/dp/0143444727/ref=sr_1_2?s=books&sr=1-2" }
     ],
     mediaKit: "/books/skin-rules-media-kit.pdf",
     featured: true,
@@ -65,7 +63,7 @@ const books = [
     id: 3,
     title: "The Skincare Answer Book",
     subtitle: "Everything You Need to Know About Skin, Hair & Nails",
-    cover: "/books/skincare-answer-book.jpg",
+    cover: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/books/skincareanswerbook.webp",
     description: "Dr. Jaishree's latest book is an extensive Q&A compendium addressing the most frequently asked questions on skin, hair, and nail care. It was launched on 28th April 2023 by Bollywood actor Ranbir Kapoor and veteran actress Neetu Kapoor at a high-profile event in Mumbai, and has been hailed as a 'beauty bible'.",
     keyTakeaways: [
       "Q&A format for easy reference",
@@ -82,28 +80,54 @@ const books = [
       "Comprehensive Q&A format for easy reference"
     ],
     buyLinks: [
-      { label: "Amazon India", url: "https://amazon.in/skincare-answer-book" },
-      { label: "Flipkart", url: "https://flipkart.com/skincare-answer-book" }
+      { label: "Buy Now", url: "https://www.amazon.in/Skincare-Answer-Book-Frequently-Questions/dp/014346194X/ref=sr_1_1?s=books&sr=1-1" }
     ],
     mediaKit: "/books/skincare-answer-book-media-kit.pdf",
     featured: false,
     year: "2023",
     publisher: "Penguin Random House"
+  },
+  {
+    id: 4,
+    title: "Aesthetic Dermatology",
+    subtitle: "Advanced Techniques and Clinical Practice",
+    cover: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/books/aestheticdermatology.webp",
+    description: "Dr. Jaishree's comprehensive guide to aesthetic dermatology, covering advanced techniques, clinical practices, and the latest innovations in cosmetic dermatology. This book serves as an essential reference for medical professionals and students in the field.",
+    keyTakeaways: [
+      "Advanced aesthetic techniques",
+      "Clinical practice guidelines",
+      "Latest innovations in cosmetic dermatology",
+      "Case studies and treatment protocols",
+      "Professional reference material"
+    ],
+    endorsements: [
+      "Essential reference for medical professionals",
+      "Comprehensive coverage of aesthetic dermatology",
+      "Latest techniques and clinical practices",
+      "Highly recommended for dermatology students"
+    ],
+    buyLinks: [
+      { label: "Buy Now", url: "https://www.amazon.in/Aesthetic-Dermatology-Perspectives-Jaishree-Sharad/dp/9352703472/ref=sr_1_5?s=books&sr=1-5" }
+    ],
+    mediaKit: "/books/aesthetic-dermatology-media-kit.pdf",
+    featured: false,
+    year: "2018",
+    publisher: "Medical Publications"
   }
 ];
 
 const upcomingBook = {
-  title: "Coming Soon",
-  subtitle: "Advanced Anti-Aging Techniques",
-  description: "Dr. Jaishree's latest book on advanced anti-aging techniques and treatments. Pre-order available soon.",
-  expectedDate: "2025"
+  title: "Untitled",
+  subtitle: "",
+  description: "",
+  expectedDate: "2026"
 };
 
 export default function BooksPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-pastel-green/20 via-white to-pastel-pink/20">
+      <section className="relative py-12 bg-gradient-to-br from-pastel-green/20 via-white to-pastel-pink/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -144,15 +168,13 @@ export default function BooksPage() {
             >
               {/* Book Cover */}
               <div className="relative">
-                <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-[3/4] flex items-center justify-center">
-                  <div className="text-center">
-                    <BookOpen className="w-24 h-24 text-pastel-pink mx-auto mb-6" />
-                    <h3 className="font-display text-2xl font-bold text-gray-800 mb-2">
-                      {book.title}
-                    </h3>
-                    <p className="text-gray-600">{book.subtitle}</p>
-                    <p className="text-sm text-gray-500 mt-4">Book Cover Image</p>
-                  </div>
+                <div className="relative aspect-[3/5] rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={book.cover}
+                    alt={`${book.title} - ${book.subtitle}`}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
                 </div>
                 <div className="absolute -top-4 -right-4 bg-pastel-pink text-white px-4 py-2 rounded-full text-sm font-semibold">
                   Featured
@@ -244,64 +266,160 @@ export default function BooksPage() {
         </div>
       </section>
 
-      {/* All Books */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
+            {/* All Books - Revamped with Bigger Images */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-pastel-pink/5 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-72 h-72 bg-gradient-to-br from-pastel-pink/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-pastel-green/10 to-transparent rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-pastel-pink/20 to-pastel-green/20 px-4 py-2 rounded-full mb-6">
+              <BookOpen className="w-5 h-5 text-pastel-pink" />
+              <span className="text-sm font-medium text-gray-700">Complete Collection</span>
+            </div>
+            
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">
               All Publications
             </h2>
-            <p className="text-xl text-gray-600">
-              Explore Dr. Jaishree's complete collection of books
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore Dr. Jaishree's complete collection of bestselling books that have transformed skincare knowledge worldwide
             </p>
-          </div>
+          </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {books.map((book, index) => (
               <motion.div
                 key={book.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden"
+                whileHover={{ y: -5, scale: 1.01 }}
+                className="group relative"
               >
-                <div className="p-8">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-20 h-24 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <BookOpen className="w-8 h-8 text-pastel-pink" />
+                <div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                  {/* Book Cover Section - Vertical Layout */}
+                  <div className="flex items-start space-x-6 p-8">
+                    {/* Book Cover - Vertical */}
+                    <div className="relative flex-shrink-0">
+                      <div className="w-32 h-48 rounded-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-300">
+                        <img 
+                          src={book.cover}
+                          alt={`${book.title} - ${book.subtitle}`}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                      
+                      {/* Year Badge */}
+                      <div className="absolute -top-2 -right-2 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 shadow-lg border border-gray-100">
+                        <div className="flex items-center space-x-1">
+                          <div className="w-1.5 h-1.5 bg-pastel-pink rounded-full"></div>
+                          <span className="text-xs font-semibold text-gray-800">{book.year}</span>
+                        </div>
+                      </div>
                     </div>
                     
-                    <div className="flex-1">
-                      <h3 className="font-display text-xl font-semibold text-gray-800 mb-1">
-                        {book.title}
-                      </h3>
-                      <p className="text-pastel-pink font-medium mb-3">
-                        {book.subtitle}
-                      </p>
-                      <p className="text-gray-600 text-sm mb-4">
+                    {/* Content */}
+                    <div className="flex-1 min-w-0">
+                      {/* Title & Subtitle */}
+                      <div className="mb-4">
+                        <h3 className="font-display text-2xl font-bold text-gray-800 mb-2 group-hover:text-pastel-pink transition-colors duration-200">
+                          {book.title}
+                        </h3>
+                        <p className="text-lg text-pastel-pink font-semibold mb-2">
+                          {book.subtitle}
+                        </p>
+                        <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-pastel-pink/20 to-pastel-green/20 rounded-full">
+                          <span className="text-xs font-medium text-gray-700">{book.publisher}</span>
+                        </div>
+                      </div>
+                      
+                      {/* Description */}
+                      <p className="text-gray-600 leading-relaxed mb-4">
                         {book.description}
                       </p>
                       
-                      <div className="flex flex-wrap gap-2">
+                      {/* Key Takeaways */}
+                      <div className="mb-6">
+                        <h4 className="font-display text-sm font-semibold text-gray-800 mb-3 uppercase tracking-wide">
+                          Key Highlights
+                        </h4>
+                        <div className="grid grid-cols-1 gap-2">
+                          {book.keyTakeaways.slice(0, 3).map((takeaway, idx) => (
+                            <div key={idx} className="flex items-center space-x-2">
+                              <div className="w-1.5 h-1.5 bg-pastel-pink rounded-full flex-shrink-0"></div>
+                              <span className="text-sm text-gray-600">{takeaway}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      {/* Buy Links */}
+                      <div className="flex flex-wrap gap-3 mb-4">
                         {book.buyLinks.map((link, linkIndex) => (
                           <a
                             key={linkIndex}
                             href={link.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center space-x-1 px-3 py-1 bg-pastel-green/20 text-gray-700 text-sm rounded-full hover:bg-pastel-green/30 transition-colors"
+                            className="group/link inline-flex items-center space-x-2 px-4 py-2 bg-gray-100 text-gray-700 font-medium rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-200 text-sm border border-gray-200"
                           >
                             <span>{link.label}</span>
-                            <ExternalLink className="w-3 h-3" />
+                                                          <ExternalLink className="w-3 h-3 group-hover/link:translate-x-1 transition-transform duration-200" />
                           </a>
                         ))}
                       </div>
+                      
+                      {/* Endorsements */}
+                      {book.endorsements.length > 0 && (
+                        <div className="bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 rounded-xl p-4">
+                          <p className="text-sm text-gray-700 font-medium italic">
+                            "{book.endorsements[0].split(' - ')[0]}"
+                          </p>
+                          <p className="text-xs text-gray-500 mt-1">
+                            — {book.endorsements[0].split(' - ')[1]}
+                          </p>
+                        </div>
+                      )}
                     </div>
                   </div>
+                  
+
                 </div>
               </motion.div>
             ))}
           </div>
+          
+          {/* Bottom CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="text-center mt-16"
+          >
+            <div className="bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 rounded-2xl p-8 border border-pastel-pink/20">
+              <h3 className="font-display text-2xl font-semibold text-gray-800 mb-4">
+                Transform Your Skincare Knowledge
+              </h3>
+              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                Join thousands of readers who have discovered the secrets to beautiful, healthy skin through Dr. Jaishree's expert guidance.
+              </p>
+                              <Link
+                  href="/contact"
+                  className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-500 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-200"
+                >
+                <span>Get Personalized Advice</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -318,10 +436,21 @@ export default function BooksPage() {
               Coming Soon
             </h2>
             
-            <div className="bg-gradient-to-r from-pastel-green/20 to-pastel-pink/20 rounded-2xl p-8">
-              <div className="w-24 h-32 bg-white/50 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <BookOpen className="w-12 h-12 text-pastel-pink" />
+            <div className="bg-gradient-to-r from-pastel-green/20 to-pastel-pink/20 rounded-2xl p-8 relative overflow-hidden">
+              {/* Blurred Background Image */}
+              <div className="absolute inset-0">
+                <img 
+                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop&crop=center"
+                  alt="Coming Soon Background"
+                  className="w-full h-full object-cover blur-xl opacity-20"
+                />
               </div>
+              
+              {/* Content Overlay */}
+              <div className="relative z-10">
+                <div className="w-24 h-32 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <BookOpen className="w-12 h-12 text-pastel-pink" />
+                </div>
               
               <h3 className="font-display text-2xl font-semibold text-gray-800 mb-2">
                 {upcomingBook.title}
@@ -335,6 +464,7 @@ export default function BooksPage() {
               <p className="text-sm text-gray-500">
                 Expected: {upcomingBook.expectedDate}
               </p>
+              </div>
             </div>
           </motion.div>
         </div>

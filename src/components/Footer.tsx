@@ -41,30 +41,56 @@ export default function Footer() {
                 <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-gray-700 font-medium">Skinfinitii Aesthetic Skin & Laser Clinic</p>
-                  <p className="text-xs text-gray-500">Flat 101, 1st Floor, A Wing, Nandadeep, Opp. Shopper's Stop, Linking Road, Bandra West, Mumbai – 400050</p>
+                  <p className="text-xs text-gray-500">601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-sm text-gray-700 font-medium">Vashi Branch</p>
+                  <p className="text-xs text-gray-500">G-62, Satra Plaza, Palm Beach Road, Sector 19D, Vashi, Navi Mumbai 400 703</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-pastel-pink flex-shrink-0" />
-                <a href="tel:+91222655XXXX" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
-                  +91 22 2655 XXXX
+                <div>
+                  <a href="tel:+912241819000" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors block">
+                    +91 22 4181 9000
+                  </a>
+                  <a href="tel:+912242832000" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors block">
+                    +91 22 4283 2000
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-pastel-pink flex-shrink-0" />
+                <a href="tel:+919769691952" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
+                  Helpline: +91 97 6969 1952
                 </a>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-pastel-pink flex-shrink-0" />
                 <a href="mailto:info@jaishreesharad.com" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
-                  info@jaishreesharad.com
+                  doctorjaishree@gmail.com
                 </a>
               </div>
               
-              <div className="flex items-start space-x-3">
-                <Clock className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="text-sm text-gray-700">Mon - Sat: 9:00 AM - 7:00 PM</p>
-                  <p className="text-xs text-gray-500">Sunday: By appointment only</p>
-                </div>
+              <div className="flex items-center space-x-3">
+                <Instagram className="w-5 h-5 text-pastel-pink flex-shrink-0" />
+                <a href="https://instagram.com/drjaishreesharad" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
+                  @drjaishreesharad
+                </a>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <MapPin className="w-5 h-5 text-pastel-pink flex-shrink-0" />
+                <a href="https://www.jaishreesharad.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
+                  www.jaishreesharad.com
+                </a>
               </div>
             </div>
           </div>
