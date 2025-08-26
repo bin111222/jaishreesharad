@@ -408,7 +408,7 @@ export default function PigmentationPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gradient-to-r from-pastel-green to-pastel-pink">
+      <section className="py-16 bg-gradient-to-r from-pastel-green/10 to-pastel-pink/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

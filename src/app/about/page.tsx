@@ -172,7 +172,7 @@ export default function AboutPage() {
                 className="aspect-square rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%202.webp" 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/8.webp" 
                   alt="Dr. Jaishree Sharad - Clinic Interior" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />

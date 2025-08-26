@@ -61,12 +61,12 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-lg border-b border-gray-200/50")}>
+    <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-150 bg-white shadow-lg border-b border-gray-200/50")}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group">
-            <div className="w-24 h-16 sm:w-30 sm:h-20 lg:w-36 lg:h-24 flex items-center justify-center transition-shadow duration-300">
+            <div className="w-24 h-16 sm:w-30 sm:h-20 lg:w-36 lg:h-24 flex items-center justify-center transition-shadow duration-150">
               <img 
                 src="/Translogo.png" 
                 alt="Skinfinitii - Aesthetic Skin & Laser Clinic" 
@@ -84,7 +84,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-sm shadow-md"
+              className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-150 text-sm shadow-md"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Book Consultation</span>
@@ -108,7 +108,7 @@ export default function Header() {
             initial={{ opacity: 0, x: -300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -300 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
             className="lg:hidden fixed inset-0 z-[9999] bg-black/50"
           >
             <div className="absolute left-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-[10000]">
@@ -117,14 +117,14 @@ export default function Header() {
                 <div className="flex items-center space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-full flex items-center justify-center">
                     <img 
-                      src="/Translogo.png" 
+                      src="/favicon.ico" 
                       alt="Skinfinitii" 
                       className="w-10 h-10 object-contain"
                     />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800 text-lg">Skinfinitii</h3>
-                    <p className="text-gray-500 text-sm">Aesthetic Clinic</p>
+                    <p className="text-gray-500 text-sm">Aesthetic skin and laser Clinic</p>
                   </div>
                 </div>
               </div>
@@ -240,7 +240,7 @@ export default function Header() {
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.2 }}
+                              transition={{ duration: 0.1 }}
                               className="pl-12 space-y-1"
                             >
                                                              {[
@@ -288,7 +288,7 @@ export default function Header() {
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.2 }}
+                              transition={{ duration: 0.1 }}
                               className="pl-12 space-y-1"
                             >
                                                              {[
@@ -335,7 +335,7 @@ export default function Header() {
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.2 }}
+                              transition={{ duration: 0.1 }}
                               className="pl-12 space-y-1"
                             >
                                                              {[
@@ -380,7 +380,7 @@ export default function Header() {
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: "auto" }}
                               exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.2 }}
+                              transition={{ duration: 0.1 }}
                               className="pl-12 space-y-1"
                             >
                                                              {[
@@ -422,7 +422,7 @@ export default function Header() {
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="inline-flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-300 text-sm w-full shadow-md"
+                  className="inline-flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-150 text-sm w-full shadow-md"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Book Consultation</span>

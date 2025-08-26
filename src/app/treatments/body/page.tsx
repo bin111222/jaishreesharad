@@ -112,13 +112,13 @@ export default function BodyTreatmentsPage() {
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.1 }}
               className="space-y-6"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
+                transition={{ delay: 0.1, duration: 0.15 }}
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-pastel-pink/10 text-pastel-pink rounded-full text-sm font-medium"
               >
                 <Dumbbell className="w-4 h-4" />
@@ -128,7 +128,7 @@ export default function BodyTreatmentsPage() {
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
+                transition={{ delay: 0.15, duration: 0.1 }}
                 className="font-display text-4xl md:text-6xl font-bold text-gray-800 leading-tight"
               >
                 Body
@@ -140,7 +140,7 @@ export default function BodyTreatmentsPage() {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
+                transition={{ delay: 0.2, duration: 0.15 }}
                 className="text-xl text-gray-600 leading-relaxed"
               >
                 Transform your body with advanced non-surgical treatments. 
@@ -151,7 +151,7 @@ export default function BodyTreatmentsPage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.6 }}
+                transition={{ delay: 0.25, duration: 0.15 }}
                 className="flex flex-wrap gap-4"
               >
                 <div className="flex items-center space-x-2 text-gray-600">
@@ -171,19 +171,19 @@ export default function BodyTreatmentsPage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
+                transition={{ delay: 0.3, duration: 0.15 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  className="group inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-150 hover:scale-105"
                 >
                   <Calendar className="w-5 h-5 group-hover:scale-110 transition-transform" />
                   <span>Book Consultation</span>
                 </Link>
                 <Link
                   href="#treatments"
-                  className="group inline-flex items-center space-x-2 px-8 py-4 border-2 border-pastel-pink text-pastel-pink font-semibold rounded-full hover:bg-pastel-pink hover:text-white transition-all duration-300"
+                  className="group inline-flex items-center space-x-2 px-8 py-4 border-2 border-pastel-pink text-pastel-pink font-semibold rounded-full hover:bg-pastel-pink hover:text-white transition-all duration-150"
                 >
                   <span>Explore Treatments</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -194,7 +194,7 @@ export default function BodyTreatmentsPage() {
             <motion.div
               initial={{ opacity: 0, x: 50, scale: 0.8 }}
               animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
+              transition={{ delay: 0.2, duration: 0.1 }}
               className="relative"
             >
               <div className="relative bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-3xl p-8 aspect-square">
@@ -227,7 +227,7 @@ export default function BodyTreatmentsPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.1 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {[
@@ -240,12 +240,12 @@ export default function BodyTreatmentsPage() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
+                transition={{ delay: index * 0.05, duration: 0.15 }}
                 className="text-center group"
               >
                 <motion.div
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  className={`w-16 h-16 ${item.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-300`}
+                  className={`w-16 h-16 ${item.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-all duration-150`}
                 >
                   <item.icon className="w-8 h-8 text-white" />
                 </motion.div>
@@ -263,7 +263,7 @@ export default function BodyTreatmentsPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.1 }}
             className="space-y-12"
           >
             <div className="text-center">
@@ -281,14 +281,14 @@ export default function BodyTreatmentsPage() {
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2, duration: 0.6 }}
+                  transition={{ delay: index * 0.1, duration: 0.15 }}
                   whileHover={{ y: -10 }}
                   className={`relative cursor-pointer group ${
                     selectedTreatment === index ? 'ring-2 ring-pastel-pink' : ''
                   }`}
                   onClick={() => setSelectedTreatment(index)}
                 >
-                  <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-150">
                     <motion.div
                       whileHover={{ scale: 1.1 }}
                       className={`w-16 h-16 bg-gradient-to-r ${treatment.color} rounded-full flex items-center justify-center mx-auto mb-6`}
@@ -341,7 +341,7 @@ export default function BodyTreatmentsPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.1 }}
             className="space-y-8"
           >
             <div className="text-center">
@@ -359,7 +359,7 @@ export default function BodyTreatmentsPage() {
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
+                  transition={{ delay: index * 0.05, duration: 0.15 }}
                   className="flex items-start space-x-4 group"
                 >
                   <motion.div
@@ -382,7 +382,7 @@ export default function BodyTreatmentsPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.1 }}
             className="space-y-8"
           >
             <div className="text-center">
@@ -400,7 +400,7 @@ export default function BodyTreatmentsPage() {
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
+                  transition={{ delay: index * 0.05, duration: 0.15 }}
                   className="flex items-start space-x-4 group"
                 >
                   <motion.div
@@ -421,7 +421,7 @@ export default function BodyTreatmentsPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.1 }}
             className="space-y-8"
           >
             <div className="text-center">
@@ -439,7 +439,7 @@ export default function BodyTreatmentsPage() {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
+                  transition={{ delay: index * 0.05, duration: 0.15 }}
                   className="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
                 >
                   <button
@@ -449,7 +449,7 @@ export default function BodyTreatmentsPage() {
                     <span className="font-semibold text-gray-800">{faq.question}</span>
                     <motion.div
                       animate={{ rotate: openFaq === index ? 90 : 0 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.15 }}
                     >
                       <ArrowRight className="w-5 h-5 text-pastel-pink" />
                     </motion.div>
@@ -457,7 +457,7 @@ export default function BodyTreatmentsPage() {
                   <motion.div
                     initial={false}
                     animate={{ height: openFaq === index ? "auto" : 0, opacity: openFaq === index ? 1 : 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.15 }}
                     className="overflow-hidden"
                   >
                     <div className="px-6 pb-4">
@@ -493,7 +493,7 @@ export default function BodyTreatmentsPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.1 }}
             className="space-y-8"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800">
@@ -508,7 +508,7 @@ export default function BodyTreatmentsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="group inline-flex items-center space-x-2 px-8 py-4 bg-white text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
+                className="group inline-flex items-center space-x-2 px-8 py-4 bg-white text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-150 hover:scale-105"
               >
                 <Calendar className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 <span>Book Consultation</span>
@@ -516,7 +516,7 @@ export default function BodyTreatmentsPage() {
               
               <Link
                 href="/treatments"
-                className="group inline-flex items-center space-x-2 px-8 py-4 border-2 border-pastel-pink text-pastel-pink font-semibold rounded-full hover:bg-pastel-pink hover:text-white transition-all duration-300"
+                className="group inline-flex items-center space-x-2 px-8 py-4 border-2 border-pastel-pink text-pastel-pink font-semibold rounded-full hover:bg-pastel-pink hover:text-white transition-all duration-150"
               >
                 <span>View All Treatments</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

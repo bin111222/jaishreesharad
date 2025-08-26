@@ -7,8 +7,7 @@ const quickLinks = [
   { name: "Dermal Fillers", href: "/treatments/fillers" },
   { name: "Liquid Facelift", href: "/treatments/liquid-facelift" },
   { name: "Skin Treatments", href: "/treatments/skin" },
-  { name: "FAQs", href: "/faqs" },
-  { name: "Privacy Policy", href: "/privacy-policy" },
+ 
 ];
 
 const socialLinks = [

@@ -259,7 +259,7 @@ const heroSlideshow = [
   },
   {
     id: 2,
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%202.webp",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/8.webp",
     testimonial: "She's the only person I trust with my skin. Her attention to detail and results are unmatched.",
     author: "Shamita Shetty",
     rating: "4.9"

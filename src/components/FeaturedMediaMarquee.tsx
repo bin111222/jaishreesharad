@@ -70,7 +70,7 @@ export function FeaturedMediaMarquee() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.1 }}
           className="text-center mb-12"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -87,10 +87,10 @@ export function FeaturedMediaMarquee() {
               key={media.id}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.15, delay: index * 0.05 }}
               className="flex-shrink-0 mx-4 group"
             >
-              <div className="w-64 h-48 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="w-64 h-48 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-150 hover:scale-105">
                 <div className="relative h-32 bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 bg-white/80 rounded-full flex items-center justify-center">
@@ -122,7 +122,7 @@ export function FeaturedMediaMarquee() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.1, delay: 0.25 }}
           >
             <p className="text-gray-600 mb-4">
               Dr. Jaishree has been featured in over 100+ media outlets

@@ -374,7 +374,7 @@ export default function TreatmentsPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
             className="text-center space-y-6"
           >
             <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-800">
@@ -425,7 +425,7 @@ export default function TreatmentsPage() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.2, ease: "easeOut" }}
+                transition={{ duration: 0.1, ease: "easeOut" }}
                 className="grid grid-cols-1 md:grid-cols-4 gap-4 pt-4 border-t border-gray-200"
               >
                 <div>
@@ -504,7 +504,7 @@ export default function TreatmentsPage() {
                   key={treatment.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.25, delay: index * 0.05 }}
+                  transition={{ duration: 0.15, delay: index * 0.05 }}
                   className="group"
                 >
                   <Link href={treatment.href}>
@@ -581,7 +581,7 @@ export default function TreatmentsPage() {
                   key={treatment.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.25, delay: index * 0.03 }}
+                  transition={{ duration: 0.15, delay: index * 0.03 }}
                   className="group"
                 >
                   <Link href={treatment.href}>
@@ -684,7 +684,7 @@ export default function TreatmentsPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
             className="space-y-8"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800">

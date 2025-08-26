@@ -200,7 +200,7 @@ export const CircularTestimonials = ({
               initial="initial"
               animate="animate"
               exit="exit"
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              transition={{ duration: 0.15, ease: "easeInOut" }}
             >
               <h3
                 className="name"
@@ -232,7 +232,7 @@ export const CircularTestimonials = ({
                       y: 0,
                     }}
                     transition={{
-                      duration: 0.22,
+                      duration: 0.12,
                       ease: "easeInOut",
                       delay: 0.025 * i,
                     }}
