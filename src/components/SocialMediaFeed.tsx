@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Instagram, Heart, MessageCircle, ExternalLink, Calendar } from "lucide-react";
+import { Instagram, Heart, MessageCircle, ExternalLink, Calendar, Play } from "lucide-react";
 import { useState, useEffect } from "react";
 
 interface InstagramPost {
@@ -212,6 +212,22 @@ export default function SocialMediaFeed({ maxPosts = 3, showHeader = true }: Soc
                   </div>
                 </div>
                 
+                {/* Video Play Button */}
+                {post.media_type === 'VIDEO' && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-pastel-pink group-hover:scale-110 transition-all duration-300">
+                      <Play className="w-8 h-8 text-gray-800 group-hover:text-white ml-1" />
+                    </div>
+                  </div>
+                )}
+                
+                {/* Video Badge */}
+                {post.media_type === 'VIDEO' && (
+                  <div className="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-xs font-medium">
+                    VIDEO
+                  </div>
+                )}
+                
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <a
@@ -221,7 +237,7 @@ export default function SocialMediaFeed({ maxPosts = 3, showHeader = true }: Soc
                     className="inline-flex items-center space-x-2 px-4 py-2 bg-white text-gray-800 rounded-full hover:bg-gray-100 transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
-                    <span>View Post</span>
+                    <span>{post.media_type === 'VIDEO' ? 'Watch Video' : 'View Post'}</span>
                   </a>
                 </div>
               </div>

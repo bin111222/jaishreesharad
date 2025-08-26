@@ -90,7 +90,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <link rel="icon" href="/Translogo.png" type="image/png" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/Users/varilshah/Desktop/Clients x 1942/Jaishree Sharad/jaishreesharad/website/public/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />

@@ -879,12 +879,7 @@ export default function HomePage() {
             </div>
             
             {/* Additional CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="text-center pt-8"
-            >
+            <div className="text-center pt-8">
               <div className="bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 rounded-2xl p-8">
                 <h3 className="font-display text-2xl font-bold text-gray-800 mb-4">
                   Ready to Experience the Difference?
@@ -892,55 +887,28 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
                   Join thousands of satisfied patients who have transformed their skin and confidence with Dr. Jaishree's expertise
                 </p>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-500 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
-                >
-                  <span>Book Your Consultation</span>
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-500 text-white font-semibold rounded-full hover:shadow-lg hover:scale-102 transition-all duration-150 text-lg"
+                  >
+                    <span>Book Your Consultation</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                  <Link
+                    href="/quiz"
+                    className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-pastel-pink text-pastel-pink font-semibold rounded-full hover:bg-pastel-pink hover:text-white transition-all duration-150 text-lg"
+                  >
+                    <span>Take Skin Quiz</span>
+                  </Link>
+                </div>
               </div>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pastel-green/30 to-pastel-pink/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8"
-          >
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800">
-              Ready to Transform Your Skin?
-            </h2>
-            
-            <p className="text-xl text-gray-600">
-              Book your consultation with Dr. Jaishree and start your journey to beautiful, healthy skin.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-200 hover:scale-105"
-              >
-                <span>Book Appointment</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              
-              <Link
-                href="/quiz"
-                className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-pastel-pink text-pastel-pink font-semibold rounded-full hover:bg-pastel-pink hover:text-white transition-all duration-200"
-              >
-                <span>Take Skin Quiz</span>
-              </Link>
-            </div>
-          </motion.div>
-    </div>
-      </section>
+
     </Layout>
   );
 }

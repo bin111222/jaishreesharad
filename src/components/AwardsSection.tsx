@@ -70,8 +70,8 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2
+      staggerChildren: 0.05,
+      delayChildren: 0.1
     }
   }
 };
@@ -79,15 +79,13 @@ const containerVariants = {
 const cardVariants = {
   hidden: { 
     opacity: 0, 
-    y: 30,
-    scale: 0.95
+    y: 20
   },
   visible: { 
     opacity: 1, 
     y: 0,
-    scale: 1,
     transition: {
-      duration: 0.6
+      duration: 0.4
     }
   }
 };
@@ -104,9 +102,9 @@ export default function AwardsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-pastel-pink/20 to-pastel-green/20 px-4 py-2 rounded-full mb-6">
@@ -127,9 +125,9 @@ export default function AwardsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Left Column - Full Image of Dr. Jaishree */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             className="lg:col-span-1"
           >
             <div className="relative group">
@@ -181,13 +179,12 @@ export default function AwardsSection() {
                   key={award.id}
                   variants={cardVariants}
                   whileHover={{ 
-                    y: -8, 
-                    scale: 1.02,
-                    transition: { duration: 0.3 }
+                    y: -4, 
+                    transition: { duration: 0.2 }
                   }}
                   className="group relative"
                 >
-                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 relative overflow-hidden">
+                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-200 border border-gray-100 relative overflow-hidden">
                     {/* Background gradient */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${award.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
                     
@@ -195,11 +192,11 @@ export default function AwardsSection() {
                     <div className="relative z-10">
                       <div className="flex items-start space-x-4">
                         {/* Image Placeholder */}
-                        <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 shadow-lg group-hover:shadow-xl transition-all duration-300">
+                        <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 shadow-lg group-hover:shadow-xl transition-all duration-200">
                           <img 
                             src={award.imagePlaceholder}
                             alt={`${award.title} - ${award.organization}`}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
                           />
                         </div>
                         
@@ -229,7 +226,7 @@ export default function AwardsSection() {
                             </span>
                             
                             {/* Hover effect indicator */}
-                            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                               <div className="w-2 h-2 bg-gradient-to-r from-pastel-pink to-pastel-green rounded-full"></div>
                             </div>
                           </div>
@@ -248,9 +245,9 @@ export default function AwardsSection() {
 
         {/* Bottom CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 rounded-2xl p-8 border border-pastel-pink/20">
@@ -263,14 +260,14 @@ export default function AwardsSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
-                className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-pink to-pink-400 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-200 hover:scale-105"
+                className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-pink to-pink-400 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-150 hover:scale-102"
               >
                 <span>Book Consultation</span>
                 <Award className="w-4 h-4" />
               </Link>
               <Link 
                 href="/about"
-                className="inline-flex items-center space-x-2 px-6 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-full hover:border-pastel-pink hover:text-pastel-pink transition-all duration-200 hover:scale-105"
+                className="inline-flex items-center space-x-2 px-6 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-full hover:border-pastel-pink hover:text-pastel-pink transition-all duration-150 hover:scale-102"
               >
                 <span>View All Awards</span>
                 <Star className="w-4 h-4" />

@@ -78,31 +78,31 @@ export async function GET() {
 function getMockPosts(): InstagramPost[] {
   return [
     {
-      id: "1",
-      media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/1.webp",
-      permalink: "https://www.instagram.com/p/example1/",
-      caption: "Transform your skin with our advanced treatments. Book your consultation today! ✨ #Dermatology #SkinCare #DrJaishreeSharad",
-      media_type: "IMAGE",
+      id: "DNvw2XcWOEc",
+      media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/instagram/video1-thumbnail.jpg",
+      permalink: "https://www.instagram.com/p/DNvw2XcWOEc/",
+      caption: "Transform your skin with our advanced treatments. Book your consultation today! ✨ #Dermatology #SkinCare #DrJaishreeSharad #Skinfinitii",
+      media_type: "VIDEO",
       timestamp: "2024-01-15T10:30:00Z",
       like_count: 1247,
       comments_count: 89
     },
     {
-      id: "2",
-      media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/fillers/1.webp",
-      permalink: "https://www.instagram.com/p/example2/",
-      caption: "Natural beauty starts with healthy skin. Our PRP therapy stimulates your body's own healing factors. 🌟 #PRPTherapy #NaturalHealing",
-      media_type: "IMAGE",
+      id: "DNij3YhN_t1",
+      media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/instagram/video2-thumbnail.jpg",
+      permalink: "https://www.instagram.com/p/DNij3YhN_t1/",
+      caption: "Natural beauty starts with healthy skin. Our PRP therapy stimulates your body's own healing factors. 🌟 #PRPTherapy #NaturalHealing #DrJaishreeSharad",
+      media_type: "VIDEO",
       timestamp: "2024-01-14T15:45:00Z",
       like_count: 892,
       comments_count: 67
     },
     {
-      id: "3",
-      media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/threadlifts/1.webp",
-      permalink: "https://www.instagram.com/p/example3/",
-      caption: "Laser treatments for precise skin rejuvenation. Advanced technology for optimal results. 🔬 #LaserTreatment #SkinRejuvenation",
-      media_type: "IMAGE",
+      id: "DNMyB0PR65f",
+      media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/instagram/video3-thumbnail.jpg",
+      permalink: "https://www.instagram.com/p/DNMyB0PR65f/",
+      caption: "Laser treatments for precise skin rejuvenation. Advanced technology for optimal results. 🔬 #LaserTreatment #SkinRejuvenation #DrJaishreeSharad",
+      media_type: "VIDEO",
       timestamp: "2024-01-13T12:20:00Z",
       like_count: 1567,
       comments_count: 123
