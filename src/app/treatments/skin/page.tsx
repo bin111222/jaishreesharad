@@ -206,7 +206,7 @@ export default function SkinTreatmentsPage() {
                 />
                 <div className="relative z-10 flex items-center justify-center h-full">
                   <img 
-                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/skintreatments/1.webp"
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/skintreatments/skintreatments.webp"
                     alt="Skin Treatments - Dr. Jaishree Sharad"
                     className="w-full h-full object-cover rounded-2xl"
                   />

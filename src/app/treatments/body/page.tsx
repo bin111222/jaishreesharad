@@ -210,7 +210,7 @@ export default function BodyTreatmentsPage() {
                 />
                 <div className="relative z-10 flex items-center justify-center h-full">
                   <img 
-                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/bodytreatments/1.webp"
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/bodytreatments/bodytreatments.webp"
                     alt="Body Treatments - Dr. Jaishree Sharad"
                     className="w-full h-full object-cover rounded-2xl"
                   />

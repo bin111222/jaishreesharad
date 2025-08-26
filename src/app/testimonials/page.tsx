@@ -3,55 +3,45 @@
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { Star, Quote, Users, Award, Heart } from "lucide-react";
+import { TestimonialsColumn, testimonials } from "@/components/ui/testimonials-columns-1";
+import { CircularTestimonials } from "@/components/ui/circular-testimonials";
 
-const celebrityTestimonials = [
+const celebrityTestimonialsData = [
   {
-    id: 1,
     quote: "She will do only what is necessary and knows when to stop… I feel completely safe in her hands. I have very sensitive skin, so I do not like doing too much to it, but her mesotherapy treatment once a month is a must for me.",
     name: "Shamita Shetty",
-    treatment: "Celebrity Client",
-    rating: 5,
-    category: "celebrity"
+    designation: "Bollywood Actress",
+    src: "https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    id: 2,
     quote: "Dr. Jaishree is my skin savior. Before every shoot, I consult her on the best possible skin routine to follow depending on the weather conditions I am shooting in. I have sensitive skin and it reacts a lot to changes in weather and diet. Thanks to her, my skincare routine has become really easy!",
     name: "Huma Qureshi",
-    treatment: "Celebrity Client",
-    rating: 5,
-    category: "celebrity"
+    designation: "Bollywood Actress",
+    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
   },
   {
-    id: 3,
     quote: "I am an old man but I look more presentable and younger than I did twenty years ago! The complete credit goes to none other than my darling Dr. Jaishree Sharad! She believes in care and cure and not commercial viability, and that makes her one in a million.",
     name: "Annu Kapoor",
-    treatment: "Celebrity Client",
-    rating: 5,
-    category: "celebrity"
+    designation: "Bollywood Actor",
+    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
   },
   {
-    id: 4,
     quote: "I've been visiting Dr. J's clinic for several years now… and there's no one else I trust with my skin. She doesn't believe in extreme and radical treatments. She is so quick and accurate with her diagnosis. I have sensitive skin and face various issues. I make it a point to see her twice a month.",
     name: "Harshvardhan Kapoor",
-    treatment: "Celebrity Client",
-    rating: 5,
-    category: "celebrity"
+    designation: "Bollywood Actor",
+    src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
   },
   {
-    id: 5,
     quote: "I have always taken my skin for granted and treated it like an outward part of my body. Jaishree taught me the importance of loving my skin and nourishing it — that less is always more. She is my go-to person in times of panic because she can cure with immediate effect and calm my nerves too.",
     name: "Athiya Shetty",
-    treatment: "Celebrity Client",
-    rating: 5,
-    category: "celebrity"
+    designation: "Bollywood Actress",
+    src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
   },
   {
-    id: 6,
     quote: "I've been Dr. J's patient since 2015. I used to suffer from pimples and dull skin. Today my skin glows and is pimple-free thanks to Jaishree and her easy procedures. The peels she has done on my skin have worked wonders. More importantly, the stem cell PRP hair treatment has really helped me battle my hair loss issues.",
     name: "Amyra Dastur",
-    treatment: "Celebrity Client",
-    rating: 5,
-    category: "celebrity"
+    designation: "Bollywood Actress",
+    src: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
   }
 ];
 
@@ -139,24 +129,22 @@ const patientTestimonials = [
 ];
 
 const stats = [
-  { number: "5.0", label: "Average Rating", icon: Star },
-  { number: "10,000+", label: "Happy Patients", icon: Users },
-  { number: "20+", label: "Years Experience", icon: Award },
-  { number: "99%", label: "Satisfaction Rate", icon: Heart }
+  { number: "4.99", label: "Average Rating", icon: Star },
+  { number: "20,000+", label: "Happy Patients", icon: Users },
+  { number: "26+", label: "Years Experience", icon: Award },
+  { number: "99%", label: "Happiness Rate", icon: Heart }
 ];
 
 export default function TestimonialsPage() {
-  const allTestimonials = [...celebrityTestimonials, ...patientTestimonials];
-
   return (
     <Layout>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-pastel-green/20 via-white to-pastel-pink/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="text-center space-y-6"
           >
             <h1 className="font-display text-4xl md:text-6xl font-bold text-gray-800">
@@ -175,81 +163,105 @@ export default function TestimonialsPage() {
             
             {/* Celebrity Gallery */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className="mt-12"
             >
               <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-                {/* Celebrity 1 */}
-                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-10 h-10 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
-                        <span className="text-white text-xs font-bold">SS</span>
-                      </div>
-                      <span className="text-gray-500 text-xs font-medium">Shamita</span>
-                    </div>
+                {/* Amitabh */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden group relative grayscale group-hover:grayscale-0 transition-all duration-300">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/actors/amitabh.png?updatedAt=1756230224403"
+                    alt="Amitabh"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-300"></div>
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <span className="text-white text-xs font-medium drop-shadow-lg">Amitabh</span>
                   </div>
                 </div>
                 
-                {/* Celebrity 2 */}
-                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-10 h-10 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                        <span className="text-white text-xs font-bold">HQ</span>
-                      </div>
-                      <span className="text-gray-500 text-xs font-medium">Huma</span>
-                    </div>
+                {/* Karan */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden group relative grayscale group-hover:grayscale-0 transition-all duration-300">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/actors/karan.webp?updatedAt=1756230224403"
+                    alt="Karan"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-300"></div>
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <span className="text-white text-xs font-medium drop-shadow-lg">Karan</span>
                   </div>
                 </div>
                 
-                {/* Celebrity 3 */}
-                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-10 h-10 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
-                        <span className="text-white text-xs font-bold">AK</span>
-                      </div>
-                      <span className="text-gray-500 text-xs font-medium">Annu</span>
-                    </div>
+                {/* Ranbir */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden group relative grayscale group-hover:grayscale-0 transition-all duration-300">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/actors/ranbir.webp?updatedAt=1756230224403"
+                    alt="Ranbir"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-300"></div>
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <span className="text-white text-xs font-medium drop-shadow-lg">Ranbir</span>
                   </div>
                 </div>
                 
-                {/* Celebrity 4 */}
-                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-10 h-10 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                        <span className="text-white text-xs font-bold">HK</span>
-                      </div>
-                      <span className="text-gray-500 text-xs font-medium">Harsh</span>
-                    </div>
+                {/* Salman */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden group relative grayscale group-hover:grayscale-0 transition-all duration-300">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/actors/salman.webp?updatedAt=1756230224403"
+                    alt="Salman"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-300"></div>
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <span className="text-white text-xs font-medium drop-shadow-lg">Salman</span>
                   </div>
                 </div>
                 
-                {/* Celebrity 5 */}
-                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-10 h-10 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
-                        <span className="text-white text-xs font-bold">AS</span>
-                      </div>
-                      <span className="text-gray-500 text-xs font-medium">Athiya</span>
-                    </div>
+                {/* Sonam */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden group relative grayscale group-hover:grayscale-0 transition-all duration-300">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/actors/sonam.webp?updatedAt=1756230224403"
+                    alt="Sonam"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-300"></div>
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <span className="text-white text-xs font-medium drop-shadow-lg">Sonam</span>
                   </div>
                 </div>
                 
-                {/* Celebrity 6 */}
-                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-10 h-10 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                        <span className="text-white text-xs font-bold">AD</span>
-                      </div>
-                      <span className="text-gray-500 text-xs font-medium">Amyra</span>
-                    </div>
+                {/* Varun */}
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden group relative grayscale group-hover:grayscale-0 transition-all duration-300">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/actors/varun.webp?updatedAt=1756230224403"
+                    alt="Varun"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-300"></div>
+                  <div className="absolute bottom-2 left-2 right-2">
+                    <span className="text-white text-xs font-medium drop-shadow-lg">Varun</span>
                   </div>
                 </div>
               </div>
@@ -262,17 +274,17 @@ export default function TestimonialsPage() {
       <section className="py-12 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.6 }}
+                transition={{ delay: index * 0.05, duration: 0.3 }}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-pastel-pink to-pastel-green rounded-full flex items-center justify-center mx-auto mb-4">
@@ -290,9 +302,9 @@ export default function TestimonialsPage() {
       <section className="py-16 bg-gradient-to-r from-pastel-green/10 to-pastel-pink/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.3 }}
             className="text-center space-y-8"
           >
             <div>
@@ -304,39 +316,31 @@ export default function TestimonialsPage() {
               </p>
             </div>
             
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="bg-white rounded-3xl p-12 shadow-2xl relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-full -translate-y-16 translate-x-16"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-full translate-y-12 -translate-x-12"></div>
-              
-              <div className="relative z-10 space-y-6">
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="space-y-6">
                 <div className="flex justify-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-pastel-pink to-pastel-green rounded-full flex items-center justify-center">
-                    <Quote className="w-10 h-10 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-pastel-pink to-pastel-green rounded-full flex items-center justify-center">
+                    <Quote className="w-8 h-8 text-white" />
                   </div>
                 </div>
                 
-                <blockquote className="text-2xl md:text-3xl text-gray-800 italic leading-relaxed font-medium">
+                <blockquote className="text-xl md:text-2xl text-gray-800 italic leading-relaxed">
                   "Dr. Jaishree is not just a dermatologist; she's an artist who understands the science of beauty. Her treatments are so natural that people always compliment my skin but can never tell I've had work done. She's the secret behind many red carpet looks in Bollywood."
                 </blockquote>
                 
                 <div className="flex items-center justify-center space-x-2">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 
                 <div>
-                  <div className="font-semibold text-xl text-gray-800">Bollywood Actor</div>
+                  <div className="font-semibold text-lg text-gray-800">Bollywood Actor</div>
                   <div className="text-pastel-pink font-medium">Celebrity Client</div>
-                  <div className="text-sm text-gray-600 mt-2">Trusted Dr. Jaishree for over 5 years</div>
+                  <div className="text-sm text-gray-600 mt-1">Trusted Dr. Jaishree for over 5 years</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -345,9 +349,9 @@ export default function TestimonialsPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="space-y-12"
           >
             <div className="text-center">
@@ -359,48 +363,36 @@ export default function TestimonialsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {celebrityTestimonials.map((testimonial, index) => (
-                <motion.div
-                  key={testimonial.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2, duration: 0.6 }}
-                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-pastel-pink to-pastel-green rounded-full flex items-center justify-center flex-shrink-0">
-                      <Quote className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex-1 space-y-4">
-                      <div className="flex items-center space-x-1">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                        ))}
-                      </div>
-                      <blockquote className="text-gray-700 text-lg italic leading-relaxed">
-                        "{testimonial.quote}"
-                      </blockquote>
-                      <div className="pt-4 border-t border-gray-100">
-                        <div className="font-semibold text-gray-800">{testimonial.name}</div>
-                        <div className="text-sm text-pastel-pink">{testimonial.treatment}</div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="flex justify-center">
+              <CircularTestimonials
+                testimonials={celebrityTestimonialsData}
+                autoplay={true}
+                colors={{
+                  name: "#1f2937",
+                  designation: "#6b7280",
+                  testimony: "#374151",
+                  arrowBackground: "#f472b6",
+                  arrowForeground: "#ffffff",
+                  arrowHoverBackground: "#ec4899",
+                }}
+                fontSizes={{
+                  name: "1.75rem",
+                  designation: "1rem",
+                  quote: "1.125rem",
+                }}
+              />
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Patient Testimonials */}
+      {/* Patient Stories - New Scrolling Testimonials */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="space-y-12"
           >
             <div className="text-center">
@@ -412,31 +404,10 @@ export default function TestimonialsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {patientTestimonials.map((testimonial, index) => (
-                <motion.div
-                  key={testimonial.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.6 }}
-                  className="bg-gray-50 rounded-xl p-6 hover:shadow-md transition-all duration-300"
-                >
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-1">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <blockquote className="text-gray-700 italic leading-relaxed">
-                      "{testimonial.quote}"
-                    </blockquote>
-                    <div className="pt-3 border-t border-gray-200">
-                      <div className="font-semibold text-gray-800">{testimonial.name}</div>
-                      <div className="text-sm text-pastel-pink">{testimonial.treatment}</div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+            <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+              <TestimonialsColumn testimonials={testimonials.slice(0, 3)} duration={15} />
+              <TestimonialsColumn testimonials={testimonials.slice(3, 6)} className="hidden md:block" duration={19} />
+              <TestimonialsColumn testimonials={testimonials.slice(6, 9)} className="hidden lg:block" duration={17} />
             </div>
           </motion.div>
         </div>
@@ -446,9 +417,9 @@ export default function TestimonialsPage() {
       <section className="py-20 bg-gradient-to-r from-pastel-green/30 to-pastel-pink/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="text-center space-y-8"
           >
             <div className="w-20 h-20 bg-gradient-to-br from-pastel-pink to-pastel-green rounded-full flex items-center justify-center mx-auto">
@@ -479,9 +450,9 @@ export default function TestimonialsPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="space-y-8"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800">

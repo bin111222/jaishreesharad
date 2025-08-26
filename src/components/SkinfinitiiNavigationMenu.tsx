@@ -73,14 +73,11 @@ export function SkinfinitiiNavigationMenu() {
             Treatments
           </NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[800px] gap-3 p-6 md:grid-cols-2 lg:w-[900px] lg:grid-cols-4 bg-white">
-              {treatmentCategories.map((category) => (
-                <li key={category.title} className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-pastel-pink/10 to-pastel-green/10 p-6 no-underline outline-none focus:shadow-md hover:from-pastel-pink/20 hover:to-pastel-green/20 transition-all"
-                      href="/treatments"
-                    >
+            <div className="w-[800px] lg:w-[900px] bg-white rounded-lg shadow-lg">
+              <ul className="grid gap-3 p-6 md:grid-cols-2 lg:grid-cols-4">
+                {treatmentCategories.map((category) => (
+                  <li key={category.title} className="row-span-3">
+                    <div className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-pastel-pink/10 to-pastel-green/10 p-6 no-underline outline-none focus:shadow-md hover:from-pastel-pink/20 hover:to-pastel-green/20 transition-all">
                       <div className="mb-2 mt-4 text-lg font-medium text-gray-800">
                         {category.title}
                       </div>
@@ -95,11 +92,19 @@ export function SkinfinitiiNavigationMenu() {
                           </Link>
                         ))}
                       </div>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-              ))}
-            </ul>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <div className="border-t border-gray-100 p-4">
+                <Link
+                  href="/treatments"
+                  className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 hover:text-pastel-pink transition-colors"
+                >
+                  View All Treatments →
+                </Link>
+              </div>
+            </div>
           </NavigationMenuContent>
         </NavigationMenuItem>
 

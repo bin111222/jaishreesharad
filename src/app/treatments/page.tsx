@@ -289,7 +289,7 @@ const allTreatments = [
     duration: "30-60 min",
     downtime: "Varies",
     benefits: ["Targeted treatment", "Improves condition", "Long-term results"],
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/skintreatments/1.webp",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/skintreatments/skintreatments.webp",
     href: "/treatments/skin",
     featured: false
   },
@@ -304,7 +304,7 @@ const allTreatments = [
     duration: "30-90 min",
     downtime: "Minimal",
     benefits: ["Stimulates growth", "Improves scalp health", "Thicker hair"],
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hairtreatments/1.webp",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hairtreatments/hairtreatments.webp",
     href: "/treatments/hair",
     featured: false
   },
@@ -319,7 +319,7 @@ const allTreatments = [
     duration: "45-90 min",
     downtime: "1-3 days",
     benefits: ["Improves texture", "Reduces cellulite", "Tightens skin"],
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/bodytreatments/1.webp",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/bodytreatments/bodytreatments.webp",
     href: "/treatments/body",
     featured: false
   },

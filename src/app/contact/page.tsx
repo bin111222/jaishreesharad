@@ -2,9 +2,8 @@
 
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Clock, MessageCircle, Calendar, ArrowRight } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, MessageCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
 
 const contactMethods = [
   {
@@ -24,24 +23,6 @@ const contactMethods = [
     href: "https://wa.me/919769691952?text=Hi%20Dr.%20Jaishree,%20I%20would%20like%20to%20book%20a%20consultation",
     color: "bg-green-500",
     hoverColor: "hover:bg-green-600"
-  },
-  {
-    title: "Email Us",
-    description: "Send us a detailed message",
-    icon: Mail,
-    action: "Send Email",
-    href: "mailto:doctorjaishree@gmail.com",
-    color: "bg-pastel-pink",
-    hoverColor: "hover:bg-pastel-pink/90"
-  },
-  {
-    title: "Book Online",
-    description: "Schedule your appointment",
-    icon: Calendar,
-    action: "Book Now",
-    href: "/contact",
-    color: "bg-pastel-green",
-    hoverColor: "hover:bg-pastel-green/90"
   }
 ];
 
@@ -52,8 +33,8 @@ const clinicLocations = [
     phone: "+91 22 4181 9000",
     whatsapp: "+91 97 6969 1952",
     email: "doctorjaishree@gmail.com",
-    hours: "Mon-Sat: 9:00 AM - 7:00 PM",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.5!2d72.8347!3d19.0596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8b0b0b0b0b0%3A0x0!2sPrabhat+Chambers%2C+S+V+Road%2C+Khar+West%2C+Mumbai%2C+Maharashtra+400052!5e0!3m2!1sen!2sin!4v1234567890",
+    hours: "Mon-Sat: 10:00 AM - 7:00 PM",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8945230045947!2d72.83458327611825!3d19.068374582134588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9e4b3f237c9%3A0x234264c43c5c5224!2sSkinfinitii!5e0!3m2!1sen!2sin!4v1756227180953!5m2!1sen!2sin",
     coordinates: { lat: 19.0596, lng: 72.8347 },
     description: "Our flagship center with all laser facilities. Easily accessible via S.V. Road, near Khar Railway Station (West). Parking available in the building."
   },
@@ -63,50 +44,25 @@ const clinicLocations = [
     phone: "+91 22 4283 2000",
     whatsapp: "+91 97 6969 1952",
     email: "doctorjaishree@gmail.com",
-    hours: "Mon-Sat: 9:00 AM - 7:00 PM",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.5!2d72.9989!3d19.0759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8b0b0b0b0b0%3A0x0!2sSatra+Plaza%2C+Palm+Beach+Road%2C+Sector+19D%2C+Vashi%2C+Navi+Mumbai%2C+Maharashtra+400703!5e0!3m2!1sen!2sin!4v1234567890",
+    hours: "Mon-Sat: 10:00 AM - 7:00 PM",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.5496657326667!2d73.0038139761185!3d19.083527582122688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c136b2c080cb%3A0x25e3032462aea8b4!2sSkinfinitii!5e0!3m2!1sen!2sin!4v1756227153059!5m2!1sen!2sin",
     coordinates: { lat: 19.0759, lng: 72.9989 },
     description: "Our Navi Mumbai branch offers the same range of services for patients based in Thane/Navi Mumbai. It's in the Satra Plaza mall complex with ample parking."
   }
 ];
 
 const clinicHours = [
-  { day: "Monday", hours: "9:00 AM - 7:00 PM" },
-  { day: "Tuesday", hours: "9:00 AM - 7:00 PM" },
-  { day: "Wednesday", hours: "9:00 AM - 7:00 PM" },
-  { day: "Thursday", hours: "9:00 AM - 7:00 PM" },
-  { day: "Friday", hours: "9:00 AM - 7:00 PM" },
-  { day: "Saturday", hours: "9:00 AM - 7:00 PM" },
-  { day: "Sunday", hours: "Closed (Dr. Jaishree strongly believes Sunday is family time!)" }
+  { day: "Monday - Saturday", hours: "10:00 AM - 7:00 PM" },
+  { day: "Sunday", hours: "Closed" }
 ];
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    treatment: "",
-    message: ""
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
 
   return (
     <Layout>
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-pastel-green/20 via-white to-pastel-pink/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -130,29 +86,27 @@ export default function ContactPage() {
             className="mt-12"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Bandra Clinic */}
-              <div className="aspect-video bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-2xl flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-white text-xl font-bold">B</span>
-                    </div>
-                    <span className="text-gray-500 text-lg font-medium">Bandra Clinic</span>
-                    <p className="text-gray-400 text-sm mt-2">Khar, Mumbai</p>
-                  </div>
+              {/* Khar Clinic */}
+              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-2xl overflow-hidden relative">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/clinic/kharclinic.webp"
+                  alt="Skinfinitii Khar Clinic - Aesthetic Skin and Laser Clinic"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2">
+                  <span className="text-gray-800 font-semibold text-sm">Khar Clinic</span>
                 </div>
               </div>
               
               {/* Vashi Clinic */}
-              <div className="aspect-video bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-2xl flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-white text-xl font-bold">V</span>
-                    </div>
-                    <span className="text-gray-500 text-lg font-medium">Vashi Clinic</span>
-                    <p className="text-gray-400 text-sm mt-2">Navi Mumbai</p>
-                  </div>
+              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-2xl overflow-hidden relative">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/clinic/vashiclinic.webp"
+                  alt="Skinfinitii Vashi Clinic - Aesthetic Skin and Laser Clinic"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2">
+                  <span className="text-gray-800 font-semibold text-sm">Vashi Clinic</span>
                 </div>
               </div>
             </div>
@@ -172,7 +126,7 @@ export default function ContactPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {contactMethods.map((method, index) => (
               <motion.div
                 key={method.title}
@@ -301,9 +255,7 @@ export default function ContactPage() {
                   <p>
                     <strong>Vashi Branch:</strong> Ample parking available in Satra Plaza mall complex
                   </p>
-                  <p>
-                    <strong>Nearest Railway:</strong> Khar Railway Station (West) for Khar branch
-                  </p>
+                 
                   <p>
                     <strong>Landmarks:</strong> S.V. Road for Khar, Palm Beach Road for Vashi
                   </p>
@@ -365,137 +317,10 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
-              Send Us a Message
-            </h2>
-            <p className="text-xl text-gray-600">
-              Have questions? Fill out the form below and we'll get back to you within 24 hours.
-            </p>
-          </motion.div>
-          
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Full Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-pink focus:border-transparent"
-                  placeholder="Enter your full name"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-pink focus:border-transparent"
-                  placeholder="Enter your email address"
-                />
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-pink focus:border-transparent"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="treatment" className="block text-sm font-medium text-gray-700 mb-2">
-                  Treatment of Interest
-                </label>
-                <select
-                  id="treatment"
-                  name="treatment"
-                  value={formData.treatment}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-pink focus:border-transparent"
-                >
-                  <option value="">Select a treatment</option>
-                  <option value="botox">Botox Treatment</option>
-                  <option value="fillers">Dermal Fillers</option>
-                  <option value="liquid-facelift">Liquid Facelift</option>
-                  <option value="skin-treatments">Skin Treatments</option>
-                  <option value="body-treatments">Body Treatments</option>
-                  <option value="bridal-package">Bridal Package</option>
-                  <option value="consultation">General Consultation</option>
-                </select>
-              </div>
-            </div>
-            
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                Message *
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={6}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-pink focus:border-transparent"
-                placeholder="Tell us about your concerns and what you'd like to achieve..."
-              />
-            </div>
-            
-            <div className="text-center">
-              <button
-                type="submit"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-200 hover:scale-105"
-              >
-                <span>Send Message</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </form>
-        </div>
-      </section>
+
 
       {/* Emergency Notice */}
-      <section className="py-8 bg-red-50 border-t border-red-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center space-x-2 text-red-700">
-            <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-            <p className="font-medium">
-              <strong>Emergency:</strong> For urgent medical concerns, please call your nearest emergency services or visit the nearest hospital.
-            </p>
-          </div>
-        </div>
-      </section>
+   
     </Layout>
   );
 }

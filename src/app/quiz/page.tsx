@@ -1,468 +1,806 @@
 "use client";
 
-import Layout from "@/components/Layout";
+import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { ArrowRight, CheckCircle, Download, Mail, Star } from "lucide-react";
+import { 
+  ArrowRight, 
+  ArrowLeft, 
+  CheckCircle2, 
+  Award, 
+  Star, 
+  Heart, 
+  Microscope, 
+  Calendar,
+  Clock,
+  User,
+  Shield,
+  Sparkles,
+  Sun,
+  Moon,
+  Zap,
+  BookOpen,
+  Phone,
+  Mail,
+  Download,
+  Share2,
+  RefreshCcw
+} from "lucide-react";
 import Link from "next/link";
 
+// Types
 interface Question {
-  id: number;
+  id: string;
   text: string;
-  type: "multiple-choice" | "slider" | "image-choice" | "yes-no";
+  subtitle?: string;
+  type: "single" | "multi" | "slider" | "yesno" | "image-choice";
   options?: string[];
   min?: number;
   max?: number;
   step?: number;
-  images?: { src: string; alt: string; value: string }[];
+  required?: boolean;
 }
 
 interface QuizState {
-  currentQuestion: number;
-  answers: Record<number, any>;
-  isComplete: boolean;
-  skinProfile: string;
-  recommendations: string[];
-  email: string;
-  showEmailForm: boolean;
+  index: number;
+  answers: Record<string, any>;
+  done: boolean;
 }
 
-const questions: Question[] = [
+interface SkinProfile {
+  type: string;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  color: string;
+  recommendations: {
+    morning: string[];
+    evening: string[];
+    avoid: string[];
+    treatments: string[];
+  };
+  priority: string[];
+}
+
+// Professional Questions for Dermatology Assessment
+const QUESTIONS: Question[] = [
   {
-    id: 1,
-    text: "What's your primary skin concern?",
-    type: "multiple-choice",
+    id: "primary_concern",
+    text: "What is your primary skin concern?",
+    subtitle: "Select the most important issue you'd like to address",
+    type: "single",
     options: [
-      "Fine lines and wrinkles",
       "Acne and breakouts",
       "Hyperpigmentation and dark spots",
+      "Fine lines and wrinkles",
       "Dryness and dehydration",
       "Oiliness and enlarged pores",
-      "Sensitivity and redness"
-    ]
+      "Sensitivity and redness",
+      "Uneven skin texture",
+      "Anti-aging and prevention"
+    ],
+    required: true
   },
   {
-    id: 2,
+    id: "skin_type",
     text: "How would you describe your skin type?",
-    type: "multiple-choice",
+    subtitle: "This helps determine the right products and treatments",
+    type: "single",
     options: [
-      "Very dry",
-      "Dry",
-      "Normal",
-      "Combination",
-      "Oily",
-      "Sensitive"
+      "Very dry - feels tight and flaky",
+      "Dry - needs regular moisturizing",
+      "Normal - balanced, rarely problematic",
+      "Combination - oily T-zone, dry elsewhere",
+      "Oily - shiny throughout the day",
+      "Sensitive - easily irritated and reactive"
+    ],
+    required: true
+  },
+  {
+    id: "sensitivity_level",
+    text: "How sensitive is your skin to new products?",
+    subtitle: "This affects treatment recommendations",
+    type: "single",
+    options: [
+      "Not sensitive - can try most products",
+      "Mildly sensitive - occasional reactions",
+      "Moderately sensitive - careful introduction needed",
+      "Very sensitive - reactions to many products"
     ]
   },
   {
-    id: 3,
-    text: "How much oil does your skin produce?",
-    type: "slider",
-    min: 1,
-    max: 10,
-    step: 1
-  },
-  {
-    id: 4,
-    text: "Do you experience skin sensitivity or reactions to products?",
-    type: "yes-no",
-    options: ["Yes", "No"]
-  },
-  {
-    id: 5,
-    text: "What's your main goal?",
-    type: "multiple-choice",
+    id: "sun_exposure",
+    text: "What's your typical sun exposure?",
+    subtitle: "Important for treatment planning and sun protection",
+    type: "single",
     options: [
-      "Anti-aging and prevention",
-      "Clear acne and blemishes",
-      "Even skin tone",
-      "Hydration and moisture",
-      "Reduce pore size",
-      "Calm sensitive skin"
+      "Minimal - mostly indoors",
+      "Moderate - some outdoor activities",
+      "High - outdoor work or sports",
+      "Very high - extensive outdoor time"
     ]
   },
   {
-    id: 6,
-    text: "How much time can you dedicate to skincare daily?",
-    type: "multiple-choice",
+    id: "current_routine",
+    text: "What's your current skincare routine?",
+    subtitle: "Select all that apply",
+    type: "multi",
     options: [
-      "5 minutes or less",
-      "5-10 minutes",
-      "10-15 minutes",
-      "15+ minutes"
+      "Basic cleanser and moisturizer",
+      "Sunscreen (SPF 30+)",
+      "Vitamin C serum",
+      "Retinol or retinoid",
+      "Chemical exfoliants (AHA/BHA)",
+      "Hyaluronic acid",
+      "Niacinamide",
+      "No regular routine"
+    ]
+  },
+  {
+    id: "lifestyle_factors",
+    text: "Which lifestyle factors affect your skin?",
+    subtitle: "These can influence treatment recommendations",
+    type: "multi",
+    options: [
+      "Stress and lack of sleep",
+      "Hormonal changes (pregnancy, PCOS)",
+      "Dietary factors",
+      "Environmental pollution",
+      "Exercise and sweating",
+      "Smoking or alcohol",
+      "Medications",
+      "None of the above"
+    ]
+  },
+  {
+    id: "treatment_goals",
+    text: "What are your treatment goals?",
+    subtitle: "Select your priorities",
+    type: "multi",
+    options: [
+      "Clear, blemish-free skin",
+      "Even skin tone and texture",
+      "Firm, youthful appearance",
+      "Hydrated, plump skin",
+      "Reduced pore size",
+      "Calm, soothed skin",
+      "Prevention and maintenance",
+      "Professional treatment guidance"
+    ]
+  },
+  {
+    id: "commitment_level",
+    text: "How committed are you to a skincare routine?",
+    subtitle: "This helps tailor recommendations to your lifestyle",
+    type: "single",
+    options: [
+      "Minimal - 2-3 steps maximum",
+      "Moderate - 4-5 steps daily",
+      "Comprehensive - 6+ steps daily",
+      "Professional - willing to try advanced treatments"
     ]
   }
 ];
 
-const skinProfiles = {
-  "Balanced": {
-    description: "Your skin is well-balanced with minimal concerns. Focus on maintenance and prevention.",
-    recommendations: [
-      "Gentle daily cleanser",
-      "Broad-spectrum sunscreen SPF 30+",
-      "Lightweight moisturizer",
-      "Weekly exfoliation"
-    ],
-    treatments: ["Chemical peels", "Microdermabrasion", "Facial treatments"]
+// Professional Skin Profiles
+const SKIN_PROFILES: Record<string, SkinProfile> = {
+  acne_prone: {
+    type: "Acne-Prone Skin",
+    title: "The Clarifying Protocol",
+    description: "Your skin needs gentle yet effective acne management with a focus on preventing breakouts and minimizing post-inflammatory hyperpigmentation.",
+    icon: <Zap className="w-8 h-8" />,
+    color: "from-blue-500 to-purple-600",
+    recommendations: {
+      morning: [
+        "Gentle gel cleanser with salicylic acid",
+        "Niacinamide serum (4-5% concentration)",
+        "Light, non-comedogenic moisturizer",
+        "Broad-spectrum SPF 30+ (matte finish)"
+      ],
+      evening: [
+        "Double cleanse with oil-based cleanser",
+        "Salicylic acid toner (2% concentration)",
+        "Azelaic acid serum (10-15%)",
+        "Light moisturizer with ceramides"
+      ],
+      avoid: [
+        "Heavy, occlusive moisturizers",
+        "Fragranced products",
+        "Harsh physical scrubs",
+        "Over-washing (more than 2x daily)"
+      ],
+      treatments: [
+        "Chemical peels (salicylic/glycolic)",
+        "LED blue light therapy",
+        "Hydrafacial with acne protocol",
+        "Professional extractions"
+      ]
+    },
+    priority: [
+      "Consistent cleansing routine",
+      "Non-comedogenic products",
+      "Regular SPF application",
+      "Professional consultation for severe cases"
+    ]
   },
-  "Oily": {
-    description: "Your skin produces excess oil. Focus on oil control and pore refinement.",
-    recommendations: [
-      "Oil-free cleanser",
-      "Salicylic acid toner",
-      "Oil-free moisturizer",
-      "Clay masks 2-3 times weekly"
-    ],
-    treatments: ["Chemical peels", "Laser treatments", "Botox for oil control"]
+  hyperpigmentation: {
+    type: "Hyperpigmentation-Prone Skin",
+    title: "The Brightening Protocol",
+    description: "Your skin requires a comprehensive approach to address dark spots, uneven tone, and prevent future pigmentation issues.",
+    icon: <Star className="w-8 h-8" />,
+    color: "from-amber-500 to-orange-600",
+    recommendations: {
+      morning: [
+        "Gentle foaming cleanser",
+        "Vitamin C serum (15-20% L-ascorbic acid)",
+        "Niacinamide serum (5-10%)",
+        "Broad-spectrum SPF 50+ (reapply every 2 hours)"
+      ],
+      evening: [
+        "Double cleanse",
+        "Tranexamic acid serum",
+        "Retinoid (start with 0.025% tretinoin)",
+        "Rich moisturizer with ceramides"
+      ],
+      avoid: [
+        "Direct sun exposure without SPF",
+        "Harsh scrubs or peels",
+        "Picking at spots or scabs",
+        "Inconsistent SPF application"
+      ],
+      treatments: [
+        "Chemical peels (glycolic/mandelic)",
+        "Laser toning treatments",
+        "Microneedling with PRP",
+        "Professional brightening facials"
+      ]
+    },
+    priority: [
+      "Daily SPF application",
+      "Consistent brightening actives",
+      "Sun protection measures",
+      "Patience with treatment timeline"
+    ]
   },
-  "Dry": {
-    description: "Your skin lacks moisture and may feel tight. Focus on hydration and barrier repair.",
-    recommendations: [
-      "Cream-based cleanser",
-      "Hyaluronic acid serum",
-      "Rich moisturizer",
-      "Overnight masks"
-    ],
-    treatments: ["Hydrafacial", "Dermal fillers", "PRP therapy"]
+  anti_aging: {
+    type: "Anti-Aging Focus",
+    title: "The Youth Preservation Protocol",
+    description: "Your skin benefits from a comprehensive anti-aging approach that addresses fine lines, texture, and overall skin health.",
+    icon: <Heart className="w-8 h-8" />,
+    color: "from-pink-500 to-rose-600",
+    recommendations: {
+      morning: [
+        "Gentle cream cleanser",
+        "Vitamin C serum with ferulic acid",
+        "Peptide serum",
+        "Rich moisturizer with hyaluronic acid",
+        "Broad-spectrum SPF 30+"
+      ],
+      evening: [
+        "Double cleanse",
+        "Retinoid (0.025-0.05% tretinoin)",
+        "Peptide-rich moisturizer",
+        "Overnight mask 2-3 times weekly"
+      ],
+      avoid: [
+        "Skipping sunscreen",
+        "Over-exfoliation",
+        "Harsh, drying products",
+        "Inconsistent routine"
+      ],
+      treatments: [
+        "Chemical peels (glycolic/lactic)",
+        "Botox and dermal fillers",
+        "Radiofrequency treatments",
+        "LED light therapy"
+      ]
+    },
+    priority: [
+      "Daily SPF protection",
+      "Consistent retinoid use",
+      "Adequate hydration",
+      "Professional anti-aging treatments"
+    ]
   },
-  "Sensitive": {
-    description: "Your skin is easily irritated. Focus on gentle, soothing ingredients.",
-    recommendations: [
-      "Fragrance-free cleanser",
-      "Centella asiatica serum",
-      "Barrier repair cream",
-      "Mineral sunscreen"
-    ],
-    treatments: ["Gentle facials", "LED therapy", "Consultation for custom plan"]
-  },
-  "Combination": {
-    description: "Your skin has both oily and dry areas. Focus on targeted treatment for each zone.",
-    recommendations: [
-      "Gel cleanser",
-      "Different moisturizers for T-zone and cheeks",
-      "Targeted treatments",
-      "Weekly clay masks on T-zone"
-    ],
-    treatments: ["Customized facials", "Chemical peels", "Laser treatments"]
+  sensitive: {
+    type: "Sensitive Skin",
+    title: "The Soothing Protocol",
+    description: "Your skin requires gentle, calming care that strengthens the skin barrier and reduces reactivity to environmental factors.",
+    icon: <Shield className="w-8 h-8" />,
+    color: "from-green-500 to-emerald-600",
+    recommendations: {
+      morning: [
+        "Cream-based cleanser",
+        "Centella asiatica serum",
+        "Ceramide-rich moisturizer",
+        "Mineral SPF 30+ (zinc oxide/titanium dioxide)"
+      ],
+      evening: [
+        "Gentle oil cleanser",
+        "Barrier repair serum",
+        "Rich moisturizer with ceramides",
+        "Occlusive balm if needed"
+      ],
+      avoid: [
+        "Fragranced products",
+        "Strong acids and retinoids",
+        "Hot water and harsh scrubs",
+        "Frequent product changes"
+      ],
+      treatments: [
+        "Gentle LED red light therapy",
+        "Soothing facials",
+        "Barrier repair treatments",
+        "Professional sensitivity testing"
+      ]
+    },
+    priority: [
+      "Barrier repair and maintenance",
+      "Gentle, fragrance-free products",
+      "Consistent routine",
+      "Professional guidance for treatments"
+    ]
   }
 };
 
-export default function QuizPage() {
-  const [quizState, setQuizState] = useState<QuizState>({
-    currentQuestion: 0,
-    answers: {},
-    isComplete: false,
-    skinProfile: "",
-    recommendations: [],
-    email: "",
-    showEmailForm: false
+// Scoring Algorithm
+function determineSkinProfile(answers: Record<string, any>): string {
+  let scores = {
+    acne_prone: 0,
+    hyperpigmentation: 0,
+    anti_aging: 0,
+    sensitive: 0
+  };
+
+  // Primary concern scoring
+  switch (answers.primary_concern) {
+    case "Acne and breakouts":
+      scores.acne_prone += 5;
+      break;
+    case "Hyperpigmentation and dark spots":
+      scores.hyperpigmentation += 5;
+      break;
+    case "Fine lines and wrinkles":
+    case "Anti-aging and prevention":
+      scores.anti_aging += 5;
+      break;
+    case "Sensitivity and redness":
+      scores.sensitive += 5;
+      break;
+  }
+
+  // Skin type scoring
+  switch (answers.skin_type) {
+    case "Oily":
+      scores.acne_prone += 3;
+      break;
+    case "Sensitive - easily irritated and reactive":
+      scores.sensitive += 4;
+      break;
+    case "Very dry - feels tight and flaky":
+      scores.anti_aging += 2;
+      break;
+  }
+
+  // Sensitivity level
+  if (answers.sensitivity_level?.includes("Very sensitive")) {
+    scores.sensitive += 4;
+  }
+
+  // Sun exposure
+  if (answers.sun_exposure?.includes("High") || answers.sun_exposure?.includes("Very high")) {
+    scores.hyperpigmentation += 3;
+    scores.anti_aging += 2;
+  }
+
+  // Treatment goals
+  if (answers.treatment_goals?.includes("Clear, blemish-free skin")) {
+    scores.acne_prone += 3;
+  }
+  if (answers.treatment_goals?.includes("Even skin tone and texture")) {
+    scores.hyperpigmentation += 3;
+  }
+  if (answers.treatment_goals?.includes("Firm, youthful appearance")) {
+    scores.anti_aging += 3;
+  }
+
+  // Find the highest score
+  const maxScore = Math.max(...Object.values(scores));
+  const profile = Object.keys(scores).find(key => scores[key as keyof typeof scores] === maxScore);
+  
+  return profile || "anti_aging";
+}
+
+// Main Component
+export default function SkinQuiz() {
+  const [state, setState] = useState<QuizState>({ 
+    index: 0, 
+    answers: {}, 
+    done: false 
   });
 
-  const handleAnswer = (answer: any) => {
-    const newAnswers = { ...quizState.answers, [questions[quizState.currentQuestion].id]: answer };
+  const currentQuestion = QUESTIONS[state.index];
+  const progress = Math.round(((state.index) / QUESTIONS.length) * 100);
+  const skinProfile = useMemo(() => 
+    state.done ? SKIN_PROFILES[determineSkinProfile(state.answers)] : null, 
+    [state.done, state.answers]
+  );
+
+  const setAnswer = (value: any) => {
+    const newAnswers = { ...state.answers, [currentQuestion.id]: value };
+    const nextIndex = state.index + 1;
     
-    if (quizState.currentQuestion < questions.length - 1) {
-      setQuizState({
-        ...quizState,
-        answers: newAnswers,
-        currentQuestion: quizState.currentQuestion + 1
-      });
+    if (nextIndex < QUESTIONS.length) {
+      setState({ index: nextIndex, answers: newAnswers, done: false });
     } else {
-      // Quiz complete - calculate results
-      const profile = calculateSkinProfile(newAnswers);
-      const recommendations = skinProfiles[profile as keyof typeof skinProfiles].recommendations;
-      
-      setQuizState({
-        ...quizState,
-        answers: newAnswers,
-        isComplete: true,
-        skinProfile: profile,
-        recommendations
-      });
+      setState({ index: nextIndex, answers: newAnswers, done: true });
     }
   };
 
-  const calculateSkinProfile = (answers: Record<number, any>): string => {
-    // Simple logic - in real app, this would be more sophisticated
-    const skinType = answers[2];
-    const sensitivity = answers[4];
-    
-    if (sensitivity === "Yes") return "Sensitive";
-    if (skinType === "Oily") return "Oily";
-    if (skinType === "Dry" || skinType === "Very dry") return "Dry";
-    if (skinType === "Combination") return "Combination";
-    return "Balanced";
+  const goBack = () => {
+    setState(prev => ({ 
+      ...prev, 
+      index: Math.max(0, prev.index - 1) 
+    }));
   };
 
-  const handleEmailSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle email submission
-    console.log("Email submitted:", quizState.email);
-    setQuizState({ ...quizState, showEmailForm: false });
+  const resetQuiz = () => {
+    setState({ index: 0, answers: {}, done: false });
   };
-
-  const currentQuestion = questions[quizState.currentQuestion];
-  const progress = ((quizState.currentQuestion + 1) / questions.length) * 100;
 
   return (
-    <Layout>
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-pastel-green/20 via-white to-pastel-pink/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+      {/* Header */}
+      <div className="bg-white shadow-sm border-b">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="flex items-center space-x-2 text-gray-600 hover:text-pastel-pink transition-colors">
+              <ArrowLeft className="w-5 h-5" />
+              <span>Back to Home</span>
+            </Link>
+            <div className="flex items-center space-x-2">
+              <Award className="w-5 h-5 text-pastel-pink" />
+              <span className="font-semibold text-gray-800">Skin Assessment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Hero Section */}
+        {!state.done && (
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center space-y-6"
+            className="text-center mb-12"
           >
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-800">
-              Discover Your Perfect Skin Routine
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-pastel-pink/20 to-pastel-green/20 px-4 py-2 rounded-full mb-6">
+              <Microscope className="w-5 h-5 text-pastel-pink" />
+              <span className="text-sm font-medium text-gray-700">Professional Skin Assessment</span>
+            </div>
+            
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+              Your Personalized Skin Profile
             </h1>
+            
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Take our personalized skin quiz and get customized recommendations 
-              for your unique skin concerns and goals.
+              Answer a few questions to receive a customized skincare protocol designed by Dr. Jaishree's expertise
             </p>
           </motion.div>
-        </div>
-      </section>
+        )}
 
-      {/* Quiz Container */}
-      <section className="py-16 bg-white">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          {!quizState.isComplete ? (
-            <motion.div
-              key={quizState.currentQuestion}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.3 }}
-              className="space-y-8"
-            >
-              {/* Progress Bar */}
-              <div className="space-y-2">
-                <div className="flex justify-between text-sm text-gray-600">
-                  <span>Question {quizState.currentQuestion + 1} of {questions.length}</span>
-                  <span>{Math.round(progress)}% Complete</span>
+        {/* Progress Bar */}
+        {!state.done && (
+          <div className="mb-8">
+            <div className="flex justify-between text-sm text-gray-600 mb-2">
+              <span>Question {state.index + 1} of {QUESTIONS.length}</span>
+              <span>{progress}% Complete</span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <motion.div
+                className="bg-gradient-to-r from-pastel-pink to-pastel-green h-2 rounded-full"
+                initial={{ width: 0 }}
+                animate={{ width: `${progress}%` }}
+                transition={{ duration: 0.5 }}
+              />
+            </div>
+          </div>
+        )}
+
+        {/* Question or Results */}
+        <div className="bg-white rounded-2xl shadow-lg p-8">
+          <AnimatePresence mode="wait">
+            {!state.done ? (
+              <motion.div
+                key={currentQuestion.id}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.3 }}
+                className="space-y-6"
+              >
+                {/* Question */}
+                <div className="text-center">
+                  <h2 className="font-display text-2xl md:text-3xl font-semibold text-gray-800 mb-3">
+                    {currentQuestion.text}
+                  </h2>
+                  {currentQuestion.subtitle && (
+                    <p className="text-gray-600 text-lg">
+                      {currentQuestion.subtitle}
+                    </p>
+                  )}
                 </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div 
-                    className="bg-gradient-to-r from-pastel-green to-pastel-pink h-2 rounded-full transition-all duration-300"
-                    style={{ width: `${progress}%` }}
-                  />
-                </div>
-              </div>
 
-              {/* Question */}
-              <div className="text-center space-y-6">
-                <h2 className="font-display text-2xl font-semibold text-gray-800">
-                  {currentQuestion.text}
-                </h2>
-
-                {/* Answer Options */}
+                {/* Options */}
                 <div className="space-y-4">
-                  {currentQuestion.type === "multiple-choice" && currentQuestion.options && (
+                  {currentQuestion.type === "single" && (
                     <div className="grid gap-3">
-                      {currentQuestion.options.map((option, index) => (
+                      {currentQuestion.options?.map((option) => (
                         <button
-                          key={index}
-                          onClick={() => handleAnswer(option)}
-                          className="w-full p-4 text-left border-2 border-gray-200 rounded-xl hover:border-pastel-pink hover:bg-pastel-pink/5 transition-all duration-200"
+                          key={option}
+                          onClick={() => setAnswer(option)}
+                          className="w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-pastel-pink hover:bg-pastel-pink/5 transition-all duration-200 group"
                         >
-                          <span className="font-medium text-gray-800">{option}</span>
+                          <div className="flex items-center justify-between">
+                            <span className="text-gray-800 group-hover:text-pastel-pink transition-colors">
+                              {option}
+                            </span>
+                            <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-pastel-pink transition-colors" />
+                          </div>
                         </button>
                       ))}
                     </div>
                   )}
 
-                  {currentQuestion.type === "yes-no" && currentQuestion.options && (
-                    <div className="flex gap-4 justify-center">
-                      {currentQuestion.options.map((option, index) => (
+                                     {currentQuestion.type === "multi" && (
+                     <MultiSelect
+                       options={currentQuestion.options || []}
+                       value={state.answers[currentQuestion.id] || []}
+                       onChange={(value) => {
+                         setState(prev => ({
+                           ...prev,
+                           answers: { ...prev.answers, [currentQuestion.id]: value }
+                         }));
+                       }}
+                       onContinue={() => setAnswer(state.answers[currentQuestion.id] || [])}
+                     />
+                   )}
+
+                  {currentQuestion.type === "yesno" && (
+                    <div className="grid grid-cols-2 gap-4">
+                      {["Yes", "No"].map((option) => (
                         <button
-                          key={index}
-                          onClick={() => handleAnswer(option)}
-                          className="px-8 py-4 border-2 border-gray-200 rounded-xl hover:border-pastel-pink hover:bg-pastel-pink/5 transition-all duration-200"
+                          key={option}
+                          onClick={() => setAnswer(option)}
+                          className="p-6 border-2 border-gray-200 rounded-xl hover:border-pastel-pink hover:bg-pastel-pink/5 transition-all duration-200 text-center"
                         >
-                          <span className="font-medium text-gray-800">{option}</span>
+                          <span className="text-lg font-medium text-gray-800">{option}</span>
                         </button>
                       ))}
                     </div>
                   )}
+                </div>
 
-                  {currentQuestion.type === "slider" && (
-                    <div className="space-y-4">
-                      <input
-                        type="range"
-                        min={currentQuestion.min}
-                        max={currentQuestion.max}
-                        step={currentQuestion.step}
-                        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
-                        onChange={(e) => handleAnswer(parseInt(e.target.value))}
+                {/* Navigation */}
+                <div className="flex items-center justify-between pt-6 border-t">
+                  <button
+                    onClick={goBack}
+                    disabled={state.index === 0}
+                    className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
+                      state.index === 0
+                        ? "text-gray-400 cursor-not-allowed"
+                        : "text-gray-600 hover:text-pastel-pink"
+                    }`}
+                  >
+                    <ArrowLeft className="w-4 h-4" />
+                    <span>Previous</span>
+                  </button>
+                  
+                  <div className="text-sm text-gray-500">
+                    {currentQuestion.type === "multi" ? "Select all that apply" : "Choose one option"}
+                  </div>
+                </div>
+              </motion.div>
+            ) : (
+              /* Results */
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="space-y-8"
+              >
+                {skinProfile && (
+                  <>
+                    {/* Profile Header */}
+                    <div className="text-center">
+                      <div className={`w-20 h-20 mx-auto rounded-full bg-gradient-to-br ${skinProfile.color} flex items-center justify-center mb-6`}>
+                        <div className="text-white">
+                          {skinProfile.icon}
+                        </div>
+                      </div>
+                      
+                      <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                        {skinProfile.title}
+                      </h2>
+                      
+                      <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                        {skinProfile.description}
+                      </p>
+                    </div>
+
+                    {/* Recommendations Grid */}
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <RecommendationCard
+                        title="Morning Routine"
+                        icon={<Sun className="w-5 h-5" />}
+                        items={skinProfile.recommendations.morning}
+                        color="from-yellow-400 to-orange-500"
                       />
-                      <div className="flex justify-between text-sm text-gray-600">
-                        <span>Very Dry</span>
-                        <span>Very Oily</span>
+                      
+                      <RecommendationCard
+                        title="Evening Routine"
+                        icon={<Moon className="w-5 h-5" />}
+                        items={skinProfile.recommendations.evening}
+                        color="from-blue-400 to-purple-500"
+                      />
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <RecommendationCard
+                        title="Avoid These"
+                        icon={<Shield className="w-5 h-5" />}
+                        items={skinProfile.recommendations.avoid}
+                        color="from-red-400 to-pink-500"
+                      />
+                      
+                      <RecommendationCard
+                        title="Professional Treatments"
+                        icon={<Award className="w-5 h-5" />}
+                        items={skinProfile.recommendations.treatments}
+                        color="from-emerald-400 to-teal-500"
+                      />
+                    </div>
+
+                    {/* Priority Actions */}
+                    <div className="bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 rounded-2xl p-6 border border-pastel-pink/20">
+                      <h3 className="font-display text-xl font-semibold text-gray-800 mb-4 text-center">
+                        Priority Actions
+                      </h3>
+                      <div className="grid md:grid-cols-2 gap-4">
+                        {skinProfile.priority.map((item, index) => (
+                          <div key={index} className="flex items-center space-x-3">
+                            <div className="w-2 h-2 bg-pastel-pink rounded-full"></div>
+                            <span className="text-gray-700">{item}</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          ) : (
-            /* Results */
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-8"
-            >
-              {/* Results Header */}
-              <div className="text-center space-y-4">
-                <div className="w-20 h-20 bg-pastel-pink rounded-full flex items-center justify-center mx-auto">
-                  <CheckCircle className="w-10 h-10 text-white" />
-                </div>
-                <h2 className="font-display text-3xl font-bold text-gray-800">
-                  Your Skin Profile: {quizState.skinProfile}
-                </h2>
-                <p className="text-gray-600">
-                  {skinProfiles[quizState.skinProfile as keyof typeof skinProfiles]?.description}
-                </p>
-              </div>
 
-              {/* Recommendations */}
-              <div className="bg-gray-50 rounded-2xl p-8">
-                <h3 className="font-display text-xl font-semibold text-gray-800 mb-6">
-                  Your Personalized Recommendations
-                </h3>
-                <div className="space-y-4">
-                  {quizState.recommendations.map((rec, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <div className="w-2 h-2 bg-pastel-pink rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-gray-700">{rec}</span>
+                    {/* CTA Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Link
+                        href="/contact"
+                        className="flex-1 inline-flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-500 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-200 hover:scale-105"
+                      >
+                        <Phone className="w-5 h-5" />
+                        <span>Book Consultation</span>
+                      </Link>
+                      
+                      <button
+                        onClick={resetQuiz}
+                        className="flex-1 inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-xl hover:border-pastel-pink hover:text-pastel-pink transition-all duration-200"
+                      >
+                        <RefreshCcw className="w-5 h-5" />
+                        <span>Retake Assessment</span>
+                      </button>
                     </div>
-                  ))}
-                </div>
-              </div>
 
-              {/* Recommended Treatments */}
-              <div className="bg-gradient-to-r from-pastel-green/20 to-pastel-pink/20 rounded-2xl p-8">
-                <h3 className="font-display text-xl font-semibold text-gray-800 mb-6">
-                  Recommended Treatments
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {skinProfiles[quizState.skinProfile as keyof typeof skinProfiles]?.treatments.map((treatment, index) => (
-                    <div key={index} className="bg-white rounded-lg p-4 text-center">
-                      <span className="font-medium text-gray-800">{treatment}</span>
+                    {/* Disclaimer */}
+                    <div className="text-center text-sm text-gray-500 bg-gray-50 rounded-xl p-4">
+                      <p>
+                        This assessment provides general guidance based on your responses. For personalized treatment plans, 
+                        please consult with Dr. Jaishree for a comprehensive skin evaluation.
+                      </p>
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Email Form */}
-              {quizState.showEmailForm ? (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  className="bg-white border-2 border-pastel-pink rounded-2xl p-8"
-                >
-                  <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
-                    Get Your Complete Skin Report
-                  </h3>
-                  <p className="text-gray-600 mb-6">
-                    Enter your email to receive a detailed PDF report with your personalized recommendations.
-                  </p>
-                  <form onSubmit={handleEmailSubmit} className="space-y-4">
-                    <input
-                      type="email"
-                      value={quizState.email}
-                      onChange={(e) => setQuizState({ ...quizState, email: e.target.value })}
-                      placeholder="Enter your email address"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-pink focus:border-transparent"
-                    />
-                    <button
-                      type="submit"
-                      className="w-full px-6 py-3 bg-pastel-pink text-white font-semibold rounded-lg hover:bg-pastel-pink/90 transition-colors"
-                    >
-                      Send Report
-                    </button>
-                  </form>
-                </motion.div>
-              ) : (
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button
-                    onClick={() => setQuizState({ ...quizState, showEmailForm: true })}
-                    className="flex-1 px-6 py-4 bg-pastel-pink text-white font-semibold rounded-lg hover:bg-pastel-pink/90 transition-colors"
-                  >
-                    <Mail className="w-5 h-5 inline mr-2" />
-                    Get PDF Report
-                  </button>
-                  <Link
-                    href="/contact"
-                    className="flex-1 px-6 py-4 border-2 border-pastel-pink text-pastel-pink font-semibold rounded-lg hover:bg-pastel-pink hover:text-white transition-colors text-center"
-                  >
-                    Book Consultation
-                  </Link>
-                </div>
-              )}
-
-              {/* Restart Quiz */}
-              <div className="text-center">
-                <button
-                  onClick={() => setQuizState({
-                    currentQuestion: 0,
-                    answers: {},
-                    isComplete: false,
-                    skinProfile: "",
-                    recommendations: [],
-                    email: "",
-                    showEmailForm: false
-                  })}
-                  className="text-pastel-pink hover:text-pastel-pink/80 transition-colors"
-                >
-                  Take Quiz Again
-                </button>
-              </div>
-            </motion.div>
-          )}
+                  </>
+                )}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
-      </section>
+      </div>
+    </div>
+  );
+}
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pastel-green/30 to-pastel-pink/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8"
+// Subcomponents
+function MultiSelect({ 
+  options, 
+  value, 
+  onChange,
+  onContinue
+}: { 
+  options: string[]; 
+  value: string[]; 
+  onChange: (value: string[]) => void;
+  onContinue: () => void;
+}) {
+  const toggleOption = (option: string) => {
+    const newValue = value.includes(option)
+      ? value.filter(v => v !== option)
+      : [...value, option];
+    onChange(newValue);
+  };
+
+  return (
+    <div className="space-y-3">
+      <div className="grid gap-3">
+        {options.map((option) => (
+          <label
+            key={option}
+            className={`flex items-center space-x-3 p-4 border-2 rounded-xl cursor-pointer transition-all duration-200 ${
+              value.includes(option)
+                ? "border-pastel-pink bg-pastel-pink/5"
+                : "border-gray-200 hover:border-pastel-pink"
+            }`}
           >
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800">
-              Ready to Transform Your Skin?
-            </h2>
-            
-            <p className="text-xl text-gray-600">
-              Get personalized advice from Dr. Jaishree and start your journey to beautiful, healthy skin.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-200 hover:scale-105"
-              >
-                <span>Book Consultation</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-              
-              <Link
-                href="/treatments"
-                className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-pastel-pink text-pastel-pink font-semibold rounded-full hover:bg-pastel-pink hover:text-white transition-all duration-200"
-              >
-                <span>View Treatments</span>
-              </Link>
-            </div>
-          </motion.div>
+            <input
+              type="checkbox"
+              checked={value.includes(option)}
+              onChange={() => toggleOption(option)}
+              className="w-5 h-5 text-pastel-pink border-gray-300 rounded focus:ring-pastel-pink"
+            />
+            <span className="text-gray-800">{option}</span>
+          </label>
+        ))}
+      </div>
+      
+      <div className="flex justify-end pt-4">
+        <button
+          onClick={onContinue}
+          disabled={value.length === 0}
+          className={`inline-flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-200 ${
+            value.length === 0
+              ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+              : "bg-gradient-to-r from-pastel-pink to-pink-500 text-white hover:shadow-lg"
+          }`}
+        >
+          <span>Continue</span>
+          <ArrowRight className="w-4 h-4" />
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function RecommendationCard({ 
+  title, 
+  icon, 
+  items, 
+  color 
+}: { 
+  title: string; 
+  icon: React.ReactNode; 
+  items: string[]; 
+  color: string; 
+}) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-200">
+      <div className="flex items-center space-x-3 mb-4">
+        <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${color} flex items-center justify-center`}>
+          <div className="text-white">
+            {icon}
+          </div>
         </div>
-      </section>
-    </Layout>
+        <h3 className="font-display text-xl font-semibold text-gray-800">{title}</h3>
+      </div>
+      
+      <ul className="space-y-3">
+        {items.map((item, index) => (
+          <li key={index} className="flex items-start space-x-3">
+            <div className="w-2 h-2 bg-pastel-pink rounded-full mt-2 flex-shrink-0"></div>
+            <span className="text-gray-700 leading-relaxed">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

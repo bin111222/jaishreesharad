@@ -210,7 +210,7 @@ export default function HairTreatmentsPage() {
                 />
                 <div className="relative z-10 flex items-center justify-center h-full">
                   <img 
-                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hairtreatments/1.webp"
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hairtreatments/hairtreatments.webp"
                     alt="Hair Treatments - Dr. Jaishree Sharad"
                     className="w-full h-full object-cover rounded-2xl"
                   />

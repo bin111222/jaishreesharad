@@ -207,25 +207,25 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex justify-center items-center">
             <div className="text-sm text-gray-500">
               © {new Date().getFullYear()} Skinfinitii. All rights reserved.
             </div>
-            
-            <div className="flex space-x-6 text-sm">
-              <Link href="/privacy-policy" className="text-gray-500 hover:text-pastel-pink transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-500 hover:text-pastel-pink transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/refunds-cancellation" className="text-gray-500 hover:text-pastel-pink transition-colors">
-                Refunds & Cancellation
-              </Link>
-              <Link href="/cookies" className="text-gray-500 hover:text-pastel-pink transition-colors">
-                Cookie Policy
-              </Link>
-            </div>
+          </div>
+          
+          {/* Design Credit */}
+          <div className="mt-4 text-center">
+            <p className="text-sm text-gray-500">
+              Designed with ❤️ by{" "}
+              <a 
+                href="https://1942studio.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-pastel-pink hover:text-pastel-green transition-colors font-medium"
+              >
+                1942studio.com
+              </a>
+            </p>
           </div>
           
           {/* Emergency Note */}

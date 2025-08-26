@@ -181,10 +181,7 @@ export default function MicrodermabrasionPage() {
                   alt="Microdermabrasion Before/After - Skin Texture Results"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-2 left-2 bg-white/90 rounded-lg px-2 py-1">
-                  <span className="text-gray-700 text-xs font-medium">Before/After</span>
-                  <p className="text-gray-600 text-xs">Skin Texture</p>
-                </div>
+
               </div>
               
               {/* Before/After Image 2 */}
@@ -194,10 +191,7 @@ export default function MicrodermabrasionPage() {
                   alt="Microdermabrasion Before/After - Pore Refinement Results"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-2 left-2 bg-white/90 rounded-lg px-2 py-1">
-                  <span className="text-gray-700 text-xs font-medium">Before/After</span>
-                  <p className="text-gray-600 text-xs">Pore Refinement</p>
-                </div>
+
               </div>
               
               {/* Treatment Process Image 1 */}
@@ -207,10 +201,7 @@ export default function MicrodermabrasionPage() {
                   alt="Microdermabrasion Treatment Process"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-2 left-2 bg-white/90 rounded-lg px-2 py-1">
-                  <span className="text-gray-700 text-xs font-medium">Treatment</span>
-                  <p className="text-gray-600 text-xs">Process</p>
-                </div>
+
               </div>
               
               {/* Treatment Process Image 2 */}
@@ -220,8 +211,7 @@ export default function MicrodermabrasionPage() {
                     <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
                       <span className="text-white text-sm font-bold">+</span>
                     </div>
-                    <span className="text-gray-700 text-xs font-medium">More</span>
-                    <p className="text-gray-600 text-xs">Results</p>
+
                   </div>
                 </div>
               </div>

@@ -23,15 +23,7 @@ const teamMembers = [
     image: "/team/dr-poonam.jpg",
     description: "A skilled dermatologist who has been with Skinfinitii for years, Dr. Semlani specializes in aesthetic procedures and tailors treatments to individual needs. Patients appreciate her gentle approach and detailed consultations."
   },
-  {
-    name: "Dr. Sneha Patil",
-    role: "Senior Associate Dermatologist",
-    credentials: "MBBS, MD (Dermatology)",
-    expertise: "Laser Treatments, Anti-aging Procedures",
-    experience: "12+ years",
-    image: "/team/dr-sneha.jpg",
-    description: "With a keen eye for detail, Dr. Patil handles advanced laser treatments and anti-aging procedures. She stays updated with the latest techniques and ensures patients understand their treatment plans thoroughly."
-  },
+
   {
     name: "Dr. Shikha Shah",
     role: "Associate Dermatologist",
