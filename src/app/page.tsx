@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Star, Award, Users, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import SocialMediaFeed from "@/components/SocialMediaFeed";
+import CustomInstagramFeed from "@/components/CustomInstagramFeed";
 import { CircularTestimonials } from "@/components/ui/circular-testimonials";
 import AwardsSection from "@/components/AwardsSection";
 import { useState, useEffect } from "react";
@@ -267,7 +267,7 @@ const heroSlideshow = [
   },
   {
     id: 4,
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%204.webp",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%206.webp",
     testimonial: "Professional, caring, and amazing results. Dr. Jaishree's expertise is truly world-class.",
     author: "Celebrity Client",
     rating: "4.9"
@@ -779,7 +779,7 @@ export default function HomePage() {
       </section>
 
       {/* Social Media Feed */}
-      <SocialMediaFeed maxPosts={6} showHeader={true} />
+              <CustomInstagramFeed maxPosts={6} showHeader={true} />
 
       {/* Testimonials */}
       <section className="py-12 sm:py-20 bg-gray-50">

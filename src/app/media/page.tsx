@@ -3,6 +3,8 @@
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { Calendar, ExternalLink, Play, Mic, Newspaper, Tv, Instagram, Youtube } from "lucide-react";
+import { ImageAutoSlider } from "@/components/ui/image-auto-slider";
+import Image from "next/image";
 
 const mediaCoverage = [
   // 2025 Highlights
@@ -10,152 +12,242 @@ const mediaCoverage = [
     year: "2025",
     items: [
       {
-        title: "NDTV - Daily-use products that cause hyperpigmentation",
-        outlet: "NDTV",
-        type: "TV Interview",
-        date: "April 7, 2025",
-        description: "Expert commentary on common products that can cause skin pigmentation issues",
+        title: "NDTV Health — Dermatologist busts the myth of natural sugars being good for skin",
+        outlet: "NDTV Health",
+        type: "News Article",
+        date: "January 27, 2025",
+        description: "Dr. Jaishree explains why ‘natural’ sugars can still age the skin and trigger breakouts.",
+        icon: Newspaper,
+        link: "https://www.ndtv.com/health/dermatologist-busts-the-myth-of-natural-sugars-being-good-for-skin-7569441"
+      },
+     
+      {
+        title: "ELLE Impact 2025 — How women are shaping what the future looks like (panel)",
+        outlet: "ELLE India",
+        type: "Conference Speaker",
+        date: "March 28, 2025",
+        description: "Panelist discussing evidence-based skincare and inside-out beauty trends.",
         icon: Tv,
-        link: "#"
+        link: "https://elle.in/fashion/trailblazers-changemakers-and-visionaries-what-went-down-at-elle-impact-8899138"
       },
       {
-        title: "Free Press Journal - Risks of unregulated anti-ageing injections",
-        outlet: "Free Press Journal",
-        type: "News Article",
-        date: "June 30, 2025",
-        description: "Important safety information about unregulated cosmetic procedures",
+        title: "Tira Beauty — What Dr. Jaishree Sharad actually does to look younger",
+        outlet: "Tira Beauty",
+        type: "Expert Article",
+        date: "June 19, 2025",
+        description: "Her personal routine, trusted ingredients, and pragmatic anti-ageing philosophy.",
         icon: Newspaper,
-        link: "#"
+        link: "https://www.tirabeauty.com/article/articles/dr-jaishree-sharad-shares-what-she-actually-does-to-look-younger"
       }
     ]
   },
+
   // 2024 Highlights
   {
     year: "2024",
     items: [
       {
-        title: "Unstoppable Women with Shailja Podcast",
-        outlet: "Spotify",
-        type: "Podcast",
-        date: "September 26, 2024",
-        description: "From Challenges to Champion: Dr. Jaishree Sharad's Inspiring Story - Personal journey from growing up in a middle-class family to becoming a prominent figure in dermatology",
-        icon: Mic,
-        link: "#"
-      },
-      {
-        title: "Meet Our Sheroes - India's Leading Celebrity Cosmetic Dermatologist",
-        outlet: "Meet Our Sheroes Blog",
-        type: "Profile Feature",
-        date: "December 17, 2024",
-        description: "Comprehensive profile celebrating Dr. Jaishree's career and pioneering efforts in cosmetic procedures",
+        title: "NDTV Health — Bring on the party glow: try this 4-step skincare",
+        outlet: "NDTV Health",
+        type: "News Article",
+        date: "December 16, 2024",
+        description: "Dermatologist-backed routine to get quick, safe radiance for events.",
         icon: Newspaper,
-        link: "#"
+        link: "https://www.ndtv.com/health/how-to-get-glowing-skin-before-a-party-cosmetologists-4-step-skincare-process-revealed-7258888"
       },
       {
-        title: "Tira Beauty - Instagram's viral skincare ingredients",
-        outlet: "Tira Beauty",
-        type: "Expert Article",
-        date: "September 5, 2024",
-        description: "Scientific take on trending ingredients - which are effective and which are overhyped",
-        icon: Newspaper,
-        link: "#"
-      },
-      {
-        title: "Grazia India - Decodes Skincare Myths And Facts",
+        title: "Grazia India — Dr. Jaishree Sharad decodes skincare myths and facts",
         outlet: "Grazia India",
         type: "Magazine Feature",
         date: "April 1, 2024",
-        description: "Addressing the overload of skincare information online and setting the record straight",
+        description: "Cuts through misinformation with clear, research-led guidance.",
         icon: Newspaper,
-        link: "#"
+        link: "https://www.grazia.co.in/beauty/celeb-dermat-dr-jaishree-sharad-decodes-skincare-myths-and-facts-12334.html"
       },
       {
-        title: "ELLE Impact 2025 - Social media awareness panel",
-        outlet: "ELLE India",
-        type: "Conference Speaker",
-        date: "2024",
-        description: "Addressing stigma of cosmetic procedures and ageism in the beauty industry",
-        icon: Tv,
-        link: "#"
+        title: "HealthShots — Has your cooling mask become a heatwave essential? Experts weigh in",
+        outlet: "HealthShots",
+        type: "Expert Quote",
+        date: "May 1, 2024",
+        description: "What cooling masks can and can’t do in sweltering weather.",
+        icon: Newspaper,
+        link: "https://www.healthshots.com/beauty/natural-cures/heatwave-in-india-diy-cooling-face-masks-to-beat-the-heat/"
       }
     ]
   },
+
   // 2023 Highlights
   {
     year: "2023",
     items: [
       {
-        title: "The Skincare Answer Book Launch",
-        outlet: "Multiple Outlets",
-        type: "Book Launch Event",
-        date: "April 28, 2023",
-        description: "Book launch with Ranbir Kapoor and Neetu Kapoor, hailed as a 'beauty bible'",
-        icon: Newspaper,
-        link: "#"
-      },
-      {
-        title: "NDTV - Holi 2023: Skincare And Diet Tips",
-        outlet: "NDTV",
-        type: "TV Interview",
+        title: "NDTV Health — Holi 2023: Skincare and diet tips for a happy, healthy Holi",
+        outlet: "NDTV Health",
+        type: "News Article",
         date: "March 8, 2023",
-        description: "Tips to protect skin and hair during Holi festival with nutritionist collaboration",
-        icon: Tv,
-        link: "#"
-      },
-      {
-        title: "Tira Beauty - Baby skincare products guide",
-        outlet: "Tira Beauty",
-        type: "Expert Article",
-        date: "February 14, 2023",
-        description: "Comprehensive guide on safe baby skincare products and ingredients to avoid",
+        description: "Festival-safe skin & hair care tips with dermatologist-nutritionist guidance.",
         icon: Newspaper,
-        link: "#"
+        link: "https://www.ndtv.com/health/holi-2023-follow-these-skincare-and-diet-tips-for-a-happy-and-healthy-holi-3843173"
       },
       {
-        title: "NDTV Swirlster - Exosome Therapy trend",
-        outlet: "NDTV",
-        type: "TV Interview",
-        date: "June 2023",
-        description: "Expert commentary on emerging exosome therapy trend and its effectiveness",
+        title: "NDTV Swirlster — Vampire Facial: benefits and how-to (video interview)",
+        outlet: "NDTV Swirlster",
+        type: "TV/Video Interview",
+        date: "February 23, 2023",
+        description: "Pros, cons, and safety of PRP facials with a step-by-step demo.",
         icon: Tv,
-        link: "#"
+        link: "https://www.ndtv.com/video/celebrity-dermatologist-dr-jaishree-sharad-on-the-popular-vampire-facial-skincare-trend-684167"
+      },
+      
+      {
+        title: "Lifestyle Asia — How to build a minimal skincare routine (interview)",
+        outlet: "Lifestyle Asia India",
+        type: "Interview",
+        date: "May 1, 2023",
+        description: "Practical, minimal routines that still deliver results.",
+        icon: Newspaper,
+        link: "https://www.lifestyleasia.com/ind/beauty-grooming/dr-jaishree-sharad/"
+      },
+      {
+        title: "Times of India — Not too late to turn beautiful: why skin thinning causes wrinkles",
+        outlet: "The Times of India",
+        type: "News Article",
+        date: "December 17, 2023",
+        description: "Explainer on age-related skin thinning and prevention pointers.",
+        icon: Newspaper,
+        link: "https://timesofindia.indiatimes.com/life-style/beauty/dont-wait-till-you-get-wrinkles-heres-when-you-should-start-your-anti-ageing-treatment/articleshow/85269671.cms"
+      },
+      {
+        title: "Penguin — The Skincare Answer Book (book launch & coverage)",
+        outlet: "Penguin Random House India",
+        type: "Book Launch",
+        date: "March 2023",
+        description: "Her bestselling Q&A guide to skincare; widely covered across media.",
+        icon: Newspaper,
+        link: "https://www.penguin.co.in/book/the-skincare-answer-book/"
       }
     ]
   },
+
   // 2022 Highlights
   {
-    year: "2022",
+    year: "2018-2022",
     items: [
       {
-        title: "NDTV Swirlster - Vampire Facial skincare trend",
-        outlet: "NDTV",
-        type: "TV Interview",
-        date: "November 2022",
-        description: "Explaining PRP facial benefits and emphasizing the importance of qualified doctors",
-        icon: Tv,
-        link: "#"
+        title: "Vogue India — What really causes cellulite? Dermatologists explain",
+        outlet: "Vogue India",
+        type: "Magazine Feature",
+        date: "December 5, 2022",
+        description: "Evidence-based take on cellulite causes and realistic treatments.",
+        icon: Newspaper,
+        link: "https://www.vogue.in/beauty/content/experts-weigh-in-on-whether-you-can-really-get-rid-of-cellulite"
       },
       {
-        title: "Femina India Instagram Live",
+        title: "Doctor NDTV — For Holi, follow these skincare tips by Dr. Jaishree Sharad",
+        outlet: "Doctor NDTV",
+        type: "News Article",
+        date: "March 18, 2022",
+        description: "Pre- and post-Holi routines; what to avoid and what actually helps.",
+        icon: Newspaper,
+        link: "https://doctor.ndtv.com/living-healthy/for-holi-follow-these-skincare-tips-by-dr-jaishree-sharad-2828555"
+      },
+      {
+        title: "NDTV Health — Hyperpigmentation on the forehead: causes & solutions",
+        outlet: "NDTV Health",
+        type: "News Article",
+        date: "January 12, 2022",
+        description: "Common triggers like sun exposure, friction, and product allergies.",
+        icon: Newspaper,
+        link: "https://www.ndtv.com/health/hyperpigmentation-on-the-forehead-know-the-causes-and-the-solution-2703124"
+      },
+      {
+        title: "Femina India — Instagram Live: celebrity dermatologist on beauty regimen",
         outlet: "Femina",
         type: "Instagram Live",
         date: "December 8, 2022",
-        description: "Celebrity dermatologist talks about her beauty regimen and skincare tips",
+        description: "Candid chat on daily routines and practical skincare tips.",
         icon: Instagram,
-        link: "#"
+        link: "https://www.instagram.com/reel/Cl6GuvLJ-zj/"
       },
       {
-        title: "Second Opinion with Dr. Yuvraj Podcast",
-        outlet: "YouTube",
-        type: "Podcast",
-        date: "October 2022",
-        description: "Busting biggest skincare myths about acne, Botox, and fillers",
-        icon: Youtube,
-        link: "#"
+        title: "Times of India — Delay ageing with cosmetic procedures",
+        outlet: "Times of India",
+        type: "Feature Article",
+        date: "March 2021",
+        description: "Explains how minimally invasive procedures can postpone visible signs of ageing.",
+        icon: Newspaper,
+        link: "https://timesofindia.indiatimes.com/blogs/voices/delay-aging-with-cosmetic-procedures/"
+      },
+      {
+        title: "Vogue India — 15 skincare myths this celebrity dermatologist wants you to stop believing",
+        outlet: "Vogue India",
+        type: "Magazine Feature",
+        date: "January 2021",
+        description: "Covers popular myths vs. facts in daily skincare routines.",
+        icon: Newspaper,
+        link: "https://www.vogue.in/content/15-skincare-myths-this-celebrity-dermatologist-wants-you-to-stop-believing"
+      },
+      {
+        title: "ZeeZest — Skincare routine for dry and pigmented skin",
+        outlet: "ZeeZest",
+        type: "Expert Article",
+        date: "November 2020",
+        description: "Offers practical routines for common Indian skin concerns.",
+        icon: Newspaper,
+        link: "https://zeezest.com/style-beauty/celebrity-dermatologist-dr-jaishree-sharad-s-skincare-routine-for-dry-and-pigmented-skin-4030"
+      },
+     
+      {
+        title: "HerZindagi — 8 Skincare essentials by Dr. Jaishree Sharad",
+        outlet: "HerZindagi",
+        type: "Beauty Feature",
+        date: "2020",
+        description: "Essential home products for Indian skin.",
+        icon: Newspaper,
+        link: "https://www.herzindagi.com/beauty/skincare-secrets-celebrities-flawless-glowing-skin-celebrity-dermatologist-article-224013"
+      },
+      {
+        title: "Brides Today — An expert-approved AM to PM skincare routine",
+        outlet: "Brides Today",
+        type: "Feature",
+        date: "2019",
+        description: "Simple yet effective daily routine endorsed by Dr. Sharad.",
+        icon: Newspaper,
+        link: "https://www.bridestoday.in/beauty-grooming/story/an-expert-approved-am-to-pm-skincare-routine-for-glowing-skin-575937-2020-05-25"
+      },
+      {
+        title: "Grazia India — The A to Z of Skincare: Cutting through the clutter",
+        outlet: "Grazia",
+        type: "Feature Article",
+        date: "2019",
+        description: "Her professional breakdown of complex skincare marketing jargon.",
+        icon: Newspaper,
+        link: "https://www.grazia.co.in/beauty-and-health/a-to-z-of-skincare-an-expert-shares-how-to-cut-through-the-skincare-noise-10952.html"
+      },
+      {
+        title: "NDTV Health — For Holi, follow these skincare tips",
+        outlet: "NDTV Health",
+        type: "Festival Feature",
+        date: "March 18, 2019",
+        description: "Skin-safe ways to celebrate Holi without long-term damage.",
+        icon: Newspaper,
+        link: "https://doctor.ndtv.com/living-healthy/for-holi-follow-these-skincare-tips-by-dr-jaishree-sharad-2828555"
+      },
+      {
+        title: "Vogue India — Teenage skincare routines: what’s really needed",
+        outlet: "Vogue India",
+        type: "Expert Article",
+        date: "2019",
+        description: "Advises teens on safe product use, acne care, and minimalism.",
+        icon: Newspaper,
+        link: "https://www.vogue.in/content/a-dermatologist-recommends-what-your-teenage-skincare-routine-should-really-look-like"
       }
+      
     ]
   }
 ];
+
+
 
 const socialMediaPresence = [
   {
@@ -163,21 +255,16 @@ const socialMediaPresence = [
     handle: "@drjaishreesharad",
     followers: "100K+",
     content: "Daily Q&As, myth-busting reels, educational content",
-    icon: Instagram
+    icon: Instagram,
+    link: "https://www.instagram.com/drjaishreesharad/"
   },
   {
     platform: "YouTube",
     handle: "Dr. Jaishree Sharad",
     followers: "50K+",
     content: "Educational videos, webinar recordings, skincare tutorials",
-    icon: Youtube
-  },
-  {
-    platform: "Twitter/X",
-    handle: "@JaishreeSharad",
-    followers: "25K+",
-    content: "Quick tips, conference updates, industry insights",
-    icon: ExternalLink
+    icon: Youtube,
+    link: "https://www.youtube.com/@drjaishreesharadskin"
   }
 ];
 
@@ -190,7 +277,7 @@ export default function MediaPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.2 }}
             className="text-center space-y-6"
           >
             <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-800">
@@ -205,42 +292,170 @@ export default function MediaPage() {
         </div>
       </section>
 
-      {/* Social Media Presence */}
+      {/* Key Media Highlights */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="text-center mb-12"
           >
             <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
-              Social Media Presence
+              Key Media Highlights
             </h2>
             <p className="text-lg text-gray-600">
+              Notable appearances and recognition in leading publications
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                title: "Official Skin Expert",
+                outlet: "Femina Magazine",
+                description: "Regular skincare columnist and go-to expert",
+                image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/femina.webp",
+                link: "https://www.femina.in/beauty/skin"
+              },
+              {
+                title: "Celebrity Skin Expert",
+                outlet: "NDTV Good Times",
+                description: "Featured on 'Band Baajaa Bride' and lifestyle programs",
+                image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/ndtv.webp",
+                link: "https://www.primevideo.com/detail/Band-Baajaa-Bride/0TVOI2DU2U24U8XBSN4CW84WPX"
+              },
+              {
+                title: "TEDx Speaker",
+                outlet: "TEDx",
+                description: "Delivered popular TEDx talk on skincare",
+                image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/tedx.webp",
+                link: "https://www.youtube.com/watch?v=1BCr1LNA10U"
+              },
+              {
+                title: "Author & Educator",
+                outlet: "Penguin Random House",
+                description: "Four bestselling books on skincare",
+                image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/penguin.webp",
+                link: "https://www.penguin.co.in/book_author/dr-jaishree-sharad/"
+              }
+            ].map((highlight, index) => (
+              <motion.div
+                key={highlight.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, delay: index * 0.1 }}
+                className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="w-16 h-16 bg-gray-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <img
+                    src={highlight.image}
+                    alt={highlight.outlet}
+                    className="w-14 h-14 object-cover rounded-full"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      target.nextElementSibling?.classList.remove('hidden');
+                    }}
+                  />
+                  <div className="hidden w-12 h-12 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">{highlight.outlet.charAt(0)}</span>
+                  </div>
+                </div>
+                <h3 className="font-semibold text-gray-800 mb-2">
+                  {highlight.title}
+                </h3>
+                <p className="text-pastel-pink font-medium mb-2">
+                  {highlight.outlet}
+                </p>
+                <p className="text-sm text-gray-600 mb-4">
+                  {highlight.description}
+                </p>
+                <a
+                  href={highlight.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 py-2 bg-pastel-pink text-white text-sm font-medium rounded-lg hover:bg-pastel-pink/90 transition-colors duration-200"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Link
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Media Appearances Gallery */}
+      <ImageAutoSlider />
+
+      {/* Social Media Presence */}
+      <section className="py-12 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="text-center mb-8"
+          >
+            <h2 className="font-display text-2xl font-bold text-gray-800 mb-2">
+              Social Media Presence
+            </h2>
+            <p className="text-sm text-gray-600">
               Follow Dr. Jaishree for daily skincare tips and educational content
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             {socialMediaPresence.map((platform, index) => (
-              <motion.div
+              <motion.a
                 key={platform.platform}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow"
+                href={platform.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                className="group relative bg-white rounded-xl p-4 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-pastel-pink/30 flex-1 max-w-xs"
               >
-                <div className="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                  <platform.icon className="w-8 h-8 text-white" />
+                {/* Platform-specific gradient overlay */}
+                <div className={`absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
+                  platform.platform === 'Instagram' 
+                    ? 'bg-gradient-to-br from-purple-400 via-pink-500 to-orange-500' 
+                    : 'bg-gradient-to-br from-red-500 to-red-600'
+                }`}></div>
+                
+                <div className="relative z-10 flex items-center space-x-3">
+                  {/* Icon */}
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 ${
+                    platform.platform === 'Instagram' 
+                      ? 'bg-gradient-to-br from-purple-400 via-pink-500 to-orange-500' 
+                      : 'bg-gradient-to-br from-red-500 to-red-600'
+                  }`}>
+                    <platform.icon className="w-5 h-5 text-white" />
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="flex-1 text-left">
+                    <h3 className="font-semibold text-sm text-gray-800 group-hover:text-white transition-colors duration-300">
+                      {platform.platform}
+                    </h3>
+                    <p className="text-xs text-pastel-pink font-medium group-hover:text-white/90 transition-colors duration-300">
+                      {platform.handle}
+                    </p>
+                    <p className="text-xs text-gray-500 group-hover:text-white/80 transition-colors duration-300">
+                      {platform.followers} • {platform.content.split(',')[0]}
+                    </p>
+                  </div>
+                  
+                  {/* Arrow indicator */}
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
-                <h3 className="font-semibold text-lg text-gray-800 mb-2">
-                  {platform.platform}
-                </h3>
-                <p className="text-pastel-pink font-medium mb-2">{platform.handle}</p>
-                <p className="text-sm text-gray-600 mb-3">{platform.followers} followers</p>
-                <p className="text-sm text-gray-500">{platform.content}</p>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </div>
@@ -252,11 +467,11 @@ export default function MediaPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="text-center mb-16"
           >
             <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
-              Media Coverage (2022-2025)
+              Selected Media Coverage (2018-2025)
             </h2>
             <p className="text-lg text-gray-600">
               Featured appearances across television, print, digital media, and podcasts
@@ -269,7 +484,7 @@ export default function MediaPage() {
                 key={yearGroup.year}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: yearIndex * 0.2 }}
+                transition={{ duration: 0.4, delay: yearIndex * 0.2 }}
                 className="space-y-8"
               >
                 <div className="text-center">
@@ -285,7 +500,7 @@ export default function MediaPage() {
                       key={item.title}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: itemIndex * 0.1 }}
+                      transition={{ duration: 0.2, delay: itemIndex * 0.1 }}
                       className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
                     >
                       <div className="flex items-start justify-between mb-4">
@@ -319,9 +534,14 @@ export default function MediaPage() {
                         <span className="text-xs text-gray-500">
                           {item.type}
                         </span>
-                        <button className="text-pastel-pink hover:text-pastel-pink/80 transition-colors">
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-pastel-pink hover:text-pastel-pink/80 transition-colors cursor-pointer"
+                        >
                           <ExternalLink className="w-4 h-4" />
-                        </button>
+                        </a>
                       </div>
                     </motion.div>
                   ))}
@@ -332,67 +552,7 @@ export default function MediaPage() {
         </div>
       </section>
 
-      {/* Key Media Highlights */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
-              Key Media Highlights
-            </h2>
-            <p className="text-lg text-gray-600">
-              Notable appearances and recognition in leading publications
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: "Official Skin Expert",
-                outlet: "Femina Magazine",
-                description: "Regular skincare columnist and go-to expert"
-              },
-              {
-                title: "Celebrity Skin Expert",
-                outlet: "NDTV Good Times",
-                description: "Featured on 'Band Baajaa Bride' and lifestyle programs"
-              },
-              {
-                title: "TEDx Speaker",
-                outlet: "TEDx",
-                description: "Delivered popular TEDx talk on skincare"
-              },
-              {
-                title: "Author & Educator",
-                outlet: "Penguin Random House",
-                description: "Four bestselling books on skincare"
-              }
-            ].map((highlight, index) => (
-              <motion.div
-                key={highlight.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center p-6 bg-gray-50 rounded-xl"
-              >
-                <h3 className="font-semibold text-gray-800 mb-2">
-                  {highlight.title}
-                </h3>
-                <p className="text-pastel-pink font-medium mb-2">
-                  {highlight.outlet}
-                </p>
-                <p className="text-sm text-gray-600">
-                  {highlight.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+
     </Layout>
   );
 }
