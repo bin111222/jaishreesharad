@@ -85,12 +85,7 @@ export default function Footer() {
                 </a>
               </div>
               
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-pastel-pink flex-shrink-0" />
-                <a href="https://www.jaishreesharad.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
-                  www.jaishreesharad.com
-                </a>
-              </div>
+             
             </div>
           </div>
 
@@ -208,7 +203,7 @@ export default function Footer() {
         <div className="border-t border-gray-200 mt-12 pt-8">
           <div className="flex justify-center items-center">
             <div className="text-sm text-gray-500">
-              © {new Date().getFullYear()} Skinfinitii. All rights reserved.
+              © {new Date().getFullYear()} Skinfinitii Aesthetic Skin & Laser Clinic. All rights reserved.
             </div>
           </div>
           

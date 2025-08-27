@@ -43,87 +43,81 @@ const featuredTreatments = [
 const testimonials = [
   {
     id: 1,
-    quote: "She's the only person I trust with my skin.",
-    name: "Bollywood Actor",
-    treatment: "Celebrity Client",
+    quote: "When someone like Jaishree enters your life, you feel like you have won the skin battle! … your skin's BFF for life.",
+    name: "Karan Johar",
+    treatment: "Director",
     rating: 5
   },
   {
     id: 2,
-    quote: "Dr. Jaishree understands beauty and science in equal measure.",
-    name: "Fashion Icon",
-    treatment: "Celebrity Client",
+    quote: "Great skin doesn't happen by chance, it happens by appointment … she's the reason I look into the mirror!",
+    name: "Ranbir Kapoor",
+    treatment: "Actor",
     rating: 5
   },
   {
     id: 3,
-    quote: "Professional, caring, and amazing results. Highly recommend!",
-    name: "Patient",
-    treatment: "Liquid Facelift",
+    quote: "There is no one I trust more to take care of my skin … I always go to her for the best and the right advice.",
+    name: "Sonam Kapoor",
+    treatment: "Actor",
     rating: 5
   }
 ];
 
 const circularTestimonials = [
   {
-    quote: "Dr. Jaishree is the only person I trust with my skin. Her expertise and attention to detail are unmatched. The results I've seen are incredible!",
+    quote: "When someone like Jaishree enters your life, you feel like you have won the skin battle! … your skin's BFF for life.",
+    name: "Karan Johar",
+    designation: "Director",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/karan.webp"
+  },
+  {
+    quote: "Great skin doesn't happen by chance, it happens by appointment … she's the reason I look into the mirror!",
+    name: "Ranbir Kapoor",
+    designation: "Actor",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/ranbir.webp"
+  },
+  {
+    quote: "There is no one I trust more to take care of my skin … I always go to her for the best and the right advice.",
+    name: "Sonam Kapoor",
+    designation: "Actor",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/sonam.webp"
+  },
+  {
+    quote: "Jaishree is my instant cure for any skin problem … she is 'Dr Solve It' for me.",
+    name: "Varun Dhawan",
+    designation: "Actor",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/varun.webp"
+  },
+  {
+    quote: "The oxygen facials at Dr J's Skinfiniti … my skin looks naturally moisturized.",
+    name: "Jacqueline Fernandez",
+    designation: "Actor",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/jacqueline.webp"
+  },
+  {
+    quote: "Jaishree is so knowledgeable … there is no one better than her to write a book on skincare.",
+    name: "Farah Khan",
+    designation: "Director",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/farah.webp"
+  },
+  {
+    quote: "Jaishree is one of the nicest, most genuine, caring and positive souls I have come across.",
     name: "Shamita Shetty",
-    designation: "Bollywood Actress",
-    src: "https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    designation: "Actor",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/shamita.webp"
   },
   {
-    quote: "Dr. Jaishree understands beauty and science in equal measure. Her treatments are not just about looking good, but feeling confident from within.",
-    name: "Neha Dhupia",
-    designation: "Actress & Model",
-    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
+    quote: "Dr J has been my skin saviour … thanks to her, my skincare routine has become really easy!",
+    name: "Huma Qureshi",
+    designation: "Actor",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/huma.webp"
   },
   {
-    quote: "Professional, caring, and amazing results. Dr. Jaishree's liquid facelift treatment gave me the natural rejuvenation I was looking for. Highly recommend!",
-    name: "Priya Sharma",
-    designation: "Business Executive",
-    src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
-  },
-  {
-    quote: "After struggling with acne scars for years, Dr. Jaishree's treatments completely transformed my skin. I finally feel confident in my own skin!",
-    name: "Anjali Patel",
-    designation: "Software Engineer",
-    src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
-  },
-  {
-    quote: "Dr. Jaishree's botox treatment was so natural, no one could tell I had anything done. She truly is an artist with injectables!",
-    name: "Riya Kapoor",
-    designation: "Marketing Director",
-    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
-  },
-  {
-    quote: "The PRP therapy for my hair loss was a game-changer. Dr. Jaishree's expertise in regenerative treatments is outstanding.",
-    name: "Arjun Singh",
-    designation: "Entrepreneur",
-    src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
-  },
-  {
-    quote: "Dr. Jaishree's chemical peel treatment gave me the radiant skin I always wanted. Her attention to detail is remarkable.",
-    name: "Meera Reddy",
-    designation: "Fashion Designer",
-    src: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
-  },
-  {
-    quote: "The thread lift procedure was exactly what I needed. Dr. Jaishree's non-surgical approach gave me natural-looking results.",
-    name: "Kavya Iyer",
-    designation: "Corporate Lawyer",
-    src: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
-  },
-  {
-    quote: "Dr. Jaishree's laser treatments for pigmentation worked wonders. She truly understands Indian skin and its unique needs.",
-    name: "Sneha Gupta",
-    designation: "Doctor",
-    src: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
-  },
-  {
-    quote: "The bridal package at Skinfinitii was perfect for my wedding. Dr. Jaishree made sure I looked my absolute best on my special day!",
-    name: "Zara Khan",
-    designation: "Bride",
-    src: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
+    quote: "Jaishree taught me the importance of loving my skin and nourishing it—that less is always more.",
+    name: "Athiya Shetty",
+    designation: "Actor",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/athiya.webp"
   }
 ];
 
@@ -734,8 +728,8 @@ export default function HomePage() {
                       
                       {/* Play Button */}
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-pastel-pink group-hover:scale-110 transition-all duration-300">
-                          <Play className="w-8 h-8 text-gray-800 group-hover:text-white ml-1" />
+                        <div className="w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300">
+                          <Play className="w-8 h-8 text-white ml-1 drop-shadow-lg" />
                         </div>
                       </div>
                       
@@ -788,13 +782,13 @@ export default function HomePage() {
       <SocialMediaFeed maxPosts={6} showHeader={true} />
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-12"
+            className="space-y-8 sm:space-y-12"
           >
             <div className="text-center">
               <h2 className="font-display text-4xl font-bold text-gray-800 mb-4">
@@ -818,9 +812,9 @@ export default function HomePage() {
                   arrowHoverBackground: "#ec4899",
                 }}
                 fontSizes={{
-                  name: "1.75rem",
-                  designation: "1rem",
-                  quote: "1.125rem",
+                  name: "1.5rem",
+                  designation: "0.875rem",
+                  quote: "1rem",
                 }}
               />
             </div>

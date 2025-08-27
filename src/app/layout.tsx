@@ -95,9 +95,9 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#D7A7A0" />
+        <meta name="theme-color" content="#FFFFFF" />
       </head>
-      <body className="min-h-screen bg-gray-50 font-body text-gray-800 antialiased">
+      <body className="min-h-screen bg-white font-body text-gray-800 antialiased">
         {children}
       </body>
     </html>

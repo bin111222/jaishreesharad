@@ -112,11 +112,11 @@ export default function AwardsSection() {
             <span className="text-sm font-medium text-gray-700">Recognition & Excellence</span>
           </div>
           
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Awards & Recognition
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Celebrating Dr. Jaishree's excellence in aesthetic dermatology and her commitment to advancing the field
           </p>
         </motion.div>
@@ -202,20 +202,20 @@ export default function AwardsSection() {
                         
                         {/* Text content */}
                         <div className="flex-1 min-w-0">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <h3 className="font-display text-lg font-semibold text-gray-800 truncate">
+                          <div className="flex items-start space-x-2 mb-2">
+                            <h3 className="font-display text-lg font-semibold text-gray-900 leading-tight">
                               {award.title}
                             </h3>
-                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-600">
+                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-200 text-gray-700 flex-shrink-0">
                               {award.category}
                             </span>
                           </div>
                           
-                          <p className="text-sm font-medium text-pastel-pink mb-2">
+                          <p className="text-sm font-medium text-pastel-pink/90 mb-2">
                             {award.organization}
                           </p>
                           
-                          <p className="text-sm text-gray-600 mb-3 leading-relaxed">
+                          <p className="text-sm text-gray-700 mb-3 leading-relaxed">
                             {award.description}
                           </p>
                           
@@ -251,10 +251,10 @@ export default function AwardsSection() {
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 rounded-2xl p-8 border border-pastel-pink/20">
-            <h3 className="font-display text-2xl font-semibold text-gray-800 mb-4">
+            <h3 className="font-display text-2xl font-semibold text-gray-900 mb-4">
               Trusted by Thousands
             </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
               Join the thousands of patients who have experienced Dr. Jaishree's expertise and commitment to excellence in aesthetic dermatology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

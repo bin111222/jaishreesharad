@@ -276,16 +276,16 @@ export const CircularTestimonials = ({
         .testimonial-container {
           width: 100%;
           max-width: 56rem;
-          padding: 2rem;
+          padding: 1rem;
         }
         .testimonial-grid {
           display: grid;
-          gap: 5rem;
+          gap: 2rem;
         }
         .image-container {
           position: relative;
           width: 100%;
-          height: 24rem;
+          height: 18rem;
           perspective: 1000px;
         }
         .testimonial-image {
@@ -293,7 +293,7 @@ export const CircularTestimonials = ({
           width: 100%;
           height: 100%;
           object-fit: cover;
-          border-radius: 1.5rem;
+          border-radius: 1rem;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         .testimonial-content {
@@ -306,19 +306,19 @@ export const CircularTestimonials = ({
           margin-bottom: 0.25rem;
         }
         .designation {
-          margin-bottom: 2rem;
+          margin-bottom: 1rem;
         }
         .quote {
-          line-height: 1.75;
+          line-height: 1.6;
         }
         .arrow-buttons {
           display: flex;
-          gap: 1.5rem;
-          padding-top: 3rem;
+          gap: 1rem;
+          padding-top: 1.5rem;
         }
         .arrow-button {
-          width: 2.7rem;
-          height: 2.7rem;
+          width: 2.5rem;
+          height: 2.5rem;
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -333,9 +333,30 @@ export const CircularTestimonials = ({
         @media (min-width: 768px) {
           .testimonial-grid {
             grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+          }
+          .image-container {
+            height: 20rem;
           }
           .arrow-buttons {
             padding-top: 0;
+          }
+        }
+        @media (max-width: 767px) {
+          .testimonial-container {
+            padding: 0.5rem;
+          }
+          .testimonial-grid {
+            gap: 1rem;
+          }
+          .image-container {
+            height: 16rem;
+          }
+          .designation {
+            margin-bottom: 0.75rem;
+          }
+          .arrow-buttons {
+            padding-top: 1rem;
           }
         }
       `}</style>

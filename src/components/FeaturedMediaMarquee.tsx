@@ -93,8 +93,8 @@ export function FeaturedMediaMarquee() {
               <div className="w-64 h-48 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-150 hover:scale-105">
                 <div className="relative h-32 bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-white/80 rounded-full flex items-center justify-center">
-                      <Play className="w-6 h-6 text-pastel-pink" />
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center">
+                      <Play className="w-6 h-6 text-white drop-shadow-lg" />
                     </div>
                   </div>
                   <div className="absolute top-3 right-3">
@@ -141,4 +141,5 @@ export function FeaturedMediaMarquee() {
     </section>
   );
 }
+
 

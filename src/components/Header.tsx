@@ -64,14 +64,25 @@ export default function Header() {
     <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-150 bg-white shadow-lg border-b border-gray-200/50")}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group">
-            <div className="w-24 h-16 sm:w-30 sm:h-20 lg:w-36 lg:h-24 flex items-center justify-center transition-shadow duration-150">
-              <img 
-                src="/Translogo.png" 
-                alt="Skinfinitii - Aesthetic Skin & Laser Clinic" 
-                className="w-full h-full object-contain"
-              />
+          {/* Logo Group */}
+          <Link href="/" className="flex items-center space-x-4 sm:space-x-5 lg:space-x-6 group">
+            <div className="flex items-center space-x-0.5 sm:space-x-1 lg:space-x-1.5 transition-shadow duration-150">
+              {/* Logo 1 - Symbol */}
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex items-center justify-center">
+                <img 
+                  src="/logo1.png" 
+                  alt="Skinfinitii Logo Symbol" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              {/* Logo 2 - Text */}
+              <div className="w-28 h-14 sm:w-32 sm:h-16 lg:w-40 lg:h-20 flex items-center justify-center">
+                <img 
+                  src="/logo2.png" 
+                  alt="Skinfinitii Logo Text" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </Link>
 
@@ -84,7 +95,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-150 text-sm shadow-md"
+              className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-150 text-sm shadow-md whitespace-nowrap"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Book Consultation</span>
@@ -114,17 +125,24 @@ export default function Header() {
             <div className="absolute left-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-[10000]">
               {/* Profile Section */}
               <div className="p-6 border-b border-gray-100">
-                <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-full flex items-center justify-center">
-                    <img 
-                      src="/favicon.ico" 
-                      alt="Skinfinitii" 
-                      className="w-10 h-10 object-contain"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800 text-lg">Skinfinitii</h3>
-                    <p className="text-gray-500 text-sm">Aesthetic skin and laser Clinic</p>
+                <div className="flex items-center justify-center">
+                  <div className="flex items-center space-x-1">
+                    {/* Logo 1 - Symbol */}
+                    <div className="w-10 h-10 flex items-center justify-center">
+                      <img 
+                        src="/logo1.png" 
+                        alt="Skinfinitii Logo Symbol" 
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    {/* Logo 2 - Text */}
+                    <div className="w-36 h-18 flex items-center justify-center">
+                      <img 
+                        src="/logo2.png" 
+                        alt="Skinfinitii Logo Text" 
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -422,7 +440,7 @@ export default function Header() {
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="inline-flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-150 text-sm w-full shadow-md"
+                  className="inline-flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-150 text-sm w-full shadow-md whitespace-nowrap"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Book Consultation</span>

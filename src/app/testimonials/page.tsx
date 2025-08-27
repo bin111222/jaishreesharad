@@ -8,121 +8,219 @@ import { CircularTestimonials } from "@/components/ui/circular-testimonials";
 
 const celebrityTestimonialsData = [
   {
-    quote: "She will do only what is necessary and knows when to stop… I feel completely safe in her hands. I have very sensitive skin, so I do not like doing too much to it, but her mesotherapy treatment once a month is a must for me.",
+    quote: "When someone like Jaishree enters your life, you feel like you have won the skin battle! … your skin's BFF for life.",
+    name: "Karan Johar",
+    designation: "Director",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/karan.webp"
+  },
+  {
+    quote: "Great skin doesn't happen by chance, it happens by appointment … she's the reason I look into the mirror!",
+    name: "Ranbir Kapoor",
+    designation: "Actor",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/ranbir.webp"
+  },
+  {
+    quote: "There is no one I trust more to take care of my skin … I always go to her for the best and the right advice.",
+    name: "Sonam Kapoor",
+    designation: "Actor",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/sonam.webp"
+  },
+  {
+    quote: "Jaishree is my instant cure for any skin problem … she is 'Dr Solve It' for me.",
+    name: "Varun Dhawan",
+    designation: "Actor",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/varun.webp"
+  },
+  {
+    quote: "The oxygen facials at Dr J's Skinfiniti … my skin looks naturally moisturized.",
+    name: "Jacqueline Fernandez",
+    designation: "Actor",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/jacqueline.webp"
+  },
+  {
+    quote: "Jaishree is so knowledgeable … there is no one better than her to write a book on skincare.",
+    name: "Farah Khan",
+    designation: "Director",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/farah.webp"
+  },
+  {
+    quote: "Jaishree is one of the nicest, most genuine, caring and positive souls I have come across.",
     name: "Shamita Shetty",
-    designation: "Bollywood Actress",
-    src: "https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    designation: "Actor",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/shamita.webp"
   },
   {
-    quote: "Dr. Jaishree is my skin savior. Before every shoot, I consult her on the best possible skin routine to follow depending on the weather conditions I am shooting in. I have sensitive skin and it reacts a lot to changes in weather and diet. Thanks to her, my skincare routine has become really easy!",
+    quote: "Dr J has been my skin saviour … thanks to her, my skincare routine has become really easy!",
     name: "Huma Qureshi",
-    designation: "Bollywood Actress",
-    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
+    designation: "Actor",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/huma.webp"
   },
   {
-    quote: "I am an old man but I look more presentable and younger than I did twenty years ago! The complete credit goes to none other than my darling Dr. Jaishree Sharad! She believes in care and cure and not commercial viability, and that makes her one in a million.",
-    name: "Annu Kapoor",
-    designation: "Bollywood Actor",
-    src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
-  },
-  {
-    quote: "I've been visiting Dr. J's clinic for several years now… and there's no one else I trust with my skin. She doesn't believe in extreme and radical treatments. She is so quick and accurate with her diagnosis. I have sensitive skin and face various issues. I make it a point to see her twice a month.",
-    name: "Harshvardhan Kapoor",
-    designation: "Bollywood Actor",
-    src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
-  },
-  {
-    quote: "I have always taken my skin for granted and treated it like an outward part of my body. Jaishree taught me the importance of loving my skin and nourishing it — that less is always more. She is my go-to person in times of panic because she can cure with immediate effect and calm my nerves too.",
+    quote: "Jaishree taught me the importance of loving my skin and nourishing it—that less is always more.",
     name: "Athiya Shetty",
-    designation: "Bollywood Actress",
-    src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
-  },
-  {
-    quote: "I've been Dr. J's patient since 2015. I used to suffer from pimples and dull skin. Today my skin glows and is pimple-free thanks to Jaishree and her easy procedures. The peels she has done on my skin have worked wonders. More importantly, the stem cell PRP hair treatment has really helped me battle my hair loss issues.",
-    name: "Amyra Dastur",
-    designation: "Bollywood Actress",
-    src: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1368&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fA%3D%3D"
+    designation: "Actor",
+    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/athiya.webp"
   }
 ];
 
 const patientTestimonials = [
   {
+    id: 1,
+    quote: "The peels she has done on my skin have worked wonders … stem cell PRP helped my hair loss issues.",
+    name: "Amyra Dastur",
+    treatment: "Patient",
+    rating: 5,
+    category: "patient"
+  },
+  {
+    id: 2,
+    quote: "From the word go she made me comfortable and confident in my own skin … always leave the clinic revitalized.",
+    name: "Aadar Jain",
+    treatment: "Patient",
+    rating: 5,
+    category: "patient"
+  },
+  {
+    id: 3,
+    quote: "Jaishree will always be available and ready to help … she's just a call away.",
+    name: "Elli Avram",
+    treatment: "Patient",
+    rating: 5,
+    category: "patient"
+  },
+  {
+    id: 4,
+    quote: "You're the best doc, thank you for helping me out with my skin.",
+    name: "Karan Kapadia",
+    treatment: "Patient",
+    rating: 5,
+    category: "patient"
+  },
+  {
+    id: 5,
+    quote: "She simplified skincare for me … I deeply admire her positive energy and warmth.",
+    name: "Sobhita Dhulipala",
+    treatment: "Patient",
+    rating: 5,
+    category: "patient"
+  },
+  {
+    id: 6,
+    quote: "Healthy and glowing skin is very important … Skin tips from Dr J and basic peels changed the way my skin looks.",
+    name: "Priya Banerjee",
+    treatment: "Patient",
+    rating: 5,
+    category: "patient"
+  },
+  {
     id: 7,
-    quote: "Dr. Jaishree's botox treatment was so natural. My friends couldn't believe I had anything done - they just said I looked well-rested!",
-    name: "Priya M.",
-    treatment: "Botox Treatment",
+    quote: "Love J! She is the best.",
+    name: "Shekhar Ravjiani",
+    treatment: "Patient",
     rating: 5,
     category: "patient"
   },
   {
     id: 8,
-    quote: "After struggling with acne scars for years, Dr. Jaishree's laser treatments completely transformed my skin. I finally have the confidence I always wanted.",
-    name: "Anita S.",
-    treatment: "Laser Treatments",
+    quote: "I switched make-up brands … with regular clean-ups, my skin has been better. She never pushes products.",
+    name: "Kalyani Priyadarshan",
+    treatment: "Patient",
     rating: 5,
     category: "patient"
   },
   {
     id: 9,
-    quote: "The PRP therapy for my hair loss was incredible. I can see new hair growth and my confidence is back. Dr. Jaishree is truly a miracle worker.",
-    name: "Rahul K.",
-    treatment: "PRP Hair Therapy",
+    quote: "She doesn't force treatments … my face has never looked better thanks to her.",
+    name: "Yasmin Karachiwala",
+    treatment: "Patient",
     rating: 5,
     category: "patient"
   },
   {
     id: 10,
-    quote: "Dr. Jaishree's chemical peel treatment was exactly what my pigmented skin needed. The results are beyond my expectations.",
-    name: "Meera P.",
-    treatment: "Chemical Peels",
+    quote: "Fantastic dermatologist, amazing person and my best friend.",
+    name: "Namrata Dutt Kumar",
+    treatment: "Patient",
     rating: 5,
     category: "patient"
   },
   {
     id: 11,
-    quote: "Her dermal filler treatment for my lips was perfect - natural, not overdone, and exactly what I wanted. Dr. Jaishree really listens to her patients.",
-    name: "Sonia R.",
-    treatment: "Dermal Fillers",
+    quote: "She is one person I can truly trust with closed eyes … thank you for always putting up with me.",
+    name: "Riddhima Kapoor",
+    treatment: "Patient",
     rating: 5,
     category: "patient"
   },
   {
     id: 12,
-    quote: "The bridal package was worth every penny. My skin was glowing on my wedding day, and the team made me feel like a princess throughout the process.",
-    name: "Aisha M.",
-    treatment: "Bridal Package",
+    quote: "Such a warm and positive person … her smile and kindness make you feel good before treatment.",
+    name: "Iulia Vantur",
+    treatment: "Patient",
     rating: 5,
     category: "patient"
   },
   {
     id: 13,
-    quote: "Dr. Jaishree's thread lift procedure gave me the perfect lift without any surgery. I look 10 years younger and feel amazing.",
-    name: "Kavita D.",
-    treatment: "Thread Lifts",
+    quote: "Whether hydration, diet, or oxygen facials … Jaishree knows best.",
+    name: "Jitesh Pillai",
+    treatment: "Patient",
     rating: 5,
     category: "patient"
   },
   {
     id: 14,
-    quote: "After years of dealing with melasma, Dr. Jaishree's pigmentation treatment finally gave me clear, even skin. I'm so grateful for her expertise.",
-    name: "Neha S.",
-    treatment: "Pigmentation Treatment",
+    quote: "She heals her patients not just physically but instills confidence … a real-life heroine.",
+    name: "Shalini Sharma",
+    treatment: "Patient",
     rating: 5,
     category: "patient"
   },
   {
     id: 15,
-    quote: "The microdermabrasion treatment was so gentle yet effective. My skin texture improved dramatically, and the glow is incredible.",
-    name: "Pooja K.",
-    treatment: "Microdermabrasion",
+    quote: "My skin is in its best form today and it's only because of her! My skin saviour.",
+    name: "Palak Muchhal",
+    treatment: "Patient",
     rating: 5,
     category: "patient"
   },
   {
     id: 16,
-    quote: "Dr. Jaishree's neck bands treatment was a game-changer. I no longer feel self-conscious about my neck, and the results are so natural.",
-    name: "Rekha M.",
-    treatment: "Neck Bands Treatment",
+    quote: "Your expertise and knowledge are always up to the mark … staff is as sweet and nice as you are.",
+    name: "Gaurie Pandit Dwivedi",
+    treatment: "Patient",
+    rating: 5,
+    category: "patient"
+  },
+  {
+    id: 17,
+    quote: "Expert hands with a human touch … she takes care of my worries perfectly.",
+    name: "Prithvi Hatte",
+    treatment: "Patient",
+    rating: 5,
+    category: "patient"
+  },
+  {
+    id: 18,
+    quote: "I took my husband to Dr J … now he looks younger than me!",
+    name: "Anupama Kapoor",
+    treatment: "Patient",
+    rating: 5,
+    category: "patient"
+  },
+  {
+    id: 19,
+    quote: "Instead of pimples, now I smile with dimples … she did her magic.",
+    name: "Amit Sadh",
+    treatment: "Patient",
+    rating: 5,
+    category: "patient"
+  },
+  {
+    id: 20,
+    quote: "She is quick and accurate with her diagnosis … I make it a point to see her twice a month.",
+    name: "Harshvardhan Kapoor",
+    treatment: "Patient",
     rating: 5,
     category: "patient"
   }
@@ -139,13 +237,13 @@ export default function TestimonialsPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-pastel-green/20 via-white to-pastel-pink/20">
+      <section className="relative py-12 sm:py-20 bg-gradient-to-br from-pastel-green/20 via-white to-pastel-pink/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="text-center space-y-6"
+            className="text-center space-y-4 sm:space-y-6"
           >
             <h1 className="font-display text-4xl md:text-6xl font-bold text-gray-800">
               Patient Testimonials
@@ -166,15 +264,15 @@ export default function TestimonialsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="mt-12"
+              className="mt-8 sm:mt-12"
             >
               <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
                 {/* Amitabh */}
-                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden group relative grayscale group-hover:grayscale-0 transition-all duration-300">
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden group relative transition-all duration-300">
                   <img 
-                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/actors/amitabh.png?updatedAt=1756230224403"
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/actors/amitabh.webp?updatedAt=1756230224403"
                     alt="Amitabh"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}
@@ -186,11 +284,11 @@ export default function TestimonialsPage() {
                 </div>
                 
                 {/* Karan */}
-                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden group relative grayscale group-hover:grayscale-0 transition-all duration-300">
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden group relative transition-all duration-300">
                   <img 
                     src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/actors/karan.webp?updatedAt=1756230224403"
                     alt="Karan"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}
@@ -202,11 +300,11 @@ export default function TestimonialsPage() {
                 </div>
                 
                 {/* Ranbir */}
-                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden group relative grayscale group-hover:grayscale-0 transition-all duration-300">
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden group relative transition-all duration-300">
                   <img 
                     src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/actors/ranbir.webp?updatedAt=1756230224403"
                     alt="Ranbir"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}
@@ -218,11 +316,11 @@ export default function TestimonialsPage() {
                 </div>
                 
                 {/* Salman */}
-                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden group relative grayscale group-hover:grayscale-0 transition-all duration-300">
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden group relative transition-all duration-300">
                   <img 
                     src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/actors/salman.webp?updatedAt=1756230224403"
                     alt="Salman"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}
@@ -234,11 +332,11 @@ export default function TestimonialsPage() {
                 </div>
                 
                 {/* Sonam */}
-                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden group relative grayscale group-hover:grayscale-0 transition-all duration-300">
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden group relative transition-all duration-300">
                   <img 
                     src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/actors/sonam.webp?updatedAt=1756230224403"
                     alt="Sonam"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}
@@ -250,11 +348,11 @@ export default function TestimonialsPage() {
                 </div>
                 
                 {/* Varun */}
-                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden group relative grayscale group-hover:grayscale-0 transition-all duration-300">
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden group relative transition-all duration-300">
                   <img 
                     src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/actors/varun.webp?updatedAt=1756230224403"
                     alt="Varun"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                     }}
@@ -271,7 +369,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 bg-white border-b border-gray-200">
+      <section className="py-8 sm:py-12 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -299,13 +397,13 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Featured Testimonial */}
-      <section className="py-16 bg-gradient-to-r from-pastel-green/10 to-pastel-pink/10">
+      <section className="py-12 sm:py-16 bg-gradient-to-r from-pastel-green/10 to-pastel-pink/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="text-center space-y-8"
+            className="text-center space-y-6 sm:space-y-8"
           >
             <div>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -316,8 +414,8 @@ export default function TestimonialsPage() {
               </p>
             </div>
             
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <div className="space-y-6">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg">
+              <div className="space-y-4 sm:space-y-6">
                 <div className="flex justify-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-pastel-pink to-pastel-green rounded-full flex items-center justify-center">
                     <Quote className="w-8 h-8 text-white" />
@@ -346,13 +444,13 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Celebrity Testimonials */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="space-y-12"
+            className="space-y-8 sm:space-y-12"
           >
             <div className="text-center">
               <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -387,13 +485,13 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Patient Stories - New Scrolling Testimonials */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="space-y-12"
+            className="space-y-8 sm:space-y-12"
           >
             <div className="text-center">
               <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -404,7 +502,7 @@ export default function TestimonialsPage() {
               </p>
             </div>
 
-            <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+            <div className="flex justify-center gap-6 mt-6 sm:mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
               <TestimonialsColumn testimonials={testimonials.slice(0, 3)} duration={15} />
               <TestimonialsColumn testimonials={testimonials.slice(3, 6)} className="hidden md:block" duration={19} />
               <TestimonialsColumn testimonials={testimonials.slice(6, 9)} className="hidden lg:block" duration={17} />
@@ -414,13 +512,13 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Featured Testimonial */}
-      <section className="py-20 bg-gradient-to-r from-pastel-green/30 to-pastel-pink/30">
+      <section className="py-12 sm:py-20 bg-gradient-to-r from-pastel-green/30 to-pastel-pink/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="text-center space-y-8"
+            className="text-center space-y-6 sm:space-y-8"
           >
             <div className="w-20 h-20 bg-gradient-to-br from-pastel-pink to-pastel-green rounded-full flex items-center justify-center mx-auto">
               <Quote className="w-10 h-10 text-white" />
@@ -447,13 +545,13 @@ export default function TestimonialsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800">
               Join Our Happy Patients

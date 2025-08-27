@@ -19,13 +19,13 @@ export const TestimonialsColumn = (props: {
           ease: "linear",
           repeatType: "loop",
         }}
-        className="flex flex-col gap-6 pb-6 bg-background"
+        className="flex flex-col gap-3 sm:gap-6 pb-6 bg-background"
       >
         {[
           ...new Array(2).fill(0).map((_, index) => (
             <React.Fragment key={index}>
               {props.testimonials.map(({ text, image, name, role }, i) => (
-                <div className="p-10 rounded-3xl border shadow-lg shadow-primary/10 max-w-xs w-full" key={i}>
+                <div className="p-6 sm:p-10 rounded-3xl border shadow-lg shadow-primary/10 max-w-xs w-full" key={i}>
                   <div>{text}</div>
                   <div className="flex items-center gap-2 mt-5">
                     <img
@@ -52,59 +52,126 @@ export const TestimonialsColumn = (props: {
 
 const testimonials = [
   {
-    text: "Dr. Jaishree's botox treatment was so natural. My friends couldn't believe I had anything done - they just said I looked well-rested!",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face",
-    name: "Priya M.",
-    role: "Botox Treatment",
+    text: "The peels she has done on my skin have worked wonders … stem cell PRP helped my hair loss issues.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/amyra.webp",
+    name: "Amyra Dastur",
+    role: "Patient",
   },
   {
-    text: "After struggling with acne scars for years, Dr. Jaishree's laser treatments completely transformed my skin. I finally have the confidence I always wanted.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    name: "Anita S.",
-    role: "Laser Treatments",
+    text: "From the word go she made me comfortable and confident in my own skin … always leave the clinic revitalized.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/aadar.webp",
+    name: "Aadar Jain",
+    role: "Patient",
   },
   {
-    text: "The PRP therapy for my hair loss was incredible. I can see new hair growth and my confidence is back. Dr. Jaishree is truly a miracle worker.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    name: "Rahul K.",
-    role: "PRP Hair Therapy",
+    text: "Jaishree will always be available and ready to help … she's just a call away.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/elli.webp",
+    name: "Elli AvrRam",
+    role: "Patient",
   },
   {
-    text: "Dr. Jaishree's chemical peel treatment was exactly what my pigmented skin needed. The results are beyond my expectations.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-    name: "Meera P.",
-    role: "Chemical Peels",
+    text: "You're the best doc, thank you for helping me out with my skin.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/karankapadia.webp",
+    name: "Karan Kapadia",
+    role: "Patient",
   },
   {
-    text: "Her dermal filler treatment for my lips was perfect - natural, not overdone, and exactly what I wanted. Dr. Jaishree really listens to her patients.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-    name: "Sonia R.",
-    role: "Dermal Fillers",
+    text: "She simplified skincare for me … I deeply admire her positive energy and warmth.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/shobhita.webp",
+    name: "Sobhita Dhulipala",
+    role: "Patient",
   },
   {
-    text: "The bridal package was worth every penny. My skin was glowing on my wedding day, and the team made me feel like a princess throughout the process.",
-    image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150&h=150&fit=crop&crop=face",
-    name: "Aisha M.",
-    role: "Bridal Package",
+    text: "Healthy and glowing skin is very important … Skin tips from Dr J and basic peels changed the way my skin looks.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/priya.webp",
+    name: "Priya Banerjee",
+    role: "Patient",
   },
   {
-    text: "Dr. Jaishree's thread lift procedure gave me the perfect lift without any surgery. I look 10 years younger and feel amazing.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-    name: "Kavita D.",
-    role: "Thread Lifts",
+    text: "Love J! She is the best.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/shekhar.webp",
+    name: "Shekhar Ravjiani",
+    role: "Patient",
   },
   {
-    text: "After years of dealing with melasma, Dr. Jaishree's pigmentation treatment finally gave me clear, even skin. I'm so grateful for her expertise.",
-    image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=150&h=150&fit=crop&crop=face",
-    name: "Neha S.",
-    role: "Pigmentation Treatment",
+    text: "I switched make-up brands … with regular clean-ups, my skin has been better. She never pushes products.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/kalyani.webp",
+    name: "Kalyani Priyadarshan",
+    role: "Patient",
   },
   {
-    text: "The microdermabrasion treatment was so gentle yet effective. My skin texture improved dramatically, and the glow is incredible.",
-    image: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?w=150&h=150&fit=crop&crop=face",
-    name: "Pooja K.",
-    role: "Microdermabrasion",
+    text: "She doesn't force treatments … my face has never looked better thanks to her.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/yasmin.webp",
+    name: "Yasmin Karachiwala",
+    role: "Patient",
+  },
+  {
+    text: "Fantastic dermatologist, amazing person and my best friend.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/namrata.webp",
+    name: "Namrata Dutt Kumar",
+    role: "Patient",
+  },
+  {
+    text: "She is one person I can truly trust with closed eyes … thank you for always putting up with me.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/riddhima.webp",
+    name: "Riddhima Kapoor",
+    role: "Patient",
+  },
+  {
+    text: "Such a warm and positive person … her smile and kindness make you feel good before treatment.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/iulia.webp",
+    name: "Iulia Vantur",
+    role: "Patient",
+  },
+  {
+    text: "Whether hydration, diet, or oxygen facials … Jaishree knows best.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/jitesh.webp",
+    name: "Jitesh Pillai",
+    role: "Patient",
+  },
+  {
+    text: "She heals her patients not just physically but instills confidence … a real-life heroine.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/shalini.webp",
+    name: "Shalini Sharma",
+    role: "Patient",
+  },
+  {
+    text: "My skin is in its best form today and it's only because of her! My skin saviour.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/palak.webp",
+    name: "Palak Muchhal",
+    role: "Patient",
+  },
+  {
+    text: "Your expertise and knowledge are always up to the mark … staff is as sweet and nice as you are.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/gaurie.webp",
+    name: "Gaurie Pandit Dwivedi",
+    role: "Patient",
+  },
+  {
+    text: "Expert hands with a human touch … she takes care of my worries perfectly.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/prithvi.webp",
+    name: "Prithvi Hatte",
+    role: "Patient",
+  },
+  {
+    text: "I took my husband to Dr J … now he looks younger than me!",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/anupama.webp",
+    name: "Anupama Kapoor",
+    role: "Patient",
+  },
+  {
+    text: "Instead of pimples, now I smile with dimples … she did her magic.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/amit.webp",
+    name: "Amit Sadh",
+    role: "Patient",
+  },
+  {
+    text: "She is quick and accurate with her diagnosis … I make it a point to see her twice a month.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/harshvardhan.webp",
+    name: "Harshvardhan Kapoor",
+    role: "Patient",
   },
 ];
 
 export { testimonials };
+
