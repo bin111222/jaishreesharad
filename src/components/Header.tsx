@@ -405,7 +405,6 @@ export default function Header() {
                             >
                                                              {[
                                  { name: 'PRP Therapy', href: '/treatments/prp-therapy' },
-                                 { name: 'Hair Treatments', href: '/treatments/hair' },
                                  { name: 'Bridal Packages', href: '/treatments/bridal' }
                                ].map((treatment) => (
                                  <Link

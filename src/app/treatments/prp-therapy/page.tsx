@@ -208,7 +208,7 @@ export default function PRPTherapyPage() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-16"
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Before/After Image 1 */}
               <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
                 <img 
@@ -237,18 +237,6 @@ export default function PRPTherapyPage() {
                   className="w-full h-full object-cover"
                 />
 
-              </div>
-              
-              {/* Treatment Process Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden relative">
-                <div className="w-full h-full bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">+</span>
-                    </div>
-
-                  </div>
-                </div>
               </div>
             </div>
           </motion.div>

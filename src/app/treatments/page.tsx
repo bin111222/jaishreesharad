@@ -275,20 +275,6 @@ const allTreatments = [
     href: "/treatments/skin"
   },
   {
-    id: 20,
-    title: "Hair Treatments",
-    category: "Hair",
-    concern: "Hair Loss & Scalp Issues",
-    area: "Scalp",
-    provider: "Dr. Jaishree",
-    description: "Advanced treatments for hair loss, thinning, and scalp conditions",
-    duration: "30-90 min",
-    downtime: "Minimal",
-    benefits: ["Stimulates growth", "Improves scalp health", "Thicker hair"],
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hairtreatments/hairtreatments.webp",
-    href: "/treatments/hair"
-  },
-  {
     id: 21,
     title: "Body Treatments",
     category: "Body",
@@ -318,7 +304,7 @@ const allTreatments = [
   }
 ];
 
-const categories = ["All", "Injectables", "Skin", "Hair", "Body", "Lifting", "Comprehensive", "Packages"];
+const categories = ["All", "Injectables", "Skin", "Body", "Lifting", "Comprehensive", "Packages"];
 const concerns = ["All", "Wrinkles", "Volume Loss", "Aging", "Acne", "Unwanted Hair", "Fat Reduction", "Pigmentation", "Hair Loss", "Skin Tightening", "Acne Scars", "Skin Laxity", "Nose Shape", "Skin Quality", "Skin Texture", "Facial Shape", "Various Skin Issues", "Scalp Issues", "Body Concerns", "Special Occasions"];
 const areas = ["All", "Face", "Body", "Face & Body", "Face & Scalp", "Scalp"];
 const providers = ["All", "Dr. Jaishree", "Associates", "Therapists"];

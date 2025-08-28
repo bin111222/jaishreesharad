@@ -178,7 +178,8 @@ export default function ChemicalPeelsPage() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="relative"
             >
-              <div className="relative bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-3xl p-8 aspect-square overflow-hidden">
+              {/* Main Hero Image */}
+              <div className="relative bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-3xl p-8 aspect-square overflow-hidden mb-6">
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -192,48 +193,35 @@ export default function ChemicalPeelsPage() {
                   />
                 </div>
               </div>
+              
+              {/* Thumbnail Gallery */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/chemicalpeels/2.webp"
+                    alt="Chemical Peels Treatment - Dr. Jaishree Sharad"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/chemicalpeels/3.webp"
+                    alt="Chemical Peels Before/After - Acne Scars Results"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/chemicalpeels/4.webp"
+                    alt="Chemical Peels Before/After - Pigmentation Results"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </motion.div>
           </div>
-          
-          {/* Treatment Gallery */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-16"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Before/After Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/chemicalpeels/2.webp"
-                  alt="Chemical Peels Before/After - Acne Scars Results"
-                  className="w-full h-full object-cover"
-                />
-               
-              </div>
-              
-              {/* Before/After Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/chemicalpeels/3.webp"
-                  alt="Chemical Peels Before/After - Pigmentation Results"
-                  className="w-full h-full object-cover"
-                />
-                
-              </div>
-              
-              {/* Treatment Process Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/chemicalpeels/4.webp"
-                  alt="Chemical Peels Treatment Process"
-                  className="w-full h-full object-cover"
-                />
-               
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 

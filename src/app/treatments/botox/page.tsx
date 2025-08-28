@@ -149,55 +149,43 @@ export default function BotoxPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-square flex items-center justify-center overflow-hidden">
+              {/* Main Hero Image */}
+              <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-square flex items-center justify-center overflow-hidden mb-6">
                 <img 
                   src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/1.webp"
                   alt="Botox Treatment - Dr. Jaishree Sharad"
                   className="w-full h-full object-cover rounded-xl"
                 />
               </div>
+              
+              {/* Thumbnail Gallery */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/2.webp"
+                    alt="Botox Treatment - Dr. Jaishree Sharad"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/3.webp"
+                    alt="Botox Before/After - Frown Lines Results"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/4.webp"
+                    alt="Botox Before/After - Crow's Feet Results"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </motion.div>
           </div>
-          
-          {/* Treatment Gallery */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-16"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* Before/After Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/2.webp"
-                  alt="Botox Before/After - Frown Lines Results"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
-              
-              {/* Before/After Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/3.webp"
-                  alt="Botox Before/After - Crow's Feet Results"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
-              
-              {/* Treatment Process Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/4.webp"
-                  alt="Botox Treatment Process"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 

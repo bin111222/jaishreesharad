@@ -195,7 +195,8 @@ export default function LaserTreatmentsPage() {
               transition={{ delay: 0.2, duration: 0.1 }}
               className="relative"
             >
-              <div className="relative bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-3xl p-8 aspect-square">
+              {/* Main Hero Image */}
+              <div className="relative bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-3xl p-8 aspect-square mb-6">
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
@@ -211,6 +212,33 @@ export default function LaserTreatmentsPage() {
                     src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/laser-treatments/laser-types/1.webp?updatedAt=1756376529456"
                     alt="Laser Treatments - Dr. Jaishree Sharad"
                     className="w-full h-full object-cover rounded-2xl"
+                  />
+                </div>
+              </div>
+              
+              {/* Thumbnail Gallery */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/laser-treatments/laser-types/3.webp"
+                    alt="Laser Treatments - Dr. Jaishree Sharad"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/laser-treatments/laser-types/5.webp"
+                    alt="Laser Hair Removal Treatment"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/laser-treatments/laser-types/4.webp"
+                    alt="Laser Skin Rejuvenation Treatment"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
