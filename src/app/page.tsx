@@ -532,6 +532,7 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8"
           >
@@ -540,6 +541,7 @@ export default function HomePage() {
                 key={index}
                 initial={{ opacity: 0, y: 20, scale: 0.8 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 0.8, type: "spring", stiffness: 100 }}
                 whileHover={{ 
                   y: -8, 
@@ -576,6 +578,7 @@ export default function HomePage() {
                   className="text-3xl sm:text-4xl font-bold text-gray-800 mb-2 sm:mb-3"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
                   transition={{ delay: index * 0.15 + 0.3, duration: 0.6 }}
                 >
                   {stat.number}
@@ -585,6 +588,7 @@ export default function HomePage() {
                   className="text-sm sm:text-base text-gray-600 font-medium"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
                   transition={{ delay: index * 0.15 + 0.5, duration: 0.6 }}
                 >
                   {stat.label}
@@ -604,6 +608,7 @@ export default function HomePage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="space-y-12"
           >

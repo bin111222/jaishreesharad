@@ -34,7 +34,6 @@ const navigation = [
       { name: "HIFU Treatment", href: "/treatments/hifu" },
       { name: "Body Treatments", href: "/treatments/body" },
       { name: "PRP Therapy", href: "/treatments/prp-therapy" },
-      { name: "Hair Treatments", href: "/treatments/hair" },
       { name: "Bridal Packages", href: "/treatments/bridal" }
     ]
   },
@@ -62,13 +61,13 @@ export default function Header() {
 
   return (
     <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-150 bg-white shadow-lg border-b border-gray-200/50")}>
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
-        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24 w-full">
+      <div className="max-w-7xl mx-auto px-2 sm:px-3 md:px-4 lg:px-6">
+        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20 lg:h-24 w-full">
           {/* Logo Group */}
-          <Link href="/" className="flex items-center space-x-4 sm:space-x-5 lg:space-x-6 group flex-shrink-0">
-            <div className="flex items-center space-x-0.5 sm:space-x-1 lg:space-x-1.5 transition-shadow duration-150">
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 lg:space-x-6 group flex-shrink-0">
+            <div className="flex items-center space-x-0.5 sm:space-x-1 md:space-x-1.5 lg:space-x-2 transition-shadow duration-150">
               {/* Logo 1 - Symbol */}
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex items-center justify-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 flex items-center justify-center">
                 <img 
                   src="/logo1.png" 
                   alt="Skinfinitii Logo Symbol" 
@@ -76,7 +75,7 @@ export default function Header() {
                 />
               </div>
               {/* Logo 2 - Text */}
-              <div className="w-28 h-14 sm:w-32 sm:h-16 lg:w-40 lg:h-20 flex items-center justify-center">
+              <div className="w-20 h-10 sm:w-24 sm:h-12 md:w-28 md:h-14 lg:w-40 lg:h-20 flex items-center justify-center">
                 <img 
                   src="/logo2.png" 
                   alt="Skinfinitii Logo Text" 
@@ -86,33 +85,31 @@ export default function Header() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center flex-1 justify-center">
+          {/* Desktop Navigation - Only show on very large screens */}
+          <nav className="hidden xl:flex items-center flex-1 justify-center">
             <SkinfinitiiNavigationMenu />
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center flex-shrink-0">
+          {/* CTA Button - Always visible on tablet and above */}
+          <div className="hidden sm:flex items-center flex-shrink-0">
             <Link
               href="/contact"
-              className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-150 text-sm shadow-md whitespace-nowrap"
             >
-              <MessageCircle className="w-4 h-4" />
-              <span>Book Consultation</span>
+              
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile/Tablet Menu Button - Show on all screens except very large */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-gray-700 hover:text-pastel-pink transition-colors duration-200 rounded-lg hover:bg-gray-100"
+            className="xl:hidden p-2 text-gray-700 hover:text-pastel-pink transition-colors duration-200 rounded-lg hover:bg-gray-100"
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile/Tablet Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -120,7 +117,7 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -300 }}
             transition={{ duration: 0.15, ease: "easeOut" }}
-            className="lg:hidden fixed inset-0 z-[9999] bg-black/50"
+            className="xl:hidden fixed inset-0 z-[9999] bg-black/50"
           >
             <div className="absolute left-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl z-[10000]">
               {/* Profile Section */}

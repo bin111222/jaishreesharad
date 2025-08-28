@@ -61,12 +61,12 @@ const treatmentCategories = [
 export function SkinfinitiiNavigationMenu() {
   return (
     <NavigationMenu className="max-w-none w-full">
-      <NavigationMenuList className="space-x-6 justify-center">
+      <NavigationMenuList className="space-x-2 md:space-x-4 lg:space-x-6 justify-center">
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={cn(
               navigationMenuTriggerStyle(),
-              "text-gray-800 hover:text-pastel-pink transition-colors"
+              "text-gray-800 hover:text-pastel-pink transition-colors text-sm md:text-base"
             )}>
               Home
             </NavigationMenuLink>
@@ -74,7 +74,7 @@ export function SkinfinitiiNavigationMenu() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-gray-800 hover:text-pastel-pink transition-colors">
+          <NavigationMenuTrigger className="text-gray-800 hover:text-pastel-pink transition-colors text-sm md:text-base">
             Treatments
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -117,7 +117,7 @@ export function SkinfinitiiNavigationMenu() {
           <Link href="/about" legacyBehavior passHref>
             <NavigationMenuLink className={cn(
               navigationMenuTriggerStyle(),
-              "text-gray-800 hover:text-pastel-pink transition-colors"
+              "text-gray-800 hover:text-pastel-pink transition-colors text-sm md:text-base"
             )}>
               About
             </NavigationMenuLink>
@@ -128,7 +128,7 @@ export function SkinfinitiiNavigationMenu() {
           <Link href="/team" legacyBehavior passHref>
             <NavigationMenuLink className={cn(
               navigationMenuTriggerStyle(),
-              "text-gray-800 hover:text-pastel-pink transition-colors"
+              "text-gray-800 hover:text-pastel-pink transition-colors text-sm md:text-base"
             )}>
               Team
             </NavigationMenuLink>
@@ -139,7 +139,7 @@ export function SkinfinitiiNavigationMenu() {
           <Link href="/testimonials" legacyBehavior passHref>
             <NavigationMenuLink className={cn(
               navigationMenuTriggerStyle(),
-              "text-gray-800 hover:text-pastel-pink transition-colors"
+              "text-gray-800 hover:text-pastel-pink transition-colors text-sm md:text-base"
             )}>
               Testimonials
             </NavigationMenuLink>
@@ -150,7 +150,7 @@ export function SkinfinitiiNavigationMenu() {
           <Link href="/media" legacyBehavior passHref>
             <NavigationMenuLink className={cn(
               navigationMenuTriggerStyle(),
-              "text-gray-800 hover:text-pastel-pink transition-colors"
+              "text-gray-800 hover:text-pastel-pink transition-colors text-sm md:text-base"
             )}>
               Media
             </NavigationMenuLink>
@@ -161,7 +161,7 @@ export function SkinfinitiiNavigationMenu() {
           <Link href="/books" legacyBehavior passHref>
             <NavigationMenuLink className={cn(
               navigationMenuTriggerStyle(),
-              "text-gray-800 hover:text-pastel-pink transition-colors"
+              "text-gray-800 hover:text-pastel-pink transition-colors text-sm md:text-base"
             )}>
               Books
             </NavigationMenuLink>
@@ -172,7 +172,7 @@ export function SkinfinitiiNavigationMenu() {
           <Link href="/quiz" legacyBehavior passHref>
             <NavigationMenuLink className={cn(
               navigationMenuTriggerStyle(),
-              "text-gray-800 hover:text-pastel-pink transition-colors"
+              "text-gray-800 hover:text-pastel-pink transition-colors text-sm md:text-base"
             )}>
               Skin Quiz
             </NavigationMenuLink>
