@@ -128,7 +128,7 @@ export default function BotoxPage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-200 hover:scale-105"
+                  className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-200 hover:scale-100"
                 >
                   <Calendar className="w-5 h-5" />
                   <span>Book Consultation</span>
@@ -166,7 +166,7 @@ export default function BotoxPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-16"
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Before/After Image 1 */}
               <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
                 <img 
@@ -195,18 +195,6 @@ export default function BotoxPage() {
                   className="w-full h-full object-cover"
                 />
 
-              </div>
-              
-              {/* Treatment Process Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden relative">
-                <div className="w-full h-full bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">+</span>
-                    </div>
-
-                  </div>
-                </div>
               </div>
             </div>
           </motion.div>
@@ -250,39 +238,71 @@ export default function BotoxPage() {
       </section>
 
       {/* What it Treats */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
+              <h2 className="font-display text-4xl font-bold text-gray-800 mb-6">
                 What Botox Treats
               </h2>
-              <p className="text-xl text-gray-600">
-                Botox is most effective for dynamic wrinkles that appear when you make facial expressions
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Botox is most effective for dynamic wrinkles that appear when you make facial expressions. 
+                Our expert treatments target specific areas for natural, rejuvenated results.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {treatmentAreas.map((treatment, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow"
+                  className="bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-100"
                 >
-                  <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold">{index + 1}</span>
+                  <div className="w-full h-48 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-6 overflow-hidden">
+                    <img 
+                      src={(() => {
+                        // Map treatment areas to correct image filenames
+                        const imageMap: { [key: string]: string } = {
+                          "Frown Lines (Glabellar Lines)": "frown-lines-glabellar-lines.webp",
+                          "Crow's Feet": "crows-feet.webp",
+                          "Forehead Lines": "forehead-lines.webp",
+                          "Square Jaw Treatment": "square-jaw-treatment.webp",
+                          "Neck Bands (Platysmal Bands)": "neck-bands-platysmal-bands.webp",
+                          "Excessive Sweating (Hyperhidrosis)": "excessive-sweating-hyperhidrosis.webp"
+                        };
+                        return `https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/treatment-areas/${imageMap[treatment.area] || 'default.webp'}`;
+                      })()}
+                      alt={`${treatment.area} treatment`}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = `
+                          <div class="w-full h-48 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-xl flex items-center justify-center">
+                            <div class="text-center">
+                              <div class="w-16 h-16 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-white font-bold text-xl">${index + 1}</span>
+                              </div>
+                              <p class="text-gray-600 font-medium">${treatment.area}</p>
+                            </div>
+                          </div>
+                        `;
+                      }}
+                    />
                   </div>
-                  <h3 className="font-semibold text-gray-800 mb-3 text-center">{treatment.area}</h3>
-                  <p className="text-gray-600 text-sm mb-3">{treatment.description}</p>
-                  <div className="bg-pastel-green/10 rounded-lg p-3">
-                    <p className="text-pastel-pink font-medium text-sm">{treatment.benefit}</p>
+                  <div className="w-10 h-10 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-sm">{index + 1}</span>
+                  </div>
+                  <h3 className="font-semibold text-gray-800 mb-4 text-center text-lg">{treatment.area}</h3>
+                  <p className="text-gray-600 mb-4 text-center leading-relaxed">{treatment.description}</p>
+                  <div className="bg-gradient-to-r from-pastel-green/10 to-pastel-pink/10 rounded-xl p-4 border border-pastel-green/20">
+                    <p className="text-pastel-pink font-semibold text-center">{treatment.benefit}</p>
                   </div>
                 </motion.div>
               ))}
@@ -324,51 +344,141 @@ export default function BotoxPage() {
       </section>
 
       {/* Procedure */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
+              <h2 className="font-display text-4xl font-bold text-gray-800 mb-6">
                 The Procedure
               </h2>
-              <p className="text-xl text-gray-600">
-                What to expect during your Botox treatment
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                What to expect during your Botox treatment - a simple, three-step process 
+                designed for your comfort and optimal results
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">1</span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, delay: 0.1 }}
+                className="text-center group"
+              >
+                <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-100 border border-gray-100">
+                  <div className="relative mb-8">
+                    <img 
+                      src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/process-consultation.webp"
+                      alt="Botox consultation"
+                      className="w-full h-56 object-cover rounded-2xl mb-6 group-hover:scale-100 transition-transform duration-300"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = `
+                          <div class="w-full h-56 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl mb-6 flex items-center justify-center">
+                            <div class="text-center">
+                              <div class="w-20 h-20 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white text-2xl font-bold">1</span>
+                              </div>
+                              <p class="text-gray-600 font-semibold text-lg">Consultation</p>
+                            </div>
+                          </div>
+                        `;
+                      }}
+                    />
+                                         <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
+                       <div className="w-14 h-14 bg-gradient-to-r from-pastel-pink to-pastel-green rounded-full flex items-center justify-center shadow-lg border-3 border-white">
+                         <span className="text-white font-bold text-lg">1</span>
+                       </div>
+                     </div>
+                  </div>
+                  <h3 className="font-semibold text-gray-800 mb-4 text-xl">Consultation</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    We'll assess your concerns, discuss goals, and create a personalized treatment plan tailored to your unique needs
+                  </p>
                 </div>
-                <h3 className="font-semibold text-gray-800 mb-2">Consultation</h3>
-                <p className="text-gray-600 text-sm">
-                  We'll assess your concerns, discuss goals, and create a personalized treatment plan
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">2</span>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, delay: 0.2 }}
+                className="text-center group"
+              >
+                <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-100 border border-gray-100">
+                  <div className="relative mb-8">
+                    <img 
+                      src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/process-treatment.webp"
+                      alt="Botox treatment"
+                      className="w-full h-56 object-cover rounded-2xl mb-6 group-hover:scale-100 transition-transform duration-300"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = `
+                          <div class="w-full h-56 bg-gradient-to-br from-pastel-pink/30 to-pastel-green/30 rounded-2xl mb-6 flex items-center justify-center">
+                            <div class="text-center">
+                              <div class="w-20 h-20 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white text-2xl font-bold">2</span>
+                              </div>
+                              <p class="text-gray-600 font-semibold text-lg">Treatment</p>
+                            </div>
+                          </div>
+                        `;
+                      }}
+                    />
+                                         <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
+                       <div className="w-14 h-14 bg-gradient-to-r from-pastel-green to-pastel-pink rounded-full flex items-center justify-center shadow-lg border-3 border-white">
+                         <span className="text-white font-bold text-lg">2</span>
+                       </div>
+                     </div>
+                  </div>
+                  <h3 className="font-semibold text-gray-800 mb-4 text-xl">Treatment</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Precise injections using fine needles for maximum comfort. The procedure takes just 15-30 minutes with minimal discomfort
+                  </p>
                 </div>
-                <h3 className="font-semibold text-gray-800 mb-2">Treatment</h3>
-                <p className="text-gray-600 text-sm">
-                  Precise injections using fine needles. The procedure takes 15-30 minutes
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">3</span>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, delay: 0.3 }}
+                className="text-center group"
+              >
+                <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-100 border border-gray-100">
+                  <div className="relative mb-8">
+                    <img 
+                      src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/process-results.webp"
+                      alt="Botox results"
+                      className="w-full h-56 object-cover rounded-2xl mb-6 group-hover:scale-100 transition-transform duration-300"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = `
+                          <div class="w-full h-56 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl mb-6 flex items-center justify-center">
+                            <div class="text-center">
+                              <div class="w-20 h-20 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-4">
+                                <span class="text-white text-2xl font-bold">3</span>
+                              </div>
+                              <p class="text-gray-600 font-semibold text-lg">Results</p>
+                            </div>
+                          </div>
+                        `;
+                      }}
+                    />
+                                         <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2">
+                       <div className="w-14 h-14 bg-gradient-to-r from-pastel-pink to-pastel-green rounded-full flex items-center justify-center shadow-lg border-3 border-white">
+                         <span className="text-white font-bold text-lg">3</span>
+                       </div>
+                     </div>
+                  </div>
+                  <h3 className="font-semibold text-gray-800 mb-4 text-xl">Results</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Gradual improvement over 7-14 days with natural-looking results. Effects last 3-6 months with proper maintenance
+                  </p>
                 </div>
-                <h3 className="font-semibold text-gray-800 mb-2">Results</h3>
-                <p className="text-gray-600 text-sm">
-                  Gradual improvement over 7-14 days. Results last 3-6 months
-                </p>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -469,7 +579,7 @@ export default function BotoxPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-200 hover:scale-105"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-200 hover:scale-100"
               >
                 <Calendar className="w-4 h-4" />
                 <span>Book Consultation</span>

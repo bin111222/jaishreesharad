@@ -10,7 +10,7 @@ const teamMembers = [
     role: "Founder & Medical Director",
     credentials: "MBBS, MD (Dermatology), International Fellowships",
     expertise: "Cosmetic Dermatology, Anti-aging, Celebrity Care",
-    experience: "23+ years",
+    experience: "26+ years",
     image: "/team/dr-jaishree.jpg",
     description: "India's leading celebrity cosmetic dermatologist with international training and recognition. Board Member of ISDS, International Mentor for ASDS, and author of four bestselling books."
   },
@@ -101,22 +101,24 @@ export default function TeamPage() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-pastel-green/20 via-white to-pastel-pink/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url("https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/5.webp")' }}>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center space-y-6"
           >
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-gray-800">
+            <h1 className="font-display text-4xl md:text-6xl font-bold text-white">
               Team Skinfinitii
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
               A multidisciplinary team of dermatologists, aesthetic physicians, therapists, and nurses 
               supporting Dr. Jaishree to deliver premium care.
             </p>
-            <div className="flex items-center justify-center space-x-4 text-gray-600">
+            <div className="flex items-center justify-center space-x-4 text-gray-200">
               <Users className="w-6 h-6" />
               <span className="text-lg">Expert Team</span>
               <span>•</span>
@@ -192,50 +194,90 @@ export default function TeamPage() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {/* Team Working Image 1 */}
                 <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
-                        <span className="text-white text-sm font-bold">1</span>
-                      </div>
-                      <span className="text-gray-500 text-xs font-medium">Team Working</span>
-                    </div>
-                  </div>
+                <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/1.webp"
+                    alt="Team treatment"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.parentElement!.innerHTML = `
+                        <div class="w-full h-full bg-gray-100 flex items-center justify-center">
+                          <div class="text-center">
+                            <div class="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                              <span class="text-white text-sm font-bold">3</span>
+                            </div>
+                            <span class="text-gray-500 text-xs font-medium">Treatment</span>
+                          </div>
+                        </div>
+                      `;
+                    }}
+                  />
                 </div>
                 
                 {/* Team Working Image 2 */}
                 <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                        <span className="text-white text-sm font-bold">2</span>
-                      </div>
-                      <span className="text-gray-500 text-xs font-medium">Consultation</span>
-                    </div>
-                  </div>
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/2.webp"
+                    alt="Team consultation"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.parentElement!.innerHTML = `
+                        <div class="w-full h-full bg-gray-100 flex items-center justify-center">
+                          <div class="text-center">
+                            <div class="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
+                              <span class="text-white text-sm font-bold">2</span>
+                            </div>
+                            <span class="text-gray-500 text-xs font-medium">Consultation</span>
+                          </div>
+                        </div>
+                      `;
+                    }}
+                  />
                 </div>
                 
                 {/* Team Working Image 3 */}
                 <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
-                        <span className="text-white text-sm font-bold">3</span>
-                      </div>
-                      <span className="text-gray-500 text-xs font-medium">Treatment</span>
-                    </div>
-                  </div>
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/3.webp"
+                    alt="Team treatment"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.parentElement!.innerHTML = `
+                        <div class="w-full h-full bg-gray-100 flex items-center justify-center">
+                          <div class="text-center">
+                            <div class="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                              <span class="text-white text-sm font-bold">3</span>
+                            </div>
+                            <span class="text-gray-500 text-xs font-medium">Treatment</span>
+                          </div>
+                        </div>
+                      `;
+                    }}
+                  />
                 </div>
                 
                 {/* Team Working Image 4 */}
                 <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                        <span className="text-white text-sm font-bold">4</span>
-                      </div>
-                      <span className="text-gray-500 text-xs font-medium">Care</span>
-                    </div>
-                  </div>
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/4.webp"
+                    alt="Team care"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.parentElement!.innerHTML = `
+                        <div class="w-full h-full bg-gray-100 flex items-center justify-center">
+                          <div class="text-center">
+                            <div class="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
+                              <span class="text-white text-sm font-bold">4</span>
+                            </div>
+                            <span class="text-gray-500 text-xs font-medium">Care</span>
+                          </div>
+                        </div>
+                      `;
+                    }}
+                  />
                 </div>
               </div>
             </motion.div>

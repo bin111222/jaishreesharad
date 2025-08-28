@@ -222,6 +222,30 @@ export default function BridalPackagesPage() {
                   whileHover={{ y: -10 }}
                   className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
                 >
+                  <div className="w-full h-40 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-6 overflow-hidden">
+                    <img 
+                      src={`https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/bridal/packages/${pkg.name.toLowerCase().replace(/\s+/g, '-')}.webp`}
+                      alt={`${pkg.name} bridal package`}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = `
+                          <div class="w-full h-40 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-xl flex items-center justify-center">
+                            <div class="text-center">
+                              <motion.div
+                                whileHover={{ scale: 1.1 }}
+                                class="w-16 h-16 bg-gradient-to-r ${pkg.color} rounded-full flex items-center justify-center mx-auto mb-2"
+                              >
+                                <pkg.icon class="w-8 h-8 text-white" />
+                              </motion.div>
+                              <p class="text-gray-600 font-medium text-sm">${pkg.name}</p>
+                            </div>
+                          </div>
+                        `;
+                      }}
+                    />
+                  </div>
+                  
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     className={`w-16 h-16 bg-gradient-to-r ${pkg.color} rounded-full flex items-center justify-center mx-auto mb-6`}

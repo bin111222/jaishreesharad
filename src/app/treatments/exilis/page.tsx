@@ -264,6 +264,27 @@ export default function ExilisPage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
+                  <div className="w-full h-32 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-4 overflow-hidden">
+                    <img 
+                      src={`https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/exilis/treatment-areas/${treatment.area.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}.webp`}
+                      alt={`${treatment.area} exilis treatment`}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = `
+                          <div class="w-full h-32 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-xl flex items-center justify-center">
+                            <div class="text-center">
+                              <div class="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                                <span class="text-white font-bold">${index + 1}</span>
+                              </div>
+                              <p class="text-gray-600 font-medium text-sm">${treatment.area}</p>
+                            </div>
+                          </div>
+                        `;
+                      }}
+                    />
+                  </div>
+                  
                   <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold">{index + 1}</span>
                   </div>

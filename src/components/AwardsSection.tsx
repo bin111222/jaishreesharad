@@ -269,7 +269,7 @@ export default function AwardsSection() {
                 href="/about"
                 className="inline-flex items-center space-x-2 px-6 py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-full hover:border-pastel-pink hover:text-pastel-pink transition-all duration-150 hover:scale-102"
               >
-                <span>View All Awards</span>
+                <span>All Recognition</span>
                 <Star className="w-4 h-4" />
               </Link>
             </div>

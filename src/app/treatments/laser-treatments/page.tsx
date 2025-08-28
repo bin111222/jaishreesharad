@@ -208,7 +208,7 @@ export default function LaserTreatmentsPage() {
                 />
                 <div className="relative z-10 flex items-center justify-center h-full">
                   <img 
-                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/lasertreatments/1.webp"
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/laser-treatments/laser-types/1.webp?updatedAt=1756376529456"
                     alt="Laser Treatments - Dr. Jaishree Sharad"
                     className="w-full h-full object-cover rounded-2xl"
                   />
@@ -256,16 +256,16 @@ export default function LaserTreatmentsPage() {
       </section>
 
       {/* Laser Types with Interactive Cards */}
-      <section id="laser-types" className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="laser-types" className="py-12 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.1 }}
-            className="space-y-12"
+            className="space-y-8"
           >
             <div className="text-center">
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-3">
                 Our Laser Treatments
               </h2>
               <p className="text-xl text-gray-600">
@@ -273,7 +273,7 @@ export default function LaserTreatmentsPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {laserTypes.map((laser, index) => (
                 <motion.div
                   key={index}
@@ -286,21 +286,45 @@ export default function LaserTreatmentsPage() {
                   }`}
                   onClick={() => setSelectedLaser(index)}
                 >
-                  <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-150">
+                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-150">
+                    <div className="w-full h-48 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-4 overflow-hidden">
+                      <img 
+                        src={`https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/laser-treatments/laser-types/${laser.name.toLowerCase().replace(/\s+/g, '-')}.webp`}
+                        alt={`${laser.name} laser treatment`}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.parentElement!.innerHTML = `
+                            <div class="w-full h-48 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-xl flex items-center justify-center">
+                              <div class="text-center">
+                                <motion.div
+                                  whileHover={{ scale: 1.1 }}
+                                  class="w-12 h-12 bg-gradient-to-r ${laser.color} rounded-full flex items-center justify-center mx-auto mb-2"
+                                >
+                                  <laser.icon class="w-6 h-6 text-white" />
+                                </motion.div>
+                                <p class="text-gray-600 font-medium text-sm">${laser.name}</p>
+                              </div>
+                            </div>
+                          `;
+                        }}
+                      />
+                    </div>
+                    
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className={`w-16 h-16 bg-gradient-to-r ${laser.color} rounded-full flex items-center justify-center mx-auto mb-6`}
+                      className={`w-12 h-12 bg-gradient-to-r ${laser.color} rounded-full flex items-center justify-center mx-auto mb-4`}
                     >
-                      <laser.icon className="w-8 h-8 text-white" />
+                      <laser.icon className="w-6 h-6 text-white" />
                     </motion.div>
 
-                    <h3 className="font-display text-xl font-semibold text-gray-800 mb-3 text-center">
+                    <h3 className="font-display text-xl font-semibold text-gray-800 mb-2 text-center">
                       {laser.name}
                     </h3>
-                    <p className="text-gray-600 text-center mb-6">{laser.description}</p>
+                    <p className="text-gray-600 text-center mb-4">{laser.description}</p>
 
-                    <div className="space-y-4">
-                      <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="space-y-3">
+                      <div className="grid grid-cols-2 gap-3 text-sm">
                         <div className="flex justify-between">
                           <span className="text-gray-500">Duration:</span>
                           <span className="font-medium">{laser.duration}</span>
@@ -311,13 +335,13 @@ export default function LaserTreatmentsPage() {
                         </div>
                       </div>
                       
-                      <div className="pt-4 border-t border-gray-100">
+                      <div className="pt-3 border-t border-gray-100">
                         <h4 className="font-medium text-gray-800 mb-2">Treats:</h4>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5">
                           {laser.concerns.map((concern, idx) => (
                             <span
                               key={idx}
-                              className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                              className="px-2.5 py-0.5 bg-gray-100 text-gray-700 text-xs rounded-full"
                             >
                               {concern}
                             </span>

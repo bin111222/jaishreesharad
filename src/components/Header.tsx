@@ -17,24 +17,24 @@ const navigation = [
       { name: "Botox", href: "/treatments/botox" },
       { name: "Dermal Fillers", href: "/treatments/fillers" },
       { name: "Liquid Facelift", href: "/treatments/liquid-facelift" },
-      { name: "Chemical Peels", href: "/treatments/chemical-peels" },
-      { name: "Laser Treatments", href: "/treatments/laser-treatments" },
-      { name: "Microdermabrasion", href: "/treatments/microdermabrasion" },
-      { name: "PRP Therapy", href: "/treatments/prp-therapy" },
       { name: "Thread Lifts", href: "/treatments/thread-lifts" },
-      { name: "HIFU Treatment", href: "/treatments/hifu" },
-      { name: "EndyMed", href: "/treatments/endymed" },
-      { name: "Exilis", href: "/treatments/exilis" },
-      { name: "Cryolipolysis", href: "/treatments/cryolipolysis" },
-      { name: "Pigmentation Treatment", href: "/treatments/pigmentation" },
       { name: "Non-Surgical Nose Job", href: "/treatments/non-surgical-nose" },
       { name: "Skin Boosters", href: "/treatments/skin-boosters" },
-      { name: "Acne Scar Treatment", href: "/treatments/acne-scars" },
-      { name: "Skin Treatments", href: "/treatments/skin" },
-      { name: "Hair Treatments", href: "/treatments/hair" },
-      { name: "Body Treatments", href: "/treatments/body" },
       { name: "Facial Contouring", href: "/treatments/facial-contouring" },
+      { name: "Chemical Peels", href: "/treatments/chemical-peels" },
+      { name: "Microdermabrasion", href: "/treatments/microdermabrasion" },
+      { name: "Pigmentation Treatment", href: "/treatments/pigmentation" },
+      { name: "Acne Scar Treatment", href: "/treatments/acne-scars" },
+      { name: "Laser Treatments", href: "/treatments/laser-treatments" },
       { name: "Anti-Aging & Rejuvenation", href: "/treatments/anti-aging" },
+      { name: "Skin Treatments", href: "/treatments/skin" },
+      { name: "Cryolipolysis", href: "/treatments/cryolipolysis" },
+      { name: "Exilis", href: "/treatments/exilis" },
+      { name: "EndyMed", href: "/treatments/endymed" },
+      { name: "HIFU Treatment", href: "/treatments/hifu" },
+      { name: "Body Treatments", href: "/treatments/body" },
+      { name: "PRP Therapy", href: "/treatments/prp-therapy" },
+      { name: "Hair Treatments", href: "/treatments/hair" },
       { name: "Bridal Packages", href: "/treatments/bridal" }
     ]
   },
@@ -62,10 +62,10 @@ export default function Header() {
 
   return (
     <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-150 bg-white shadow-lg border-b border-gray-200/50")}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+        <div className="flex items-center justify-between h-16 sm:h-20 lg:h-24 w-full">
           {/* Logo Group */}
-          <Link href="/" className="flex items-center space-x-4 sm:space-x-5 lg:space-x-6 group">
+          <Link href="/" className="flex items-center space-x-4 sm:space-x-5 lg:space-x-6 group flex-shrink-0">
             <div className="flex items-center space-x-0.5 sm:space-x-1 lg:space-x-1.5 transition-shadow duration-150">
               {/* Logo 1 - Symbol */}
               <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 flex items-center justify-center">
@@ -87,12 +87,12 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center">
+          <nav className="hidden lg:flex items-center flex-1 justify-center">
             <SkinfinitiiNavigationMenu />
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden lg:flex items-center flex-shrink-0">
             <Link
               href="/contact"
               className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-150 text-sm shadow-md whitespace-nowrap"
@@ -190,7 +190,7 @@ export default function Header() {
                     className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-pastel-pink hover:bg-gray-50 rounded-lg transition-colors duration-200"
                   >
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h15c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
                     </svg>
                     <span className="font-medium">Testimonials</span>
                   </Link>
@@ -315,7 +315,8 @@ export default function Header() {
                                  { name: 'Pigmentation', href: '/treatments/pigmentation' },
                                  { name: 'Acne Scars', href: '/treatments/acne-scars' },
                                  { name: 'Laser Treatments', href: '/treatments/laser-treatments' },
-                                 { name: 'Anti-Aging', href: '/treatments/anti-aging' }
+                                 { name: 'Anti-Aging', href: '/treatments/anti-aging' },
+                                 { name: 'Skin Treatments', href: '/treatments/skin' }
                                ].map((treatment) => (
                                  <Link
                                    key={treatment.name}
@@ -360,7 +361,8 @@ export default function Header() {
                                  { name: 'Cryolipolysis', href: '/treatments/cryolipolysis' },
                                  { name: 'Exilis', href: '/treatments/exilis' },
                                  { name: 'EndyMed', href: '/treatments/endymed' },
-                                 { name: 'HIFU', href: '/treatments/hifu' }
+                                 { name: 'HIFU', href: '/treatments/hifu' },
+                                 { name: 'Body Treatments', href: '/treatments/body' }
                                ].map((treatment) => (
                                  <Link
                                    key={treatment.name}
@@ -403,6 +405,7 @@ export default function Header() {
                             >
                                                              {[
                                  { name: 'PRP Therapy', href: '/treatments/prp-therapy' },
+                                 { name: 'Hair Treatments', href: '/treatments/hair' },
                                  { name: 'Bridal Packages', href: '/treatments/bridal' }
                                ].map((treatment) => (
                                  <Link

@@ -1,9 +1,10 @@
 "use client";
 
 import Layout from "@/components/Layout";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { BookOpen, Star, ExternalLink, Download, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useRef } from "react";
 
 const books = [
   {
@@ -161,19 +162,20 @@ export default function BooksPage() {
           {books.filter(book => book.featured).map((book) => (
             <motion.div
               key={book.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
             >
               {/* Book Cover */}
               <div className="relative">
                 <div className="relative aspect-[3/5] rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={book.cover}
-                    alt={`${book.title} - ${book.subtitle}`}
-                    className="w-full h-full object-cover"
-                  />
+                                          <img 
+                          src={book.cover}
+                          alt={`${book.title} - ${book.subtitle}`}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
                 </div>
                 <div className="absolute -top-4 -right-4 bg-pastel-pink text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -266,19 +268,19 @@ export default function BooksPage() {
         </div>
       </section>
 
-            {/* All Books - Revamped with Bigger Images */}
+            {/* All Books - Optimized Performance */}
       <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-pastel-pink/5 relative overflow-hidden">
-        {/* Background Elements */}
+        {/* Simplified Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-72 h-72 bg-gradient-to-br from-pastel-pink/10 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-pastel-green/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-1/4 w-72 h-72 bg-gradient-to-br from-pastel-pink/10 to-transparent rounded-full blur-2xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-pastel-green/10 to-transparent rounded-full blur-2xl"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-pastel-pink/20 to-pastel-green/20 px-4 py-2 rounded-full mb-6">
@@ -295,25 +297,30 @@ export default function BooksPage() {
           </motion.div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {books.map((book, index) => (
-              <motion.div
-                key={book.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -5, scale: 1.01 }}
-                className="group relative"
-              >
-                <div className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+            {books.map((book, index) => {
+              const ref = useRef(null);
+              const isInView = useInView(ref, { once: true, margin: "-50px" });
+              
+              return (
+                <motion.div
+                  ref={ref}
+                  key={book.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  className="group relative"
+                >
+                <div className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-200 overflow-hidden border border-gray-100">
                   {/* Book Cover Section - Vertical Layout */}
                   <div className="flex items-start space-x-6 p-8">
                     {/* Book Cover - Vertical */}
                     <div className="relative flex-shrink-0">
-                      <div className="w-32 h-48 rounded-xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-all duration-300">
+                      <div className="w-32 h-48 rounded-xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-200">
                         <img 
                           src={book.cover}
                           alt={`${book.title} - ${book.subtitle}`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
+                          loading="lazy"
                         />
                       </div>
                       
@@ -394,14 +401,15 @@ export default function BooksPage() {
 
                 </div>
               </motion.div>
-            ))}
+            );
+            })}
           </div>
           
           {/* Bottom CTA */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.4 }}
             className="text-center mt-16"
           >
             <div className="bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 rounded-2xl p-8 border border-pastel-pink/20">

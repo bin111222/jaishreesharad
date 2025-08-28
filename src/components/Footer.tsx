@@ -143,30 +143,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter & Social */}
+          {/* Social Links */}
           <div>
-            <h4 className="font-display font-semibold text-gray-800 mb-4">Stay Connected</h4>
+            <h4 className="font-display font-semibold text-gray-800 mb-4">Follow Us</h4>
             
-            {/* Newsletter Signup */}
-            <div className="mb-6">
-              <p className="text-sm text-gray-600 mb-3">Subscribe to our newsletter for updates and tips</p>
-              <form className="space-y-2">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-pink focus:border-transparent"
-                />
-                <button
-                  type="submit"
-                  className="w-full px-4 py-2 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-medium rounded-lg hover:shadow-lg transition-all duration-200 text-sm"
-                >
-                  Subscribe
-                </button>
-              </form>
-            </div>
-
             {/* Social Links */}
-            <div>
+            <div className="mb-6">
               <p className="text-sm text-gray-600 mb-3">Follow us on social media</p>
               <div className="flex space-x-3">
                 {socialLinks.map((social) => (
@@ -185,7 +167,7 @@ export default function Footer() {
             </div>
 
             {/* WhatsApp CTA */}
-            <div className="mt-6">
+            <div>
               <a
                 href="https://wa.me/9198XXXXXXXX?text=Hi%20Dr.%20Jaishree,%20I%20would%20like%20to%20book%20a%20consultation"
                 target="_blank"

@@ -22,6 +22,9 @@ const treatmentCategories = [
       { name: "Dermal Fillers", href: "/treatments/fillers" },
       { name: "Liquid Facelift", href: "/treatments/liquid-facelift" },
       { name: "Thread Lifts", href: "/treatments/thread-lifts" },
+      { name: "Non-Surgical Nose", href: "/treatments/non-surgical-nose" },
+      { name: "Skin Boosters", href: "/treatments/skin-boosters" },
+      { name: "Facial Contouring", href: "/treatments/facial-contouring" },
     ]
   },
   {
@@ -31,6 +34,9 @@ const treatmentCategories = [
       { name: "Microdermabrasion", href: "/treatments/microdermabrasion" },
       { name: "Pigmentation", href: "/treatments/pigmentation" },
       { name: "Acne Scars", href: "/treatments/acne-scars" },
+      { name: "Laser Treatments", href: "/treatments/laser-treatments" },
+      { name: "Anti-Aging", href: "/treatments/anti-aging" },
+      { name: "Skin Treatments", href: "/treatments/skin" },
     ]
   },
   {
@@ -40,23 +46,23 @@ const treatmentCategories = [
       { name: "Exilis", href: "/treatments/exilis" },
       { name: "EndyMed", href: "/treatments/endymed" },
       { name: "HIFU", href: "/treatments/hifu" },
+      { name: "Body Treatments", href: "/treatments/body" },
     ]
   },
   {
     title: "Specialized",
     treatments: [
       { name: "PRP Therapy", href: "/treatments/prp-therapy" },
-      { name: "Skin Boosters", href: "/treatments/skin-boosters" },
-      { name: "Non-Surgical Nose", href: "/treatments/non-surgical-nose" },
-      { name: "Facial Contouring", href: "/treatments/facial-contouring" },
+      { name: "Hair Treatments", href: "/treatments/hair" },
+      { name: "Bridal Packages", href: "/treatments/bridal" },
     ]
   }
 ]
 
 export function SkinfinitiiNavigationMenu() {
   return (
-    <NavigationMenu className="max-w-none">
-      <NavigationMenuList className="space-x-6">
+    <NavigationMenu className="max-w-none w-full">
+      <NavigationMenuList className="space-x-6 justify-center">
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={cn(

@@ -292,6 +292,27 @@ export default function SkinBoostersPage() {
                   whileHover={{ y: -10 }}
                   className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
                 >
+                  <div className="w-full h-32 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-6 overflow-hidden">
+                    <img 
+                      src={`https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/skin-boosters/booster-types/${booster.type.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}.webp`}
+                      alt={`${booster.type} skin booster`}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = `
+                          <div class="w-full h-32 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-xl flex items-center justify-center">
+                            <div class="text-center">
+                              <div class="w-16 h-16 bg-gradient-to-r from-pastel-pink to-purple-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <Sparkles class="w-8 h-8 text-white" />
+                              </div>
+                              <p class="text-gray-600 font-medium text-sm">${booster.type}</p>
+                            </div>
+                          </div>
+                        `;
+                      }}
+                    />
+                  </div>
+                  
                   <div className="w-16 h-16 bg-gradient-to-r from-pastel-pink to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Sparkles className="w-8 h-8 text-white" />
                   </div>

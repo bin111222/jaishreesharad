@@ -174,7 +174,7 @@ export default function FillersPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mt-16"
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Before/After Image 1 */}
               <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
                 <img 
@@ -203,18 +203,6 @@ export default function FillersPage() {
                   className="w-full h-full object-cover"
                 />
 
-              </div>
-              
-              {/* Treatment Process Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden relative">
-                <div className="w-full h-full bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">+</span>
-                    </div>
-
-                  </div>
-                </div>
               </div>
             </div>
           </motion.div>
@@ -258,36 +246,65 @@ export default function FillersPage() {
       </section>
 
       {/* Treatment Areas */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
+              <h2 className="font-display text-4xl font-bold text-gray-800 mb-6">
                 Treatment Areas
               </h2>
-              <p className="text-xl text-gray-600">
-                Dermal fillers can enhance and restore volume in multiple facial areas
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Dermal fillers can enhance and restore volume in multiple facial areas. 
+                Our expert treatments target specific areas for natural, rejuvenated results.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {treatmentAreas.map((area, index) => (
-                <div key={index} className="bg-white rounded-xl p-6">
-                  <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold">{index + 1}</span>
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-105"
+                >
+                  <div className="w-full h-48 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-6 overflow-hidden">
+                    <img 
+                      src={`https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/dermalfillers/treatment-areas/${area.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}.webp`}
+                      alt={`${area.name} filler treatment`}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = `
+                          <div class="w-full h-48 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-xl flex items-center justify-center">
+                            <div class="text-center">
+                              <div class="w-16 h-16 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-white font-bold text-xl">${index + 1}</span>
+                              </div>
+                              <p class="text-gray-600 font-medium">${area.name}</p>
+                            </div>
+                          </div>
+                        `;
+                      }}
+                    />
                   </div>
-                  <h3 className="font-semibold text-gray-800 mb-2 text-center">{area.name}</h3>
-                  <p className="text-gray-600 text-sm text-center mb-4">{area.description}</p>
-                  <div className="flex justify-between text-xs text-gray-500">
-                    <span>Duration: {area.duration}</span>
-                    <span>Results: {area.results}</span>
+                  <div className="w-10 h-10 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-sm">{index + 1}</span>
                   </div>
-                </div>
+                  <h3 className="font-semibold text-gray-800 mb-4 text-center text-lg">{area.name}</h3>
+                  <p className="text-gray-600 text-center mb-4 leading-relaxed">{area.description}</p>
+                  <div className="bg-gradient-to-r from-pastel-green/10 to-pastel-pink/10 rounded-xl p-3 border border-pastel-green/20">
+                    <div className="flex justify-between text-sm text-gray-600 font-medium">
+                      <span>Duration: {area.duration}</span>
+                      <span>Results: {area.results}</span>
+                    </div>
+                  </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>

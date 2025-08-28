@@ -202,7 +202,7 @@ export default function ChemicalPeelsPage() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-16"
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Before/After Image 1 */}
               <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
                 <img 
@@ -231,18 +231,6 @@ export default function ChemicalPeelsPage() {
                   className="w-full h-full object-cover"
                 />
                
-              </div>
-              
-              {/* Treatment Process Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden relative">
-                <div className="w-full h-full bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">+</span>
-                    </div>
-
-                  </div>
-                </div>
               </div>
             </div>
           </motion.div>
@@ -311,17 +299,38 @@ export default function ChemicalPeelsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.2, duration: 0.6 }}
                   whileHover={{ y: -10 }}
-                  className={`relative cursor-pointer group ${
-                    selectedPeel === index ? 'ring-2 ring-pastel-pink' : ''
-                  }`}
-                  onClick={() => setSelectedPeel(index)}
+                  className="relative group"
                 >
                   <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div className="w-full h-40 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-4 overflow-hidden">
+                      <img 
+                        src={`https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/chemicalpeels/peel-types/${peel.name.toLowerCase().replace(/\s+/g, '-')}.webp`}
+                        alt={`${peel.name} chemical peel`}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.parentElement!.innerHTML = `
+                            <div class="w-full h-40 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-xl flex items-center justify-center">
+                              <div class="text-center">
+                                <motion.div
+                                  whileHover={{ scale: 1.1 }}
+                                  class="w-12 h-12 bg-gradient-to-r ${peel.color} rounded-full flex items-center justify-center mx-auto mb-2"
+                                >
+                                  <peel.icon class="w-6 h-6 text-white" />
+                                </motion.div>
+                                <p class="text-gray-600 font-medium text-sm">${peel.name}</p>
+                              </div>
+                            </div>
+                          `;
+                        }}
+                      />
+                    </div>
+                    
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className={`w-16 h-16 bg-gradient-to-r ${peel.color} rounded-full flex items-center justify-center mx-auto mb-6`}
+                      className={`w-12 h-12 bg-gradient-to-r ${peel.color} rounded-full flex items-center justify-center mx-auto mb-4`}
                     >
-                      <peel.icon className="w-8 h-8 text-white" />
+                      <peel.icon className="w-6 h-6 text-white" />
                     </motion.div>
 
                     <h3 className="font-display text-xl font-semibold text-gray-800 mb-3 text-center">

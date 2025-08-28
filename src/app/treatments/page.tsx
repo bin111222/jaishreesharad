@@ -20,8 +20,7 @@ const allTreatments = [
     downtime: "Minimal",
     benefits: ["Reduces fine lines", "Prevents wrinkles", "Natural results"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/1.webp",
-    href: "/treatments/botox",
-    featured: true
+    href: "/treatments/botox"
   },
   {
     id: 2,
@@ -35,8 +34,7 @@ const allTreatments = [
     downtime: "1-2 days",
     benefits: ["Restores volume", "Enhances contours", "Natural look"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/dermalfillers/1.webp",
-    href: "/treatments/fillers",
-    featured: true
+    href: "/treatments/fillers"
   },
   {
     id: 3,
@@ -50,8 +48,7 @@ const allTreatments = [
     downtime: "2-3 days",
     benefits: ["Lifts sagging skin", "Restores youth", "No surgery"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/liquidfacelift/1.webp",
-    href: "/treatments/liquid-facelift",
-    featured: true
+    href: "/treatments/liquid-facelift"
   },
   {
     id: 4,
@@ -65,8 +62,7 @@ const allTreatments = [
     downtime: "3-7 days",
     benefits: ["Improves texture", "Reduces acne", "Brightens skin"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/chemicalpeels/1.webp",
-    href: "/treatments/chemical-peels",
-    featured: false
+    href: "/treatments/chemical-peels"
   },
   {
     id: 5,
@@ -80,8 +76,7 @@ const allTreatments = [
     downtime: "Minimal to 1 week",
     benefits: ["Precise treatment", "Effective results", "Minimal downtime"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/chemicalpeels/3.webp",
-    href: "/treatments/laser-treatments",
-    featured: false
+    href: "/treatments/laser-treatments"
   },
   {
     id: 6,
@@ -95,8 +90,7 @@ const allTreatments = [
     downtime: "1-2 days",
     benefits: ["Natural treatment", "Stimulates growth", "No side effects"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/prptherapy/1.webp",
-    href: "/treatments/prp-therapy",
-    featured: false
+    href: "/treatments/prp-therapy"
   },
   {
     id: 7,
@@ -110,8 +104,7 @@ const allTreatments = [
     downtime: "2-3 days",
     benefits: ["Immediate lift", "Natural results", "Minimal invasion"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/threadlifts/1.webp",
-    href: "/treatments/thread-lifts",
-    featured: false
+    href: "/treatments/thread-lifts"
   },
   {
     id: 8,
@@ -125,8 +118,7 @@ const allTreatments = [
     downtime: "Minimal",
     benefits: ["Deep tissue tightening", "No surgery", "Long-lasting results"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hifutreatment/1.webp",
-    href: "/treatments/hifu",
-    featured: false
+    href: "/treatments/hifu"
   },
   {
     id: 9,
@@ -140,8 +132,7 @@ const allTreatments = [
     downtime: "3-7 days",
     benefits: ["Reduces scars", "Improves texture", "Boosts confidence"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/acnescars/1.webp",
-    href: "/treatments/acne-scars",
-    featured: false
+    href: "/treatments/acne-scars"
   },
   {
     id: 10,
@@ -155,8 +146,7 @@ const allTreatments = [
     downtime: "Minimal",
     benefits: ["Tightens skin", "Stimulates collagen", "No downtime"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/endymed/1.webp",
-    href: "/treatments/endymed",
-    featured: false
+    href: "/treatments/endymed"
   },
   {
     id: 11,
@@ -170,8 +160,7 @@ const allTreatments = [
     downtime: "Minimal",
     benefits: ["Reduces fat", "Tightens skin", "No surgery"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/exilis/1.webp",
-    href: "/treatments/exilis",
-    featured: false
+    href: "/treatments/exilis"
   },
   {
     id: 12,
@@ -185,8 +174,7 @@ const allTreatments = [
     downtime: "Minimal",
     benefits: ["Targeted fat reduction", "No surgery", "Permanent results"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/cryolipolysis/1.webp",
-    href: "/treatments/cryolipolysis",
-    featured: false
+    href: "/treatments/cryolipolysis"
   },
   {
     id: 13,
@@ -200,8 +188,7 @@ const allTreatments = [
     downtime: "3-5 days",
     benefits: ["Even skin tone", "Reduces dark spots", "Brightens complexion"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/pigmentation/1.webp",
-    href: "/treatments/pigmentation",
-    featured: false
+    href: "/treatments/pigmentation"
   },
   {
     id: 14,
@@ -215,8 +202,7 @@ const allTreatments = [
     downtime: "1-2 days",
     benefits: ["No surgery", "Immediate results", "Reversible"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/nonsurgicalnosejob/1.webp",
-    href: "/treatments/non-surgical-nose",
-    featured: false
+    href: "/treatments/non-surgical-nose"
   },
   {
     id: 15,
@@ -230,8 +216,7 @@ const allTreatments = [
     downtime: "1-2 days",
     benefits: ["Improves texture", "Hydrates skin", "Natural glow"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/skinboosters/1.webp",
-    href: "/treatments/skin-boosters",
-    featured: false
+    href: "/treatments/skin-boosters"
   },
   {
     id: 16,
@@ -245,8 +230,7 @@ const allTreatments = [
     downtime: "Minimal",
     benefits: ["Improves texture", "Removes dead skin", "Brightens complexion"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/microdermabrasion/1.webp",
-    href: "/treatments/microdermabrasion",
-    featured: false
+    href: "/treatments/microdermabrasion"
   },
   {
     id: 17,
@@ -260,8 +244,7 @@ const allTreatments = [
     downtime: "1-3 days",
     benefits: ["Enhances features", "Balances proportions", "Natural results"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/facialcontouring/1.webp",
-    href: "/treatments/facial-contouring",
-    featured: false
+    href: "/treatments/facial-contouring"
   },
   {
     id: 18,
@@ -275,8 +258,7 @@ const allTreatments = [
     downtime: "3-7 days",
     benefits: ["Comprehensive results", "Long-lasting effects", "Natural rejuvenation"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/antiaging/1.webp",
-    href: "/treatments/anti-aging",
-    featured: false
+    href: "/treatments/anti-aging"
   },
   {
     id: 19,
@@ -290,8 +272,7 @@ const allTreatments = [
     downtime: "Varies",
     benefits: ["Targeted treatment", "Improves condition", "Long-term results"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/skintreatments/skintreatments.webp",
-    href: "/treatments/skin",
-    featured: false
+    href: "/treatments/skin"
   },
   {
     id: 20,
@@ -305,8 +286,7 @@ const allTreatments = [
     downtime: "Minimal",
     benefits: ["Stimulates growth", "Improves scalp health", "Thicker hair"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hairtreatments/hairtreatments.webp",
-    href: "/treatments/hair",
-    featured: false
+    href: "/treatments/hair"
   },
   {
     id: 21,
@@ -320,8 +300,7 @@ const allTreatments = [
     downtime: "1-3 days",
     benefits: ["Improves texture", "Reduces cellulite", "Tightens skin"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/bodytreatments/bodytreatments.webp",
-    href: "/treatments/body",
-    featured: false
+    href: "/treatments/body"
   },
   {
     id: 22,
@@ -335,8 +314,7 @@ const allTreatments = [
     downtime: "Varies",
     benefits: ["Comprehensive care", "Radiant glow", "Confidence boost"],
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/bridalpackages/1.webp",
-    href: "/treatments/bridal",
-    featured: false
+    href: "/treatments/bridal"
   }
 ];
 
@@ -364,27 +342,86 @@ export default function TreatmentsPage() {
     return matchesSearch && matchesCategory && matchesConcern && matchesArea && matchesProvider;
   });
 
-  const featuredTreatments = allTreatments.filter(t => t.featured);
+
 
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-pastel-green/20 via-white to-pastel-pink/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.15, ease: "easeOut" }}
-            className="text-center space-y-6"
-          >
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-800">
-              Our Treatments
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our comprehensive range of dermatological and aesthetic treatments 
-              designed to enhance your natural beauty and boost your confidence.
-            </p>
-          </motion.div>
+      <section className="relative py-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-gradient-to-br from-pastel-green/20 via-white to-pastel-pink/20">
+          <img 
+            src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/treatments/hero-bg.webp"
+            alt="Dr. Jaishree performing treatment"
+            className="w-full h-full object-cover opacity-10"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+        </div>
+        
+        {/* Decorative Elements */}
+        <div className="absolute top-10 left-10 w-32 h-32 bg-pastel-green/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-pastel-pink/20 rounded-full blur-3xl"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center lg:text-left space-y-6"
+            >
+              <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-800">
+                Our Treatments
+              </h1>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                Discover our comprehensive range of dermatological and aesthetic treatments 
+                designed to enhance your natural beauty and boost your confidence.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <div className="flex items-center space-x-2 text-gray-600">
+                  <div className="w-8 h-8 bg-pastel-green rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">✓</span>
+                  </div>
+                  <span>FDA Approved Treatments</span>
+                </div>
+                <div className="flex items-center space-x-2 text-gray-600">
+                  <div className="w-8 h-8 bg-pastel-pink rounded-full flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">✓</span>
+                  </div>
+                  <span>Expert Care</span>
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-square flex items-center justify-center overflow-hidden">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/treatments/hero-treatment.webp"
+                  alt="Advanced dermatological treatments"
+                  className="w-full h-full object-cover rounded-xl"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML = `
+                      <div class="text-center">
+                        <div class="w-16 h-16 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-4">
+                          <span class="text-white text-2xl">✨</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Advanced Treatments</h3>
+                        <p class="text-gray-600">State-of-the-art dermatological care</p>
+                      </div>
+                    `;
+                  }}
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -485,71 +522,7 @@ export default function TreatmentsPage() {
         </div>
       </section>
 
-      {/* Featured Treatments */}
-      {searchTerm === "" && selectedCategory === "All" && selectedConcern === "All" && selectedArea === "All" && selectedProvider === "All" && (
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
-                Featured Treatments
-              </h2>
-              <p className="text-xl text-gray-600">
-                Our most popular and highly-rated procedures
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {featuredTreatments.map((treatment, index) => (
-                <motion.div
-                  key={treatment.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.15, delay: index * 0.05 }}
-                  className="group"
-                >
-                  <Link href={treatment.href}>
-                    <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 overflow-hidden group-hover:scale-102">
-                      <div className="h-48 relative overflow-hidden">
-                        <img 
-                          src={treatment.image}
-                          alt={`${treatment.title} - Dr. Jaishree Sharad`}
-                          className="w-full h-full object-cover opacity-80"
-                        />
-                        <div className="absolute top-4 left-4 bg-pastel-pink text-white px-3 py-1 rounded-full text-sm font-semibold">
-                          Featured
-                        </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
-                        <div className="absolute bottom-4 left-4 right-4">
-                          <h3 className="font-display text-2xl font-bold text-white drop-shadow-xl leading-tight">
-                            {treatment.title}
-                          </h3>
-                        </div>
-                      </div>
-                      
-                      <div className="p-6">
-                        <p className="text-gray-600 mb-4">{treatment.description}</p>
-                        
-                        <div className="flex justify-between items-center text-sm text-gray-500 mb-4">
-                          <span className="flex items-center space-x-1">
-                            <Clock className="w-4 h-4" />
-                            <span>{treatment.duration}</span>
-                          </span>
-                          <span>Downtime: {treatment.downtime}</span>
-                        </div>
-                        
-                        <div className="flex items-center justify-between">
-                          <span className="text-pastel-pink font-semibold">Learn More</span>
-                          <ArrowRight className="w-4 h-4 text-pastel-pink group-hover:translate-x-1 transition-transform duration-200" />
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+
 
       {/* All Treatments */}
       <section className="py-16 bg-white">
@@ -592,11 +565,7 @@ export default function TreatmentsPage() {
                           alt={`${treatment.title} - Dr. Jaishree Sharad`}
                           className="w-full h-full object-cover opacity-80"
                         />
-                        {treatment.featured && (
-                          <div className="absolute top-4 left-4 bg-pastel-pink text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            Featured
-                          </div>
-                        )}
+
                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/20"></div>
                         <div className="absolute bottom-4 left-4 right-4">
                           <h3 className="font-display text-2xl font-bold text-white drop-shadow-xl leading-tight">
@@ -678,8 +647,119 @@ export default function TreatmentsPage() {
         </div>
       </section>
 
+      {/* Clinic Environment */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
+              State-of-the-Art Clinic
+            </h2>
+            <p className="text-xl text-gray-600">
+              Experience world-class dermatological care in our modern, comfortable environment
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-center"
+            >
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/clinic/treatment-room.webp"
+                  alt="Modern treatment room"
+                  className="w-full h-48 object-cover rounded-xl mb-4"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML = `
+                      <div class="w-full h-48 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-4 flex items-center justify-center">
+                        <div class="text-center">
+                          <div class="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
+                            <span class="text-white text-xl">🏥</span>
+                          </div>
+                          <p class="text-gray-600 font-medium">Treatment Room</p>
+                        </div>
+                      </div>
+                    `;
+                  }}
+                />
+                <h3 className="font-semibold text-gray-800 mb-2">Modern Treatment Rooms</h3>
+                <p className="text-gray-600 text-sm">Equipped with the latest technology for optimal results</p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center"
+            >
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/clinic/equipment.webp"
+                  alt="Advanced medical equipment"
+                  className="w-full h-48 object-cover rounded-xl mb-4"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML = `
+                      <div class="w-full h-48 bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl mb-4 flex items-center justify-center">
+                        <div class="text-center">
+                          <div class="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                            <span class="text-white text-xl">⚡</span>
+                          </div>
+                          <p class="text-gray-600 font-medium">Advanced Equipment</p>
+                        </div>
+                      </div>
+                    `;
+                  }}
+                />
+                <h3 className="font-semibold text-gray-800 mb-2">Advanced Equipment</h3>
+                <p className="text-gray-600 text-sm">Latest FDA-approved devices for safe, effective treatments</p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-center"
+            >
+              <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/clinic/consultation.webp"
+                  alt="Patient consultation"
+                  className="w-full h-48 object-cover rounded-xl mb-4"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML = `
+                      <div class="w-full h-48 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-4 flex items-center justify-center">
+                        <div class="text-center">
+                          <div class="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
+                            <span class="text-white text-xl">👩‍⚕️</span>
+                          </div>
+                          <p class="text-gray-600 font-medium">Expert Consultation</p>
+                        </div>
+                      </div>
+                    `;
+                  }}
+                />
+                <h3 className="font-semibold text-gray-800 mb-2">Expert Consultation</h3>
+                <p className="text-gray-600 text-sm">Personalized care from Dr. Jaishree and her experienced team</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-pastel-green/30 to-pastel-pink/30">
+      <section className="py-20 bg-gradient-to-r from-pastel-green/10 to-pastel-pink/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -314,13 +314,34 @@ export default function AntiAgingPage() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.2, duration: 0.6 }}
-                  whileHover={{ y: -10 }}
-                  className={`relative cursor-pointer group ${
-                    selectedTreatment === index ? 'ring-2 ring-pastel-pink' : ''
-                  }`}
+                  
                   onClick={() => setSelectedTreatment(index)}
                 >
                   <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div className="w-full h-40 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-6 overflow-hidden">
+                      <img 
+                        src={`https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/anti-aging/treatments/${treatment.name.toLowerCase().replace(/\s+/g, '-')}.webp`}
+                        alt={`${treatment.name} anti-aging treatment`}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.parentElement!.innerHTML = `
+                            <div class="w-full h-40 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-xl flex items-center justify-center">
+                              <div class="text-center">
+                                <motion.div
+                                  whileHover={{ scale: 1.1 }}
+                                  class="w-16 h-16 bg-gradient-to-r ${treatment.color} rounded-full flex items-center justify-center mx-auto mb-2"
+                                >
+                                  <treatment.icon class="w-8 h-8 text-white" />
+                                </motion.div>
+                                <p class="text-gray-600 font-medium text-sm">${treatment.name}</p>
+                              </div>
+                            </div>
+                          `;
+                        }}
+                      />
+                    </div>
+                    
                     <motion.div
                       whileHover={{ scale: 1.1 }}
                       className={`w-16 h-16 bg-gradient-to-r ${treatment.color} rounded-full flex items-center justify-center mx-auto mb-6`}
