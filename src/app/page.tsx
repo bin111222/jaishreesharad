@@ -428,7 +428,7 @@ export default function HomePage() {
             >
               <div className="relative">
                 {/* Main Hero Image Slideshow */}
-                <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+                <div className="relative aspect-[5/7] rounded-3xl overflow-hidden shadow-2xl">
                   {heroSlideshow.map((slide, index) => (
                     <motion.img
                       key={slide.id}
@@ -466,7 +466,7 @@ export default function HomePage() {
                         key={index}
                         onClick={() => setCurrentSlide(index)}
                         className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                          index === currentSlide ? 'bg-white w-6' : 'bg-white/50'
+                          index === currentSlide ? 'bg-white w-6' : 'bg-white/30'
                         }`}
                       />
                     ))}

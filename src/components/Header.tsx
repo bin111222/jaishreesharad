@@ -49,18 +49,46 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const currentScrollY = window.scrollY;
+      
+      // Check if scrolled past threshold
+      setIsScrolled(currentScrollY > 10);
+      
+      // Header visibility logic for desktop only
+      if (window.innerWidth >= 1280) { // xl breakpoint
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          // Scrolling down - hide header
+          setIsHeaderVisible(false);
+        } else if (currentScrollY < lastScrollY) {
+          // Scrolling up - show header
+          setIsHeaderVisible(true);
+        }
+      } else {
+        // On mobile/tablet, always show header
+        setIsHeaderVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   return (
-    <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-150 bg-white shadow-lg border-b border-gray-200/50")}>
+    <motion.header 
+      className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-150 bg-white shadow-lg border-b border-gray-200/50")}
+      animate={{
+        y: isHeaderVisible ? 0 : -100,
+        opacity: isHeaderVisible ? 1 : 0
+      }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+    >
       <div className="max-w-7xl mx-auto px-2 sm:px-3 md:px-4 lg:px-6">
         <div className="flex items-center justify-between h-16 sm:h-18 md:h-20 lg:h-24 w-full">
           {/* Logo Group */}
@@ -89,15 +117,6 @@ export default function Header() {
           <nav className="hidden xl:flex items-center flex-1 justify-center">
             <SkinfinitiiNavigationMenu />
           </nav>
-
-          {/* CTA Button - Always visible on tablet and above */}
-          <div className="hidden sm:flex items-center flex-shrink-0">
-            <Link
-              href="/contact"
-            >
-              
-            </Link>
-          </div>
 
           {/* Mobile/Tablet Menu Button - Show on all screens except very large */}
           <button
@@ -223,6 +242,17 @@ export default function Header() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     <span className="font-medium">Skin Quiz</span>
+                  </Link>
+
+                  <Link
+                    href="/contact"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-pastel-pink hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span className="font-medium">Contact</span>
                   </Link>
 
                   {/* Treatments Section */}
@@ -455,6 +485,6 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 }

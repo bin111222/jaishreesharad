@@ -292,6 +292,9 @@ export default function MediaPage() {
         </div>
       </section>
 
+      {/* Media Appearances Gallery */}
+      <ImageAutoSlider />
+
       {/* Key Media Highlights */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -385,9 +388,6 @@ export default function MediaPage() {
           </div>
         </div>
       </section>
-
-      {/* Media Appearances Gallery */}
-      <ImageAutoSlider />
 
       {/* Social Media Presence */}
       <section className="py-12 bg-gradient-to-br from-gray-50 to-white">

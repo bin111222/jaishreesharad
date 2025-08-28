@@ -24,7 +24,7 @@ interface CustomInstagramFeedProps {
 const manualInstagramPosts: InstagramPost[] = [
   {
     id: "post1",
-    media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/instagram/post1.webp",
+    media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/2.webp",
     permalink: "https://www.instagram.com/drjaishreesharad/",
     caption: "Transform your skin with our advanced treatments. Book your consultation today! ✨ #Dermatology #SkinCare #DrJaishreeSharad #Skinfinitii #BollywoodDermatologist",
     media_type: "IMAGE",
@@ -34,7 +34,7 @@ const manualInstagramPosts: InstagramPost[] = [
   },
   {
     id: "post2",
-    media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/instagram/post2.webp",
+    media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/3.webp",
     permalink: "https://www.instagram.com/drjaishreesharad/",
     caption: "Natural beauty starts with healthy skin. Our PRP therapy stimulates your body's own healing factors. 🌟 #PRPTherapy #NaturalHealing #DrJaishreeSharad #Skinfinitii",
     media_type: "IMAGE",
@@ -44,7 +44,7 @@ const manualInstagramPosts: InstagramPost[] = [
   },
   {
     id: "post3",
-    media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/instagram/post3.webp",
+    media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/4.webp",
     permalink: "https://www.instagram.com/drjaishreesharad/",
     caption: "Laser treatments for precise skin rejuvenation. Advanced technology for optimal results. 🔬 #LaserTreatment #SkinRejuvenation #DrJaishreeSharad #Skinfinitii",
     media_type: "IMAGE",

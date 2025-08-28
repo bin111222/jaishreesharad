@@ -290,8 +290,8 @@ const allTreatments = [
   },
   {
     id: 22,
-    title: "Bridal Packages",
-    category: "Packages",
+    title: "Bridal Care",
+    category: "Bridal",
     concern: "Special Occasions",
     area: "Face & Body",
     provider: "Dr. Jaishree",
@@ -304,7 +304,7 @@ const allTreatments = [
   }
 ];
 
-const categories = ["All", "Injectables", "Skin", "Body", "Lifting", "Comprehensive", "Packages"];
+const categories = ["All", "Injectables", "Skin", "Body", "Lifting", "Comprehensive", "Bridal"];
 const concerns = ["All", "Wrinkles", "Volume Loss", "Aging", "Acne", "Unwanted Hair", "Fat Reduction", "Pigmentation", "Hair Loss", "Skin Tightening", "Acne Scars", "Skin Laxity", "Nose Shape", "Skin Quality", "Skin Texture", "Facial Shape", "Various Skin Issues", "Scalp Issues", "Body Concerns", "Special Occasions"];
 const areas = ["All", "Face", "Body", "Face & Body", "Face & Scalp", "Scalp"];
 const providers = ["All", "Dr. Jaishree", "Associates", "Therapists"];
@@ -312,20 +312,13 @@ const providers = ["All", "Dr. Jaishree", "Associates", "Therapists"];
 export default function TreatmentsPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedConcern, setSelectedConcern] = useState("All");
-  const [selectedArea, setSelectedArea] = useState("All");
-  const [selectedProvider, setSelectedProvider] = useState("All");
-  const [showFilters, setShowFilters] = useState(false);
 
   const filteredTreatments = allTreatments.filter(treatment => {
     const matchesSearch = treatment.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          treatment.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === "All" || treatment.category === selectedCategory;
-    const matchesConcern = selectedConcern === "All" || treatment.concern === selectedConcern;
-    const matchesArea = selectedArea === "All" || treatment.area === selectedArea;
-    const matchesProvider = selectedProvider === "All" || treatment.provider === selectedProvider;
 
-    return matchesSearch && matchesCategory && matchesConcern && matchesArea && matchesProvider;
+    return matchesSearch && matchesCategory;
   });
 
 
@@ -412,98 +405,37 @@ export default function TreatmentsPage() {
       </section>
 
       {/* Search and Filters */}
-      <section className="py-8 bg-white border-b border-gray-200">
+      <section className="py-6 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-4">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
             {/* Search Bar */}
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
               <input
                 type="text"
                 placeholder="Search treatments..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-pink focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-pink focus:border-transparent text-sm"
               />
             </div>
 
-            {/* Filter Toggle */}
-            <div className="flex items-center justify-between">
-              <button
-                onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center space-x-2 px-4 py-2 text-gray-700 hover:text-pastel-pink transition-colors"
+            {/* Simple Category Filter */}
+            <div className="flex items-center gap-2">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-pink focus:border-transparent text-sm bg-white"
               >
-                <Filter className="w-4 h-4" />
-                <span>Filters</span>
-              </button>
+                {categories.map(category => (
+                  <option key={category} value={category}>{category}</option>
+                ))}
+              </select>
               
-              <p className="text-sm text-gray-500">
-                {filteredTreatments.length} treatment{filteredTreatments.length !== 1 ? 's' : ''} found
-              </p>
+              <span className="text-sm text-gray-500">
+                {filteredTreatments.length} treatment{filteredTreatments.length !== 1 ? 's' : ''}
+              </span>
             </div>
-
-            {/* Filter Options */}
-            {showFilters && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.1, ease: "easeOut" }}
-                className="grid grid-cols-1 md:grid-cols-4 gap-4 pt-4 border-t border-gray-200"
-              >
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-pink focus:border-transparent"
-                  >
-                    {categories.map(category => (
-                      <option key={category} value={category}>{category}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Concern</label>
-                  <select
-                    value={selectedConcern}
-                    onChange={(e) => setSelectedConcern(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-pink focus:border-transparent"
-                  >
-                    {concerns.map(concern => (
-                      <option key={concern} value={concern}>{concern}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Area</label>
-                  <select
-                    value={selectedArea}
-                    onChange={(e) => setSelectedArea(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-pink focus:border-transparent"
-                  >
-                    {areas.map(area => (
-                      <option key={area} value={area}>{area}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Provider</label>
-                  <select
-                    value={selectedProvider}
-                    onChange={(e) => setSelectedProvider(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pastel-pink focus:border-transparent"
-                  >
-                    {providers.map(provider => (
-                      <option key={provider} value={provider}>{provider}</option>
-                    ))}
-                  </select>
-                </div>
-              </motion.div>
-            )}
           </div>
         </div>
       </section>
@@ -513,7 +445,7 @@ export default function TreatmentsPage() {
       {/* All Treatments */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {searchTerm !== "" || selectedCategory !== "All" || selectedConcern !== "All" || selectedArea !== "All" || selectedProvider !== "All" ? (
+          {searchTerm !== "" || selectedCategory !== "All" ? (
             <div className="text-center mb-12">
               <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
                 Search Results
@@ -620,9 +552,6 @@ export default function TreatmentsPage() {
                 onClick={() => {
                   setSearchTerm("");
                   setSelectedCategory("All");
-                  setSelectedConcern("All");
-                  setSelectedArea("All");
-                  setSelectedProvider("All");
                 }}
                 className="px-6 py-3 bg-pastel-pink text-white font-semibold rounded-full hover:bg-pastel-pink/90 transition-colors"
               >
@@ -659,7 +588,7 @@ export default function TreatmentsPage() {
             >
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
                 <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/clinic/treatment-room.webp"
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/treatment-room.webp"
                   alt="Modern treatment room"
                   className="w-full h-48 object-cover rounded-xl mb-4"
                   onError={(e) => {
@@ -689,7 +618,7 @@ export default function TreatmentsPage() {
             >
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
                 <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/clinic/equipment.webp"
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/treatments/hero-treatment.webp"
                   alt="Advanced medical equipment"
                   className="w-full h-48 object-cover rounded-xl mb-4"
                   onError={(e) => {
@@ -719,7 +648,7 @@ export default function TreatmentsPage() {
             >
               <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
                 <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/clinic/consultation.webp"
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/8.webp"
                   alt="Patient consultation"
                   className="w-full h-48 object-cover rounded-xl mb-4"
                   onError={(e) => {
