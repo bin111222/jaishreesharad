@@ -220,7 +220,7 @@ export default function LaserTreatmentsPage() {
               <div className="grid grid-cols-3 gap-4">
                 <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
                   <img 
-                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/laser-treatments/laser-types/3.webp"
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/laser-treatments/laser-types/2.webp"
                     alt="Laser Treatments - Dr. Jaishree Sharad"
                     className="w-full h-full object-cover"
                   />

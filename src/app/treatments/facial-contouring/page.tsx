@@ -217,7 +217,8 @@ export default function FacialContouringPage() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="relative"
             >
-              <div className="relative bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-3xl p-8 aspect-square overflow-hidden">
+              {/* Main Hero Image */}
+              <div className="relative bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-3xl p-8 aspect-square overflow-hidden mb-6">
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -236,60 +237,35 @@ export default function FacialContouringPage() {
                   />
                 </div>
               </div>
-            </motion.div>
-          </div>
-          
-          {/* Treatment Gallery */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-16"
-          >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {/* Before/After Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/facialcontouring/2.webp"
-                  alt="Facial Contouring Before/After - Jawline Results"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
               
-              {/* Before/After Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/facialcontouring/3.webp"
-                  alt="Facial Contouring Before/After - Cheekbones Results"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
-              
-              {/* Treatment Process Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/facialcontouring/4.webp"
-                  alt="Facial Contouring Treatment Process"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
-              
-              {/* Treatment Process Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden relative">
-                <div className="w-full h-full bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">+</span>
-                    </div>
-
-                  </div>
+              {/* Thumbnail Gallery */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/facialcontouring/2.webp"
+                    alt="Facial Contouring Before/After - Jawline Results"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/facialcontouring/3.webp"
+                    alt="Facial Contouring Before/After - Cheekbones Results"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/facialcontouring/4.webp"
+                    alt="Facial Contouring Treatment Process"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -358,30 +334,6 @@ export default function FacialContouringPage() {
                   onClick={() => setSelectedTreatment(index)}
                 >
                   <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="w-full h-32 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-6 overflow-hidden">
-                      <img 
-                        src={`https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/facial-contouring/treatments/${treatment.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '').replace(/&/g, 'and').replace(/-+/g, '-')}.webp`}
-                        alt={`${treatment.name} facial contouring treatment`}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          e.currentTarget.style.display = 'none';
-                          e.currentTarget.parentElement!.innerHTML = `
-                            <div class="w-full h-32 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-xl flex items-center justify-center">
-                              <div class="text-center">
-                                <motion.div
-                                  whileHover={{ scale: 1.1 }}
-                                  class="w-16 h-16 bg-gradient-to-r ${treatment.color} rounded-full flex items-center justify-center mx-auto mb-2"
-                                >
-                                  <treatment.icon class="w-8 h-8 text-white" />
-                                </motion.div>
-                                <p class="text-gray-600 font-medium text-sm">${treatment.name}</p>
-                              </div>
-                            </div>
-                          `;
-                        }}
-                      />
-                    </div>
-                    
                     <motion.div
                       whileHover={{ scale: 1.1 }}
                       className={`w-16 h-16 bg-gradient-to-r ${treatment.color} rounded-full flex items-center justify-center mx-auto mb-6`}

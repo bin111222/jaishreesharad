@@ -147,67 +147,43 @@ export default function CryolipolysisPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-square flex items-center justify-center overflow-hidden">
+              {/* Main Hero Image */}
+              <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-square flex items-center justify-center overflow-hidden mb-6">
                 <img 
                   src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/cryolipolysis/1.webp"
                   alt="Cryolipolysis Treatment - Dr. Jaishree Sharad"
                   className="w-full h-full object-cover rounded-xl"
                 />
               </div>
-            </motion.div>
-          </div>
-          
-          {/* Treatment Gallery */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-16"
-          >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {/* Before/After Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/cryolipolysis/2.webp"
-                  alt="Cryolipolysis Before/After - Fat Reduction Results"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
               
-              {/* Before/After Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/cryolipolysis/3.webp"
-                  alt="Cryolipolysis Before/After - Body Contouring Results"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
-              
-              {/* Treatment Process Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/cryolipolysis/4.webp"
-                  alt="Cryolipolysis Treatment Process"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
-              
-              {/* Treatment Process Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden relative">
-                <div className="w-full h-full bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">+</span>
-                    </div>
-
-                  </div>
+              {/* Thumbnail Gallery */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/cryolipolysis/2.webp"
+                    alt="Cryolipolysis Before/After - Fat Reduction Results"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/cryolipolysis/3.webp"
+                    alt="Cryolipolysis Before/After - Body Contouring Results"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/cryolipolysis/4.webp"
+                    alt="Cryolipolysis Treatment Process"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -248,46 +224,46 @@ export default function CryolipolysisPage() {
       </section>
 
       {/* What it Treats */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-12"
           >
             <div className="text-center">
-              <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
+              <h2 className="font-display text-4xl font-bold text-gray-800 mb-6">
                 What Cryolipolysis Can Treat
               </h2>
-              <p className="text-xl text-gray-600">
-                Comprehensive fat reduction solutions for various body areas
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive fat reduction solutions for various body areas, providing natural-looking results
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {treatmentAreas.map((treatment, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow"
+                  className="bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
-                  <div className="w-full h-32 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-4 overflow-hidden">
+                  <div className="w-full h-48 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-6 overflow-hidden">
                     <img 
                       src={`https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/cryolipolysis/treatment-areas/${treatment.area.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '').replace(/&/g, 'and')}.webp`}
                       alt={`${treatment.area} cryolipolysis treatment`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
                         e.currentTarget.parentElement!.innerHTML = `
-                          <div class="w-full h-32 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-xl flex items-center justify-center">
+                          <div class="w-full h-48 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-xl flex items-center justify-center">
                             <div class="text-center">
-                              <div class="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
-                                <span class="text-white font-bold">${index + 1}</span>
+                              <div class="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-3">
+                                <span class="text-white font-bold text-xl">${index + 1}</span>
                               </div>
-                              <p class="text-gray-600 font-medium text-sm">${treatment.area}</p>
+                              <p class="text-gray-600 font-medium">${treatment.area}</p>
                             </div>
                           </div>
                         `;
@@ -295,13 +271,13 @@ export default function CryolipolysisPage() {
                     />
                   </div>
                   
-                  <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold">{index + 1}</span>
+                  <div className="w-10 h-10 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-sm">{index + 1}</span>
                   </div>
-                  <h3 className="font-semibold text-gray-800 mb-3 text-center">{treatment.area}</h3>
-                  <p className="text-gray-600 text-sm mb-3">{treatment.description}</p>
-                  <div className="bg-pastel-green/10 rounded-lg p-3">
-                    <p className="text-pastel-pink font-medium text-sm">{treatment.benefit}</p>
+                  <h3 className="font-semibold text-gray-800 mb-4 text-center text-lg">{treatment.area}</h3>
+                  <p className="text-gray-600 mb-4 text-center leading-relaxed">{treatment.description}</p>
+                  <div className="bg-gradient-to-r from-pastel-green/10 to-pastel-pink/10 rounded-xl p-4 border border-pastel-green/20">
+                    <p className="text-pastel-pink font-semibold text-center">{treatment.benefit}</p>
                   </div>
                 </motion.div>
               ))}

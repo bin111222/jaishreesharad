@@ -288,7 +288,7 @@ export default function BodyTreatmentsPage() {
                   <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-150">
                     <div className="w-full h-40 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-6 overflow-hidden">
                       <img 
-                        src={`https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/body/treatments/${treatment.name.toLowerCase().replace(/\s+/g, '-')}.webp`}
+                        src={`https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/bodytreatments/treatments/${treatment.name.toLowerCase().replace(/\s+/g, '-')}.webp`}
                         alt={`${treatment.name} body treatment`}
                         className="w-full h-full object-cover"
                         onError={(e) => {

@@ -137,67 +137,43 @@ export default function HIFUPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-square flex items-center justify-center overflow-hidden">
+              {/* Main Hero Image */}
+              <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-square flex items-center justify-center overflow-hidden mb-6">
                 <img 
                   src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hifutreatment/1.webp"
                   alt="HIFU Treatment - Dr. Jaishree Sharad"
                   className="w-full h-full object-cover rounded-xl"
                 />
               </div>
-            </motion.div>
-          </div>
-          
-          {/* Treatment Gallery */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-16"
-          >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {/* Before/After Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hifutreatment/2.webp"
-                  alt="HIFU Before/After - Skin Tightening Results"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
               
-              {/* Before/After Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hifutreatment/3.webp"
-                  alt="HIFU Before/After - Lifting Effect Results"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
-              
-              {/* Treatment Process Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hifutreatment/4.webp"
-                  alt="HIFU Treatment Process"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
-              
-              {/* Treatment Process Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden relative">
-                <div className="w-full h-full bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">+</span>
-                    </div>
-
-                  </div>
+              {/* Thumbnail Gallery */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hifutreatment/2.webp"
+                    alt="HIFU Before/After - Skin Tightening Results"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hifutreatment/3.webp"
+                    alt="HIFU Before/After - Lifting Effect Results"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hifutreatment/4.webp"
+                    alt="HIFU Treatment Process"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -266,7 +242,7 @@ export default function HIFUPage() {
                 >
                   <div className="w-full h-32 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-4 overflow-hidden">
                     <img 
-                      src={`https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hifu/treatment-areas/${treatment.area.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}.webp`}
+                      src={`https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/hifutreatment/treatment-areas/${treatment.area.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}.webp`}
                       alt={`${treatment.area} hifu treatment`}
                       className="w-full h-full object-cover"
                       onError={(e) => {
