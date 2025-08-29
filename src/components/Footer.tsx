@@ -169,7 +169,7 @@ export default function Footer() {
             {/* WhatsApp CTA */}
             <div>
               <a
-                href="https://wa.me/9198XXXXXXXX?text=Hi%20Dr.%20Jaishree,%20I%20would%20like%20to%20book%20a%20consultation"
+                href="https://wa.me/919769691952?text=Hi%20Dr.%20Jaishree,%20I%20would%20like%20to%20book%20a%20consultation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors duration-200 text-sm"

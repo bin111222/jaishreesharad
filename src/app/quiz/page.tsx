@@ -451,18 +451,20 @@ export default function SkinQuiz() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2 text-gray-600 hover:text-pastel-pink transition-colors">
-              <ArrowLeft className="w-5 h-5" />
-              <span>Back to Home</span>
+            {/* Back Button - Mobile Optimized */}
+            <Link href="/" className="flex items-center space-x-1 sm:space-x-2 text-gray-600 hover:text-pastel-pink transition-colors">
+              <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="text-sm sm:text-base hidden sm:inline">Back to Home</span>
+              <span className="text-sm sm:text-base sm:hidden">Back</span>
             </Link>
             
-            {/* Brand Logo */}
-            <div className="flex items-center space-x-2">
+            {/* Brand Logo - Mobile Optimized */}
+            <div className="flex items-center space-x-1 sm:space-x-2">
               <div className="flex items-center space-x-1">
                 {/* Logo 1 - Symbol */}
-                <div className="w-20 h-20 flex items-center justify-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 flex items-center justify-center">
                   <img 
                     src="/logo1.png" 
                     alt="Skinfinitii Logo Symbol" 
@@ -470,7 +472,7 @@ export default function SkinQuiz() {
                   />
                 </div>
                 {/* Logo 2 - Text */}
-                <div className="w-25 h-20 flex items-center justify-center">
+                <div className="w-16 h-12 sm:w-20 sm:h-16 lg:w-25 lg:h-20 flex items-center justify-center">
                   <img 
                     src="/logo2.png" 
                     alt="Skinfinitii Logo Text" 
@@ -480,25 +482,27 @@ export default function SkinQuiz() {
               </div>
             </div>
             
-            <div className="flex items-center space-x-2">
-              <Award className="w-5 h-5 text-pastel-pink" />
-              <span className="font-semibold text-gray-800">Skin Assessment</span>
+            {/* Assessment Label - Mobile Optimized */}
+            <div className="flex items-center space-x-1 sm:space-x-2">
+              <Award className="w-4 h-4 sm:w-5 sm:h-5 text-pastel-pink" />
+              <span className="font-semibold text-gray-800 text-sm sm:text-base hidden sm:inline">Skin Assessment</span>
+              <span className="font-semibold text-gray-800 text-sm sm:text-base sm:hidden">Quiz</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
         {/* Hero Section */}
         {!state.done && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-12"
+            className="text-center mb-8 sm:mb-12"
           >
             
             
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-2">
               Answer a few questions to receive a customized skincare protocol designed by Dr. Jaishree's expertise
             </p>
           </motion.div>
@@ -506,8 +510,8 @@ export default function SkinQuiz() {
 
         {/* Progress Bar */}
         {!state.done && (
-          <div className="mb-8">
-            <div className="flex justify-between text-sm text-gray-600 mb-2">
+          <div className="mb-6 sm:mb-8">
+            <div className="flex justify-between text-xs sm:text-sm text-gray-600 mb-2">
               <span>Question {state.index + 1} of {QUESTIONS.length}</span>
               <span>{progress}% Complete</span>
             </div>
@@ -523,7 +527,7 @@ export default function SkinQuiz() {
         )}
 
         {/* Question or Results */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+        <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8">
           <AnimatePresence mode="wait">
             {!state.done ? (
               <motion.div
@@ -536,31 +540,31 @@ export default function SkinQuiz() {
               >
                 {/* Question */}
                 <div className="text-center">
-                  <h2 className="font-display text-2xl md:text-3xl font-semibold text-gray-800 mb-3">
+                  <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 mb-3 px-2">
                     {currentQuestion.text}
                   </h2>
                   {currentQuestion.subtitle && (
-                    <p className="text-gray-600 text-lg">
+                    <p className="text-gray-600 text-base sm:text-lg px-2">
                       {currentQuestion.subtitle}
                     </p>
                   )}
                 </div>
 
                 {/* Options */}
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {currentQuestion.type === "single" && (
                     <div className="grid gap-3">
                       {currentQuestion.options?.map((option) => (
                         <button
                           key={option}
                           onClick={() => setAnswer(option)}
-                          className="w-full text-left p-4 border-2 border-gray-200 rounded-xl hover:border-pastel-pink hover:bg-pastel-pink/5 transition-all duration-200 group"
+                          className="w-full text-left p-3 sm:p-4 border-2 border-gray-200 rounded-xl hover:border-pastel-pink hover:bg-pastel-pink/5 transition-all duration-200 group"
                         >
                           <div className="flex items-center justify-between">
-                            <span className="text-gray-800 group-hover:text-pastel-pink transition-colors">
+                            <span className="text-gray-800 group-hover:text-pastel-pink transition-colors text-sm sm:text-base">
                               {option}
                             </span>
-                            <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-pastel-pink transition-colors" />
+                            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-pastel-pink transition-colors flex-shrink-0" />
                           </div>
                         </button>
                       ))}
@@ -597,21 +601,21 @@ export default function SkinQuiz() {
                 </div>
 
                 {/* Navigation */}
-                <div className="flex items-center justify-between pt-6 border-t">
+                <div className="flex items-center justify-between pt-4 sm:pt-6 border-t">
                   <button
                     onClick={goBack}
                     disabled={state.index === 0}
-                    className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
+                    className={`flex items-center space-x-1 sm:space-x-2 px-3 sm:px-4 py-2 rounded-lg transition-colors ${
                       state.index === 0
                         ? "text-gray-400 cursor-not-allowed"
                         : "text-gray-600 hover:text-pastel-pink"
                     }`}
                   >
                     <ArrowLeft className="w-4 h-4" />
-                    <span>Previous</span>
+                    <span className="text-sm sm:text-base">Previous</span>
                   </button>
                   
-                  <div className="text-sm text-gray-500">
+                  <div className="text-xs sm:text-sm text-gray-500 text-center">
                     {currentQuestion.type === "multi" ? "Select all that apply" : "Choose one option"}
                   </div>
                 </div>
@@ -752,7 +756,7 @@ function MultiSelect({
         {options.map((option) => (
           <label
             key={option}
-            className={`flex items-center space-x-3 p-4 border-2 rounded-xl cursor-pointer transition-all duration-200 ${
+            className={`flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 border-2 rounded-xl cursor-pointer transition-all duration-200 ${
               value.includes(option)
                 ? "border-pastel-pink bg-pastel-pink/5"
                 : "border-gray-200 hover:border-pastel-pink"
@@ -762,9 +766,9 @@ function MultiSelect({
               type="checkbox"
               checked={value.includes(option)}
               onChange={() => toggleOption(option)}
-              className="w-5 h-5 text-pastel-pink border-gray-300 rounded focus:ring-pastel-pink"
+              className="w-4 h-4 sm:w-5 sm:h-5 text-pastel-pink border-gray-300 rounded focus:ring-pastel-pink flex-shrink-0"
             />
-            <span className="text-gray-800">{option}</span>
+            <span className="text-gray-800 text-sm sm:text-base">{option}</span>
           </label>
         ))}
       </div>
@@ -773,7 +777,7 @@ function MultiSelect({
         <button
           onClick={onContinue}
           disabled={value.length === 0}
-          className={`inline-flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-200 ${
+          className={`inline-flex items-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold transition-all duration-200 text-sm sm:text-base ${
             value.length === 0
               ? "bg-gray-300 text-gray-500 cursor-not-allowed"
               : "bg-gradient-to-r from-pastel-pink to-pink-100 text-white hover:shadow-lg"
