@@ -437,7 +437,7 @@ export default function HomePage() {
                       className="absolute inset-0 w-full h-full object-cover"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: index === currentSlide ? 1 : 0 }}
-                      transition={{ duration: 0.8 }}
+                      transition={{ duration: 1.2 }}
                     />
                   ))}
                   
@@ -447,14 +447,14 @@ export default function HomePage() {
                   {/* Navigation Arrows */}
                   <button
                     onClick={prevSlide}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-700 hover:bg-white transition-all duration-200 shadow-lg"
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10  backdrop-blur-sm rounded-full flex items-center justify-center text-gray-700 hover: transition-all duration-200 shadow-lg"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   
                   <button
                     onClick={nextSlide}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-700 hover:bg-white transition-all duration-200 shadow-lg"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10  backdrop-blur-sm rounded-full flex items-center justify-center text-gray-700 hover: transition-all duration-200 shadow-lg"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>

@@ -132,7 +132,7 @@ export default function AwardsSection() {
           >
             <div className="relative group">
               {/* Full Image of Dr. Jaishree */}
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
                 <img 
                   src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%203.webp"
                   alt="Dr. Jaishree Sharad - Award Ceremony"

@@ -71,7 +71,7 @@ export function FeaturedMediaMarquee() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.1 }}
           className="text-center mb-12"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -89,7 +89,7 @@ export function FeaturedMediaMarquee() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.2, delay: index * 0.02 }}
+              transition={{ duration: 0.1, delay: index * 0.02 }}
               className="flex-shrink-0 mx-4 group"
             >
               <div className="w-64 h-48 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-150 hover:scale-105">
@@ -125,7 +125,7 @@ export function FeaturedMediaMarquee() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.3, delay: 0.1 }}
+            transition={{ duration: 0.1, delay: 0.1 }}
           >
             <p className="text-gray-600 mb-4">
               Dr. Jaishree has been featured in over 100+ media outlets
