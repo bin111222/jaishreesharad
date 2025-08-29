@@ -295,7 +295,7 @@ const allTreatments = [
     concern: "Special Occasions",
     area: "Face & Body",
     provider: "Dr. Jaishree",
-    description: "Comprehensive bridal packages for radiant skin and confidence on your special day",
+    description: "Comprehensive bridal care for radiant skin and confidence on your special day",
     duration: "Varies",
     downtime: "Varies",
     benefits: ["Comprehensive care", "Radiant glow", "Confidence boost"],

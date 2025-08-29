@@ -24,7 +24,7 @@ const antiAgingTreatments = [
     sessions: "1 session",
     results: "Immediate to 3 months",
     icon: Activity,
-    color: "from-purple-400 to-pink-400",
+    color: "from-purple-400 to-pink-100",
     concerns: ["Sagging skin", "Face lift", "Neck lift", "Skin tightening"]
   },
   {

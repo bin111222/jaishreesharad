@@ -53,7 +53,7 @@ const treatmentCategories = [
     title: "Specialized",
     treatments: [
       { name: "PRP Therapy", href: "/treatments/prp-therapy" },
-      { name: "Bridal Packages", href: "/treatments/bridal" },
+      { name: "Bridal Care", href: "/treatments/bridal" },
     ]
   }
 ]

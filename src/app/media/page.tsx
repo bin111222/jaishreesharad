@@ -361,7 +361,7 @@ export default function MediaPage() {
                       target.nextElementSibling?.classList.remove('hidden');
                     }}
                   />
-                  <div className="hidden w-12 h-12 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full flex items-center justify-center">
+                  <div className="hidden w-12 h-12 bg-gradient-to-br from-pink-100 to-purple-500 rounded-full flex items-center justify-center">
                     <span className="text-white font-bold text-lg">{highlight.outlet.charAt(0)}</span>
                   </div>
                 </div>
@@ -421,7 +421,7 @@ export default function MediaPage() {
                 {/* Platform-specific gradient overlay */}
                 <div className={`absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 ${
                   platform.platform === 'Instagram' 
-                    ? 'bg-gradient-to-br from-purple-400 via-pink-500 to-orange-500' 
+                    ? 'bg-gradient-to-br from-purple-400 via-pink-100 to-orange-500' 
                     : 'bg-gradient-to-br from-red-500 to-red-600'
                 }`}></div>
                 
@@ -429,7 +429,7 @@ export default function MediaPage() {
                   {/* Icon */}
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110 ${
                     platform.platform === 'Instagram' 
-                      ? 'bg-gradient-to-br from-purple-400 via-pink-500 to-orange-500' 
+                      ? 'bg-gradient-to-br from-purple-400 via-pink-100 to-orange-500' 
                       : 'bg-gradient-to-br from-red-500 to-red-600'
                   }`}>
                     <platform.icon className="w-5 h-5 text-white" />

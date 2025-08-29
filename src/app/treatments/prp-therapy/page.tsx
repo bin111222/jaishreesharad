@@ -13,7 +13,7 @@ const prpApplications = [
     duration: "60-90 min",
     sessions: "3-6 sessions",
     icon: Heart,
-    color: "from-red-400 to-pink-400"
+    color: "from-red-400 to-pink-100"
   },
   {
     name: "Skin Rejuvenation",
@@ -21,7 +21,7 @@ const prpApplications = [
     duration: "45-60 min",
     sessions: "3-4 sessions",
     icon: Activity,
-    color: "from-purple-400 to-pink-400"
+    color: "from-purple-400 to-pink-100"
   },
   {
     name: "Acne Scar Treatment",
@@ -305,10 +305,7 @@ export default function PRPTherapyPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.2, duration: 0.6 }}
                   whileHover={{ y: -10 }}
-                  className={`relative cursor-pointer group ${
-                    selectedApplication === index ? 'ring-2 ring-pastel-pink' : ''
-                  }`}
-                  onClick={() => setSelectedApplication(index)}
+                  className="relative group"
                 >
                   <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                     <div className="w-full h-40 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-6 overflow-hidden">

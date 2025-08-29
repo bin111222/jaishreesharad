@@ -24,7 +24,7 @@ const skinTreatments = [
     sessions: "6-12 sessions",
     results: "Improved tone",
     icon: Zap,
-    color: "from-purple-400 to-pink-400",
+    color: "from-purple-400 to-pink-100",
     concerns: ["Acne", "Anti-aging", "Redness", "Pigmentation"]
   },
   {
@@ -44,7 +44,7 @@ const skinTreatments = [
     sessions: "Monthly",
     results: "Maintenance",
     icon: Heart,
-    color: "from-pink-400 to-rose-400",
+    color: "from-pink-100 to-rose-400",
     concerns: ["All skin types", "Maintenance", "Relaxation", "Glow"]
   }
 ];

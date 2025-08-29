@@ -15,7 +15,8 @@ const facialContouringTreatments = [
     results: "3-7 days",
     icon: Target,
     color: "from-blue-400 to-cyan-400",
-    concerns: ["Crow's feet", "Eye wrinkles", "Expression lines", "Aging around eyes"]
+    concerns: ["Crow's feet", "Eye wrinkles", "Expression lines", "Aging around eyes"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/treatment-areas/crows-feet.webp"
   },
   {
     name: "Frown Lines Treatment",
@@ -24,8 +25,9 @@ const facialContouringTreatments = [
     sessions: "1 session",
     results: "3-7 days",
     icon: Activity,
-    color: "from-purple-400 to-pink-400",
-    concerns: ["Frown lines", "Glabellar lines", "Angry expression", "Forehead tension"]
+    color: "from-purple-400 to-pink-100",
+    concerns: ["Frown lines", "Glabellar lines", "Angry expression", "Forehead tension"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/treatment-areas/frown-lines-glabellar-lines.webp"
   },
   {
     name: "Forehead Lines Treatment",
@@ -35,7 +37,8 @@ const facialContouringTreatments = [
     results: "3-7 days",
     icon: Sparkles,
     color: "from-green-400 to-emerald-400",
-    concerns: ["Forehead lines", "Horizontal wrinkles", "Expression lines", "Aging forehead"]
+    concerns: ["Forehead lines", "Horizontal wrinkles", "Expression lines", "Aging forehead"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/treatment-areas/forehead-lines.webp"
   },
   {
     name: "Square Jaw Reduction",
@@ -45,7 +48,8 @@ const facialContouringTreatments = [
     results: "2-4 weeks",
     icon: Scissors,
     color: "from-orange-400 to-red-400",
-    concerns: ["Square jaw", "Masculine jawline", "Face shape", "Jaw contouring"]
+    concerns: ["Square jaw", "Masculine jawline", "Face shape", "Jaw contouring"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/treatment-areas/square-jaw-treatment.webp"
   },
   {
     name: "Lip Enhancement",
@@ -54,8 +58,9 @@ const facialContouringTreatments = [
     sessions: "1 session",
     results: "Immediate",
     icon: Heart,
-    color: "from-pink-400 to-rose-400",
-    concerns: ["Thin lips", "Lip shape", "Lip volume", "Lip symmetry"]
+    color: "from-pink-100 to-rose-400",
+    concerns: ["Thin lips", "Lip shape", "Lip volume", "Lip symmetry"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/dermalfillers/treatment-areas/lip-augmentation.webp"
   },
   {
     name: "Tear Trough Fillers",
@@ -65,7 +70,8 @@ const facialContouringTreatments = [
     results: "Immediate",
     icon: Target,
     color: "from-indigo-400 to-purple-400",
-    concerns: ["Under-eye hollows", "Dark circles", "Tired appearance", "Eye bags"]
+    concerns: ["Under-eye hollows", "Dark circles", "Tired appearance", "Eye bags"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/dermalfillers/treatment-areas/tear-trough-under-eye.webp"
   },
   {
     name: "Non-surgical Jaw & Chin Contouring",
@@ -75,7 +81,8 @@ const facialContouringTreatments = [
     results: "2-4 weeks",
     icon: Zap,
     color: "from-teal-400 to-cyan-400",
-    concerns: ["Weak jawline", "Chin projection", "Face definition", "Profile improvement"]
+    concerns: ["Weak jawline", "Chin projection", "Face definition", "Profile improvement"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/dermalfillers/treatment-areas/chin-&-jaw-contouring.webp?updatedAt=1756375140329"
   },
   {
     name: "Non-surgical Nose Job",
@@ -85,7 +92,8 @@ const facialContouringTreatments = [
     results: "2-4 weeks",
     icon: Target,
     color: "from-amber-400 to-orange-400",
-    concerns: ["Nose bumps", "Nose shape", "Bridge contouring", "Tip refinement"]
+    concerns: ["Nose bumps", "Nose shape", "Bridge contouring", "Tip refinement"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/dermalfillers/treatment-areas/non-surgical-nose-job.webp"
   }
 ];
 
@@ -333,13 +341,16 @@ export default function FacialContouringPage() {
                   
                   onClick={() => setSelectedTreatment(index)}
                 >
-                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <motion.div
-                      whileHover={{ scale: 1.1 }}
-                      className={`w-16 h-16 bg-gradient-to-r ${treatment.color} rounded-full flex items-center justify-center mx-auto mb-6`}
-                    >
-                      <treatment.icon className="w-8 h-8 text-white" />
-                    </motion.div>
+                  <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div className="w-full h-48 bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 overflow-hidden">
+                      <img 
+                        src={treatment.image}
+                        alt={`${treatment.name} treatment`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    
+                    <div className="p-6">
 
                     <h3 className="font-display text-lg font-semibold text-gray-800 mb-3 text-center">
                       {treatment.name}
@@ -373,6 +384,7 @@ export default function FacialContouringPage() {
                       </div>
                     </div>
                   </div>
+                </div>
                 </motion.div>
               ))}
             </div>

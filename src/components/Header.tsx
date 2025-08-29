@@ -34,7 +34,7 @@ const navigation = [
       { name: "HIFU Treatment", href: "/treatments/hifu" },
       { name: "Body Treatments", href: "/treatments/body" },
       { name: "PRP Therapy", href: "/treatments/prp-therapy" },
-      { name: "Bridal Packages", href: "/treatments/bridal" }
+      { name: "Bridal Care", href: "/treatments/bridal" }
     ]
   },
   { name: "About", href: "/about" },
@@ -432,7 +432,7 @@ export default function Header() {
                             >
                                                              {[
                                  { name: 'PRP Therapy', href: '/treatments/prp-therapy' },
-                                 { name: 'Bridal Packages', href: '/treatments/bridal' }
+                                 { name: 'Bridal Care', href: '/treatments/bridal' }
                                ].map((treatment) => (
                                  <Link
                                    key={treatment.name}

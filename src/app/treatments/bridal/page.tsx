@@ -31,7 +31,7 @@ const bridalTreatments = [
     duration: "30-45 min",
     sessions: "3-5 sessions",
     icon: Heart,
-    color: "from-pink-400 to-rose-400",
+    color: "from-pink-100 to-rose-400",
     benefits: ["Skin rejuvenation", "Dark circle treatment", "Fine line reduction", "Instant glow"]
   },
   {
@@ -58,7 +58,7 @@ const bridalTreatments = [
     duration: "15-30 min",
     sessions: "1-2 sessions",
     icon: Crown,
-    color: "from-purple-400 to-pink-400",
+    color: "from-purple-400 to-pink-100",
     benefits: ["Jaw contouring", "Non-surgical", "Natural results", "Long-lasting"]
   }
 ];
@@ -74,7 +74,7 @@ const bridalTips = [
     title: "Diet & Lifestyle",
     description: "Healthy low salt, low calorie, protein rich diet. 6-8 hours of sleep everyday. Avoid sun exposure.",
     icon: Heart,
-    color: "from-pink-400 to-rose-400"
+    color: "from-pink-100 to-rose-400"
   },
   {
     title: "Sun Protection",
@@ -86,7 +86,7 @@ const bridalTips = [
     title: "Last Minute Care",
     description: "Go for mild alpha hydroxy peels once in a fortnight. One or two sessions of skin polishing will clear dead skin and remove tan.",
     icon: Sparkles,
-    color: "from-purple-400 to-pink-400"
+    color: "from-purple-400 to-pink-100"
   }
 ];
 
@@ -273,6 +273,7 @@ export default function BridalCarePage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="space-y-12"
           >
@@ -292,6 +293,7 @@ export default function BridalCarePage() {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
@@ -354,6 +356,7 @@ export default function BridalCarePage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="space-y-12"
           >
@@ -372,6 +375,7 @@ export default function BridalCarePage() {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100"
                 >
@@ -393,6 +397,7 @@ export default function BridalCarePage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
@@ -425,6 +430,7 @@ export default function BridalCarePage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >

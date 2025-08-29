@@ -14,7 +14,7 @@ const bodyTreatments = [
     sessions: "6-8 sessions",
     results: "2-4 months",
     icon: Target,
-    color: "from-purple-400 to-pink-400",
+    color: "from-purple-400 to-pink-100",
     concerns: ["Stubborn fat", "Cellulite", "Body shaping", "Tone improvement"]
   },
   {

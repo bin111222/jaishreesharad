@@ -421,7 +421,7 @@ export default function BooksPage() {
               </p>
                               <Link
                   href="/contact"
-                  className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-500 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-200"
+                  className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-100 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-200"
                 >
                 <span>Get Personalized Advice</span>
                 <ArrowRight className="w-5 h-5" />

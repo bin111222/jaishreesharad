@@ -68,10 +68,10 @@ export function FeaturedMediaMarquee() {
     <section className="py-16 bg-gradient-to-r from-pastel-green/10 to-pastel-pink/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
           className="text-center mb-12"
         >
           <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -82,17 +82,17 @@ export function FeaturedMediaMarquee() {
           </p>
         </motion.div>
         
-        <Marquee speed={15} pauseOnHover>
+        <Marquee speed={8} pauseOnHover>
           {featuredMedia.map((media, index) => (
             <motion.div
               key={media.id}
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              transition={{ duration: 0.2, delay: index * 0.02 }}
               className="flex-shrink-0 mx-4 group"
             >
-              <div className="w-64 h-48 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-200 hover:scale-105">
+              <div className="w-64 h-48 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-150 hover:scale-105">
                 <div className="relative h-32 bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full flex items-center justify-center">
@@ -125,7 +125,7 @@ export function FeaturedMediaMarquee() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
           >
             <p className="text-gray-600 mb-4">
               Dr. Jaishree has been featured in over 100+ media outlets

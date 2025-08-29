@@ -23,7 +23,7 @@ const peelTypes = [
     downtime: "5-7 days",
     results: "Wrinkle reduction",
     icon: Zap,
-    color: "from-purple-400 to-pink-400"
+    color: "from-purple-400 to-pink-100"
   },
   {
     name: "Deep Peels",
@@ -302,9 +302,9 @@ export default function ChemicalPeelsPage() {
                               <div class="text-center">
                                 <motion.div
                                   whileHover={{ scale: 1.1 }}
-                                  class="w-12 h-12 bg-gradient-to-r ${peel.color} rounded-full flex items-center justify-center mx-auto mb-2"
+                                  class="w-16 h-16 bg-gradient-to-r ${peel.color} rounded-full flex items-center justify-center mx-auto mb-2"
                                 >
-                                  <peel.icon class="w-6 h-6 text-white" />
+                                  <peel.icon class="w-8 h-8 text-white" />
                                 </motion.div>
                                 <p class="text-gray-600 font-medium text-sm">${peel.name}</p>
                               </div>
@@ -316,9 +316,9 @@ export default function ChemicalPeelsPage() {
                     
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className={`w-12 h-12 bg-gradient-to-r ${peel.color} rounded-full flex items-center justify-center mx-auto mb-4`}
+                      className={`w-16 h-16 bg-gradient-to-r ${peel.color} rounded-full flex items-center justify-center mx-auto mb-4`}
                     >
-                      <peel.icon className="w-6 h-6 text-white" />
+                      <peel.icon className="w-8 h-8 text-white" />
                     </motion.div>
 
                     <h3 className="font-display text-xl font-semibold text-gray-800 mb-3 text-center">

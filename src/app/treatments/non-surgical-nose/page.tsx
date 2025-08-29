@@ -240,7 +240,7 @@ export default function NonSurgicalNosePage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-full h-32 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-4 overflow-hidden">
+                  <div className="w-full h-48 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-6 overflow-hidden">
                     <img 
                       src={`https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/nonsurgicalnosejob/treatment-areas/${treatment.area.toLowerCase().replace(/\s+/g, '-')}.webp`}
                       alt={`${treatment.area} non-surgical nose treatment`}
@@ -248,10 +248,10 @@ export default function NonSurgicalNosePage() {
                       onError={(e) => {
                         e.currentTarget.style.display = 'none';
                         e.currentTarget.parentElement!.innerHTML = `
-                          <div class="w-full h-32 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-xl flex items-center justify-center">
+                          <div class="w-full h-48 bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-xl flex items-center justify-center">
                             <div class="text-center">
-                              <div class="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
-                                <span class="text-white font-bold">${index + 1}</span>
+                              <div class="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-2">
+                                <span class="text-white font-bold text-lg">${index + 1}</span>
                               </div>
                               <p class="text-gray-600 font-medium text-sm">${treatment.area}</p>
                             </div>
@@ -261,8 +261,8 @@ export default function NonSurgicalNosePage() {
                     />
                   </div>
                   
-                  <div className="w-12 h-12 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold">{index + 1}</span>
+                  <div className="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-lg">{index + 1}</span>
                   </div>
                   <h3 className="font-semibold text-gray-800 mb-3 text-center">{treatment.area}</h3>
                   <p className="text-gray-600 text-sm mb-3">{treatment.description}</p>

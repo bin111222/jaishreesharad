@@ -31,7 +31,7 @@ const awardsData = [
     description: "Awarded for outstanding contributions to aesthetic medicine",
     imagePlaceholder: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/brandlogos/indiatoday.webp",
     category: "Innovation",
-    color: "from-red-400 to-pink-500"
+    color: "from-red-400 to-pink-100"
   },
   {
     id: 4,
@@ -260,7 +260,7 @@ export default function AwardsSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
-                className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-pink to-pink-400 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-150 hover:scale-102"
+                className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-pink to-pink-100 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-150 hover:scale-102"
               >
                 <span>Book Consultation</span>
                 <Award className="w-4 h-4" />

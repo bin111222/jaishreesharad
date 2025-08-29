@@ -267,9 +267,9 @@ const heroSlideshow = [
   },
   {
     id: 4,
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%206.webp",
-    testimonial: "The peels she has done on my skin have worked wonders … stem cell PRP helped my hair loss issues.",
-    author: "Amyra Dastur",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/appearance2.webp",
+    testimonial: "Great skin doesn't happen by chance, it happens by appointment … she's the reason I look into the mirror! ",
+    author: "Ranbir Kapoor",
     rating: "5"
   }
 ];
@@ -336,7 +336,7 @@ export default function HomePage() {
                 <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.9]">
                   <span className="block text-gray-800">Science.</span>
                   <span className="block text-gray-800">Skin.</span>
-                  <span className="block bg-gradient-to-r from-pastel-pink via-pink-500 to-pastel-green bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-pastel-pink via-pink-100 to-pastel-green bg-clip-text text-transparent">
                     Confidence.
                   </span>
                 </h1>
@@ -382,7 +382,7 @@ export default function HomePage() {
               >
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center justify-center space-x-3 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-500 text-white font-semibold rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
+                  className="group inline-flex items-center justify-center space-x-3 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-100 text-white font-semibold rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
                 >
                   <span>Book Consultation</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -482,7 +482,7 @@ export default function HomePage() {
                   className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 max-w-xs"
                 >
                   <div className="flex items-start space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-pastel-pink to-pink-400 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-to-br from-pastel-pink to-pink-100 rounded-full flex items-center justify-center">
                       <Star className="w-5 h-5 text-white" />
                     </div>
                     <div>
@@ -551,7 +551,7 @@ export default function HomePage() {
                 className="text-center group cursor-pointer"
               >
                 <motion.div 
-                  className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-pastel-pink to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300"
+                  className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-pastel-pink to-pink-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300"
                   whileHover={{ 
                     rotate: 360,
                     transition: { duration: 0.6, ease: "easeInOut" }
@@ -679,7 +679,7 @@ export default function HomePage() {
             >
               <Link
                 href="/treatments"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-500 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-100 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
               >
                 <span>View All Treatments</span>
                 <ArrowRight className="w-5 h-5" />
@@ -814,7 +814,7 @@ export default function HomePage() {
             >
               <Link
                 href="/media"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-500 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-100 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
               >
                 <span>View More Videos</span>
                 <ArrowRight className="w-5 h-5" />
@@ -889,7 +889,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-pink to-pink-500 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-150 text-sm"
+                    className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-pink to-pink-100 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-150 text-sm"
                   >
                     <span>Book Consultation</span>
                     <ArrowRight className="w-4 h-4" />

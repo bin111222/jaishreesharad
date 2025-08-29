@@ -127,7 +127,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/treatments/bridal" className="text-sm text-gray-600 hover:text-pastel-pink transition-colors duration-200">
-                  Bridal Packages
+                  Bridal Care
                 </Link>
               </li>
               <li>

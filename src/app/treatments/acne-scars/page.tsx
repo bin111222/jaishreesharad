@@ -59,42 +59,48 @@ const treatmentMethods = [
     description: "Creates controlled micro-injuries to stimulate collagen production and skin remodeling",
     bestFor: "All scar types, especially rolling scars",
     sessions: "3-6 sessions",
-    results: "3-6 months"
+    results: "3-6 months",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/skintreatments/treatments/microneedling.webp"
   },
   {
     method: "Laser Treatments",
     description: "Q-Switched Nd:YAG and pico-second lasers target scar tissue and stimulate healing",
     bestFor: "Ice pick scars, pigmentation",
     sessions: "4-8 sessions",
-    results: "2-4 months"
+    results: "2-4 months",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/laser-treatments/laser-types/4.webp"
   },
   {
     method: "Chemical Peels",
     description: "Exfoliate damaged skin layers and promote new cell growth",
     bestFor: "Superficial scars, texture issues",
     sessions: "4-6 sessions",
-    results: "2-3 months"
+    results: "2-3 months",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/chemicalpeels/1.webp"
   },
   {
     method: "Subcision",
     description: "Manually release tethered scar tissue to allow area to elevate",
     bestFor: "Tethered scars, rolling scars",
     sessions: "1-3 sessions",
-    results: "3-6 months"
+    results: "3-6 months",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/acnescars/treatment-methods/subcision.webp"
   },
   {
     method: "PRP Therapy",
     description: "Uses your own growth factors to boost healing and collagen production",
     bestFor: "All scar types, enhances other treatments",
     sessions: "3-6 sessions",
-    results: "4-8 months"
+    results: "4-8 months",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/prptherapy/1.webp"
   },
   {
     method: "Dermal Fillers",
     description: "Immediately lifts depressed scars and provides volume support",
     bestFor: "Rolling scars, deep depressions",
     sessions: "1-2 sessions",
-    results: "6-18 months"
+    results: "6-18 months",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/dermalfillers/1.webp"
   }
 ];
 
@@ -159,67 +165,43 @@ export default function AcneScarsPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-square flex items-center justify-center overflow-hidden">
+              {/* Main Hero Image */}
+              <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-square flex items-center justify-center overflow-hidden mb-6">
                 <img 
                   src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/acnescars/1.webp"
                   alt="Acne Scars Treatment - Dr. Jaishree Sharad"
                   className="w-full h-full object-cover rounded-xl"
                 />
               </div>
-            </motion.div>
-          </div>
-          
-          {/* Treatment Gallery */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-16"
-          >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {/* Before/After Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/acnescars/2.webp"
-                  alt="Acne Scars Before/After - Ice Pick Scars Results"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
               
-              {/* Before/After Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/acnescars/3.webp"
-                  alt="Acne Scars Before/After - Boxcar Scars Results"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
-              
-              {/* Treatment Process Image 1 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden">
-                <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/acnescars/4.webp"
-                  alt="Acne Scars Treatment Process"
-                  className="w-full h-full object-cover"
-                />
-
-              </div>
-              
-              {/* Treatment Process Image 2 */}
-              <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden relative">
-                <div className="w-full h-full bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-white text-sm font-bold">+</span>
-                    </div>
-
-                  </div>
+              {/* Thumbnail Gallery */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/acnescars/2.webp"
+                    alt="Acne Scars Before/After - Ice Pick Scars Results"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="aspect-square bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/acnescars/3.webp"
+                    alt="Acne Scars Before/After - Boxcar Scars Results"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-200">
+                  <img 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/acnescars/4.webp"
+                    alt="Acne Scars Treatment Process"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -285,16 +267,21 @@ export default function AcneScarsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   whileHover={{ y: -10 }}
-                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-pastel-pink to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Target className="w-8 h-8 text-white" />
+                  <div className="w-full h-48 overflow-hidden">
+                    <img 
+                      src={method.image}
+                      alt={`${method.method} Treatment`}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
 
-                  <h3 className="font-display text-xl font-semibold text-gray-800 mb-3 text-center">
-                    {method.method}
-                  </h3>
-                  <p className="text-gray-600 text-center mb-6">{method.description}</p>
+                  <div className="p-6">
+                    <h3 className="font-display text-xl font-semibold text-gray-800 mb-3 text-center">
+                      {method.method}
+                    </h3>
+                    <p className="text-gray-600 text-center mb-6">{method.description}</p>
 
                   <div className="space-y-4">
                     <div className="bg-pastel-green/10 rounded-lg p-3">
@@ -313,6 +300,7 @@ export default function AcneScarsPage() {
                       </div>
                     </div>
                   </div>
+                </div>
                 </motion.div>
               ))}
             </div>

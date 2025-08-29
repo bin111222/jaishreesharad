@@ -14,7 +14,7 @@ const celebrityTestimonialsData = [
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/karan.webp"
   },
   {
-    quote: "Great skin doesn't happen by chance, it happens by appointment … she's the reason I look into the mirror!",
+    quote: "Great skin doesn't happen by chance, it happens by appointment . she's the reason I look into the mirror!",
     name: "Ranbir Kapoor",
     designation: "Actor",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/ranbir.webp"

@@ -24,7 +24,7 @@ const laserTypes = [
     sessions: "3-6 sessions",
     results: "Improved texture",
     icon: Eye,
-    color: "from-purple-500 to-pink-500",
+    color: "from-purple-500 to-pink-100",
     concerns: ["Fine lines", "Uneven texture", "Sun damage", "Age spots"]
   },
   {
@@ -309,10 +309,7 @@ export default function LaserTreatmentsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.15 }}
                   whileHover={{ y: -10 }}
-                  className={`relative cursor-pointer group ${
-                    selectedLaser === index ? 'ring-2 ring-pastel-pink' : ''
-                  }`}
-                  onClick={() => setSelectedLaser(index)}
+                  className="relative group"
                 >
                   <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-150">
                     <div className="w-full h-48 bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-xl mb-4 overflow-hidden">

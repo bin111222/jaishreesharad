@@ -86,8 +86,8 @@ export default function SocialMediaFeed({ maxPosts = 3, showHeader = true }: Soc
                 transition={{ duration: 0.6 }}
                 className="inline-flex items-center space-x-2 mb-4"
               >
-                <Instagram className="w-6 h-6 text-pink-500" />
-                <span className="text-pink-500 font-semibold">@drjaishreesharad</span>
+                <Instagram className="w-6 h-6 text-pink-100" />
+                <span className="text-pink-100 font-semibold">@drjaishreesharad</span>
               </motion.div>
               <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
                 Follow Our Journey
@@ -161,8 +161,8 @@ export default function SocialMediaFeed({ maxPosts = 3, showHeader = true }: Soc
             className="text-center mb-12"
           >
             <div className="inline-flex items-center space-x-2 mb-4">
-              <Instagram className="w-6 h-6 text-pink-500" />
-              <span className="text-pink-500 font-semibold">@drjaishreesharad</span>
+              <Instagram className="w-6 h-6 text-pink-100" />
+              <span className="text-pink-100 font-semibold">@drjaishreesharad</span>
             </div>
             <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
               Follow Our Journey
@@ -202,7 +202,7 @@ export default function SocialMediaFeed({ maxPosts = 3, showHeader = true }: Soc
                 {/* Placeholder for when image is not available or fails to load */}
                 <div className={`w-full h-full bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 flex items-center justify-center ${post.media_url && post.media_url.startsWith('http') ? 'hidden' : ''}`}>
                   <div className="text-center space-y-4">
-                    <div className="w-20 h-20 bg-gradient-to-br from-pink-400 to-purple-500 rounded-full flex items-center justify-center mx-auto">
+                    <div className="w-20 h-20 bg-gradient-to-br from-pink-100 to-purple-500 rounded-full flex items-center justify-center mx-auto">
                       <Instagram className="w-10 h-10 text-white" />
                     </div>
                     <div>

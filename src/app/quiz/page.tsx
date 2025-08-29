@@ -266,7 +266,7 @@ const SKIN_PROFILES: Record<string, SkinProfile> = {
     title: "The Youth Preservation Protocol",
     description: "Your skin benefits from a comprehensive anti-aging approach that addresses fine lines, texture, and overall skin health.",
     icon: <Heart className="w-8 h-8" />,
-    color: "from-pink-500 to-rose-600",
+    color: "from-pink-100 to-rose-600",
     recommendations: {
       morning: [
         "Gentle cream cleanser",
@@ -457,6 +457,29 @@ export default function SkinQuiz() {
               <ArrowLeft className="w-5 h-5" />
               <span>Back to Home</span>
             </Link>
+            
+            {/* Brand Logo */}
+            <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-1">
+                {/* Logo 1 - Symbol */}
+                <div className="w-20 h-20 flex items-center justify-center">
+                  <img 
+                    src="/logo1.png" 
+                    alt="Skinfinitii Logo Symbol" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                {/* Logo 2 - Text */}
+                <div className="w-25 h-20 flex items-center justify-center">
+                  <img 
+                    src="/logo2.png" 
+                    alt="Skinfinitii Logo Text" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            
             <div className="flex items-center space-x-2">
               <Award className="w-5 h-5 text-pastel-pink" />
               <span className="font-semibold text-gray-800">Skin Assessment</span>
@@ -473,14 +496,7 @@ export default function SkinQuiz() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-pastel-pink/20 to-pastel-green/20 px-4 py-2 rounded-full mb-6">
-              <Microscope className="w-5 h-5 text-pastel-pink" />
-              <span className="text-sm font-medium text-gray-700">Professional Skin Assessment</span>
-            </div>
             
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-              Your Personalized Skin Profile
-            </h1>
             
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Answer a few questions to receive a customized skincare protocol designed by Dr. Jaishree's expertise
@@ -648,7 +664,7 @@ export default function SkinQuiz() {
                         title="Avoid These"
                         icon={<Shield className="w-5 h-5" />}
                         items={skinProfile.recommendations.avoid}
-                        color="from-red-400 to-pink-500"
+                        color="from-red-400 to-pink-100"
                       />
                       
                       <RecommendationCard
@@ -678,7 +694,7 @@ export default function SkinQuiz() {
                     <div className="flex flex-col sm:flex-row gap-4">
                       <Link
                         href="/contact"
-                        className="flex-1 inline-flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-500 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-200 hover:scale-105"
+                        className="flex-1 inline-flex items-center justify-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-100 text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-200 hover:scale-105"
                       >
                         <Phone className="w-5 h-5" />
                         <span>Book Consultation</span>
@@ -760,7 +776,7 @@ function MultiSelect({
           className={`inline-flex items-center space-x-2 px-6 py-3 rounded-xl font-semibold transition-all duration-200 ${
             value.length === 0
               ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-              : "bg-gradient-to-r from-pastel-pink to-pink-500 text-white hover:shadow-lg"
+              : "bg-gradient-to-r from-pastel-pink to-pink-100 text-white hover:shadow-lg"
           }`}
         >
           <span>Continue</span>

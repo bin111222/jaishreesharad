@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Award, GraduationCap, Users, BookOpen, Play, Star } from "lucide-react";
 import Link from "next/link";
 import AwardsSection from "@/components/AwardsSection";
+import { ImageAutoSlider } from "@/components/ui/image-auto-slider";
 
 const credentials = [
   {
@@ -344,6 +345,32 @@ export default function AboutPage() {
               <BookOpen className="w-4 h-4" />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Gallery Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Behind the Scenes
+              </h2>
+              <p className="text-xl text-gray-600">
+                A glimpse into Dr. Jaishree's world of expertise and innovation
+              </p>
+            </div>
+          </motion.div>
+        </div>
+        
+        <div className="w-full">
+          <ImageAutoSlider />
         </div>
       </section>
 
