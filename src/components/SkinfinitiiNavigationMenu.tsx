@@ -168,7 +168,16 @@ export function SkinfinitiiNavigationMenu() {
           </Link>
         </NavigationMenuItem>
 
-
+        <NavigationMenuItem>
+          <Link href="/training" legacyBehavior passHref>
+            <NavigationMenuLink className={cn(
+              navigationMenuTriggerStyle(),
+              "text-gray-800 hover:text-pastel-pink transition-colors text-sm md:text-base"
+            )}>
+              Training
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
 
         <NavigationMenuItem>
           <Link href="/contact" legacyBehavior passHref>
