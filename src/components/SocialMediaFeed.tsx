@@ -87,7 +87,7 @@ export default function SocialMediaFeed({ maxPosts = 3, showHeader = true }: Soc
                 className="inline-flex items-center space-x-2 mb-4"
               >
                 <Instagram className="w-6 h-6 text-pink-100" />
-                <span className="text-pink-100 font-semibold">@drjaishreesharad</span>
+                <span className="text-pink-800 font-semibold">@drjaishreesharad</span>
               </motion.div>
               <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
                 Follow Our Journey
@@ -162,7 +162,7 @@ export default function SocialMediaFeed({ maxPosts = 3, showHeader = true }: Soc
           >
             <div className="inline-flex items-center space-x-2 mb-4">
               <Instagram className="w-6 h-6 text-pink-100" />
-              <span className="text-pink-100 font-semibold">@drjaishreesharad</span>
+              <span className="text-pink-800 font-semibold">@drjaishreesharad</span>
             </div>
             <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
               Follow Our Journey

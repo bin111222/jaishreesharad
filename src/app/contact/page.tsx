@@ -33,7 +33,7 @@ const clinicLocations = [
     address: "601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052",
     phone: "+91 22 4181 9000",
     whatsapp: "+91 97 6969 1952",
-    email: "doctorjaishree@gmail.com",
+    email: "skinfinitii@gmail.com",
     hours: "Mon-Sat: 10AM-7PM",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8945230062886!2d72.83457791168001!3d19.068374582060134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9e4b3f237c9%3A0x234264c43c5c5224!2s%27Skinfinitii%27!5e0!3m2!1sen!2sin!4v1756280894097!5m2!1sen!2sin",
     coordinates: { lat: 19.0596, lng: 72.8347 },
@@ -44,7 +44,7 @@ const clinicLocations = [
     address: "G-62, Satra Plaza, Palm Beach Road, Sector 19D, Vashi, Navi Mumbai 400 703",
     phone: "+91 22 4283 2000",
     whatsapp: "+91 97 6969 1952",
-    email: "doctorjaishree@gmail.com",
+    email: "skinfinitii@gmail.com",
     hours: "Mon-Sat: 10AM-7PM",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.549665734366!2d73.00380861168024!3d19.083527582048035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c136b2c080cb%3A0x25e3032462aea8b4!2s%27Skinfinitii%27!5e0!3m2!1sen!2sin!4v1756281143714!5m2!1sen!2sin",
     coordinates: { lat: 19.0759, lng: 72.9989 },
@@ -287,22 +287,8 @@ export default function ContactPage() {
               
               {/* Parking & Directions */}
               <div>
-                <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
-                  Parking & Directions
-                </h3>
-                <div className="space-y-3 text-gray-600">
-                  <p>
-                    <strong>Khar Branch:</strong> Parking available in Prabhat Chambers building
-                  </p>
-                  <p>
-                    <strong>Vashi Branch:</strong> Ample parking available in Satra Plaza mall complex
-                  </p>
-                  <p>
-                  </p>
-                  <p>
-                    <strong>Landmarks:</strong> S.V. Road for Khar, Palm Beach Road for Vashi
-                  </p>
-                </div>
+                
+             
               </div>
             </motion.div>
             

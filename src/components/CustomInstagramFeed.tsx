@@ -86,8 +86,8 @@ export default function CustomInstagramFeed({ maxPosts = 3, showHeader = true }:
             className="text-center mb-12"
           >
             <div className="inline-flex items-center space-x-2 mb-4">
-              <Instagram className="w-6 h-6 text-pink-100" />
-              <span className="text-pink-100 font-semibold">@drjaishreesharad</span>
+              <Instagram className="w-6 h-6 text-pink-800" />
+              <span className="text-pink-800 font-semibold">@drjaishreesharad</span>
             </div>
             <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
               Follow Our Journey

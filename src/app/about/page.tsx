@@ -43,7 +43,7 @@ const credentials = [
 
 
 const memberships = [
-  "Board of Directors Member - International Society of Dermatologic and Aesthetic Surgery (ISDS)",
+  "Past Board of Directors Member - International Society of Dermatologic and Aesthetic Surgery (ISDS)",
   "International Mentor - American Society of Dermatologic Surgery (ASDS)",
   "Associate Editor - Journal of Cosmetic Dermatology (Wiley)",
   "Joint Secretary - Association of Cutaneous Surgeons of India (ACSI)",

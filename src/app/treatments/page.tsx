@@ -692,12 +692,7 @@ export default function TreatmentsPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/quiz"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-gray-800 font-semibold rounded-full hover:shadow-lg transition-all duration-150 hover:scale-102"
-              >
-                <span>Take Skin Quiz</span>
-              </Link>
+             
               
               <Link
                 href="/contact"

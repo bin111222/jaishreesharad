@@ -74,7 +74,7 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-pastel-pink flex-shrink-0" />
                 <a href="mailto:info@jaishreesharad.com" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
-                  doctorjaishree@gmail.com
+                  skinfinitii@gmail.com
                 </a>
               </div>
               

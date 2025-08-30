@@ -689,46 +689,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-12 sm:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8 sm:space-y-12"
-          >
-            <div className="text-center">
-              <h2 className="font-display text-4xl font-bold text-gray-800 mb-4">
-                What Our Patients Say
-              </h2>
-              <p className="text-xl text-gray-600">
-                Real stories from celebrities and patients who trust Dr. Jaishree
-              </p>
-            </div>
-            
-            <div className="flex justify-center">
-              <CircularTestimonials
-                testimonials={circularTestimonials}
-                autoplay={true}
-                colors={{
-                  name: "#1f2937",
-                  designation: "#6b7280",
-                  testimony: "#374151",
-                  arrowBackground: "#f472b6",
-                  arrowForeground: "#ffffff",
-                  arrowHoverBackground: "#ec4899",
-                }}
-                fontSizes={{
-                  name: "1.5rem",
-                  designation: "0.875rem",
-                  quote: "1rem",
-                }}
-              />
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
 
       {/* Video Testimonials Section */}
       <section className="py-20 bg-gray-50">
@@ -896,13 +857,65 @@ export default function HomePage() {
                   </Link>
                   
                   <Link
-                    href="/quiz"
+                    href="/treatments"
                     className="inline-flex items-center space-x-2 px-6 py-3 border-2 border-pastel-pink text-pastel-pink font-semibold rounded-full hover:bg-pastel-pink hover:text-white transition-all duration-150 text-sm"
                   >
-                    <span>Take Skin Quiz</span>
+                    <span>View Treatments</span>
                   </Link>
                 </div>
               </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-12 sm:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8 sm:space-y-12"
+          >
+            <div className="text-center">
+              <h2 className="font-display text-4xl font-bold text-gray-800 mb-4">
+                What Our Patients Say
+              </h2>
+              <p className="text-xl text-gray-600">
+                Real stories from celebrities and patients who trust Dr. Jaishree
+              </p>
+            </div>
+            
+            <div className="flex justify-center">
+              <CircularTestimonials
+                testimonials={circularTestimonials}
+                autoplay={true}
+                colors={{
+                  name: "#1f2937",
+                  designation: "#6b7280",
+                  testimony: "#374151",
+                  arrowBackground: "#f472b6",
+                  arrowForeground: "#ffffff",
+                  arrowHoverBackground: "#ec4899",
+                }}
+                fontSizes={{
+                  name: "1.5rem",
+                  designation: "0.875rem",
+                  quote: "1rem",
+                }}
+              />
+            </div>
+            
+            {/* View All Testimonials Button */}
+            <div className="text-center pt-8">
+              <Link
+                href="/testimonials"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-100 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
+              >
+                <span>View All Testimonials</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
           </motion.div>
         </div>
