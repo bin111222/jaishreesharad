@@ -56,34 +56,39 @@ const memberships = [
 
 const mediaHighlights = [
   {
-    title: "Free Press Journal (Jun 30, 2025)",
-    outlet: "Explained risks of unregulated anti-ageing injections",
+    title: "Hindustan Times — Chewing gum gives you a sharper jawline? Dermat calls it a myth and shares what actually works",
+    outlet: "Hindustan Times",
     type: "News Article",
-    date: "2025"
+    date: "August 29, 2025",
+    link: "https://www.hindustantimes.com/lifestyle/health/chewing-gum-gives-you-a-sharper-jawline-dermat-calls-it-a-myth-and-shares-what-actually-works-101756457127176.html"
   },
   {
-    title: "Tira Beauty (Feb 14, 2023)",
-    outlet: "Baby Talk: A Tira Guide to Buying Skincare Products for Your Baby",
+    title: "NDTV Health — Dermatologist busts the myth of natural sugars being good for skin",
+    outlet: "NDTV Health",
+    type: "News Article",
+    date: "January 27, 2025",
+    link: "https://www.ndtv.com/health/dermatologist-busts-the-myth-of-natural-sugars-being-good-for-skin-7569441"
+  },
+  {
+    title: "ELLE Impact 2025 — How women are shaping what the future looks like (panel)",
+    outlet: "ELLE India",
+    type: "Conference Speaker",
+    date: "March 28, 2025",
+    link: "https://elle.in/fashion/trailblazers-changemakers-and-visionaries-what-went-down-at-elle-impact-8899138"
+  },
+  {
+    title: "Tira Beauty — What Dr. Jaishree Sharad actually does to look younger",
+    outlet: "Tira Beauty",
     type: "Expert Article",
-    date: "2023"
+    date: "June 19, 2025",
+    link: "https://www.tirabeauty.com/article/articles/dr-jaishree-sharad-shares-what-she-actually-does-to-look-younger"
   },
   {
-    title: "NDTV Swirlster (Nov 2022)",
-    outlet: "Celebrity Dermatologist Dr. Jaishree Sharad on the popular Vampire Facial skincare trend",
-    type: "TV Interview",
-    date: "2022"
-  },
-  {
-    title: "Femina India (Dec 8, 2022)",
-    outlet: "Celebrity dermatologist Dr. Jaishree Sharad talks about her beauty regimen and more!",
-    type: "Instagram Live",
-    date: "2022"
-  },
-  {
-    title: "Second Opinion Podcast (Oct 2022)",
-    outlet: "Dermatologist Dr. Jaishree Sharad Busts Biggest Skincare Myths – Acne, Botox, Fillers",
-    type: "Podcast",
-    date: "2022"
+    title: "NDTV Health — Bring on the party glow: try this 4-step skincare",
+    outlet: "NDTV Health",
+    type: "News Article",
+    date: "December 16, 2024",
+    link: "https://www.ndtv.com/health/how-to-get-glowing-skin-before-a-party-cosmetologists-4-step-skincare-process-revealed-7258888"
   }
 ];
 
@@ -317,7 +322,7 @@ export default function AboutPage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-xl p-6"
+                className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-2">
@@ -331,7 +336,20 @@ export default function AboutPage() {
                 <h3 className="font-display text-lg font-semibold text-gray-800 mb-2">
                   {highlight.title}
                 </h3>
-                <p className="text-gray-600">{highlight.outlet}</p>
+                <p className="text-gray-600 mb-4">{highlight.outlet}</p>
+                {highlight.link && (
+                  <a
+                    href={highlight.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 text-pastel-pink hover:text-pastel-pink/80 transition-colors text-sm font-medium"
+                  >
+                    <span>Read Article</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )}
               </motion.div>
             ))}
           </div>

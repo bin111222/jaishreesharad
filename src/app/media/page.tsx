@@ -38,6 +38,15 @@ const mediaCoverage = [
         description: "Her personal routine, trusted ingredients, and pragmatic anti-ageing philosophy.",
         icon: Newspaper,
         link: "https://www.tirabeauty.com/article/articles/dr-jaishree-sharad-shares-what-she-actually-does-to-look-younger"
+      },
+      {
+        title: "Hindustan Times — Chewing gum gives you a sharper jawline? Dermat calls it a myth and shares what actually works",
+        outlet: "Hindustan Times",
+        type: "News Article",
+        date: "August 29, 2025",
+        description: "Dr. Jaishree Sharad debunks the chewing gum jawline myth and reveals that gargling can actually help tone facial muscles.",
+        icon: Newspaper,
+        link: "https://www.hindustantimes.com/lifestyle/health/chewing-gum-gives-you-a-sharper-jawline-dermat-calls-it-a-myth-and-shares-what-actually-works-101756457127176.html"
       }
     ]
   },
