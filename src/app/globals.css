@@ -86,3 +86,75 @@ html {
     font-size: 16px;
   }
 }
+
+/* Custom Cursor Styles */
+:root {
+  /* Default cursor - elegant arrow with pastel pink accent */
+  --cursor-default: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23D7A7A0' d='M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z'/%3E%3Cpath fill='%23C89A93' d='M13.04 14.69l-1.43 4.2L3 3l10.04 11.69z'/%3E%3C/svg%3E") 12 12, auto;
+  
+  /* Pointer cursor - same arrow but with pastel green */
+  --cursor-pointer: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23A8D5BA' d='M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z'/%3E%3Cpath fill='%2396C4A8' d='M13.04 14.69l-1.43 4.2L3 3l10.04 11.69z'/%3E%3C/svg%3E") 12 12, pointer;
+  
+  /* Text cursor - vertical line with pastel pink */
+  --cursor-text: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2' height='20' viewBox='0 0 2 20'%3E%3Crect width='2' height='20' fill='%23D7A7A0'/%3E%3C/svg%3E") 1 10, text;
+  
+  /* Loading cursor - spinning circle */
+  --cursor-loading: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='8' fill='none' stroke='%23D7A7A0' stroke-width='2' stroke-dasharray='31.416' stroke-dashoffset='31.416'%3E%3Canimate attributeName='stroke-dashoffset' values='31.416;0' dur='1s' repeatCount='indefinite'/%3E%3C/circle%3E%3C/svg%3E") 10 10, wait;
+}
+
+/* Apply custom cursors */
+* {
+  cursor: var(--cursor-default);
+}
+
+/* Interactive elements */
+a, button, [role="button"], input[type="button"], input[type="submit"], input[type="reset"] {
+  cursor: var(--cursor-pointer);
+}
+
+/* Ensure all child elements of interactive elements use pointer cursor */
+a *, button *, [role="button"] *, input[type="button"] *, input[type="submit"] *, input[type="reset"] * {
+  cursor: inherit;
+}
+
+/* Text input areas */
+input[type="text"], input[type="email"], input[type="password"], input[type="search"], textarea, [contenteditable="true"] {
+  cursor: var(--cursor-text);
+}
+
+/* Loading states */
+.loading, [aria-busy="true"] {
+  cursor: var(--cursor-loading);
+}
+
+/* Disabled elements */
+:disabled, [aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+/* Hover effects for interactive elements */
+a:hover, button:hover, [role="button"]:hover {
+  cursor: var(--cursor-pointer);
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+/* Custom cursor for specific sections */
+.hero-section, .featured-section {
+  cursor: var(--cursor-default);
+}
+
+/* Mobile cursor reset - use default cursors on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto;
+  }
+  
+  a, button, [role="button"] {
+    cursor: pointer;
+  }
+  
+  input, textarea, [contenteditable="true"] {
+    cursor: text;
+  }
+}
