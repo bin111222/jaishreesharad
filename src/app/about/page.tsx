@@ -56,6 +56,13 @@ const memberships = [
 
 const mediaHighlights = [
   {
+    title: "Vogue India — Is 'lazy luxe' a skinimalism reset or just another beauty trend in 2025?",
+    outlet: "Vogue India",
+    type: "Magazine Feature",
+    date: "September 5, 2025",
+    link: "https://www.vogue.in/content/is-lazy-luxe-a-skinimalism-reset-or-just-another-beauty-trend-in-2025"
+  },
+  {
     title: "Hindustan Times — Chewing gum gives you a sharper jawline? Dermat calls it a myth and shares what actually works",
     outlet: "Hindustan Times",
     type: "News Article",

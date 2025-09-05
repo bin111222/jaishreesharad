@@ -207,6 +207,15 @@ const featuredVideos = [
     videoId: "g93IhHW600U",
     category: "Podcast",
     duration: "45:20"
+  },
+  {
+    id: 7,
+    title: "Skincare का सबसे बड़ा SCAM | Chehre Ke Daag Dhabbe | Dr. Jaishree",
+    description: "Biggest scams in skincare and how to avoid them",
+    thumbnail: "https://img.youtube.com/vi/-nLWeu2K0lE/maxresdefault.jpg",
+    videoId: "-nLWeu2K0lE",
+    category: "Expert Talk",
+    duration: "19:09"
   }
 ];
 

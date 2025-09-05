@@ -47,6 +47,15 @@ const mediaCoverage = [
         description: "Dr. Jaishree Sharad debunks the chewing gum jawline myth and reveals that gargling can actually help tone facial muscles.",
         icon: Newspaper,
         link: "https://www.hindustantimes.com/lifestyle/health/chewing-gum-gives-you-a-sharper-jawline-dermat-calls-it-a-myth-and-shares-what-actually-works-101756457127176.html"
+      },
+      {
+        title: "Vogue India — Is 'lazy luxe' a skinimalism reset or just another beauty trend in 2025?",
+        outlet: "Vogue India",
+        type: "Magazine Feature",
+        date: "September 5, 2025",
+        description: "Dr. Jaishree discusses the rise of skinimalism and the shift from extensive skincare routines to mindful, condensed beauty rituals.",
+        icon: Newspaper,
+        link: "https://www.vogue.in/content/is-lazy-luxe-a-skinimalism-reset-or-just-another-beauty-trend-in-2025"
       }
     ]
   },
@@ -274,6 +283,72 @@ const socialMediaPresence = [
     content: "Educational videos, webinar recordings, skincare tutorials",
     icon: Youtube,
     link: "https://www.youtube.com/@drjaishreesharadskin"
+  }
+];
+
+const featuredVideos = [
+  {
+    id: 1,
+    title: "Stop Wasting Money on Skincare! Do THIS Instead",
+    description: "Expert advice on smart skincare spending",
+    thumbnail: "https://img.youtube.com/vi/iVmnobqE3G8/maxresdefault.jpg",
+    videoId: "iVmnobqE3G8",
+    category: "Skincare Tips",
+    duration: "8:45"
+  },
+  {
+    id: 2,
+    title: "The Changing Paradigms of Skincare in India",
+    description: "Dr. Jaishree discusses evolving skincare trends",
+    thumbnail: "https://img.youtube.com/vi/Xj5VJNHrSCc/maxresdefault.jpg",
+    videoId: "Xj5VJNHrSCc",
+    category: "Expert Talk",
+    duration: "12:30"
+  },
+  {
+    id: 3,
+    title: "TEDx – The Mind–Skin Connection: Healing from Within",
+    description: "Groundbreaking TEDx talk on mind-skin relationship",
+    thumbnail: "https://img.youtube.com/vi/1BCr1LNA10U/maxresdefault.jpg",
+    videoId: "1BCr1LNA10U",
+    category: "TEDx Talk",
+    duration: "18:22"
+  },
+  {
+    id: 4,
+    title: "Don't Do This With Your Skin!",
+    description: "Common skincare mistakes to avoid",
+    thumbnail: "https://img.youtube.com/vi/SMaSfrrBGc8/maxresdefault.jpg",
+    videoId: "SMaSfrrBGc8",
+    category: "What's Your Mantra?",
+    duration: "6:15"
+  },
+  {
+    id: 5,
+    title: "Bollywood Celebrity Skin Care Secrets",
+    description: "Exclusive insights into celebrity skincare routines",
+    thumbnail: "https://img.youtube.com/vi/DCofgfHdBUI/maxresdefault.jpg",
+    videoId: "DCofgfHdBUI",
+    category: "Celebrity Secrets",
+    duration: "10:45"
+  },
+  {
+    id: 6,
+    title: "Figuring Out Podcast – Skin Care Secrets, Fillers, Botox, Acne & Sunscreen",
+    description: "Comprehensive discussion on popular treatments",
+    thumbnail: "https://img.youtube.com/vi/g93IhHW600U/maxresdefault.jpg",
+    videoId: "g93IhHW600U",
+    category: "Podcast",
+    duration: "45:20"
+  },
+  {
+    id: 7,
+    title: "Skincare का सबसे बड़ा SCAM | Chehre Ke Daag Dhabbe | Dr. Jaishree",
+    description: "Biggest scams in skincare and how to avoid them",
+    thumbnail: "https://img.youtube.com/vi/-nLWeu2K0lE/maxresdefault.jpg",
+    videoId: "-nLWeu2K0lE",
+    category: "Expert Talk",
+    duration: "19:09"
   }
 ];
 
@@ -561,6 +636,83 @@ export default function MediaPage() {
         </div>
       </section>
 
+      {/* Featured Videos Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Featured Videos
+              </h2>
+              <p className="text-xl text-gray-600">
+                Watch Dr. Jaishree's expert insights on TEDx, podcasts, and media features
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredVideos.map((video, index) => (
+                <motion.div
+                  key={video.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.2, duration: 0.6 }}
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className="group cursor-pointer"
+                >
+                  <a 
+                    href={`https://www.youtube.com/watch?v=${video.videoId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                  >
+                    <div className="aspect-video relative overflow-hidden">
+                      <img 
+                        src={video.thumbnail}
+                        alt={video.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div>
+                      
+                      {/* Play Button */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-16 h-16 rounded-full flex items-center justify-center group-hover:scale-110 transition-all duration-300">
+                          <Play className="w-8 h-8 text-white ml-1 drop-shadow-lg" />
+                        </div>
+                      </div>
+                      
+                      {/* Duration Badge */}
+                      <div className="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm font-medium">
+                        {video.duration}
+                      </div>
+                      
+                      {/* Category Badge */}
+                      <div className="absolute bottom-4 left-4">
+                        <span className="bg-pastel-pink text-white px-3 py-1 rounded-full text-xs font-medium">
+                          {video.category}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div className="p-6">
+                      <h3 className="font-display text-lg font-semibold text-gray-800 mb-2 group-hover:text-pastel-pink transition-colors">
+                        {video.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {video.description}
+                      </p>
+                    </div>
+                  </a>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
     </Layout>
   );
