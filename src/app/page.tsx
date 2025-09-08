@@ -68,38 +68,38 @@ const circularTestimonials = [
   {
     quote: "When someone like Jaishree enters your life, you feel like you have won the skin battle! … your skin's BFF for life.",
     name: "Karan Johar",
-    designation: "Director",
+    designation: "Director, in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/karan.webp"
   },
   {
-    quote: "Great skin doesn't happen by chance, it happens by appointment … she's the reason I look into the mirror!",
+    quote: "I get dark circles when I don’t sleep . . . I get sunburnt and my skin peels when I spend the day on the beach . . . I break out into pimples and acne when I’m stressed . . . But as a film star, I’ve gotta always look like I’ve walked out of a magazine cover! That’s when I realized great skin doesn’t happen by chance, it happens by appointment . . . Dr Jaishree is my one-stop shop. Forget the camera, she’s the reason I look into the mirror!",
     name: "Ranbir Kapoor",
-    designation: "Actor",
+    designation: "Actor, in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/ranbir.webp"
   },
   {
     quote: "There is no one I trust more to take care of my skin … I always go to her for the best and the right advice.",
     name: "Sonam Kapoor",
-    designation: "Actor",
+    designation: "Actor, in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/sonam.webp"
   },
   {
     quote: "Jaishree is my instant cure for any skin problem … she is 'Dr Solve It' for me.",
     name: "Varun Dhawan",
-    designation: "Actor",
+    designation: "Actor, in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/varun.webp"
   },
   {
     quote: "Jaishree is so knowledgeable … there is no one better than her to write a book on skincare.",
     name: "Farah Khan",
-    designation: "Director",
+    designation: "Director, in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/farah.webp"
   },
  
   {
     quote: "Jaishree taught me the importance of loving my skin and nourishing it—that less is always more.",
     name: "Athiya Shetty",
-    designation: "Actor",
+    designation: "Actor, in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/athiya.webp"
   }
 ];
@@ -246,8 +246,8 @@ const heroSlideshow = [
   {
     id: 2,
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/8.webp",
-    testimonial: "She's the only person I trust with my skin. Her attention to detail and results are unmatched.",
-    author: "Shamita Shetty",
+    testimonial: "I had pimples and scars on my face all my life and I struggled with them. Then I met Dr J and she did her magic. Now I smile and have dimples instead of pimples. I also have the pleasure of knowing this beautiful being personally",
+    author: "Amit Sadh",
     rating: "5"
   },
   {
@@ -260,7 +260,7 @@ const heroSlideshow = [
   {
     id: 4,
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/appearance2.webp",
-    testimonial: "Great skin doesn't happen by chance, it happens by appointment … she's the reason I look into the mirror! ",
+    testimonial: "I get dark circles when I don’t sleep . . . I get sunburnt and my skin peels when I spend the day on the beach . . . I break out into pimples and acne when I’m stressed . . . But as a film star, I’ve gotta always look like I’ve walked out of a magazine cover! That’s when I realized great skin doesn’t happen by chance, it happens by appointment . . . Dr Jaishree is my one-stop shop. Forget the camera, she’s the reason I look into the mirror!",
     author: "Ranbir Kapoor",
     rating: "5"
   }
