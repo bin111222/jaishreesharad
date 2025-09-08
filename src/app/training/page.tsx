@@ -2,93 +2,114 @@
 
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { GraduationCap, Users, Clock, Star, Award, BookOpen, Play, Calendar, MapPin, ArrowRight, CheckCircle } from "lucide-react";
+import { GraduationCap, Users, Clock, Star, Award, BookOpen, Play, Calendar, MapPin, ArrowRight, CheckCircle, Building2, Microscope, Zap, Shield, Globe, Target } from "lucide-react";
 import Link from "next/link";
 
-const courses = [
+const academyPrograms = [
   {
-    title: "Advanced Botox & Dermal Fillers",
-    duration: "3 Days",
+    title: "Master's Program in Aesthetic Dermatology",
+    duration: "6 Months",
+    level: "Advanced",
+    description: "Comprehensive program covering all aspects of aesthetic dermatology with hands-on training and mentorship.",
+    features: ["Live patient demonstrations", "Hands-on practice", "Case studies", "International certification", "Mentorship program"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/masters-program-placeholder.webp",
+    category: "Comprehensive Training"
+  },
+  {
+    title: "Advanced Injection Techniques Workshop",
+    duration: "5 Days",
     level: "Intermediate to Advanced",
-    price: "₹45,000",
-    description: "Comprehensive hands-on training in advanced injection techniques for facial rejuvenation and contouring.",
-    features: ["Live demonstrations", "Hands-on practice", "Case studies", "Certificate of completion"],
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop"
+    description: "Intensive workshop focusing on advanced botox, fillers, and thread lift techniques with live demonstrations.",
+    features: ["Live demonstrations", "Hands-on practice", "Complication management", "Certificate of completion"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/injection-workshop-placeholder.webp",
+    category: "Specialized Workshop"
   },
   {
-    title: "Chemical Peels & Skin Resurfacing",
-    duration: "2 Days",
-    level: "Beginner to Intermediate",
-    price: "₹35,000",
-    description: "Master the art of chemical peels and skin resurfacing techniques for various skin concerns.",
-    features: ["Theory sessions", "Practical training", "Safety protocols", "Product knowledge"],
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
-  },
-  {
-    title: "Laser Treatments & Technology",
+    title: "Laser & Energy-Based Devices Certification",
     duration: "4 Days",
     level: "Advanced",
-    price: "₹55,000",
-    description: "Comprehensive training on various laser technologies and their applications in aesthetic medicine.",
-    features: ["Laser physics", "Treatment protocols", "Safety measures", "Equipment handling"],
-    image: "https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=400&h=300&fit=crop"
+    description: "Comprehensive training on various laser technologies and energy-based devices for aesthetic treatments.",
+    features: ["Laser physics", "Treatment protocols", "Safety measures", "Equipment handling", "Certification"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/laser-certification-placeholder.webp",
+    category: "Technology Training"
   },
   {
-    title: "Thread Lifts & Non-Surgical Facelifts",
+    title: "Chemical Peels & Skin Resurfacing Masterclass",
+    duration: "3 Days",
+    level: "Beginner to Advanced",
+    description: "Master the art of chemical peels and skin resurfacing techniques for various skin concerns and conditions.",
+    features: ["Theory sessions", "Practical training", "Safety protocols", "Product knowledge", "Certification"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/chemical-peels-placeholder.webp",
+    category: "Skin Treatments"
+  },
+  {
+    title: "Business of Aesthetic Medicine",
     duration: "2 Days",
-    level: "Intermediate",
-    price: "₹40,000",
-    description: "Learn advanced thread lift techniques and non-surgical facelift procedures.",
-    features: ["Thread selection", "Placement techniques", "Complication management", "Results optimization"],
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop"
+    level: "All Levels",
+    description: "Learn the business aspects of running a successful aesthetic practice including marketing, pricing, and patient management.",
+    features: ["Business planning", "Marketing strategies", "Pricing models", "Patient management", "Practice growth"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/business-course-placeholder.webp",
+    category: "Business Development"
+  },
+  {
+    title: "International Fellowship Program",
+    duration: "1 Year",
+    level: "Advanced",
+    description: "Exclusive fellowship program with international exposure and advanced training in aesthetic dermatology.",
+    features: ["International exposure", "Advanced training", "Research opportunities", "Global certification", "Mentorship"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/fellowship-placeholder.webp",
+    category: "Fellowship Program"
   }
 ];
 
-const testimonials = [
+const academyTestimonials = [
   {
     name: "Dr. Priya Sharma",
     location: "Mumbai",
     rating: 5,
-    text: "The training program exceeded my expectations. Dr. Jaishree's expertise and teaching methods are exceptional. I feel confident to implement these techniques in my practice.",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face"
+    program: "Master's Program Graduate",
+    text: "The Academy of Aesthetic Excellence transformed my practice completely. Dr. Jaishree's mentorship and the comprehensive curriculum gave me the confidence to offer advanced aesthetic treatments.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/testimonial-1-placeholder.webp"
   },
   {
     name: "Dr. Amit Patel",
     location: "Delhi",
     rating: 5,
-    text: "Outstanding academy with world-class facilities. The hands-on training and personalized attention made all the difference in my learning experience.",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop&crop=face"
+    program: "Fellowship Program Graduate",
+    text: "Outstanding academy with world-class facilities and international exposure. The hands-on training and personalized attention made all the difference in my learning experience.",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/testimonial-2-placeholder.webp"
   },
   {
     name: "Dr. Sneha Reddy",
     location: "Bangalore",
     rating: 5,
+    program: "Advanced Workshop Graduate",
     text: "The academy provides comprehensive training that combines theory with extensive practical experience. Highly recommended for any dermatologist looking to enhance their skills.",
-    image: "https://images.unsplash.com/photo-1594824475545-9d0c7c4951c5?w=100&h=100&fit=crop&crop=face"
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/testimonial-3-placeholder.webp"
   }
 ];
 
 const upcomingEvents = [
   {
-    title: "Advanced Botox Workshop",
-    date: "March 15-17, 2024",
+    title: "Master's Program in Aesthetic Dermatology",
+    date: "March 15-20, 2025",
     location: "Mumbai",
     seats: "Limited seats available",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop"
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/upcoming-event-1-placeholder.webp"
   },
   {
-    title: "Chemical Peels Certification",
-    date: "April 5-6, 2024",
+    title: "Advanced Injection Techniques Workshop",
+    date: "April 5-9, 2025",
     location: "Mumbai",
     seats: "Registration open",
-    image: "https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=400&h=250&fit=crop"
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/upcoming-event-2-placeholder.webp"
   },
   {
-    title: "Laser Technology Summit",
-    date: "May 10-13, 2024",
+    title: "International Fellowship Program",
+    date: "May 10-15, 2025",
     location: "Mumbai",
     seats: "Early bird registration",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=250&fit=crop"
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/upcoming-event-3-placeholder.webp"
   }
 ];
 
@@ -110,10 +131,10 @@ export default function TrainingPage() {
                 <span>Professional Training Academy</span>
               </div>
               <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-800">
-                Dr. Jaishree's Aesthetic Academy
+                Dr. Jaishree's Academy of Aesthetic Excellence
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Transform your practice with world-class training in aesthetic dermatology. Learn from India's leading cosmetic dermatologist through comprehensive hands-on programs designed for medical professionals.
+                Transform your practice with world-class training in aesthetic dermatology. Learn from India's leading cosmetic dermatologist through comprehensive hands-on programs designed for medical professionals seeking excellence in aesthetic medicine.
               </p>
               <div className="flex flex-wrap items-center gap-6">
                 <div className="flex items-center space-x-2">
@@ -157,8 +178,8 @@ export default function TrainingPage() {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=600&fit=crop" 
-                  alt="Dr. Jaishree's Aesthetic Academy Training Session" 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/hero-academy-placeholder.webp" 
+                  alt="Dr. Jaishree's Academy of Aesthetic Excellence" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -200,22 +221,22 @@ export default function TrainingPage() {
               {
                 icon: GraduationCap,
                 title: "Expert Faculty",
-                description: "Learn directly from Dr. Jaishree Sharad and her team of experienced professionals"
+                description: "Learn directly from Dr. Jaishree Sharad and her team of internationally recognized professionals"
               },
               {
                 icon: Users,
                 title: "Small Batch Size",
-                description: "Personalized attention with limited participants for maximum learning"
+                description: "Personalized attention with limited participants for maximum learning and mentorship"
               },
               {
                 icon: Award,
-                title: "Certification",
-                description: "Internationally recognized certificates upon successful completion"
+                title: "International Certification",
+                description: "Globally recognized certificates and fellowship programs upon successful completion"
               },
               {
                 icon: Clock,
                 title: "Hands-on Training",
-                description: "Extensive practical sessions with real patients under supervision"
+                description: "Extensive practical sessions with real patients under expert supervision"
               }
             ].map((feature, index) => (
               <motion.div
@@ -248,17 +269,17 @@ export default function TrainingPage() {
             className="text-center mb-16"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Course Offerings
+              Academy Programs
             </h2>
             <p className="text-xl text-gray-600">
-              Comprehensive training programs designed for medical professionals
+              Comprehensive training programs designed for medical professionals seeking excellence in aesthetic dermatology
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {courses.map((course, index) => (
+            {academyPrograms.map((program, index) => (
               <motion.div
-                key={course.title}
+                key={program.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -266,30 +287,33 @@ export default function TrainingPage() {
               >
                 <div className="aspect-video overflow-hidden">
                   <img 
-                    src={course.image} 
-                    alt={course.title} 
+                    src={program.image} 
+                    alt={program.title} 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-sm font-semibold text-pastel-pink bg-pastel-pink/10 px-3 py-1 rounded-full">
-                      {course.level}
+                      {program.category}
                     </span>
-                    <span className="text-2xl font-bold text-gray-800">{course.price}</span>
                   </div>
                   <h3 className="font-display text-xl font-semibold text-gray-800 mb-2">
-                    {course.title}
+                    {program.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">{course.description}</p>
+                  <p className="text-gray-600 mb-4">{program.description}</p>
                   <div className="flex items-center space-x-4 mb-4 text-sm text-gray-500">
                     <div className="flex items-center space-x-1">
                       <Clock className="w-4 h-4" />
-                      <span>{course.duration}</span>
+                      <span>{program.duration}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Award className="w-4 h-4" />
+                      <span>{program.level}</span>
                     </div>
                   </div>
                   <div className="space-y-2 mb-6">
-                    {course.features.map((feature, featureIndex) => (
+                    {program.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-pastel-green" />
                         <span className="text-sm text-gray-600">{feature}</span>
@@ -391,7 +415,7 @@ export default function TrainingPage() {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {academyTestimonials.map((testimonial, index) => (
               <motion.div
                 key={testimonial.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -414,6 +438,7 @@ export default function TrainingPage() {
                   <div>
                     <p className="font-semibold text-gray-800">{testimonial.name}</p>
                     <p className="text-sm text-gray-500">{testimonial.location}</p>
+                    <p className="text-xs text-pastel-pink font-medium">{testimonial.program}</p>
                   </div>
                 </div>
               </motion.div>
@@ -432,10 +457,10 @@ export default function TrainingPage() {
             className="text-center mb-16"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              State-of-the-Art Facilities
+              Academy Facilities
             </h2>
             <p className="text-xl text-gray-600">
-              Learn in a world-class environment with the latest equipment and technology
+              Learn in a world-class environment with the latest equipment and cutting-edge technology
             </p>
           </motion.div>
           
@@ -449,29 +474,29 @@ export default function TrainingPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=400&fit=crop" 
-                    alt="Training Room" 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/facility-1-placeholder.webp" 
+                    alt="Academy Training Room" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=400&h=400&fit=crop" 
-                    alt="Equipment" 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/facility-2-placeholder.webp" 
+                    alt="Advanced Equipment" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=400&fit=crop" 
-                    alt="Practice Area" 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/facility-3-placeholder.webp" 
+                    alt="Hands-on Practice Area" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
                   <img 
-                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop" 
-                    alt="Consultation Room" 
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/facility-4-placeholder.webp" 
+                    alt="Academy Consultation Room" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -486,12 +511,14 @@ export default function TrainingPage() {
             >
               <div className="space-y-4">
                 {[
-                  "Fully equipped training rooms with latest aesthetic equipment",
-                  "Dedicated practice areas for hands-on training",
-                  "High-definition cameras for procedure demonstrations",
-                  "Comfortable accommodation for outstation participants",
-                  "Wi-Fi enabled classrooms with multimedia facilities",
-                  "Library with extensive reference materials"
+                  "Fully equipped academy training rooms with latest aesthetic equipment",
+                  "Dedicated practice areas for hands-on training with live patients",
+                  "High-definition cameras and live streaming for procedure demonstrations",
+                  "International standard accommodation for outstation participants",
+                  "Wi-Fi enabled classrooms with multimedia facilities and virtual learning",
+                  "Academy library with extensive reference materials and research papers",
+                  "International collaboration and exchange programs",
+                  "Research and development facilities for advanced studies"
                 ].map((facility, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-pastel-green flex-shrink-0" />
@@ -514,18 +541,18 @@ export default function TrainingPage() {
             className="space-y-8"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800">
-              Ready to Transform Your Practice?
+              Ready to Join the Academy of Excellence?
             </h2>
             
             <p className="text-xl text-gray-600">
-              Join hundreds of medical professionals who have enhanced their skills and expanded their practice through our comprehensive training programs.
+              Join hundreds of medical professionals who have transformed their practice and achieved excellence in aesthetic dermatology through our comprehensive academy programs.
             </p>
             
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="text-left">
                   <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
-                    Contact Information
+                    Academy Information
                   </h3>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
@@ -536,14 +563,18 @@ export default function TrainingPage() {
                       <Calendar className="w-5 h-5 text-pastel-pink" />
                       <span className="text-gray-600">Monday - Friday, 9:00 AM - 6:00 PM</span>
                     </div>
+                    <div className="flex items-center space-x-3">
+                      <GraduationCap className="w-5 h-5 text-pastel-pink" />
+                      <span className="text-gray-600">International Certification Programs</span>
+                    </div>
                   </div>
                 </div>
                 <div className="text-left">
                   <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
-                    Get Started
+                    Join the Academy
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    Contact us to learn more about our training programs and upcoming sessions.
+                    Contact us to learn more about our academy programs, upcoming sessions, and admission requirements.
                   </p>
                   <Link
                     href="/contact"
@@ -561,5 +592,6 @@ export default function TrainingPage() {
     </Layout>
   );
 }
+
 
 

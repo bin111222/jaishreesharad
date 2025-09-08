@@ -17,7 +17,7 @@ const contactMethods = [
     hoverColor: "hover:bg-green-600"
   },
   {
-    title: "WhatsApp",
+    title: "WhatsApp Helpline",
     description: "Quick consultation via WhatsApp",
     icon: MessageCircle,
     action: "Message Us",
@@ -32,8 +32,8 @@ const clinicLocations = [
     name: "Skinfinitii (Khar, Mumbai) - Aesthetic Skin and Laser Clinic",
     address: "601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052",
     phone: "+91 22 4181 9000",
-    whatsapp: "+91 97 6969 1952",
-    email: "skinfinitii@gmail.com",
+    whatsapp: "+91 92 2321 9419",
+    email: "contactus@gmail.com",
     hours: "Mon-Sat: 10AM-7PM",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8945230062886!2d72.83457791168001!3d19.068374582060134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9e4b3f237c9%3A0x234264c43c5c5224!2s%27Skinfinitii%27!5e0!3m2!1sen!2sin!4v1756280894097!5m2!1sen!2sin",
     coordinates: { lat: 19.0596, lng: 72.8347 },
@@ -41,10 +41,10 @@ const clinicLocations = [
   },
   {
     name: "Skinfinitii (Vashi, Navi Mumbai) - Aesthetic Skin and Laser Clinic",
-    address: "G-62, Satra Plaza, Palm Beach Road, Sector 19D, Vashi, Navi Mumbai 400 703",
+    address: "105, Satra Plaza, Palm Beach Road, Sector 19D, Vashi, Navi Mumbai 400 703",
     phone: "+91 22 4283 2000",
-    whatsapp: "+91 97 6969 1952",
-    email: "skinfinitii@gmail.com",
+    whatsapp: "+91 97 6969 1957",
+    email: "contactus@gmail.com",
     hours: "Mon-Sat: 10AM-7PM",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.549665734366!2d73.00380861168024!3d19.083527582048035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c136b2c080cb%3A0x25e3032462aea8b4!2s%27Skinfinitii%27!5e0!3m2!1sen!2sin!4v1756281143714!5m2!1sen!2sin",
     coordinates: { lat: 19.0759, lng: 72.9989 },
@@ -236,11 +236,22 @@ export default function ContactPage() {
                           </div>
                         </div>
                         
-                        <div className="flex items-center space-x-2 sm:space-x-3">
-                          <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-pastel-pink flex-shrink-0" />
-                          <a href={`tel:${clinic.phone}`} className="text-gray-600 hover:text-pastel-pink transition-colors text-xs sm:text-sm">
-                            {clinic.phone}
-                          </a>
+                        <div className="flex items-start space-x-2 sm:space-x-3">
+                          <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-pastel-pink flex-shrink-0 mt-0.5" />
+                          <div className="space-y-1">
+                            <a href={`tel:${clinic.phone}`} className="text-gray-600 hover:text-pastel-pink transition-colors text-xs sm:text-sm block">
+                              {clinic.phone} (Landline)
+                            </a>
+                            {clinic.name.includes("Khar") ? (
+                              <a href="tel:+919223219419" className="text-gray-600 hover:text-pastel-pink transition-colors text-xs sm:text-sm block">
+                                +91 92 2321 9419 (Mobile)
+                              </a>
+                            ) : (
+                              <a href="tel:+919769691957" className="text-gray-600 hover:text-pastel-pink transition-colors text-xs sm:text-sm block">
+                                +91 97 6969 1957 (Mobile)
+                              </a>
+                            )}
+                          </div>
                         </div>
                         
                         <div className="flex items-center space-x-2 sm:space-x-3">

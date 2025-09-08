@@ -8,69 +8,90 @@ const teamMembers = [
   {
     name: "Dr. Jaishree Sharad",
     role: "Founder & Medical Director",
-    credentials: "MBBS, MD (Dermatology), International Fellowships",
+    credentials: "MBBS, DDV, International Fellowships",
     expertise: "Cosmetic Dermatology, Anti-aging, Celebrity Care",
-    experience: "26+ years",
+    experience: "25+ years",
+    branch: "Both Locations",
     image: "/team/dr-jaishree.jpg",
     description: "India's leading celebrity cosmetic dermatologist with international training and recognition. Board Member of ISDS, International Mentor for ASDS, and author of four bestselling books."
   },
   {
-    name: "Dr. Poonam Semlani",
-    role: "Senior Associate Dermatologist",
-    credentials: "MBBS, MD (Dermatology)",
-    expertise: "Aesthetic Procedures, Patient Care",
-    experience: "15+ years",
-    image: "/team/dr-poonam.jpg",
-    description: "A skilled dermatologist who has been with Skinfinitii for years, Dr. Semlani specializes in aesthetic procedures and tailors treatments to individual needs. Patients appreciate her gentle approach and detailed consultations."
-  },
-
-  {
-    name: "Dr. Shikha Shah",
+    name: "Dr. Drishti Rajdeh",
     role: "Associate Dermatologist",
     credentials: "MBBS, MD (Dermatology)",
-    expertise: "Acne, Pigmentation, Hair Concerns",
+    expertise: "Aesthetic Procedures, Patient Care",
     experience: "8+ years",
-    image: "/team/dr-shikha.jpg",
-    description: "Dr. Shah is known for her friendly demeanor and expertise in treating acne, pigmentation, and hair concerns. She often manages the follow-up care and makes sure each patient's skincare regimen is optimized for results."
+    branch: "Khar Branch",
+    image: "/team/dr-drishti.jpg",
+    description: "Dr. Rajdeh brings extensive experience in aesthetic dermatology and is known for her meticulous approach to patient care and treatment planning."
   },
   {
-    name: "Dr. Fauzia Sheikh",
-    role: "Assistant Doctor",
+    name: "Dr. Chethan Shetty",
+    role: "Associate Dermatologist",
     credentials: "MBBS, MD (Dermatology)",
     expertise: "Clinical Dermatology, Skin Analysis",
-    experience: "5+ years",
-    image: "/team/dr-fauzia.jpg",
-    description: "Working closely under Dr. Jaishree's mentorship, Dr. Sheikh assists in procedures and conducts skin analyses for new patients. Her background in clinical dermatology ensures even routine treatments are done with precision."
+    experience: "6+ years",
+    branch: "Khar Branch",
+    image: "/team/dr-chethan.jpg",
+    description: "Dr. Shetty specializes in clinical dermatology and provides comprehensive skin analysis and treatment recommendations for patients."
   },
   {
-    name: "Dr. Aishwarya Bhatia",
+    name: "Dr. Fauzia Siddique",
     role: "Assistant Doctor",
     credentials: "MBBS, MD (Dermatology)",
     expertise: "Patient Care, Pre & Post-treatment",
-    experience: "3+ years",
-    image: "/team/dr-aishwarya.jpg",
-    description: "Dr. Bhatia's enthusiasm and up-to-date knowledge make her a valuable team member. She often handles pre-treatment prep and post-treatment care instructions, making patients feel at ease."
+    experience: "4+ years",
+    branch: "Khar Branch",
+    image: "/team/dr-fauzia.jpg",
+    description: "Dr. Siddique works closely with the team to ensure optimal patient care and manages pre and post-treatment protocols with precision."
+  },
+  {
+    name: "Dr. Saujanya Sagar",
+    role: "Associate Dermatologist",
+    credentials: "MBBS, MD (Dermatology)",
+    expertise: "Aesthetic Procedures, Patient Care",
+    experience: "7+ years",
+    branch: "Vashi Branch",
+    image: "/team/dr-saujanya.jpg",
+    description: "Dr. Sagar leads the Vashi branch with expertise in aesthetic procedures and is committed to delivering exceptional patient care."
   }
 ];
 
 const supportStaff = [
   {
-    name: "Certified Therapists & Nurses",
-    role: "Treatment Support Team",
-    expertise: "Supportive Therapies, Laser Safety, Hygiene Standards",
-    experience: "Trained by Dr. Jaishree"
+    name: "Rubina",
+    role: "Senior Therapist",
+    expertise: "Laser Treatments, Skin Care Procedures",
+    experience: "Khar Branch",
+    branch: "Khar"
   },
   {
-    name: "Clinic Managers & Support Staff",
-    role: "Administrative Team",
-    expertise: "Appointments, Queries, Follow-ups, Patient Coordination",
-    experience: "Patient-first approach"
+    name: "Maheen",
+    role: "Therapist",
+    expertise: "Aesthetic Treatments, Patient Care",
+    experience: "Khar Branch",
+    branch: "Khar"
   },
   {
-    name: "Front Desk Team",
-    role: "Patient Care Coordinators",
-    expertise: "Reception, Scheduling, Patient Experience",
-    experience: "Warm and welcoming service"
+    name: "Pooja Gurav",
+    role: "Senior Therapist",
+    expertise: "Laser Safety, Treatment Protocols",
+    experience: "Vashi Branch",
+    branch: "Vashi"
+  },
+  {
+    name: "Snehal Gole",
+    role: "Therapist",
+    expertise: "Skin Care, Patient Support",
+    experience: "Vashi Branch",
+    branch: "Vashi"
+  },
+  {
+    name: "Nageshwari Wanga",
+    role: "Therapist",
+    expertise: "Treatment Support, Hygiene Standards",
+    experience: "Vashi Branch",
+    branch: "Vashi"
   }
 ];
 
@@ -171,6 +192,7 @@ export default function TeamPage() {
                       <div>
                         <h3 className="text-xl font-semibold text-gray-800">{member.name}</h3>
                         <p className="text-pastel-pink font-medium">{member.role}</p>
+                        <p className="text-blue-600 text-sm font-medium">{member.branch}</p>
                       </div>
                       <div className="space-y-2 text-sm text-gray-600">
                         <p><strong>Credentials:</strong> {member.credentials}</p>
@@ -316,7 +338,8 @@ export default function TeamPage() {
                     <Activity className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="font-semibold text-gray-800 mb-2">{staff.name}</h3>
-                  <p className="text-pastel-pink text-sm font-medium mb-2">{staff.role}</p>
+                  <p className="text-pastel-pink text-sm font-medium mb-1">{staff.role}</p>
+                  <p className="text-blue-600 text-xs font-medium mb-2">{staff.branch} Branch</p>
                   <p className="text-sm text-gray-600 mb-2">{staff.expertise}</p>
                   <p className="text-xs text-gray-500">{staff.experience}</p>
                 </motion.div>

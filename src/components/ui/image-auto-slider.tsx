@@ -14,7 +14,11 @@ export const ImageAutoSlider = () => {
     "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/appearance5.webp",
     "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/appearance6.webp",
     "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/appearance7.webp",
-    "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/appearance8.webp"
+    "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/appearance8.webp",
+    "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/appearance9.webp",
+    "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/appearance10.webp",
+    "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/appearance11.webp",
+    "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/media/appearance12.webp"
   ];
 
   // Duplicate images for seamless loop

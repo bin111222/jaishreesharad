@@ -271,7 +271,7 @@ const socialMediaPresence = [
   {
     platform: "Instagram",
     handle: "@drjaishreesharad",
-    followers: "100K+",
+    followers: "230K+",
     content: "Daily Q&As, myth-busting reels, educational content",
     icon: Instagram,
     link: "https://www.instagram.com/drjaishreesharad/"

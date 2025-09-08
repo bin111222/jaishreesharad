@@ -44,18 +44,6 @@ const celebrityTestimonialsData = [
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/farah.webp"
   },
   {
-    quote: "Jaishree is one of the nicest, most genuine, caring and positive souls I have come across.",
-    name: "Shamita Shetty",
-    designation: "Actor",
-    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/shamita.webp"
-  },
-  {
-    quote: "Dr J has been my skin saviour … thanks to her, my skincare routine has become really easy!",
-    name: "Huma Qureshi",
-    designation: "Actor",
-    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/huma.webp"
-  },
-  {
     quote: "Jaishree taught me the importance of loving my skin and nourishing it—that less is always more.",
     name: "Athiya Shetty",
     designation: "Actor",
@@ -229,7 +217,7 @@ const patientTestimonials = [
 const stats = [
   { number: "5", label: "Rating", icon: Star },
   { number: "20,000+", label: "Happy Patients", icon: Users },
-  { number: "26+", label: "Years Experience", icon: Award },
+  { number: "25+", label: "Years Experience", icon: Award },
   { number: "99%", label: "Happiness Rate", icon: Heart }
 ];
 

@@ -15,11 +15,11 @@ const awardsData = [
   },
   {
     id: 2,
-    title: "Top 10 Dermatologists",
-    organization: "Forbes India Healthcare",
-    year: "2023",
-    description: "Featured among India's leading medical professionals",
-    imagePlaceholder: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/brandlogos/forbes.webp?updatedAt=1756187069822",
+    title: "Best Skin Expert",
+    organization: "Elle Beauty Awards",
+    year: "2016",
+    description: "Best aesthetic dermatologist",
+    imagePlaceholder: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/brandlogos/elle.webp",
     category: "Leadership",
     color: "from-blue-400 to-indigo-500"
   },
@@ -31,15 +31,15 @@ const awardsData = [
     description: "Awarded for outstanding contributions to aesthetic medicine",
     imagePlaceholder: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/brandlogos/indiatoday.webp",
     category: "Innovation",
-    color: "from-red-400 to-pink-100"
+    color: "from-red-400 to-pink-500"
   },
   {
     id: 4,
-    title: "Patient Choice Award",
-    organization: "Practo",
-    year: "2023",
-    description: "Highest patient satisfaction and trust rating",
-    imagePlaceholder: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/brandlogos/practo.webp",
+    title: "Best Author",
+    organization: "Crossword Book Awards",
+    year: "2019",
+    description: "For Skin Rules: Your 6-Week Plan to Radiant Skin",
+    imagePlaceholder: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/brandlogos/crossword.webp",
     category: "Trust",
     color: "from-rose-400 to-red-500"
   },
@@ -134,7 +134,7 @@ export default function AwardsSection() {
               {/* Full Image of Dr. Jaishree */}
               <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%203.webp"
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/9.webp"
                   alt="Dr. Jaishree Sharad - Award Ceremony"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -184,7 +184,7 @@ export default function AwardsSection() {
                   }}
                   className="group relative"
                 >
-                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-200 border border-gray-100 relative overflow-hidden">
+                  <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-200 border border-gray-100 relative overflow-hidden min-h-[180px]">
                     {/* Background gradient */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${award.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
                     
@@ -202,11 +202,11 @@ export default function AwardsSection() {
                         
                         {/* Text content */}
                         <div className="flex-1 min-w-0">
-                          <div className="flex items-start space-x-2 mb-2">
+                          <div className="flex flex-col space-y-2 mb-2">
                             <h3 className="font-display text-lg font-semibold text-gray-900 leading-tight">
                               {award.title}
                             </h3>
-                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-200 text-gray-700 flex-shrink-0">
+                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-200 text-gray-700 w-fit">
                               {award.category}
                             </span>
                           </div>
@@ -215,7 +215,7 @@ export default function AwardsSection() {
                             {award.organization}
                           </p>
                           
-                          <p className="text-sm text-gray-700 mb-3 leading-relaxed">
+                          <p className="text-sm text-gray-700 mb-3 leading-relaxed line-clamp-2">
                             {award.description}
                           </p>
                           
@@ -260,7 +260,7 @@ export default function AwardsSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
-                className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-pink to-pink-100 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-150 hover:scale-102"
+                className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-pink to-pink-400 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-150 hover:scale-102"
               >
                 <span>Book Consultation</span>
                 <Award className="w-4 h-4" />

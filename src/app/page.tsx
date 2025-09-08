@@ -90,29 +90,12 @@ const circularTestimonials = [
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/varun.webp"
   },
   {
-    quote: "The oxygen facials at Dr J's Skinfiniti … my skin looks naturally moisturized.",
-    name: "Jacqueline Fernandez",
-    designation: "Actor",
-    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/jacqueline.webp"
-  },
-  {
     quote: "Jaishree is so knowledgeable … there is no one better than her to write a book on skincare.",
     name: "Farah Khan",
     designation: "Director",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/farah.webp"
   },
-  {
-    quote: "Jaishree is one of the nicest, most genuine, caring and positive souls I have come across.",
-    name: "Shamita Shetty",
-    designation: "Actor",
-    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/shamita.webp"
-  },
-  {
-    quote: "Dr J has been my skin saviour … thanks to her, my skincare routine has become really easy!",
-    name: "Huma Qureshi",
-    designation: "Actor",
-    src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/huma.webp"
-  },
+ 
   {
     quote: "Jaishree taught me the importance of loving my skin and nourishing it—that less is always more.",
     name: "Athiya Shetty",
@@ -122,7 +105,7 @@ const circularTestimonials = [
 ];
 
 const stats = [
-  { number: "26+", label: "Years Experience", icon: Award },
+  { number: "25+", label: "Years Experience", icon: Award },
   { number: "20,000+", label: "Happy Patients", icon: Users },
   { number: "4", label: "Published Books", icon: BookOpen },
   { number: "500+", label: "Global Lectures", icon: Star }
@@ -222,7 +205,7 @@ const featuredVideos = [
 const whyChooseUs = [
   {
     icon: "👩‍⚕️",
-    title: "26+ Years Experience",
+    title: "25+ Years Experience",
     description: "Leading expert in aesthetic dermatology"
   },
   {
@@ -269,7 +252,7 @@ const heroSlideshow = [
   },
   {
     id: 3,
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%203.webp",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/3.webp",
     testimonial: "Dr. Jaishree understands beauty and science in equal measure. Her treatments are transformative.",
     author: "Neha Dhupia",
     rating: "5"
@@ -345,7 +328,7 @@ export default function HomePage() {
                 <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.9]">
                   <span className="block text-gray-800">Science.</span>
                   <span className="block text-gray-800">Skin.</span>
-                  <span className="block bg-gradient-to-r from-pastel-pink via-pink-100 to-pastel-green bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-pink-500 via-pink-500 to-pastel-pink bg-clip-text text-transparent">
                     Confidence.
                   </span>
                 </h1>
@@ -369,7 +352,7 @@ export default function HomePage() {
                 className="flex flex-wrap gap-8 pt-4"
               >
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-800">26+</div>
+                  <div className="text-3xl font-bold text-gray-800">25+</div>
                   <div className="text-sm text-gray-600">Years Experience</div>
                 </div>
                 <div className="text-center">

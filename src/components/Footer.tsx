@@ -39,7 +39,7 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-sm text-gray-700 font-medium">Skinfinitii Aesthetic Skin & Laser Clinic</p>
+                  <p className="text-sm text-gray-700 font-medium">Khar Branch</p>
                   <p className="text-xs text-gray-500">601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052</p>
                 </div>
               </div>
@@ -48,33 +48,34 @@ export default function Footer() {
                 <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-gray-700 font-medium">Vashi Branch</p>
-                  <p className="text-xs text-gray-500">G-62, Satra Plaza, Palm Beach Road, Sector 19D, Vashi, Navi Mumbai 400 703</p>
+                  <p className="text-xs text-gray-500">105, Satra Plaza, Palm Beach Road, Sector 19D, Vashi, Navi Mumbai 400 703</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-pastel-pink flex-shrink-0" />
                 <div>
-                  <a href="tel:+912241819000" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors block">
-                    +91 22 4181 9000
+                 
+                  <a href="tel:+919223219419" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors block">
+                    +91 92 2321 9419 (Khar Mobile)
                   </a>
-                  <a href="tel:+912242832000" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors block">
-                    +91 22 4283 2000
+                  <a href="tel:+919769691957" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors block">
+                    +91 97 6969 1957 (Vashi Mobile)
                   </a>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-pastel-pink flex-shrink-0" />
-                <a href="tel:+919769691952" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
-                  Helpline: +91 97 6969 1952
+                <MessageCircle className="w-5 h-5 text-pastel-pink flex-shrink-0" />
+                <a href="https://wa.me/919769691952" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
+                  WhatsApp Helpline: +91 97 6969 1952
                 </a>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-pastel-pink flex-shrink-0" />
-                <a href="mailto:info@jaishreesharad.com" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
-                  skinfinitii@gmail.com
+                <a href="mailto:contactus@gmail.com" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
+                  contactus@gmail.com
                 </a>
               </div>
               
