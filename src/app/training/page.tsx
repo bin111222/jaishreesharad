@@ -5,59 +5,140 @@ import { motion } from "framer-motion";
 import { GraduationCap, Users, Clock, Star, Award, BookOpen, Play, Calendar, MapPin, ArrowRight, CheckCircle, Building2, Microscope, Zap, Shield, Globe, Target } from "lucide-react";
 import Link from "next/link";
 
-const academyPrograms = [
+// Short-Term Online Masterclasses (2-4 hours each)
+const shortTermMasterclasses = [
   {
-    title: "Master's Program in Aesthetic Dermatology",
+    title: "Botulinum Toxin Mastery",
+    duration: "2-4 Hours",
+    level: "All Levels",
+    description: "Master the art of botulinum toxin injections with evidence-based techniques and patient-centric artistry.",
+    features: ["Upper & lower face techniques", "Neck treatments", "Hyperhidrosis management", "Complication prevention", "Live demonstrations"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/botox-masterclass.webp",
+    category: "Online Masterclass"
+  },
+  {
+    title: "Filler Artistry Masterclass",
+    duration: "3-4 Hours",
+    level: "Intermediate to Advanced",
+    description: "Advanced filler techniques for cheeks, jawline, and lips with focus on natural-looking results.",
+    features: ["Cheek contouring", "Jawline definition", "Lip enhancement", "Tear trough correction", "Nose reshaping"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/filler-artistry.webp",
+    category: "Online Masterclass"
+  },
+  {
+    title: "Skin Boosters & Bioremodellers",
+    duration: "2-3 Hours",
+    level: "All Levels",
+    description: "Comprehensive training on skin boosters including Profhilo, Restylane Vital, and SkinVive.",
+    features: ["Profhilo techniques", "Restylane Vital protocols", "SkinVive applications", "Patient selection", "Results optimization"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/skin-boosters.webp",
+    category: "Online Masterclass"
+  },
+  {
+    title: "Combination Treatments Masterclass",
+    duration: "3-4 Hours",
+    level: "Advanced",
+    description: "Learn to combine lasers with injectables for optimal aesthetic outcomes and patient satisfaction.",
+    features: ["Laser + injectable protocols", "Treatment sequencing", "Safety considerations", "Case studies", "Results optimization"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/combination-treatments.webp",
+    category: "Online Masterclass"
+  },
+  {
+    title: "Managing Complications in Aesthetic Medicine",
+    duration: "2-3 Hours",
+    level: "All Levels",
+    description: "Essential training on preventing and managing complications in aesthetic procedures.",
+    features: ["Complication prevention", "Early recognition", "Management protocols", "Emergency procedures", "Case discussions"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/complications-management.webp",
+    category: "Online Masterclass"
+  },
+  {
+    title: "Business & Branding in Aesthetics",
+    duration: "2-3 Hours",
+    level: "All Levels",
+    description: "Learn the business aspects of aesthetic medicine including marketing, pricing, and practice growth.",
+    features: ["Practice branding", "Marketing strategies", "Pricing models", "Patient retention", "Practice growth"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/business-branding.webp",
+    category: "Online Masterclass"
+  }
+];
+
+// Certificate Programmes (4-6 weeks, Online + Optional Hands-on)
+const certificatePrograms = [
+  {
+    title: "Certificate in Botox & Fillers",
+    duration: "4-6 Weeks",
+    level: "Intermediate",
+    description: "Comprehensive certificate program covering all aspects of botulinum toxin and dermal filler treatments.",
+    features: ["Blended learning approach", "Recorded modules", "Live Q&A sessions", "Case discussions", "Optional hands-on training"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/cert-botox-fillers.webp",
+    category: "Certificate Programme"
+  },
+  {
+    title: "Certificate in Energy-Based Devices",
+    duration: "4-6 Weeks",
+    level: "Intermediate",
+    description: "Complete training on lasers, RF, and HIFU devices for various aesthetic treatments.",
+    features: ["Laser physics & safety", "RF technology", "HIFU applications", "Treatment protocols", "Hands-on practice"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/cert-energy-devices.webp",
+    category: "Certificate Programme"
+  },
+  {
+    title: "Certificate in Skin Rejuvenation",
+    duration: "4-6 Weeks",
+    level: "All Levels",
+    description: "Comprehensive program covering peels, microneedling, exosomes, PRP, and biostimulators.",
+    features: ["Chemical peels", "Microneedling techniques", "Exosome therapy", "PRP protocols", "Biostimulator applications"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/cert-skin-rejuvenation.webp",
+    category: "Certificate Programme"
+  },
+  {
+    title: "Certificate in Body Contouring & Hair Restoration",
+    duration: "4-6 Weeks",
+    level: "Intermediate",
+    description: "Specialized training in body contouring techniques and hair restoration procedures.",
+    features: ["Body contouring protocols", "Hair restoration techniques", "Patient assessment", "Treatment planning", "Results optimization"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/cert-body-hair.webp",
+    category: "Certificate Programme"
+  }
+];
+
+// Fellowships (3-6 months, Hybrid or In-clinic)
+const fellowshipPrograms = [
+  {
+    title: "Fellowship in Advanced Injectable Aesthetics",
+    duration: "3-6 Months",
+    level: "Advanced",
+    description: "Intensive hands-on fellowship program for dermatologists seeking mastery in injectable aesthetics.",
+    features: ["Intensive hands-on training", "Live patient demonstrations", "Supervised practice", "Case-based learning", "International certification"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/fellowship-injectables.webp",
+    category: "Fellowship Program"
+  },
+  {
+    title: "Fellowship in Laser & Energy Devices",
+    duration: "3-6 Months",
+    level: "Advanced",
+    description: "Comprehensive fellowship covering all aspects of laser and energy-based device treatments.",
+    features: ["Advanced laser training", "Energy device mastery", "Safety protocols", "Research opportunities", "International exposure"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/fellowship-laser.webp",
+    category: "Fellowship Program"
+  },
+  {
+    title: "Fellowship in Regenerative Aesthetics",
+    duration: "3-6 Months",
+    level: "Advanced",
+    description: "Specialized fellowship in PRP, PRF, exosomes, and biostimulators for regenerative medicine.",
+    features: ["PRP & PRF techniques", "Exosome therapy", "Biostimulator applications", "Research projects", "Clinical trials"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/fellowship-regenerative.webp",
+    category: "Fellowship Program"
+  },
+  {
+    title: "Fellowship in Comprehensive Aesthetic Dermatology",
     duration: "6 Months",
     level: "Advanced",
-    description: "Comprehensive program covering all aspects of aesthetic dermatology with hands-on training and mentorship.",
-    features: ["Live patient demonstrations", "Hands-on practice", "Case studies", "International certification", "Mentorship program"],
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/masters-program-placeholder.webp",
-    category: "Comprehensive Training"
-  },
-  {
-    title: "Advanced Injection Techniques Workshop",
-    duration: "5 Days",
-    level: "Intermediate to Advanced",
-    description: "Intensive workshop focusing on advanced botox, fillers, and thread lift techniques with live demonstrations.",
-    features: ["Live demonstrations", "Hands-on practice", "Complication management", "Certificate of completion"],
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/injection-workshop-placeholder.webp",
-    category: "Specialized Workshop"
-  },
-  {
-    title: "Laser & Energy-Based Devices Certification",
-    duration: "4 Days",
-    level: "Advanced",
-    description: "Comprehensive training on various laser technologies and energy-based devices for aesthetic treatments.",
-    features: ["Laser physics", "Treatment protocols", "Safety measures", "Equipment handling", "Certification"],
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/laser-certification-placeholder.webp",
-    category: "Technology Training"
-  },
-  {
-    title: "Chemical Peels & Skin Resurfacing Masterclass",
-    duration: "3 Days",
-    level: "Beginner to Advanced",
-    description: "Master the art of chemical peels and skin resurfacing techniques for various skin concerns and conditions.",
-    features: ["Theory sessions", "Practical training", "Safety protocols", "Product knowledge", "Certification"],
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/chemical-peels-placeholder.webp",
-    category: "Skin Treatments"
-  },
-  {
-    title: "Business of Aesthetic Medicine",
-    duration: "2 Days",
-    level: "All Levels",
-    description: "Learn the business aspects of running a successful aesthetic practice including marketing, pricing, and patient management.",
-    features: ["Business planning", "Marketing strategies", "Pricing models", "Patient management", "Practice growth"],
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/business-course-placeholder.webp",
-    category: "Business Development"
-  },
-  {
-    title: "International Fellowship Program",
-    duration: "1 Year",
-    level: "Advanced",
-    description: "Exclusive fellowship program with international exposure and advanced training in aesthetic dermatology.",
-    features: ["International exposure", "Advanced training", "Research opportunities", "Global certification", "Mentorship"],
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/fellowship-placeholder.webp",
+    description: "Complete fellowship program covering all aspects of aesthetic dermatology for comprehensive training.",
+    features: ["Full-spectrum training", "All treatment modalities", "Business development", "Research opportunities", "International certification"],
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/fellowship-comprehensive.webp",
     category: "Fellowship Program"
   }
 ];
@@ -67,24 +148,24 @@ const academyTestimonials = [
     name: "Dr. Priya Sharma",
     location: "Mumbai",
     rating: 5,
-    program: "Master's Program Graduate",
-    text: "The Academy of Aesthetic Excellence transformed my practice completely. Dr. Jaishree's mentorship and the comprehensive curriculum gave me the confidence to offer advanced aesthetic treatments.",
+    program: "Certificate in Botox & Fillers Graduate",
+    text: "DAAE's Certificate program transformed my practice completely. The blended learning approach with hands-on training gave me the confidence to offer advanced injectable treatments with excellent results.",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/testimonial-1-placeholder.webp"
   },
   {
     name: "Dr. Amit Patel",
     location: "Delhi",
     rating: 5,
-    program: "Fellowship Program Graduate",
-    text: "Outstanding academy with world-class facilities and international exposure. The hands-on training and personalized attention made all the difference in my learning experience.",
+    program: "Fellowship in Advanced Injectable Aesthetics",
+    text: "The 6-month fellowship at DAAE was exceptional. Dr. Jaishree's mentorship, international guest faculty, and comprehensive hands-on training prepared me to become a leading aesthetic dermatologist.",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/testimonial-2-placeholder.webp"
   },
   {
     name: "Dr. Sneha Reddy",
     location: "Bangalore",
     rating: 5,
-    program: "Advanced Workshop Graduate",
-    text: "The academy provides comprehensive training that combines theory with extensive practical experience. Highly recommended for any dermatologist looking to enhance their skills.",
+    program: "Online Masterclass Graduate",
+    text: "The online masterclasses are perfect for busy dermatologists. The combination of recorded modules and live Q&A sessions provided excellent learning flexibility while maintaining high-quality education.",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/testimonial-3-placeholder.webp"
   }
 ];
@@ -131,10 +212,10 @@ export default function TrainingPage() {
                 <span>Professional Training Academy</span>
               </div>
               <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-800">
-                Dr. Jaishree's Academy of Aesthetic Excellence
+                Dr. Jaishree's Academy of Aesthetic Excellence (DAAE)
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                Transform your practice with world-class training in aesthetic dermatology. Learn from India's leading cosmetic dermatologist through comprehensive hands-on programs designed for medical professionals seeking excellence in aesthetic medicine.
+                To train dermatologists in evidence-based, ethical, and cutting-edge aesthetic medicine with a blend of theory, hands-on skills, and patient-centric artistry.
               </p>
               <div className="flex flex-wrap items-center gap-6">
                 <div className="flex items-center space-x-2">
@@ -259,8 +340,8 @@ export default function TrainingPage() {
         </div>
       </section>
 
-      {/* Course Offerings */}
-      <section id="courses" className="py-20 bg-gray-50">
+      {/* Program Types Overview */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -269,21 +350,260 @@ export default function TrainingPage() {
             className="text-center mb-16"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Academy Programs
+              DAAE Program Types
             </h2>
             <p className="text-xl text-gray-600">
-              Comprehensive training programs designed for medical professionals seeking excellence in aesthetic dermatology
+              Three comprehensive program types designed to meet every dermatologist's training needs
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-2xl p-8 shadow-lg text-center"
+            >
+              <div className="w-16 h-16 bg-pastel-pink/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Play className="w-8 h-8 text-pastel-pink" />
+              </div>
+              <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
+                Short-Term Online Masterclasses
+              </h3>
+              <p className="text-gray-600 mb-4">2-4 hours each</p>
+              <p className="text-gray-600 mb-6">For dermatologists who want updates, new techniques, or pearls in specific areas.</p>
+              <div className="space-y-2 text-sm text-gray-500">
+                <p>• Botulinum Toxin Mastery</p>
+                <p>• Filler Artistry</p>
+                <p>• Skin Boosters & Bioremodellers</p>
+                <p>• Combination Treatments</p>
+                <p>• Complication Management</p>
+                <p>• Business & Branding</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-white rounded-2xl p-8 shadow-lg text-center"
+            >
+              <div className="w-16 h-16 bg-pastel-green/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Award className="w-8 h-8 text-pastel-green" />
+              </div>
+              <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
+                Certificate Programmes
+              </h3>
+              <p className="text-gray-600 mb-4">4-6 weeks</p>
+              <p className="text-gray-600 mb-6">Blended learning with recorded modules, live Q&A, and case discussions.</p>
+              <div className="space-y-2 text-sm text-gray-500">
+                <p>• Certificate in Botox & Fillers</p>
+                <p>• Certificate in Energy-Based Devices</p>
+                <p>• Certificate in Skin Rejuvenation</p>
+                <p>• Certificate in Body Contouring & Hair</p>
+                <p>• Online + Optional Hands-on</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white rounded-2xl p-8 shadow-lg text-center"
+            >
+              <div className="w-16 h-16 bg-pastel-pink/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <GraduationCap className="w-8 h-8 text-pastel-pink" />
+              </div>
+              <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
+                Fellowships
+              </h3>
+              <p className="text-gray-600 mb-4">3-6 months</p>
+              <p className="text-gray-600 mb-6">Intensive hands-on programmes for dermatologists seeking advanced training.</p>
+              <div className="space-y-2 text-sm text-gray-500">
+                <p>• Fellowship in Advanced Injectable Aesthetics</p>
+                <p>• Fellowship in Laser & Energy Devices</p>
+                <p>• Fellowship in Regenerative Aesthetics</p>
+                <p>• Fellowship in Comprehensive Aesthetic Dermatology</p>
+                <p>• Hybrid or In-clinic</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Short-Term Online Masterclasses */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Short-Term Online Masterclasses
+            </h2>
+            <p className="text-xl text-gray-600">
+              Quick, focused training sessions for dermatologists seeking specific skill updates
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {shortTermMasterclasses.map((program, index) => (
+              <motion.div
+                key={program.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={program.image} 
+                    alt={program.title} 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm font-semibold text-pastel-pink bg-pastel-pink/10 px-3 py-1 rounded-full">
+                      {program.category}
+                    </span>
+                  </div>
+                  <h3 className="font-display text-lg font-semibold text-gray-800 mb-2">
+                    {program.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 text-sm">{program.description}</p>
+                  <div className="flex items-center space-x-4 mb-4 text-sm text-gray-500">
+                    <div className="flex items-center space-x-1">
+                      <Clock className="w-4 h-4" />
+                      <span>{program.duration}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Award className="w-4 h-4" />
+                      <span>{program.level}</span>
+                    </div>
+                  </div>
+                  <div className="space-y-1 mb-6">
+                    {program.features.slice(0, 3).map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-2">
+                        <CheckCircle className="w-3 h-3 text-pastel-green" />
+                        <span className="text-xs text-gray-600">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link
+                    href="#contact"
+                    className="inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-lg hover:shadow-lg transition-all duration-200 text-sm"
+                  >
+                    Enroll Now
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Certificate Programmes */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Certificate Programmes
+            </h2>
+            <p className="text-xl text-gray-600">
+              Comprehensive 4-6 week programs with blended learning approach
             </p>
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {academyPrograms.map((program, index) => (
+            {certificatePrograms.map((program, index) => (
               <motion.div
                 key={program.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="aspect-video overflow-hidden">
+                  <img 
+                    src={program.image} 
+                    alt={program.title} 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm font-semibold text-pastel-green bg-pastel-green/10 px-3 py-1 rounded-full">
+                      {program.category}
+                    </span>
+                  </div>
+                  <h3 className="font-display text-xl font-semibold text-gray-800 mb-2">
+                    {program.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{program.description}</p>
+                  <div className="flex items-center space-x-4 mb-4 text-sm text-gray-500">
+                    <div className="flex items-center space-x-1">
+                      <Clock className="w-4 h-4" />
+                      <span>{program.duration}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Award className="w-4 h-4" />
+                      <span>{program.level}</span>
+                    </div>
+                  </div>
+                  <div className="space-y-2 mb-6">
+                    {program.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-2">
+                        <CheckCircle className="w-4 h-4 text-pastel-green" />
+                        <span className="text-sm text-gray-600">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link
+                    href="#contact"
+                    className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-lg hover:shadow-lg transition-all duration-200"
+                  >
+                    Enroll Now
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Fellowship Programs */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Fellowship Programs
+            </h2>
+            <p className="text-xl text-gray-600">
+              Intensive hands-on programs for dermatologists seeking advanced training
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {fellowshipPrograms.map((program, index) => (
+              <motion.div
+                key={program.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="aspect-video overflow-hidden">
                   <img 
@@ -324,9 +644,293 @@ export default function TrainingPage() {
                     href="#contact"
                     className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-lg hover:shadow-lg transition-all duration-200"
                   >
-                    Enroll Now
+                    Apply Now
                   </Link>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Module Breakdown */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Comprehensive Module Breakdown
+            </h2>
+            <p className="text-xl text-gray-600">
+              Each course and fellowship follows our structured 6-module curriculum
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                module: "Module 1: Fundamentals",
+                icon: BookOpen,
+                topics: [
+                  "Patient selection & counseling",
+                  "Anatomy relevant to aesthetics",
+                  "Photography & documentation"
+                ]
+              },
+              {
+                module: "Module 2: Injectables",
+                icon: Microscope,
+                topics: [
+                  "Botox (upper, lower face, neck, hyperhidrosis)",
+                  "Fillers (contouring, rejuvenation, lips, tear trough, nose)",
+                  "Skin Boosters (Profhilo, Restylane Vital, SkinVive)",
+                  "Complications & management"
+                ]
+              },
+              {
+                module: "Module 3: Energy Devices",
+                icon: Zap,
+                topics: [
+                  "Lasers (pigment, scars, toning, tattoo removal)",
+                  "Fractional resurfacing (erbium, diode)",
+                  "RF / HIFU for tightening",
+                  "Combination protocols"
+                ]
+              },
+              {
+                module: "Module 4: Regenerative Medicine",
+                icon: Shield,
+                topics: [
+                  "PRP, PRF, ACP for skin & hair",
+                  "Exosomes",
+                  "PDRN / Salmon DNA",
+                  "Future innovations"
+                ]
+              },
+              {
+                module: "Module 5: Aesthetic Dermatology Practice Building",
+                icon: Building2,
+                topics: [
+                  "Treatment planning (mixing injectables, lasers, skincare)",
+                  "Pricing, packages & patient retention",
+                  "Branding, social media & personal positioning",
+                  "Ethical practice & medico-legal aspects"
+                ]
+              },
+              {
+                module: "Module 6: Hands-on / Observership",
+                icon: Users,
+                topics: [
+                  "Live demonstrations",
+                  "Supervised hands-on training",
+                  "Case-based discussions"
+                ]
+              }
+            ].map((module, index) => (
+              <motion.div
+                key={module.module}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-12 h-12 bg-pastel-pink/20 rounded-full flex items-center justify-center">
+                    <module.icon className="w-6 h-6 text-pastel-pink" />
+                  </div>
+                  <h3 className="font-display text-lg font-semibold text-gray-800">
+                    {module.module}
+                  </h3>
+                </div>
+                <div className="space-y-2">
+                  {module.topics.map((topic, topicIndex) => (
+                    <div key={topicIndex} className="flex items-start space-x-2">
+                      <CheckCircle className="w-4 h-4 text-pastel-green mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-gray-600">{topic}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Program Formats */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Program Formats
+            </h2>
+            <p className="text-xl text-gray-600">
+              Flexible learning options to suit your schedule and learning preferences
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-gray-50 rounded-2xl p-8 text-center"
+            >
+              <div className="w-16 h-16 bg-pastel-pink/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Globe className="w-8 h-8 text-pastel-pink" />
+              </div>
+              <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
+                Online (Global Access)
+              </h3>
+              <div className="space-y-3 text-left">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-pastel-green" />
+                  <span className="text-sm text-gray-600">Recorded + Live Zoom classes</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-pastel-green" />
+                  <span className="text-sm text-gray-600">Downloadable notes</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-pastel-green" />
+                  <span className="text-sm text-gray-600">Interactive quizzes</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-pastel-green" />
+                  <span className="text-sm text-gray-600">International certification</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-gray-50 rounded-2xl p-8 text-center"
+            >
+              <div className="w-16 h-16 bg-pastel-green/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <MapPin className="w-8 h-8 text-pastel-green" />
+              </div>
+              <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
+                Offline (Mumbai)
+              </h3>
+              <div className="space-y-3 text-left">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-pastel-green" />
+                  <span className="text-sm text-gray-600">Weekend workshops</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-pastel-green" />
+                  <span className="text-sm text-gray-600">Short observerships</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-pastel-green" />
+                  <span className="text-sm text-gray-600">1–6 month fellowships</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-pastel-green" />
+                  <span className="text-sm text-gray-600">At Dr. Jaishree's clinic</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-gray-50 rounded-2xl p-8 text-center"
+            >
+              <div className="w-16 h-16 bg-pastel-pink/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Target className="w-8 h-8 text-pastel-pink" />
+              </div>
+              <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
+                Hybrid
+              </h3>
+              <div className="space-y-3 text-left">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-pastel-green" />
+                  <span className="text-sm text-gray-600">Online theory modules</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-pastel-green" />
+                  <span className="text-sm text-gray-600">Offline hands-on training</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-pastel-green" />
+                  <span className="text-sm text-gray-600">Flexible scheduling</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-4 h-4 text-pastel-green" />
+                  <span className="text-sm text-gray-600">Best of both worlds</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Value-Add Features */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Value-Add Features
+            </h2>
+            <p className="text-xl text-gray-600">
+              Exclusive benefits that set DAAE apart from other training programs
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: Globe,
+                title: "International Guest Faculty Lectures",
+                description: "Learn from renowned international experts in aesthetic medicine through exclusive guest lectures and workshops."
+              },
+              {
+                icon: BookOpen,
+                title: "Digital Library of Protocols",
+                description: "Access comprehensive digital library with treatment protocols, before-after cases, and research papers."
+              },
+              {
+                icon: Users,
+                title: "Alumni Network & Mentorship",
+                description: "Join our exclusive alumni network and benefit from ongoing mentorship and professional development opportunities."
+              },
+              {
+                icon: Award,
+                title: "University-Endorsed Certification",
+                description: "Receive certification endorsed by DAAE with potential university partnerships for added professional weight."
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+              >
+                <div className="w-16 h-16 bg-pastel-pink/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-pastel-pink" />
+                </div>
+                <h3 className="font-display text-lg font-semibold text-gray-800 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -447,7 +1051,7 @@ export default function TrainingPage() {
         </div>
       </section>
 
-      {/* Academy Facilities */}
+      {/* DAAE Facilities & Learning Environment */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -457,10 +1061,10 @@ export default function TrainingPage() {
             className="text-center mb-16"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Academy Facilities
+              DAAE Learning Environment
             </h2>
             <p className="text-xl text-gray-600">
-              Learn in a world-class environment with the latest equipment and cutting-edge technology
+              State-of-the-art facilities designed for comprehensive aesthetic dermatology training
             </p>
           </motion.div>
           
@@ -475,14 +1079,14 @@ export default function TrainingPage() {
                 <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
                   <img 
                     src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/facility-1-placeholder.webp" 
-                    alt="Academy Training Room" 
+                    alt="DAAE Training Room" 
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
                   <img 
                     src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/facility-2-placeholder.webp" 
-                    alt="Advanced Equipment" 
+                    alt="Advanced Aesthetic Equipment" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -496,7 +1100,7 @@ export default function TrainingPage() {
                 <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
                   <img 
                     src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/facility-4-placeholder.webp" 
-                    alt="Academy Consultation Room" 
+                    alt="DAAE Consultation Room" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -511,14 +1115,14 @@ export default function TrainingPage() {
             >
               <div className="space-y-4">
                 {[
-                  "Fully equipped academy training rooms with latest aesthetic equipment",
-                  "Dedicated practice areas for hands-on training with live patients",
-                  "High-definition cameras and live streaming for procedure demonstrations",
-                  "International standard accommodation for outstation participants",
-                  "Wi-Fi enabled classrooms with multimedia facilities and virtual learning",
-                  "Academy library with extensive reference materials and research papers",
-                  "International collaboration and exchange programs",
-                  "Research and development facilities for advanced studies"
+                  "Fully equipped DAAE training rooms with latest aesthetic equipment and technology",
+                  "Dedicated hands-on practice areas with live patient demonstrations",
+                  "High-definition cameras and live streaming for online masterclasses and hybrid programs",
+                  "International standard accommodation for fellowship and offline program participants",
+                  "Wi-Fi enabled classrooms with multimedia facilities for blended learning",
+                  "Digital library access with treatment protocols and before-after case studies",
+                  "International guest faculty collaboration and exchange programs",
+                  "Research and development facilities for advanced aesthetic studies and clinical trials"
                 ].map((facility, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-pastel-green flex-shrink-0" />
@@ -541,18 +1145,18 @@ export default function TrainingPage() {
             className="space-y-8"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800">
-              Ready to Join the Academy of Excellence?
+              Ready to Join DAAE?
             </h2>
             
             <p className="text-xl text-gray-600">
-              Join hundreds of medical professionals who have transformed their practice and achieved excellence in aesthetic dermatology through our comprehensive academy programs.
+              Join hundreds of dermatologists who have transformed their practice with evidence-based, ethical, and cutting-edge aesthetic medicine training through Dr. Jaishree's Academy of Aesthetic Excellence.
             </p>
             
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="text-left">
                   <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
-                    Academy Information
+                    DAAE Information
                   </h3>
                   <div className="space-y-3">
                     <div className="flex items-center space-x-3">
@@ -561,26 +1165,30 @@ export default function TrainingPage() {
                     </div>
                     <div className="flex items-center space-x-3">
                       <Calendar className="w-5 h-5 text-pastel-pink" />
-                      <span className="text-gray-600">Monday - Friday, 9:00 AM - 6:00 PM</span>
+                      <span className="text-gray-600">Flexible scheduling for all program types</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <GraduationCap className="w-5 h-5 text-pastel-pink" />
-                      <span className="text-gray-600">International Certification Programs</span>
+                      <span className="text-gray-600">Online, Offline & Hybrid Programs</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <Globe className="w-5 h-5 text-pastel-pink" />
+                      <span className="text-gray-600">Global access with international faculty</span>
                     </div>
                   </div>
                 </div>
                 <div className="text-left">
                   <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
-                    Join the Academy
+                    Join DAAE
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    Contact us to learn more about our academy programs, upcoming sessions, and admission requirements.
+                    Contact us to learn more about our masterclasses, certificate programs, fellowships, and admission requirements. Choose from online, offline, or hybrid learning formats.
                   </p>
                   <Link
                     href="/contact"
                     className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-green to-pastel-green/80 text-gray-800 font-semibold rounded-lg hover:shadow-lg transition-all duration-200"
                   >
-                    <span>Contact Academy</span>
+                    <span>Contact DAAE</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
