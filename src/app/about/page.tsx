@@ -186,36 +186,6 @@ const academicHonors = [
 
 const memberships = [
   {
-    name: "American Academy of Dermatology",
-    number: "#354519",
-    fullForm: "AAD"
-  },
-  {
-    name: "American Society for Dermatologic Surgery",
-    number: "#54847",
-    fullForm: "ASDS"
-  },
-  {
-    name: "International Society of Dermatologic Surgery",
-    number: "#ISDS 36892",
-    fullForm: "ISDS"
-  },
-  {
-    name: "International Society of Dermatology",
-    number: "#31805",
-    fullForm: "ISD"
-  },
-  {
-    name: "International Peeling Society",
-    number: "#250",
-    fullForm: "IPS"
-  },
-  {
-    name: "Women's Dermatology Society",
-    number: "",
-    fullForm: "WDS"
-  },
-  {
     name: "Indian Association of Dermatology, Venereology, Leprology",
     number: "LM / M / 4226",
     fullForm: "IADVL"
@@ -226,8 +196,39 @@ const memberships = [
     fullForm: "ACSI"
   },
   {
+    name: "American Academy of Dermatology",
+   
+    fullForm: "AAD"
+  },
+  {
+    name: "American Society for Dermatologic Surgery",
+    
+    fullForm: "ASDS"
+  },
+  {
+    name: "International Society of Dermatologic Surgery",
+    
+    fullForm: "ISDS"
+  },
+  {
+    name: "International Society of Dermatology",
+   
+    fullForm: "ISD"
+  },
+  {
+    name: "International Peeling Society",
+    
+    fullForm: "IPS"
+  },
+  {
+    name: "Women's Dermatology Society",
+    
+    fullForm: "WDS"
+  },
+  
+  {
     name: "Cosmetic Dermatology Society of India",
-    number: "SJ-8",
+
     fullForm: "CDSI"
   }
 ];
