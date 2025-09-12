@@ -87,6 +87,15 @@ html {
   }
 }
 
+/* Force light theme and prevent system dark mode styling */
+:root { 
+  color-scheme: only light; /* prevents UA dark styling */
+}
+
+html { 
+  background: #fff !important; 
+}
+
 /* Custom Cursor Styles */
 :root {
   /* Default cursor - elegant arrow with pastel pink accent */

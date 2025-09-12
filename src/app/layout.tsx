@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import LightModeEnforcer from "@/components/LightModeEnforcer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -87,7 +88,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/Translogo.png" type="image/png" />
         <link rel="icon" href="/Users/varilshah/Desktop/Clients x 1942/Jaishree Sharad/jaishreesharad/website/public/favicon.ico" />
@@ -98,6 +99,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#FFFFFF" />
       </head>
       <body className="min-h-screen bg-white font-body text-gray-800 antialiased">
+        <LightModeEnforcer />
         {children}
       </body>
     </html>
