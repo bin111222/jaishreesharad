@@ -23,9 +23,9 @@ const books = [
       "Easy-to-follow advice"
     ],
     endorsements: [
-      "Salman Khan - 'I have saved Dr Jaishree's phone number in my phone as Jaishree Face. If I ever have any skin problems, the only dermatologist I would trust is Dr J.'",
-      "Ranbir Kapoor - 'Skin is an important part of our body and I think it is important for both men and women to take care of their skin... taking care of your skin is not just about beautification, it is about having blemish-free, acne-free, radiant skin.'",
-      "Neetu Kapoor - 'I believe in a healthy diet and daily exercise... One thing I never forget is my nighttime skincare routine... If in doubt, I always call Jaishree for expert advice.'"
+      "'I have saved Dr Jaishree's phone number in my phone as Jaishree Face. If I ever have any skin problems, the only dermatologist I would trust is Dr J.' — Salman Khan",
+      "'Skin is an important part of our body and I think it is important for both men and women to take care of their skin... taking care of your skin is not just about beautification, it is about having blemish-free, acne-free, radiant skin.' — Ranbir Kapoor",
+      "'I believe in a healthy diet and daily exercise... One thing I never forget is my nighttime skincare routine... If in doubt, I always call Jaishree for expert advice.' — Neetu Kapoor"
     ],
     buyLinks: [
       { label: "Buy Now", url: "https://www.amazon.in/Skin-Talks-Secrets-Glowing-Women/dp/8184005202/ref=sr_1_4?s=books&sr=1-4" }
@@ -49,9 +49,9 @@ const books = [
       "Before and after case studies"
     ],
     endorsements: [
-      "Amitabh Bachchan - 'This gem of a book is a comprehensive compilation that will take you from the essentials of self-preservation to the most complex layered technology services available, and everything in between.'",
-      "Karan Johar - 'Your skin at times can be your arch-nemesis... When someone like Jaishree enters your life, you feel like you have won the skin battle! She makes the cure painless and immediately effective—it's an ageless bond and your skin's BFF for life.'",
-      "Ranbir Kapoor - 'I get dark circles when I don't sleep... I realized great skin doesn't happen by chance, it happens by appointment. Dr Jaishree is my one-stop shop. Forget the camera, she's the reason I look into the mirror!'"
+      "'This gem of a book is a comprehensive compilation that will take you from the essentials of self-preservation to the most complex layered technology services available, and everything in between.' — Amitabh Bachchan",
+      "'Your skin at times can be your arch-nemesis... When someone like Jaishree enters your life, you feel like you have won the skin battle! She makes the cure painless and immediately effective—it's an ageless bond and your skin's BFF for life.' — Karan Johar",
+      "'I get dark circles when I don't sleep... I realized great skin doesn't happen by chance, it happens by appointment. Dr Jaishree is my one-stop shop. Forget the camera, she's the reason I look into the mirror!' — Ranbir Kapoor"
     ],
     buyLinks: [
       { label: "Buy Now", url: "https://www.amazon.in/Skin-Rules-Your-6-week-Radiant/dp/0143444727/ref=sr_1_2?s=books&sr=1-2" }
@@ -76,9 +76,9 @@ const books = [
       "Real patient questions answered"
     ],
     endorsements: [
-      "Alia Bhatt - 'Your skin is the largest organ in your body... Doc has been a one-point contact whenever my skin is under any kind of stress. And for that I am super grateful.'",
-      "Sanjay Dutt - 'Dear Jaishree, congratulations for your new book. I bet it's gonna be great. All the best. You are one of the best skin doctors in the country.'",
-      "Malaika Arora - 'Well, here's wishing Jaishree all the very best and congratulations for her third book. I'm sure this will be a bestseller!'"
+      "'Your skin is the largest organ in your body... Doc has been a one-point contact whenever my skin is under any kind of stress. And for that I am super grateful.' — Alia Bhatt",
+      "'Dear Jaishree, congratulations for your new book. I bet it's gonna be great. All the best. You are one of the best skin doctors in the country.' — Sanjay Dutt",
+      "'Well, here's wishing Jaishree all the very best and congratulations for her third book. I'm sure this will be a bestseller!' — Malaika Arora"
     ],
     buyLinks: [
       { label: "Buy Now", url: "https://www.amazon.in/Skincare-Answer-Book-Frequently-Questions/dp/014346194X/ref=sr_1_1?s=books&sr=1-1" }
@@ -229,7 +229,7 @@ export default function BooksPage() {
                             <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                           ))}
                         </div>
-                        <p className="text-gray-600 italic">"{endorsement}"</p>
+                        <p className="text-gray-600 italic">{endorsement}</p>
                       </div>
                     ))}
                   </div>
@@ -406,10 +406,10 @@ export default function BooksPage() {
                       {book.endorsements.length > 0 && (
                         <div className="bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 rounded-xl p-4">
                           <p className="text-sm text-gray-700 font-medium italic">
-                            "{book.endorsements[0].split(' - ')[0]}"
+                            {book.endorsements[0].split(' — ')[0]}
                           </p>
                           <p className="text-xs text-gray-500 mt-1">
-                            — {book.endorsements[0].split(' - ')[1]}
+                            — {book.endorsements[0].split(' — ')[1]}
                           </p>
                         </div>
                       )}
