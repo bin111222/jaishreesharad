@@ -8,42 +8,12 @@ const teamMembers = [
   {
     name: "Dr. Jaishree Sharad",
     role: "Founder & Medical Director",
-    credentials: "MBBS, DDV, International Fellowships",
-    expertise: "Cosmetic Dermatology, Anti-aging, Celebrity Care",
+    credentials: "MBBS, DDV, IFAAD, International Society for Dermatologic and Aesthetic Surgery, Fellowship in Cosmetic Dermatology (USA), Fellowship in Lasers (Bangkok)",
+    expertise: "Cosmetic Dermatology, Anti-aging, Aesthetic Dermatology",
     experience: "25+ years",
-    branch: "Both Locations",
-    image: "/team/dr-jaishree.jpg",
-    description: "India's leading celebrity cosmetic dermatologist with international training and recognition. Board Member of ISDS, International Mentor for ASDS, and author of four bestselling books."
-  },
-  {
-    name: "Dr. Drishti Rajdeh",
-    role: "Associate Dermatologist",
-    credentials: "MBBS, MD (Dermatology)",
-    expertise: "Aesthetic Procedures, Patient Care",
-    experience: "8+ years",
-    branch: "Khar Branch",
-    image: "/team/dr-drishti.jpg",
-    description: "Dr. Rajdeh brings extensive experience in aesthetic dermatology and is known for her meticulous approach to patient care and treatment planning."
-  },
-  {
-    name: "Dr. Chethan Shetty",
-    role: "Associate Dermatologist",
-    credentials: "MBBS, MD (Dermatology)",
-    expertise: "Clinical Dermatology, Skin Analysis",
-    experience: "6+ years",
-    branch: "Khar Branch",
-    image: "/team/dr-chethan.jpg",
-    description: "Dr. Shetty specializes in clinical dermatology and provides comprehensive skin analysis and treatment recommendations for patients."
-  },
-  {
-    name: "Dr. Fauzia Siddique",
-    role: "Assistant Doctor",
-    credentials: "MBBS, MD (Dermatology)",
-    expertise: "Patient Care, Pre & Post-treatment",
-    experience: "4+ years",
-    branch: "Khar Branch",
-    image: "/team/dr-fauzia.jpg",
-    description: "Dr. Siddique works closely with the team to ensure optimal patient care and manages pre and post-treatment protocols with precision."
+    branch: "Khar and Vashi Branch",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/team/jaishree.webp",
+    description: "Internationally renowned cosmetic dermatologist of India with international training and recognition. Board Member of ISDS, International Mentor for ASDS, and author of four bestselling books."
   },
   {
     name: "Dr. Saujanya Sagar",
@@ -52,8 +22,36 @@ const teamMembers = [
     expertise: "Aesthetic Procedures, Patient Care",
     experience: "7+ years",
     branch: "Vashi Branch",
-    image: "/team/dr-saujanya.jpg",
-    description: "Dr. Sagar leads the Vashi branch with expertise in aesthetic procedures and is committed to delivering exceptional patient care."
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/team/saujanya.webp",
+    description: "Dr. Saujanya leads the Vashi branch with expertise in aesthetic procedures and is committed to delivering exceptional patient care."
+  },
+  {
+    name: "Dr. Fauzia Siddique",
+    role: "Cosmetologist",
+
+    expertise: "Patient Care, Pre & Post-treatment",
+    experience: "10+ years",
+    branch: "Khar Branch",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/5.webp",
+    description: "Dr. Siddique works closely with the team to ensure optimal patient care and manages pre and post-treatment protocols with precision."
+  },
+  {
+    name: "Dr. Drishti Rajdeh",
+    role: "Assistant Dermatologist",
+    credentials: "MBBS, MD (Dermatology)",
+    expertise: "Aesthetic Procedures, Patient Care",
+    branch: "Khar Branch",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/team/drishti.webp",
+    description: "Dr. Rajdeh brings extensive experience in aesthetic dermatology and is known for her meticulous approach to patient care and treatment planning."
+  },
+  {
+    name: "Dr. Chethan Shetty",
+    role: "Assistant Dermatologist",
+    credentials: "MBBS, MD (Dermatology)",
+    expertise: "Clinical Dermatology, Skin Analysis",
+    branch: "Khar Branch and KEM Hospital",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/5.webp",
+    description: "Dr. Shetty specializes in clinical dermatology and provides comprehensive skin analysis and treatment recommendations for patients."
   }
 ];
 
@@ -63,35 +61,40 @@ const supportStaff = [
     role: "Senior Therapist",
     expertise: "Laser Treatments, Skin Care Procedures",
     experience: "Khar Branch",
-    branch: "Khar"
+    branch: "Khar",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/5.webp"
   },
   {
     name: "Maheen",
     role: "Therapist",
     expertise: "Aesthetic Treatments, Patient Care",
     experience: "Khar Branch",
-    branch: "Khar"
+    branch: "Khar",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/5.webp"
   },
   {
     name: "Pooja Gurav",
     role: "Senior Therapist",
     expertise: "Laser Safety, Treatment Protocols",
     experience: "Vashi Branch",
-    branch: "Vashi"
+    branch: "Vashi",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/pooja.webp"
   },
   {
     name: "Snehal Gole",
     role: "Therapist",
     expertise: "Skin Care, Patient Support",
     experience: "Vashi Branch",
-    branch: "Vashi"
+    branch: "Vashi",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/snehal.webp"
   },
   {
     name: "Nageshwari Wanga",
     role: "Therapist",
     expertise: "Treatment Support, Hygiene Standards",
     experience: "Vashi Branch",
-    branch: "Vashi"
+    branch: "Vashi",
+    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/nageshwari.webp"
   }
 ];
 
@@ -113,8 +116,8 @@ const clinicValues = [
   },
   {
     icon: Star,
-    title: "Celebrity-Grade Standards",
-    description: "The same high standards we apply to our celebrity clients for everyone."
+    title: "Premium Standards",
+    description: "The same high standards we apply to our premium clients for everyone."
   }
 ];
 
@@ -168,38 +171,75 @@ export default function TeamPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.2, duration: 0.6 }}
-                  className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
+                  className="bg-white rounded-3xl p-6 hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-pastel-pink/20 group"
                 >
-                  <div className="flex items-start space-x-6">
-                    <div className="w-24 h-24 bg-gradient-to-br from-pastel-pink to-pastel-green rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
-                      <div className="w-full h-full bg-gray-100 flex items-center justify-center">
-                        <div className="text-center">
-                          <div className="w-8 h-8 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-1">
-                            <span className="text-white text-xs font-bold">{member.name.split(' ').map(n => n[0]).join('')}</span>
-                          </div>
-                          <span className="text-gray-500 text-xs font-medium">Photo</span>
-                        </div>
-                      </div>
+                  {/* Large Image Section */}
+                  <div className="relative mb-6">
+                    <div className="w-full h-64 bg-gradient-to-br from-pastel-pink/10 to-pastel-green/10 rounded-2xl overflow-hidden">
+                      <img 
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          e.currentTarget.parentElement!.innerHTML = `
+                            <div class="w-full h-full bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 flex items-center justify-center">
+                              <div class="text-center">
+                                <div class="w-16 h-16 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-3">
+                                  <span class="text-white text-lg font-bold">${member.name.split(' ').map(n => n[0]).join('')}</span>
+                                </div>
+                                <span class="text-gray-600 text-sm font-medium">Professional Photo</span>
+                              </div>
+                            </div>
+                          `;
+                        }}
+                      />
                     </div>
-                    <div className="flex-1 space-y-3">
-                      <div>
-                        <h3 className="text-xl font-semibold text-gray-800">{member.name}</h3>
-                        <p className="text-pastel-pink font-medium">{member.role}</p>
-                        <p className="text-blue-600 text-sm font-medium">{member.branch}</p>
+                    {/* Branch Badge */}
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-white/90 backdrop-blur-sm text-blue-600 text-xs font-semibold px-3 py-1 rounded-full border border-blue-200">
+                        {member.branch}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Content Section */}
+                  <div className="space-y-4">
+                    <div className="text-center">
+                      <h3 className="text-xl font-bold text-gray-800 mb-1">{member.name}</h3>
+                      <p className="text-pastel-pink font-semibold text-sm">{member.role}</p>
+                    </div>
+
+                    <div className="space-y-3 text-sm">
+                      {member.credentials && (
+                        <div className="bg-gray-50 rounded-xl p-3">
+                          <p className="text-gray-600 mb-1"><strong className="text-gray-800">Credentials:</strong></p>
+                          <p className="text-gray-700 text-xs leading-relaxed">{member.credentials}</p>
+                        </div>
+                      )}
+                      
+                      <div className="bg-gray-50 rounded-xl p-3">
+                        <p className="text-gray-600 mb-1"><strong className="text-gray-800">Expertise:</strong></p>
+                        <p className="text-gray-700 text-xs">{member.expertise}</p>
                       </div>
-                      <div className="space-y-2 text-sm text-gray-600">
-                        <p><strong>Credentials:</strong> {member.credentials}</p>
-                        <p><strong>Expertise:</strong> {member.expertise}</p>
-                        <p><strong>Experience:</strong> {member.experience}</p>
-                      </div>
-                      <p className="text-gray-700">{member.description}</p>
+
+                      {member.experience && (
+                        <div className="bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 rounded-xl p-3">
+                          <p className="text-gray-600 mb-1"><strong className="text-gray-800">Experience:</strong></p>
+                          <p className="text-gray-700 text-xs font-semibold">{member.experience}</p>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="pt-2">
+                      <p className="text-gray-600 text-sm leading-relaxed text-center">{member.description}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -217,7 +257,7 @@ export default function TeamPage() {
                 {/* Team Working Image 1 */}
                 <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
                 <img 
-                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/1.webp"
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/team/1.webp"
                     alt="Team treatment"
                     className="w-full h-full object-cover"
                     onError={(e) => {
@@ -261,7 +301,7 @@ export default function TeamPage() {
                 {/* Team Working Image 3 */}
                 <div className="aspect-square bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 rounded-xl flex items-center justify-center overflow-hidden">
                   <img 
-                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/3.webp"
+                    src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/5.webp"
                     alt="Team treatment"
                     className="w-full h-full object-cover"
                     onError={(e) => {
@@ -334,8 +374,22 @@ export default function TeamPage() {
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   className="bg-white rounded-xl p-6 text-center hover:shadow-md transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-pastel-green to-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Activity className="w-8 h-8 text-white" />
+                  <div className="w-36 h-36 bg-gradient-to-br from-pastel-green to-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                    <img 
+                      src={staff.image}
+                      alt={staff.name}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.parentElement!.innerHTML = `
+                          <div class="w-full h-full bg-gradient-to-br from-pastel-green to-pastel-pink rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                            </svg>
+                          </div>
+                        `;
+                      }}
+                    />
                   </div>
                   <h3 className="font-semibold text-gray-800 mb-2">{staff.name}</h3>
                   <p className="text-pastel-pink text-sm font-medium mb-1">{staff.role}</p>

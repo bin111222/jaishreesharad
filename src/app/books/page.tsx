@@ -1,10 +1,12 @@
 "use client";
 
 import Layout from "@/components/Layout";
+import BookTestimonials from "@/components/BookTestimonials";
 import { motion, useInView } from "framer-motion";
-import { BookOpen, Star, ExternalLink, Download, ArrowRight } from "lucide-react";
+import { BookOpen, Star, ExternalLink, Download, ArrowRight, MessageCircle, Heart } from "lucide-react";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { getTestimonialsByBook } from "@/data/testimonials";
 
 const books = [
   {
@@ -21,9 +23,9 @@ const books = [
       "Easy-to-follow advice"
     ],
     endorsements: [
-      "Amitabh Bachchan - 'Dr. Sharad's ability to make skincare approachable is remarkable'",
-      "Bestseller in India - Penguin Random House",
-      "A comprehensive lifestyle guide for healthy skin - Reader Reviews"
+      "Salman Khan - 'I have saved Dr Jaishree's phone number in my phone as Jaishree Face. If I ever have any skin problems, the only dermatologist I would trust is Dr J.'",
+      "Ranbir Kapoor - 'Skin is an important part of our body and I think it is important for both men and women to take care of their skin... taking care of your skin is not just about beautification, it is about having blemish-free, acne-free, radiant skin.'",
+      "Neetu Kapoor - 'I believe in a healthy diet and daily exercise... One thing I never forget is my nighttime skincare routine... If in doubt, I always call Jaishree for expert advice.'"
     ],
     buyLinks: [
       { label: "Buy Now", url: "https://www.amazon.in/Skin-Talks-Secrets-Glowing-Women/dp/8184005202/ref=sr_1_4?s=books&sr=1-4" }
@@ -47,10 +49,9 @@ const books = [
       "Before and after case studies"
     ],
     endorsements: [
-      "Crossword Popular Book Award Winner (Health & Fitness category) - 2020",
-      "Amitabh Bachchan - 'This gem of a book is a comprehensive compilation'",
-      "Proceeds support girl child education (Nargis Dutt Foundation)",
-      "Top-selling skincare book in India"
+      "Amitabh Bachchan - 'This gem of a book is a comprehensive compilation that will take you from the essentials of self-preservation to the most complex layered technology services available, and everything in between.'",
+      "Karan Johar - 'Your skin at times can be your arch-nemesis... When someone like Jaishree enters your life, you feel like you have won the skin battle! She makes the cure painless and immediately effective—it's an ageless bond and your skin's BFF for life.'",
+      "Ranbir Kapoor - 'I get dark circles when I don't sleep... I realized great skin doesn't happen by chance, it happens by appointment. Dr Jaishree is my one-stop shop. Forget the camera, she's the reason I look into the mirror!'"
     ],
     buyLinks: [
       { label: "Buy Now", url: "https://www.amazon.in/Skin-Rules-Your-6-week-Radiant/dp/0143444727/ref=sr_1_2?s=books&sr=1-2" }
@@ -75,10 +76,9 @@ const books = [
       "Real patient questions answered"
     ],
     endorsements: [
-      "Launched by Ranbir Kapoor and Neetu Kapoor - April 28, 2023",
-      "Hailed as a 'beauty bible' - Lifestyle Asia",
-      "Answers real questions from patients and followers",
-      "Comprehensive Q&A format for easy reference"
+      "Alia Bhatt - 'Your skin is the largest organ in your body... Doc has been a one-point contact whenever my skin is under any kind of stress. And for that I am super grateful.'",
+      "Sanjay Dutt - 'Dear Jaishree, congratulations for your new book. I bet it's gonna be great. All the best. You are one of the best skin doctors in the country.'",
+      "Malaika Arora - 'Well, here's wishing Jaishree all the very best and congratulations for her third book. I'm sure this will be a bestseller!'"
     ],
     buyLinks: [
       { label: "Buy Now", url: "https://www.amazon.in/Skincare-Answer-Book-Frequently-Questions/dp/014346194X/ref=sr_1_1?s=books&sr=1-1" }
@@ -117,14 +117,18 @@ const books = [
   }
 ];
 
-const upcomingBook = {
-  title: "Untitled",
-  subtitle: "",
-  description: "",
-  expectedDate: "2026"
-};
 
 export default function BooksPage() {
+  const [selectedBook, setSelectedBook] = useState<string | null>(null);
+
+  const handleShowTestimonials = (bookTitle: string) => {
+    setSelectedBook(bookTitle);
+  };
+
+  const handleCloseTestimonials = () => {
+    setSelectedBook(null);
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -231,7 +235,7 @@ export default function BooksPage() {
                   </div>
                 </div>
                 
-                {/* Buy Links */}
+                {/* Buy Links & Testimonials */}
                 <div>
                   <h4 className="font-display text-lg font-semibold text-gray-800 mb-3">
                     Get Your Copy
@@ -249,19 +253,22 @@ export default function BooksPage() {
                         <ExternalLink className="w-4 h-4" />
                       </a>
                     ))}
+                    
+                    {/* Testimonials Button - Only for books with testimonials */}
+                    {getTestimonialsByBook(book.title).length > 0 && (
+                      <button
+                        onClick={() => handleShowTestimonials(book.title)}
+                        className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-pink to-pink-100 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-200 hover:scale-105"
+                      >
+                        <MessageCircle className="w-4 h-4" />
+                        <span>View Testimonials ({getTestimonialsByBook(book.title).length})</span>
+                      </button>
+                    )}
                   </div>
                 </div>
                 
                 {/* Media Kit */}
-                <div>
-                  <a
-                    href={book.mediaKit}
-                    className="inline-flex items-center space-x-2 text-pastel-pink hover:text-pastel-pink/80 transition-colors"
-                  >
-                    <Download className="w-4 h-4" />
-                    <span>Download Media Kit</span>
-                  </a>
-                </div>
+               
               </div>
             </motion.div>
           ))}
@@ -368,7 +375,7 @@ export default function BooksPage() {
                         </div>
                       </div>
                       
-                      {/* Buy Links */}
+                      {/* Buy Links & Testimonials */}
                       <div className="flex flex-wrap gap-3 mb-4">
                         {book.buyLinks.map((link, linkIndex) => (
                           <a
@@ -379,9 +386,20 @@ export default function BooksPage() {
                             className="group/link inline-flex items-center space-x-2 px-4 py-2 bg-gray-100 text-gray-700 font-medium rounded-full hover:bg-gray-200 hover:scale-105 transition-all duration-200 text-sm border border-gray-200"
                           >
                             <span>{link.label}</span>
-                                                          <ExternalLink className="w-3 h-3 group-hover/link:translate-x-1 transition-transform duration-200" />
+                            <ExternalLink className="w-3 h-3 group-hover/link:translate-x-1 transition-transform duration-200" />
                           </a>
                         ))}
+                        
+                        {/* Testimonials Button - Only for books with testimonials */}
+                        {getTestimonialsByBook(book.title).length > 0 && (
+                          <button
+                            onClick={() => handleShowTestimonials(book.title)}
+                            className="group/testimonial inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-pastel-pink/20 to-pastel-green/20 text-pastel-pink font-medium rounded-full hover:from-pastel-pink/30 hover:to-pastel-green/30 hover:scale-105 transition-all duration-200 text-sm border border-pastel-pink/30"
+                          >
+                            <MessageCircle className="w-3 h-3 group-hover/testimonial:scale-110 transition-transform duration-200" />
+                            <span>View Testimonials ({getTestimonialsByBook(book.title).length})</span>
+                          </button>
+                        )}
                       </div>
                       
                       {/* Endorsements */}
@@ -431,52 +449,6 @@ export default function BooksPage() {
         </div>
       </section>
 
-      {/* Coming Soon */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center space-y-8"
-          >
-            <h2 className="font-display text-3xl font-bold text-gray-800">
-              Coming Soon
-            </h2>
-            
-            <div className="bg-gradient-to-r from-pastel-green/20 to-pastel-pink/20 rounded-2xl p-8 relative overflow-hidden">
-              {/* Blurred Background Image */}
-              <div className="absolute inset-0">
-                <img 
-                  src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop&crop=center"
-                  alt="Coming Soon Background"
-                  className="w-full h-full object-cover blur-xl opacity-20"
-                />
-              </div>
-              
-              {/* Content Overlay */}
-              <div className="relative z-10">
-                <div className="w-24 h-32 bg-white/80 backdrop-blur-sm rounded-lg flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <BookOpen className="w-12 h-12 text-pastel-pink" />
-                </div>
-              
-              <h3 className="font-display text-2xl font-semibold text-gray-800 mb-2">
-                {upcomingBook.title}
-              </h3>
-              <p className="text-pastel-pink font-medium mb-4">
-                {upcomingBook.subtitle}
-              </p>
-              <p className="text-gray-600 mb-4">
-                {upcomingBook.description}
-              </p>
-              <p className="text-sm text-gray-500">
-                Expected: {upcomingBook.expectedDate}
-              </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-pastel-green/30 to-pastel-pink/30">
@@ -514,6 +486,16 @@ export default function BooksPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Testimonials Modal */}
+      {selectedBook && (
+        <BookTestimonials
+          bookTitle={selectedBook}
+          testimonials={getTestimonialsByBook(selectedBook)}
+          isOpen={!!selectedBook}
+          onClose={handleCloseTestimonials}
+        />
+      )}
     </Layout>
   );
 }

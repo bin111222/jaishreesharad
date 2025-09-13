@@ -221,59 +221,80 @@ export default function ContactPage() {
                   >
                     <div>
                       <h4 className="font-semibold text-lg text-gray-800 mb-2">{clinic.name}</h4>
-                      <div className="space-y-3">
-                        <div className="flex items-start space-x-2 sm:space-x-3">
-                          <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-pastel-pink flex-shrink-0 mt-0.5" />
-                          <div className="flex-1">
+                      <div className="space-y-4">
+                        {/* Address */}
+                        <div className="flex items-start gap-3">
+                          <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center mt-0.5">
+                            <MapPin className="w-4 h-4 text-pastel-pink" />
+                          </div>
+                          <div className="flex-1 min-w-0">
                             <a 
                               href={clinic.name.includes("Khar") ? "https://maps.app.goo.gl/mjkAkCfu15Xb9zxH6" : "https://maps.app.goo.gl/8NHSQh7ddn9SAHun8"}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-gray-600 text-xs sm:text-sm hover:text-pastel-pink transition-colors cursor-pointer leading-relaxed block"
+                              className="text-gray-600 text-sm hover:text-pastel-pink transition-colors cursor-pointer leading-relaxed block"
                             >
                               {clinic.address}
                             </a>
                           </div>
                         </div>
                         
-                        <div className="flex items-start space-x-2 sm:space-x-3">
-                          <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-pastel-pink flex-shrink-0 mt-0.5" />
-                          <div className="space-y-1">
-                            <a href={`tel:${clinic.phone}`} className="text-gray-600 hover:text-pastel-pink transition-colors text-xs sm:text-sm block">
+                        {/* Phone Numbers */}
+                        <div className="flex items-start gap-3">
+                          <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center mt-0.5">
+                            <Phone className="w-4 h-4 text-pastel-pink" />
+                          </div>
+                          <div className="flex-1 min-w-0 space-y-1">
+                            <a href={`tel:${clinic.phone}`} className="text-gray-600 hover:text-pastel-pink transition-colors text-sm block">
                               {clinic.phone} (Landline)
                             </a>
                             {clinic.name.includes("Khar") ? (
-                              <a href="tel:+919223219419" className="text-gray-600 hover:text-pastel-pink transition-colors text-xs sm:text-sm block">
+                              <a href="tel:+919223219419" className="text-gray-600 hover:text-pastel-pink transition-colors text-sm block">
                                 +91 92 2321 9419 (Mobile)
                               </a>
                             ) : (
-                              <a href="tel:+919769691957" className="text-gray-600 hover:text-pastel-pink transition-colors text-xs sm:text-sm block">
+                              <a href="tel:+919769691957" className="text-gray-600 hover:text-pastel-pink transition-colors text-sm block">
                                 +91 97 6969 1957 (Mobile)
                               </a>
                             )}
                           </div>
                         </div>
                         
-                        <div className="flex items-center space-x-2 sm:space-x-3">
-                          <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-pastel-pink flex-shrink-0" />
-                          <a href={`https://wa.me/${clinic.whatsapp.replace(/\s/g, '')}?text=Hi%20Dr.%20Jaishree,%20I%20would%20like%20to%20book%20a%20consultation%20at%20${clinic.name}`} 
-                             target="_blank" 
-                             rel="noopener noreferrer"
-                             className="text-gray-600 hover:text-pastel-pink transition-colors text-xs sm:text-sm">
-                            WhatsApp: {clinic.whatsapp}
-                          </a>
+                        {/* WhatsApp */}
+                        <div className="flex items-center gap-3">
+                          <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                            <MessageCircle className="w-4 h-4 text-pastel-pink" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <a href={`https://wa.me/${clinic.whatsapp.replace(/\s/g, '')}?text=Hi%20Dr.%20Jaishree,%20I%20would%20like%20to%20book%20a%20consultation%20at%20${clinic.name}`} 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               className="text-gray-600 hover:text-pastel-pink transition-colors text-sm">
+                              WhatsApp: {clinic.whatsapp}
+                            </a>
+                          </div>
                         </div>
                         
-                        <div className="flex items-center space-x-2 sm:space-x-3">
-                          <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-pastel-pink flex-shrink-0" />
-                          <a href={`mailto:${clinic.email}`} className="text-gray-600 hover:text-pastel-pink transition-colors text-xs sm:text-sm">
-                            {clinic.email}
-                          </a>
+                        {/* Email */}
+                        <div className="flex items-center gap-3">
+                          <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                            <Mail className="w-4 h-4 text-pastel-pink" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <a href={`mailto:${clinic.email}`} className="text-gray-600 hover:text-pastel-pink transition-colors text-sm">
+                              {clinic.email}
+                            </a>
+                          </div>
                         </div>
                         
-                        <div className="flex items-center space-x-2 sm:space-x-3">
-                          <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-pastel-pink flex-shrink-0" />
-                          <span className="text-gray-600 text-xs sm:text-sm">{clinic.hours}</span>
+                        {/* Hours */}
+                        <div className="flex items-center gap-3">
+                          <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                            <Clock className="w-4 h-4 text-pastel-pink" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <span className="text-gray-600 text-sm">{clinic.hours}</span>
+                          </div>
                         </div>
                       </div>
                     </div>

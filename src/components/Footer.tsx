@@ -3,11 +3,13 @@ import { Phone, Mail, MapPin, Clock, MessageCircle, Instagram, Youtube, Facebook
 import { cn } from "@/lib/utils";
 
 const quickLinks = [
-  { name: "Botox Treatment", href: "/treatments/botox" },
-  { name: "Dermal Fillers", href: "/treatments/fillers" },
-  { name: "Liquid Facelift", href: "/treatments/liquid-facelift" },
+  { name: "Bridal Care Prep", href: "/treatments/bridal" },
+  { name: "Exosomes", href: "/treatments/exosomes" },
+  { name: "Endolift", href: "/treatments/endolift" },
+  { name: "Microlift", href: "/treatments/microlift" },
+  { name: "Non Surgical Skin Tightening", href: "/treatments/non-surgical-skin-tightening" },
+  { name: "Hydrafacial", href: "/treatments/hydrafacial" },
   { name: "Skin Treatments", href: "/treatments/skin" },
- 
 ];
 
 const socialLinks = [
@@ -35,55 +37,79 @@ export default function Footer() {
               </div>
             </Link>
             
-            <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="text-sm text-gray-700 font-medium">Khar Branch</p>
-                  <p className="text-xs text-gray-500">601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052</p>
+            <div className="space-y-6">
+              {/* Khar Branch */}
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-sm text-gray-700 font-medium">Khar Branch</p>
+                    <p className="text-xs text-gray-500">601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052</p>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-baseline space-x-3">
+                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                    <a href="tel:+912224000000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      +91 22 2400 0000 (Landline)
+                    </a>
+                  </div>
+                  <div className="flex items-baseline space-x-3">
+                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                    <a href="tel:+919223219419" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      +91 92 2321 9419 (Mobile)
+                    </a>
+                  </div>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
-                <div>
-                  <p className="text-sm text-gray-700 font-medium">Vashi Branch</p>
-                  <p className="text-xs text-gray-500">105, Satra Plaza, Palm Beach Road, Sector 19D, Vashi, Navi Mumbai 400 703</p>
+              {/* Vashi Branch */}
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-sm text-gray-700 font-medium">Vashi Branch</p>
+                    <p className="text-xs text-gray-500">105, Satra Plaza, Palm Beach Road, Sector 19D, Vashi, Navi Mumbai 400 703</p>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-baseline space-x-3">
+                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                    <a href="tel:+912227800000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      +91 22 2780 0000 (Landline)
+                    </a>
+                  </div>
+                  <div className="flex items-baseline space-x-3">
+                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                    <a href="tel:+919769691957" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      +91 97 6969 1957 (Mobile)
+                    </a>
+                  </div>
                 </div>
               </div>
               
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-pastel-pink flex-shrink-0" />
-                <div>
-                 
-                  <a href="tel:+919223219419" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors block">
-                    +91 92 2321 9419 (Khar Mobile)
+              {/* Contact Information */}
+              <div className="space-y-3 pt-2">
+                <div className="flex items-baseline space-x-3">
+                  <MessageCircle className="w-5 h-5 text-pastel-pink flex-shrink-0 mt-1" />
+                  <a href="https://wa.me/919769691952" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
+                    WhatsApp Helpline: +91 97 6969 1952
                   </a>
-                  <a href="tel:+919769691957" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors block">
-                    +91 97 6969 1957 (Vashi Mobile)
+                </div>
+                
+                <div className="flex items-baseline space-x-3">
+                  <Mail className="w-5 h-5 text-pastel-pink flex-shrink-0 mt-1" />
+                  <a href="mailto:contactus@gmail.com" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
+                    contactus@gmail.com
                   </a>
                 </div>
-              </div>
-              
-              <div className="flex items-center space-x-3">
-                <MessageCircle className="w-5 h-5 text-pastel-pink flex-shrink-0" />
-                <a href="https://wa.me/919769691952" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
-                  WhatsApp Helpline: +91 97 6969 1952
-                </a>
-              </div>
-              
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-pastel-pink flex-shrink-0" />
-                <a href="mailto:contactus@gmail.com" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
-                  contactus@gmail.com
-                </a>
-              </div>
-              
-              <div className="flex items-center space-x-3">
-                <Instagram className="w-5 h-5 text-pastel-pink flex-shrink-0" />
-                <a href="https://instagram.com/drjaishreesharad" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
-                  @drjaishreesharad
-                </a>
+                
+                <div className="flex items-baseline space-x-3">
+                  <Instagram className="w-5 h-5 text-pastel-pink flex-shrink-0 mt-1" />
+                  <a href="https://instagram.com/drjaishreesharad" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
+                    @drjaishreesharad
+                  </a>
+                </div>
               </div>
               
              
@@ -112,7 +138,7 @@ export default function Footer() {
             <h4 className="font-display font-semibold text-gray-800 mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/treatments/injectables" className="text-sm text-gray-600 hover:text-pastel-pink transition-colors duration-200">
+                <Link href="/treatments" className="text-sm text-gray-600 hover:text-pastel-pink transition-colors duration-200">
                   Injectables
                 </Link>
               </li>
@@ -173,7 +199,7 @@ export default function Footer() {
                 href="https://wa.me/919769691952?text=Hi%20Dr.%20Jaishree,%20I%20would%20like%20to%20book%20a%20consultation"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 px-4 py-2 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors duration-200 text-sm"
+                className="inline-flex items-center space-x-2 px-4 py-2 bg-pastel-green text-white font-medium rounded-lg hover:bg-pastel-green/80 transition-colors duration-200 text-sm"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>WhatsApp Us</span>

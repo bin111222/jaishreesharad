@@ -887,9 +887,9 @@ export default function HomePage() {
                   name: "#1f2937",
                   designation: "#6b7280",
                   testimony: "#374151",
-                  arrowBackground: "#f472b6",
+                  arrowBackground: "#BACEB0",
                   arrowForeground: "#ffffff",
-                  arrowHoverBackground: "#ec4899",
+                  arrowHoverBackground: "#A8C09A",
                 }}
                 fontSizes={{
                   name: "1.5rem",

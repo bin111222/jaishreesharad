@@ -298,7 +298,7 @@ export default function TestimonialsPage() {
               Patient Testimonials
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Real stories from celebrities and patients who trust Dr. Jaishree with their skin
+            Trusted by Patients Next Door to Icons on Stage
             </p>
             <div className="flex items-center justify-center space-x-4 text-gray-600">
               <Star className="w-6 h-6 text-yellow-400 fill-current" />
@@ -434,7 +434,7 @@ export default function TestimonialsPage() {
                 transition={{ delay: index * 0.05, duration: 0.3 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-pastel-pink to-pastel-green rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-red-300 to-green-300 rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-gray-800 mb-2">{stat.number}</div>
@@ -446,7 +446,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Featured Testimonial */}
-      <section className="py-12 sm:py-16 bg-gradient-to-r from-pastel-green/10 to-pastel-pink/10">
+      <section className="py-12 sm:py-16 bg-gradient-to-r from-red- to-pastel-pink/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -466,7 +466,7 @@ export default function TestimonialsPage() {
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg">
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex justify-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-pastel-pink to-pastel-green rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-200 to-green-300 rounded-full flex items-center justify-center">
                     <Quote className="w-8 h-8 text-white" />
                   </div>
                 </div>
@@ -518,9 +518,9 @@ export default function TestimonialsPage() {
                   name: "#1f2937",
                   designation: "#6b7280",
                   testimony: "#374151",
-                  arrowBackground: "#f472b6",
+                  arrowBackground: "#BACEB0",
                   arrowForeground: "#ffffff",
-                  arrowHoverBackground: "#ec4899",
+                  arrowHoverBackground: "#A8C09A",
                 }}
                 fontSizes={{
                   name: "1.75rem",
@@ -561,7 +561,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Featured Testimonial */}
-      <section className="py-12 sm:py-20 bg-gradient-to-r from-pastel-green/30 to-pastel-pink/30">
+      <section className="py-12 sm:py-20 bg-gradient-to-r from-pastel-green/10 to-pastel-pink/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -569,7 +569,7 @@ export default function TestimonialsPage() {
             transition={{ duration: 0.4 }}
             className="text-center space-y-6 sm:space-y-8"
           >
-            <div className="w-20 h-20 bg-gradient-to-br from-pastel-pink to-pastel-green rounded-full flex items-center justify-center mx-auto">
+            <div className="w-20 h-20 bg-gradient-to-br from-red-200 to-green-300 rounded-full flex items-center justify-center mx-auto">
               <Quote className="w-10 h-10 text-white" />
             </div>
             
