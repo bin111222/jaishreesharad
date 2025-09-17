@@ -597,4 +597,3 @@ export interface Testimonial {
       default:
         return [];
     }
-  };

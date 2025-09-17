@@ -9,7 +9,7 @@ import Link from "next/link";
 const shortTermMasterclasses = [
   {
     title: "Botulinum Toxin Mastery",
-    duration: "2-4 Hours",
+    duration: "2 Hours",
     level: "All Levels",
     description: "Master the art of botulinum toxin injections with evidence-based techniques and patient-centric artistry.",
     features: ["Upper & lower face techniques", "Neck treatments", "Hyperhidrosis management", "Complication prevention", "Live demonstrations"],
@@ -18,7 +18,7 @@ const shortTermMasterclasses = [
   },
   {
     title: "Filler Artistry Masterclass",
-    duration: "3-4 Hours",
+    duration: "2 Hours",
     level: "Intermediate to Advanced",
     description: "Advanced filler techniques for cheeks, jawline, and lips with focus on natural-looking results.",
     features: ["Cheek contouring", "Jawline definition", "Lip enhancement", "Tear trough correction", "Nose reshaping"],
@@ -27,7 +27,7 @@ const shortTermMasterclasses = [
   },
   {
     title: "Skin Boosters & Bioremodellers",
-    duration: "2-3 Hours",
+    duration: "2 Hours",
     level: "All Levels",
     description: "Comprehensive training on skin boosters including Profhilo, Restylane Vital, and SkinVive.",
     features: ["Profhilo techniques", "Restylane Vital protocols", "SkinVive applications", "Patient selection", "Results optimization"],
@@ -36,7 +36,7 @@ const shortTermMasterclasses = [
   },
   {
     title: "Combination Treatments Masterclass",
-    duration: "3-4 Hours",
+    duration: "2 Hours",
     level: "Advanced",
     description: "Learn to combine lasers with injectables for optimal aesthetic outcomes and patient satisfaction.",
     features: ["Laser + injectable protocols", "Treatment sequencing", "Safety considerations", "Case studies", "Results optimization"],
@@ -45,7 +45,7 @@ const shortTermMasterclasses = [
   },
   {
     title: "Managing Complications in Aesthetic Medicine",
-    duration: "2-3 Hours",
+    duration: "2 Hours",
     level: "All Levels",
     description: "Essential training on preventing and managing complications in aesthetic procedures.",
     features: ["Complication prevention", "Early recognition", "Management protocols", "Emergency procedures", "Case discussions"],
@@ -54,7 +54,7 @@ const shortTermMasterclasses = [
   },
   {
     title: "Business & Branding in Aesthetics",
-    duration: "2-3 Hours",
+    duration: "2 Hours",
     level: "All Levels",
     description: "Learn the business aspects of aesthetic medicine including marketing, pricing, and practice growth.",
     features: ["Practice branding", "Marketing strategies", "Pricing models", "Patient retention", "Practice growth"],
@@ -67,7 +67,7 @@ const shortTermMasterclasses = [
 const certificatePrograms = [
   {
     title: "Certificate in Botox & Fillers",
-    duration: "4-6 Weeks",
+    duration: "3 Months",
     level: "Intermediate",
     description: "Comprehensive certificate program covering all aspects of botulinum toxin and dermal filler treatments.",
     features: ["Blended learning approach", "Recorded modules", "Live Q&A sessions", "Case discussions", "Optional hands-on training"],
@@ -76,7 +76,7 @@ const certificatePrograms = [
   },
   {
     title: "Certificate in Energy-Based Devices",
-    duration: "4-6 Weeks",
+    duration: "3 Months",
     level: "Intermediate",
     description: "Complete training on lasers, RF, and HIFU devices for various aesthetic treatments.",
     features: ["Laser physics & safety", "RF technology", "HIFU applications", "Treatment protocols", "Hands-on practice"],
@@ -85,7 +85,7 @@ const certificatePrograms = [
   },
   {
     title: "Certificate in Skin Rejuvenation",
-    duration: "4-6 Weeks",
+    duration: "3 Months",
     level: "All Levels",
     description: "Comprehensive program covering peels, microneedling, exosomes, PRP, and biostimulators.",
     features: ["Chemical peels", "Microneedling techniques", "Exosome therapy", "PRP protocols", "Biostimulator applications"],
@@ -94,7 +94,7 @@ const certificatePrograms = [
   },
   {
     title: "Certificate in Body Contouring & Hair Restoration",
-    duration: "4-6 Weeks",
+    duration: "3 Months",
     level: "Intermediate",
     description: "Specialized training in body contouring techniques and hair restoration procedures.",
     features: ["Body contouring protocols", "Hair restoration techniques", "Patient assessment", "Treatment planning", "Results optimization"],
@@ -107,7 +107,7 @@ const certificatePrograms = [
 const fellowshipPrograms = [
   {
     title: "Fellowship in Advanced Injectable Aesthetics",
-    duration: "3-6 Months",
+    duration: "1 Year",
     level: "Advanced",
     description: "Intensive hands-on fellowship program for dermatologists seeking mastery in injectable aesthetics.",
     features: ["Intensive hands-on training", "Live patient demonstrations", "Supervised practice", "Case-based learning", "International certification"],
@@ -116,7 +116,7 @@ const fellowshipPrograms = [
   },
   {
     title: "Fellowship in Laser & Energy Devices",
-    duration: "3-6 Months",
+    duration: "1 Year",
     level: "Advanced",
     description: "Comprehensive fellowship covering all aspects of laser and energy-based device treatments.",
     features: ["Advanced laser training", "Energy device mastery", "Safety protocols", "Research opportunities", "International exposure"],
@@ -125,7 +125,7 @@ const fellowshipPrograms = [
   },
   {
     title: "Fellowship in Regenerative Aesthetics",
-    duration: "3-6 Months",
+    duration: "1 Year",
     level: "Advanced",
     description: "Specialized fellowship in PRP, PRF, exosomes, and biostimulators for regenerative medicine.",
     features: ["PRP & PRF techniques", "Exosome therapy", "Biostimulator applications", "Research projects", "Clinical trials"],
@@ -134,7 +134,7 @@ const fellowshipPrograms = [
   },
   {
     title: "Fellowship in Comprehensive Aesthetic Dermatology",
-    duration: "6 Months",
+    duration: "1 Year",
     level: "Advanced",
     description: "Complete fellowship program covering all aspects of aesthetic dermatology for comprehensive training.",
     features: ["Full-spectrum training", "All treatment modalities", "Business development", "Research opportunities", "International certification"],
@@ -173,21 +173,21 @@ const academyTestimonials = [
 const upcomingEvents = [
   {
     title: "Master's Program in Aesthetic Dermatology",
-    date: "March 15-20, 2025",
+    date: "Coming Soon",
     location: "Mumbai",
     seats: "Limited seats available",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/upcoming-event-1-placeholder.webp"
   },
   {
     title: "Advanced Injection Techniques Workshop",
-    date: "April 5-9, 2025",
+    date: "Coming Soon",
     location: "Mumbai",
     seats: "Registration open",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/upcoming-event-2-placeholder.webp"
   },
   {
     title: "International Fellowship Program",
-    date: "May 10-15, 2025",
+    date: "Coming Soon",
     location: "Mumbai",
     seats: "Early bird registration",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/upcoming-event-3-placeholder.webp"
@@ -259,7 +259,7 @@ export default function TrainingPage() {
             >
               <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
                 <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/hero-academy-placeholder.webp" 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/academy/hero-academy-placeholder.png" 
                   alt="Dr. Jaishree's Academy of Aesthetic Excellence" 
                   className="w-full h-full object-cover"
                 />
@@ -271,7 +271,7 @@ export default function TrainingPage() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Next Workshop</p>
-                    <p className="font-semibold text-gray-800">March 15-17, 2024</p>
+                    <p className="font-semibold text-gray-800">Dates Coming Soon</p>
                   </div>
                 </div>
               </div>
@@ -370,7 +370,7 @@ export default function TrainingPage() {
               <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
                 Short-Term Online Masterclasses
               </h3>
-              <p className="text-gray-600 mb-4">2-4 hours each</p>
+              <p className="text-gray-600 mb-4">2 hours each</p>
               <p className="text-gray-600 mb-6">For dermatologists who want updates, new techniques, or pearls in specific areas.</p>
               <div className="space-y-2 text-sm text-gray-500">
                 <p>• Botulinum Toxin Mastery</p>
@@ -394,7 +394,7 @@ export default function TrainingPage() {
               <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
                 Certificate Programmes
               </h3>
-              <p className="text-gray-600 mb-4">4-6 weeks</p>
+              <p className="text-gray-600 mb-4">3 Months</p>
               <p className="text-gray-600 mb-6">Blended learning with recorded modules, live Q&A, and case discussions.</p>
               <div className="space-y-2 text-sm text-gray-500">
                 <p>• Certificate in Botox & Fillers</p>
@@ -417,7 +417,7 @@ export default function TrainingPage() {
               <h3 className="font-display text-xl font-semibold text-gray-800 mb-4">
                 Fellowships
               </h3>
-              <p className="text-gray-600 mb-4">3-6 months</p>
+              <p className="text-gray-600 mb-4">1 Year</p>
               <p className="text-gray-600 mb-6">Intensive hands-on programmes for dermatologists seeking advanced training.</p>
               <div className="space-y-2 text-sm text-gray-500">
                 <p>• Fellowship in Advanced Injectable Aesthetics</p>
