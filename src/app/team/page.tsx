@@ -42,7 +42,7 @@ const teamMembers = [
     expertise: "Aesthetic Procedures, Patient Care",
     branch: "Khar Branch",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/team/drishti.webp",
-    description: "Dr. Rajdeh brings extensive experience in aesthetic dermatology and is known for her meticulous approach to patient care and treatment planning."
+    description: "Dr. Rajdeh brings extensive experience in dermatology and is known for her meticulous approach to patient care and treatment planning."
   },
   {
     name: "Dr. Chethan Shetty",
@@ -58,7 +58,7 @@ const teamMembers = [
 const supportStaff = [
   {
     name: "Rubina",
-    role: "Senior Therapist",
+    role: "Therapist",
     expertise: "Laser Treatments, Skin Care Procedures",
     experience: "Khar Branch",
     branch: "Khar",
