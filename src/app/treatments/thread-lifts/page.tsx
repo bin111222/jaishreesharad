@@ -1,6 +1,7 @@
 "use client";
 
 import Layout from "@/components/Layout";
+import TreatmentVideo from "@/components/ui/treatment-video";
 import { motion } from "framer-motion";
 import { ArrowRight, Clock, User, Star, CheckCircle, AlertTriangle, Calendar, Activity } from "lucide-react";
 import Link from "next/link";
@@ -351,6 +352,38 @@ export default function ThreadLiftsPage() {
                   )}
                 </motion.div>
               ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Treatment Videos Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Thread Lift Treatment Videos
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Watch our thread lift procedures and see the lifting results. 
+                Our minimally invasive thread techniques provide natural-looking facial rejuvenation.
+              </p>
+            </div>
+            
+            <div className="flex justify-center">
+              <div className="max-w-2xl w-full">
+                <TreatmentVideo
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Sujata_threadlift_video.mp4"
+                  title="Thread Lift Procedure"
+                  description="Watch Dr. Jaishree perform thread lift treatment, demonstrating the minimally invasive technique for natural facial lifting and rejuvenation."
+                />
+              </div>
             </div>
           </motion.div>
         </div>

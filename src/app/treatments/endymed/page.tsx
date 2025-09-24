@@ -1,6 +1,7 @@
 "use client";
 
 import Layout from "@/components/Layout";
+import TreatmentVideo from "@/components/ui/treatment-video";
 import { motion } from "framer-motion";
 import { ArrowRight, Clock, User, Star, CheckCircle, AlertTriangle, Calendar, Zap } from "lucide-react";
 import Link from "next/link";
@@ -358,6 +359,51 @@ export default function EndyMedPage() {
                   )}
                 </motion.div>
               ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Treatment Videos Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                EndyMed Treatment Videos
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Watch our EndyMed radiofrequency procedures and see the skin tightening results. 
+                Our advanced 3DEEP technology ensures safe, effective skin rejuvenation.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Endymed_Natasha.mp4"
+                title="EndyMed Radiofrequency Treatment"
+                description="Watch Dr. Jaishree perform EndyMed treatment, demonstrating the 3DEEP technology for comprehensive skin tightening."
+                aspectRatio="portrait"
+              />
+              
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Endymed.mp4"
+                title="EndyMed Procedure Demonstration"
+                description="See the EndyMed procedure in action, showing how radiofrequency energy stimulates collagen production for natural skin tightening."
+                aspectRatio="portrait"
+              />
+              
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Sasha_s%20Endymed%20Treatment%20Reel%2021-01-2023.mp4"
+                title="EndyMed Treatment Results"
+                description="Watch the EndyMed treatment results and see the skin tightening effects achieved with this advanced radiofrequency technology."
+                aspectRatio="portrait"
+              />
             </div>
           </motion.div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Layout from "@/components/Layout";
+import TreatmentVideo from "@/components/ui/treatment-video";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Clock, User, Star, CheckCircle, AlertTriangle, Calendar, Droplets, Heart, Zap, Activity } from "lucide-react";
 import Link from "next/link";
@@ -551,6 +552,39 @@ export default function PRPTherapyPage() {
                   </motion.div>
                 </motion.div>
               ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Treatment Videos Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                PRP Therapy Treatment Videos
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Watch our PRP therapy procedures and see the natural healing results. 
+                Our platelet-rich plasma treatments use your body's own healing factors.
+              </p>
+            </div>
+            
+            <div className="flex justify-center">
+              <div className="max-w-md">
+                <TreatmentVideo
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Prp_%20procedure_new%20video.mp4"
+                  title="PRP Therapy Procedure"
+                  description="Watch Dr. Jaishree perform PRP therapy, demonstrating the platelet-rich plasma treatment process for natural healing and regeneration."
+                  aspectRatio="portrait"
+                />
+              </div>
             </div>
           </motion.div>
         </div>

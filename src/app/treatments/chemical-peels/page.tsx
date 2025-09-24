@@ -1,6 +1,7 @@
 "use client";
 
 import Layout from "@/components/Layout";
+import TreatmentVideo from "@/components/ui/treatment-video";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Clock, User, Star, CheckCircle, AlertTriangle, Calendar, Sparkles, Zap, Target } from "lucide-react";
 import Link from "next/link";
@@ -537,6 +538,66 @@ export default function ChemicalPeelsPage() {
                   </motion.div>
                 </motion.div>
               ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Treatment Videos Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Chemical Peel Treatment Videos
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Watch our chemical peel procedures and see the transformative results. 
+                Our expert techniques ensure safe, effective skin rejuvenation.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Chemical%20Peel.mp4"
+                title="Chemical Peel Procedure"
+                description="Watch Dr. Jaishree perform a comprehensive chemical peel treatment, demonstrating proper application techniques for optimal results."
+              />
+              
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/GA%20TCA%20PEEL%20Neelam.mp4"
+                title="Glycolic Acid TCA Peel"
+                description="See the GA TCA peel treatment process, showing how glycolic acid and TCA work together for deep skin rejuvenation."
+              />
+              
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Hrutuja%20Glycolic%20Peel.mp4"
+                title="Glycolic Acid Peel Treatment"
+                description="Watch the glycolic acid peel procedure, demonstrating gentle exfoliation techniques for sensitive skin types."
+              />
+              
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Hrutuja%20TCA%20Peel.mp4"
+                title="TCA Peel Treatment"
+                description="See the TCA peel procedure in action, showing how trichloroacetic acid provides deep skin resurfacing."
+              />
+              
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Neelam%20GA%20TCA%20PEEL.mp4"
+                title="Advanced GA TCA Peel"
+                description="Watch an advanced glycolic acid and TCA combination peel, demonstrating professional application techniques."
+              />
+              
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Shivani%20Mandelic%20Peel.mp4"
+                title="Mandelic Acid Peel"
+                description="See the mandelic acid peel treatment, perfect for sensitive skin and gentle exfoliation procedures."
+              />
             </div>
           </motion.div>
         </div>

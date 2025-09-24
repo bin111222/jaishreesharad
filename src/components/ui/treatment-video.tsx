@@ -9,13 +9,15 @@ interface TreatmentVideoProps {
   title: string;
   description?: string;
   className?: string;
+  aspectRatio?: 'video' | 'portrait' | 'square';
 }
 
 export default function TreatmentVideo({ 
   src, 
   title, 
   description, 
-  className = "" 
+  className = "",
+  aspectRatio = 'video'
 }: TreatmentVideoProps) {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
@@ -84,7 +86,13 @@ export default function TreatmentVideo({
     >
       <div className="relative bg-gradient-to-br from-pastel-green/20 to-pastel-pink/20 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
         {/* Video Container */}
-        <div className="relative aspect-video w-full">
+        <div className={`relative w-full ${
+          aspectRatio === 'portrait' 
+            ? 'aspect-[9/16] max-w-md mx-auto' 
+            : aspectRatio === 'square' 
+            ? 'aspect-square max-w-lg mx-auto'
+            : 'aspect-video'
+        }`}>
           <video
             ref={videoRef}
             src={src}
@@ -124,7 +132,7 @@ export default function TreatmentVideo({
           {/* Volume Control */}
           <button
             onClick={toggleMute}
-            className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors duration-200"
+            className="absolute top-4 right-4 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors duration-200 z-20"
           >
             {isMuted ? (
               <VolumeX className="w-4 h-4" />

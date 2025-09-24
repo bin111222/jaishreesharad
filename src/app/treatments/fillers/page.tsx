@@ -1,6 +1,7 @@
 "use client";
 
 import Layout from "@/components/Layout";
+import TreatmentVideo from "@/components/ui/treatment-video";
 import { motion } from "framer-motion";
 import { ArrowRight, Clock, User, Star, CheckCircle, AlertTriangle, Calendar } from "lucide-react";
 import Link from "next/link";
@@ -451,6 +452,51 @@ export default function FillersPage() {
                   )}
                 </div>
               ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Treatment Videos Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Dermal Filler Treatment Videos
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Watch our dermal filler procedures and see the natural, beautiful results. 
+                Our expert techniques ensure precise, safe injections for optimal outcomes.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Aanam%20_Chin%20filler_reel.mp4"
+                title="Chin Filler Augmentation"
+                description="Watch Dr. Jaishree perform chin filler augmentation, demonstrating precise injection techniques for enhanced jawline definition."
+                aspectRatio="portrait"
+              />
+              
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Lip%20filler_reel.mp4"
+                title="Lip Filler Enhancement"
+                description="See the lip filler procedure in action, showing how to achieve natural-looking lip enhancement with expert techniques."
+                aspectRatio="portrait"
+              />
+              
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Natasha_Undereye%20filler.mp4"
+                title="Under-Eye Filler Treatment"
+                description="Watch the under-eye filler treatment process, demonstrating how to address tear troughs and under-eye hollows safely."
+                aspectRatio="portrait"
+              />
             </div>
           </motion.div>
         </div>

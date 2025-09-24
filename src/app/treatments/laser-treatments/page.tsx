@@ -1,6 +1,7 @@
 "use client";
 
 import Layout from "@/components/Layout";
+import TreatmentVideo from "@/components/ui/treatment-video";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Clock, User, Star, CheckCircle, AlertTriangle, Calendar, Zap, Target, Eye, Heart, Shield } from "lucide-react";
 import Link from "next/link";
@@ -571,6 +572,65 @@ export default function LaserTreatmentsPage() {
                   </motion.div>
                 </motion.div>
               ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Treatment Videos Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Laser Treatment Videos
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Watch our advanced laser procedures and see the precise results. 
+                Our state-of-the-art laser technology ensures safe, effective treatments.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Laser%20hair%20removal%20reel.mp4"
+                title="Laser Hair Removal Procedure"
+                description="Watch our laser hair removal treatment in action, demonstrating safe and effective permanent hair reduction techniques."
+                aspectRatio="portrait"
+              />
+              
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Pico%20laser_Sonaakshi_Reel.mp4"
+                title="Pico Laser Treatment"
+                description="See the pico laser procedure, showing advanced laser technology for skin rejuvenation and pigmentation treatment."
+                aspectRatio="portrait"
+              />
+              
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Resurfx_yogita_Reel.mp4"
+                title="Resurfx Laser Treatment"
+                description="Watch the Resurfx laser procedure, demonstrating fractional laser technology for skin resurfacing and rejuvenation."
+                aspectRatio="portrait"
+              />
+              
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Resurfx%20video_Roshmi.mp4"
+                title="Resurfx Treatment Results"
+                description="See the Resurfx treatment results, showing the skin improvement and rejuvenation achieved with this advanced laser technology."
+                aspectRatio="portrait"
+              />
+              
+              <TreatmentVideo
+                src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Sonam%20PhotoFacial.mp4?updatedAt=1758696058261"
+                title="PhotoFacial Laser Treatment"
+                description="Watch the PhotoFacial procedure, demonstrating IPL laser technology for skin rejuvenation and pigmentation correction."
+                aspectRatio="portrait"
+              />
             </div>
           </motion.div>
         </div>

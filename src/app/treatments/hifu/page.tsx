@@ -1,6 +1,7 @@
 "use client";
 
 import Layout from "@/components/Layout";
+import TreatmentVideo from "@/components/ui/treatment-video";
 import { motion } from "framer-motion";
 import { ArrowRight, Clock, User, Star, CheckCircle, AlertTriangle, Calendar, Zap } from "lucide-react";
 import Link from "next/link";
@@ -358,6 +359,39 @@ export default function HIFUPage() {
                   )}
                 </motion.div>
               ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Treatment Videos Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-12"
+          >
+            <div className="text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                HIFU Treatment Videos
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Watch our HIFU skin tightening procedures and see the lifting results. 
+                Our focused ultrasound technology provides non-invasive skin tightening.
+              </p>
+            </div>
+            
+            <div className="flex justify-center">
+              <div className="max-w-md">
+                <TreatmentVideo
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/videos/Nisha_HIFU_Procedure.mp4"
+                  title="HIFU Skin Tightening Procedure"
+                  description="Watch Dr. Jaishree perform HIFU treatment, demonstrating focused ultrasound technology for non-invasive skin tightening and lifting."
+                  aspectRatio="portrait"
+                />
+              </div>
             </div>
           </motion.div>
         </div>
