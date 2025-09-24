@@ -50,8 +50,8 @@ export default function Footer() {
                 <div className="space-y-2">
                   <div className="flex items-baseline space-x-3">
                     <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
-                    <a href="tel:+912241819000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      +91 22 4181 9000 (Landline)
+                    <a href="tel:+912224000000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      +91 22 2400 0000 (Landline)
                     </a>
                   </div>
                   <div className="flex items-baseline space-x-3">
@@ -75,8 +75,8 @@ export default function Footer() {
                 <div className="space-y-2">
                   <div className="flex items-baseline space-x-3">
                     <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
-                    <a href="tel:+912242832000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      +91 22 4283 2000 (Landline)
+                    <a href="tel:+912227800000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      +91 22 2780 0000 (Landline)
                     </a>
                   </div>
                   <div className="flex items-baseline space-x-3">

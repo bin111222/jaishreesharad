@@ -9,7 +9,7 @@ import { ImageAutoSlider } from "@/components/ui/image-auto-slider";
 
 const credentials = [
   {
-    title: "MBBS",
+    title: "MBBS, DDV",
     institution: "Mahatma Gandhi Institute of Medical Sciences, Sevagram",
     year: "1990-1995",
     note: "MCI Registration: 79805"
@@ -20,7 +20,7 @@ const credentials = [
     year: "1996-1997"
   },
   {
-    title: "Postgraduate in Dermatology",
+    title: "Postgraduate Diploma in Dermatology (DDV)",
     institution: "Dr. Balabhai Nanavati Hospital & Medical Research Centre, Mumbai",
     year: "1997-1999"
   },
@@ -331,7 +331,7 @@ export default function AboutPage() {
                 Meet Dr. Jaishree Sharad
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed">
-                A globally renowned <strong>cosmetic dermatologist</strong>, medical director of <strong>Skinfinitii Aesthetic Skin & Laser Clinic (Mumbai)</strong>, <strong>TEDx speaker</strong>, <strong>Author</strong>, and a sought-after <strong>international speaker</strong>. Known as the dermatologist to Bollywood and business elites.
+                A globally renowned <strong>cosmetic dermatologist</strong>, medical director of <strong>Skinfinitii Aesthetic Skin & Laser Clinic (Mumbai)</strong>, and a sought-after <strong>international speaker</strong>. Known as the dermatologist to Bollywood and business elites.
               </p>
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-1">
