@@ -43,26 +43,8 @@ const awardsData = [
     category: "Trust",
     color: "from-rose-400 to-red-500"
   },
-  {
-    id: 5,
-    title: "Innovation in Dermatology",
-    organization: "Dermatology Society",
-    year: "2022",
-    description: "Pioneering new treatment approaches and technologies",
-    imagePlaceholder: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/brandlogos/cdsi.webp",
-    category: "Research",
-    color: "from-emerald-400 to-teal-500"
-  },
-  {
-    id: 6,
-    title: "Celebrity Dermatologist",
-    organization: "Bollywood Awards",
-    year: "2023",
-    description: "Trusted by leading celebrities and public figures",
-    imagePlaceholder: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/brandlogos/jaishree.webp",
-    category: "Prestige",
-    color: "from-purple-400 to-violet-500"
-  }
+  
+
 ];
 
 const containerVariants = {
