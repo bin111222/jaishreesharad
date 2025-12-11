@@ -289,51 +289,15 @@ const socialMediaPresence = [
 const featuredVideos = [
   {
     id: 1,
-    title: "Stop Wasting Money on Skincare! Do THIS Instead",
-    description: "Expert advice on smart skincare spending",
-    thumbnail: "https://img.youtube.com/vi/iVmnobqE3G8/maxresdefault.jpg",
-    videoId: "iVmnobqE3G8",
-    category: "Skincare Tips",
-    duration: "8:45"
+    title: "Masoom Minawala - Why Your Pigmentation Never Goes Away",
+    description: "Watch Dr. Jaishree's latest insights and expertise",
+    thumbnail: "https://img.youtube.com/vi/CIMz59wF4Mk/maxresdefault.jpg",
+    videoId: "CIMz59wF4Mk",
+    category: "Featured",
+    duration: "1:00:00"
   },
   {
     id: 2,
-    title: "The Changing Paradigms of Skincare in India",
-    description: "Dr. Jaishree discusses evolving skincare trends",
-    thumbnail: "https://img.youtube.com/vi/Xj5VJNHrSCc/maxresdefault.jpg",
-    videoId: "Xj5VJNHrSCc",
-    category: "Expert Talk",
-    duration: "12:30"
-  },
-  {
-    id: 3,
-    title: "TEDx – The Mind–Skin Connection: Healing from Within",
-    description: "Groundbreaking TEDx talk on mind-skin relationship",
-    thumbnail: "https://img.youtube.com/vi/1BCr1LNA10U/maxresdefault.jpg",
-    videoId: "1BCr1LNA10U",
-    category: "TEDx Talk",
-    duration: "18:22"
-  },
-  {
-    id: 4,
-    title: "Don't Do This With Your Skin!",
-    description: "Common skincare mistakes to avoid",
-    thumbnail: "https://img.youtube.com/vi/SMaSfrrBGc8/maxresdefault.jpg",
-    videoId: "SMaSfrrBGc8",
-    category: "What's Your Mantra?",
-    duration: "6:15"
-  },
-  {
-    id: 5,
-    title: "Bollywood Celebrity Skin Care Secrets",
-    description: "Exclusive insights into celebrity skincare routines",
-    thumbnail: "https://img.youtube.com/vi/DCofgfHdBUI/maxresdefault.jpg",
-    videoId: "DCofgfHdBUI",
-    category: "Celebrity Secrets",
-    duration: "10:45"
-  },
-  {
-    id: 6,
     title: "Figuring Out Podcast – Skin Care Secrets, Fillers, Botox, Acne & Sunscreen",
     description: "Comprehensive discussion on popular treatments",
     thumbnail: "https://img.youtube.com/vi/g93IhHW600U/maxresdefault.jpg",
@@ -342,7 +306,61 @@ const featuredVideos = [
     duration: "45:20"
   },
   {
+    id: 3,
+    title: "Dr. Jaishree Sharad - Expert Insights",
+    description: "Watch Dr. Jaishree's expert insights and expertise",
+    thumbnail: "https://img.youtube.com/vi/SUVB4uTtP1Q/maxresdefault.jpg",
+    videoId: "SUVB4uTtP1Q",
+    category: "Featured",
+    duration: "0:00"
+  },
+  {
+    id: 4,
+    title: "Stop Wasting Money on Skincare! Do THIS Instead",
+    description: "Expert advice on smart skincare spending",
+    thumbnail: "https://img.youtube.com/vi/iVmnobqE3G8/maxresdefault.jpg",
+    videoId: "iVmnobqE3G8",
+    category: "Skincare Tips",
+    duration: "8:45"
+  },
+  {
+    id: 5,
+    title: "The Changing Paradigms of Skincare in India",
+    description: "Dr. Jaishree discusses evolving skincare trends",
+    thumbnail: "https://img.youtube.com/vi/Xj5VJNHrSCc/maxresdefault.jpg",
+    videoId: "Xj5VJNHrSCc",
+    category: "Expert Talk",
+    duration: "12:30"
+  },
+  {
+    id: 6,
+    title: "TEDx – The Mind–Skin Connection: Healing from Within",
+    description: "Groundbreaking TEDx talk on mind-skin relationship",
+    thumbnail: "https://img.youtube.com/vi/1BCr1LNA10U/maxresdefault.jpg",
+    videoId: "1BCr1LNA10U",
+    category: "TEDx Talk",
+    duration: "18:22"
+  },
+  {
     id: 7,
+    title: "Don't Do This With Your Skin!",
+    description: "Common skincare mistakes to avoid",
+    thumbnail: "https://img.youtube.com/vi/SMaSfrrBGc8/maxresdefault.jpg",
+    videoId: "SMaSfrrBGc8",
+    category: "What's Your Mantra?",
+    duration: "6:15"
+  },
+  {
+    id: 8,
+    title: "Bollywood Celebrity Skin Care Secrets",
+    description: "Exclusive insights into celebrity skincare routines",
+    thumbnail: "https://img.youtube.com/vi/DCofgfHdBUI/maxresdefault.jpg",
+    videoId: "DCofgfHdBUI",
+    category: "Celebrity Secrets",
+    duration: "10:45"
+  },
+  {
+    id: 9,
     title: "Skincare का सबसे बड़ा SCAM | Chehre Ke Daag Dhabbe | Dr. Jaishree",
     description: "Biggest scams in skincare and how to avoid them",
     thumbnail: "https://img.youtube.com/vi/-nLWeu2K0lE/maxresdefault.jpg",
