@@ -267,196 +267,33 @@ export default function Header() {
                     
                     {/* Treatment Categories */}
                     <div className="space-y-1">
-                      {/* Injectables */}
-                      <div>
-                        <button
-                          onClick={() => setActiveDropdown(activeDropdown === 'Injectables' ? null : 'Injectables')}
-                          className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-pastel-pink hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                      {[
+                        { name: 'Anti-Ageing', href: '/treatments?category=anti-ageing' },
+                        { name: 'Acne & Acne Scars', href: '/treatments?category=acne-acne-scars' },
+                        { name: 'Pigmentation', href: '/treatments?category=pigmentation' },
+                        { name: 'Skin & Glow Treatments', href: '/treatments?category=skin-glow-treatments' },
+                        { name: 'Hair Treatments', href: '/treatments?category=hair-treatments' },
+                        { name: 'Intimate Area Treatments', href: '/treatments?category=intimate-area-treatments' },
+                        { name: 'Body Contouring', href: '/treatments?category=body-contouring' }
+                      ].map((category) => (
+                        <Link
+                          key={category.name}
+                          href={category.href}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:text-pastel-pink hover:bg-gray-50 rounded-lg transition-colors duration-200"
                         >
-                          <div className="flex items-center space-x-3">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
-                            </svg>
-                            <span className="font-medium">Injectables</span>
-                          </div>
-                          <svg className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'Injectables' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
-                        </button>
-                        <AnimatePresence>
-                          {activeDropdown === 'Injectables' && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: "auto" }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.1 }}
-                              className="pl-12 space-y-1"
-                            >
-                                                             {[
-                                 { name: 'Botox', href: '/treatments/botox' },
-                                 { name: 'Dermal Fillers', href: '/treatments/fillers' },
-                                 { name: 'Liquid Facelift', href: '/treatments/liquid-facelift' },
-                                 { name: 'Thread Lifts', href: '/treatments/thread-lifts' },
-                                 { name: 'Non-Surgical Nose', href: '/treatments/non-surgical-nose' },
-                                 { name: 'Skin Boosters', href: '/treatments/skin-boosters' },
-                                 { name: 'Facial Contouring', href: '/treatments/facial-contouring' }
-                               ].map((treatment) => (
-                                 <Link
-                                   key={treatment.name}
-                                   href={treatment.href}
-                                   onClick={() => setIsMobileMenuOpen(false)}
-                                   className="block px-4 py-2 text-sm text-gray-600 hover:text-pastel-pink transition-colors duration-200"
-                                 >
-                                   {treatment.name}
-                                 </Link>
-                               ))}
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-
-                      {/* Skin Treatments */}
-                      <div>
-                        <button
-                          onClick={() => setActiveDropdown(activeDropdown === 'Skin' ? null : 'Skin')}
-                          className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-pastel-pink hover:bg-gray-50 rounded-lg transition-colors duration-200"
-                        >
-                          <div className="flex items-center space-x-3">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m-9 0h10m-10 0a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2" />
-                            </svg>
-                            <span className="font-medium">Skin Treatments</span>
-                          </div>
-                          <svg className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'Skin' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </button>
-                        <AnimatePresence>
-                          {activeDropdown === 'Skin' && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: "auto" }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.1 }}
-                              className="pl-12 space-y-1"
-                            >
-                                                             {[
-                                 { name: 'Chemical Peels', href: '/treatments/chemical-peels' },
-                                 { name: 'Microdermabrasion', href: '/treatments/microdermabrasion' },
-                                 { name: 'Pigmentation', href: '/treatments/pigmentation' },
-                                 { name: 'Acne Scars', href: '/treatments/acne-scars' },
-                                 { name: 'Laser Treatments', href: '/treatments/laser-treatments' },
-                                 { name: 'Anti-Aging', href: '/treatments/anti-aging' },
-                                 { name: 'Skin Treatments', href: '/treatments/skin' }
-                               ].map((treatment) => (
-                                 <Link
-                                   key={treatment.name}
-                                   href={treatment.href}
-                                   onClick={() => setIsMobileMenuOpen(false)}
-                                   className="block px-4 py-2 text-sm text-gray-600 hover:text-pastel-pink transition-colors duration-200"
-                                 >
-                                   {treatment.name}
-                                 </Link>
-                               ))}
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-
-                      {/* Body Contouring */}
-                      <div>
-                        <button
-                          onClick={() => setActiveDropdown(activeDropdown === 'Body' ? null : 'Body')}
-                          className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-pastel-pink hover:bg-gray-50 rounded-lg transition-colors duration-200"
-                        >
-                          <div className="flex items-center space-x-3">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                            <span className="font-medium">Body Contouring</span>
-                          </div>
-                          <svg className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'Body' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </button>
-                        <AnimatePresence>
-                          {activeDropdown === 'Body' && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: "auto" }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.1 }}
-                              className="pl-12 space-y-1"
-                            >
-                                                             {[
-                                 { name: 'Cryolipolysis', href: '/treatments/cryolipolysis' },
-                                 { name: 'Exilis', href: '/treatments/exilis' },
-                                 { name: 'EndyMed', href: '/treatments/endymed' },
-                                 { name: 'HIFU', href: '/treatments/hifu' },
-                                 { name: 'Body Treatments', href: '/treatments/body' }
-                               ].map((treatment) => (
-                                 <Link
-                                   key={treatment.name}
-                                   href={treatment.href}
-                                   onClick={() => setIsMobileMenuOpen(false)}
-                                   className="block px-4 py-2 text-sm text-gray-600 hover:text-pastel-pink transition-colors duration-200"
-                                 >
-                                   {treatment.name}
-                                 </Link>
-                               ))}
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
-
-                      {/* Specialized */}
-                      <div>
-                        <button
-                          onClick={() => setActiveDropdown(activeDropdown === 'Specialized' ? null : 'Specialized')}
-                          className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:text-pastel-pink hover:bg-gray-50 rounded-lg transition-colors duration-200"
-                        >
-                          <div className="flex items-center space-x-3">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                            </svg>
-                            <span className="font-medium">Specialized</span>
-                          </div>
-                          <svg className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'Specialized' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </button>
-                        <AnimatePresence>
-                          {activeDropdown === 'Specialized' && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: "auto" }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.1 }}
-                              className="pl-12 space-y-1"
-                            >
-                                                             {[
-                                 { name: 'PRP Therapy', href: '/treatments/prp-therapy' },
-                                 { name: 'Bridal Care', href: '/treatments/bridal' }
-                               ].map((treatment) => (
-                                 <Link
-                                   key={treatment.name}
-                                   href={treatment.href}
-                                   onClick={() => setIsMobileMenuOpen(false)}
-                                   className="block px-4 py-2 text-sm text-gray-600 hover:text-pastel-pink transition-colors duration-200"
-                                 >
-                                   {treatment.name}
-                                 </Link>
-                               ))}
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </div>
+                          <span className="font-medium">{category.name}</span>
+                        </Link>
+                      ))}
 
                       {/* View All Treatments */}
                       <Link
                         href="/treatments"
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className="flex items-center space-x-3 px-4 py-3 text-pastel-pink hover:bg-pastel-pink/10 rounded-lg transition-colors duration-200"
+                        className="flex items-center space-x-3 px-4 py-3 text-pastel-pink hover:bg-pastel-pink/10 rounded-lg transition-colors duration-200 border-t border-gray-200 mt-2 pt-3"
                       >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

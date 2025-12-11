@@ -5,25 +5,12 @@ import TreatmentCategoryModal from "@/components/ui/treatment-category-modal";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { useState, useEffect, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useState } from "react";
 import { treatmentCategories, surgicalTreatments, TreatmentCategory } from "@/data/treatments-structure";
 
-function TreatmentsPageContent() {
-  const searchParams = useSearchParams();
+export default function TreatmentsPage() {
   const [selectedCategory, setSelectedCategory] = useState<TreatmentCategory | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    const categoryParam = searchParams.get('category');
-    if (categoryParam) {
-      const category = treatmentCategories.find(cat => cat.id === categoryParam);
-      if (category) {
-        setSelectedCategory(category);
-        setIsModalOpen(true);
-      }
-    }
-  }, [searchParams]);
 
   const handleCategoryClick = (category: TreatmentCategory) => {
     setSelectedCategory(category);
@@ -199,23 +186,6 @@ function TreatmentsPageContent() {
         onClose={handleCloseModal}
       />
     </Layout>
-  );
-}
-
-export default function TreatmentsPage() {
-  return (
-    <Suspense fallback={
-      <Layout>
-        <div className="min-h-screen flex items-center justify-center">
-          <div className="text-center">
-            <div className="w-16 h-16 border-4 border-pastel-pink border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-            <p className="text-gray-600">Loading treatments...</p>
-          </div>
-        </div>
-      </Layout>
-    }>
-      <TreatmentsPageContent />
-    </Suspense>
   );
 }
 
