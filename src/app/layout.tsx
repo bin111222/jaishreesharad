@@ -53,10 +53,11 @@ export const metadata: Metadata = {
     siteName: "Skinfinitii",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%201.webp",
         width: 1200,
-        height: 630,
+        height: 1680,
         alt: "Dr. Jaishree Sharad - Renowned Dermatologist",
+        type: "image/webp",
       },
     ],
   },
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Skinfinitii - Aesthetic Skin & Laser Clinic | Dr. Jaishree Sharad",
     description: "Skinfinitii - Leading aesthetic skin & laser clinic in Mumbai. Expert in injectables, skin treatments, and non-surgical procedures.",
-    images: ["/og-image.jpg"],
+    images: ["https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%201.webp"],
   },
   robots: {
     index: true,
