@@ -333,3 +333,5 @@ treatments.forEach(treatment => {
 
 console.log(`\n🎉 Successfully created ${treatments.length} treatment pages!`);
 
+
+
