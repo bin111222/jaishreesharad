@@ -26,16 +26,6 @@ const teamMembers = [
     description: "Dr. Saujanya leads the Vashi branch with expertise in aesthetic procedures and is committed to delivering exceptional patient care."
   },
   {
-    name: "Dr. Fauzia Siddique",
-    role: "Cosmetologist",
-
-    expertise: "Patient Care, Pre & Post-treatment",
-    experience: "10+ years",
-    branch: "Khar Branch",
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/5.webp",
-    description: "Dr. Siddique works closely with the team to ensure optimal patient care and manages pre and post-treatment protocols with precision."
-  },
-  {
     name: "Dr. Drishti Rajdeh",
     role: "Assistant Dermatologist",
     credentials: "MBBS, MD (Dermatology)",
@@ -52,6 +42,15 @@ const teamMembers = [
     branch: "Khar Branch and KEM Hospital",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/5.webp",
     description: "Dr. Shetty specializes in clinical dermatology and provides comprehensive skin analysis and treatment recommendations for patients."
+  },
+  {
+    name: "Dr. Janhvi Patel",
+    role: "Dermatologist",
+    credentials: "MBBS, MD (Dermatology)",
+    expertise: "Aesthetic & Clinical Dermatology",
+    branch: "Khar Branch",
+    image: "", // Placeholder will be used
+    description: "Dr. Janhvi Patel joins the team with a focus on comprehensive dermatological care and aesthetic treatments."
   }
 ];
 
@@ -65,15 +64,15 @@ const supportStaff = [
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/5.webp"
   },
   {
-    name: "Maheen",
+    name: "Renu",
     role: "Therapist",
-    expertise: "Aesthetic Treatments, Patient Care",
+    expertise: "Skin Care, Patient Support",
     experience: "Khar Branch",
     branch: "Khar",
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/5.webp"
+    image: "" // No image needed
   },
   {
-    name: "Pooja Gurav",
+    name: "Puja",
     role: "Senior Therapist",
     expertise: "Laser Safety, Treatment Protocols",
     experience: "Vashi Branch",
@@ -81,20 +80,12 @@ const supportStaff = [
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/pooja.webp"
   },
   {
-    name: "Snehal Gole",
+    name: "Snehal",
     role: "Therapist",
     expertise: "Skin Care, Patient Support",
     experience: "Vashi Branch",
     branch: "Vashi",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/snehal.webp"
-  },
-  {
-    name: "Nageshwari Wanga",
-    role: "Therapist",
-    expertise: "Treatment Support, Hygiene Standards",
-    experience: "Vashi Branch",
-    branch: "Vashi",
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/nageshwari.webp"
   }
 ];
 

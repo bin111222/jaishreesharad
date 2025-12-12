@@ -294,7 +294,7 @@ const featuredVideos = [
     thumbnail: "https://img.youtube.com/vi/CIMz59wF4Mk/maxresdefault.jpg",
     videoId: "CIMz59wF4Mk",
     category: "Featured",
-    duration: "1:00:00"
+    duration: "50:00"
   },
   {
     id: 2,
@@ -312,7 +312,7 @@ const featuredVideos = [
     thumbnail: "https://img.youtube.com/vi/SUVB4uTtP1Q/maxresdefault.jpg",
     videoId: "SUVB4uTtP1Q",
     category: "Featured",
-    duration: "0:00"
+    duration: "50:00"
   },
   {
     id: 4,

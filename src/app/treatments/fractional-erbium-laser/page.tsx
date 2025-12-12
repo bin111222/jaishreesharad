@@ -173,13 +173,23 @@ export default function FractionalErbiumLaserPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-square flex items-center justify-center overflow-hidden mb-6">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white text-4xl">✨</span>
-                  </div>
-                  <p className="text-gray-600 font-medium">Fractional Erbium Laser</p>
-                </div>
+            <div className="bg-gradient-to-br from-pastel-green/30 to-pastel-pink/30 rounded-2xl p-8 aspect-square flex items-center justify-center overflow-hidden mb-6">
+                <img 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/fractional-erbium-laser/fractional-erbium-laser.webp"
+                  alt="Fractional Erbium Laser Treatment - Dr. Jaishree Sharad"
+                  className="w-full h-full object-cover rounded-xl"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML = `
+                      <div class="text-center">
+                        <div class="w-24 h-24 bg-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4">
+                          <span class="text-white text-4xl">✨</span>
+                        </div>
+                        <p class="text-gray-600 font-medium">Fractional Erbium Laser</p>
+                      </div>
+                    `;
+                  }}
+                />
               </div>
             </motion.div>
           </div>
