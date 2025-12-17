@@ -10,7 +10,7 @@ const teamMembers = [
     role: "Founder & Medical Director",
     credentials: "MBBS, DDV, IFAAD, International Society for Dermatologic and Aesthetic Surgery, Fellowship in Cosmetic Dermatology (USA), Fellowship in Lasers (Bangkok)",
     expertise: "Cosmetic Dermatology, Anti-aging, Aesthetic Dermatology",
-    experience: "25+ years",
+    experience: "26+ years",
     branch: "Khar and Vashi Branch",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/team/jaishree.webp",
     description: "Internationally renowned cosmetic dermatologist of India with international training and recognition. Board Member of ISDS, International Mentor for ASDS, and author of four bestselling books."

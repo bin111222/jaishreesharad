@@ -105,7 +105,7 @@ const circularTestimonials = [
 ];
 
 const stats = [
-  { number: "25+", label: "Years Experience", icon: Award },
+  { number: "26+", label: "Years Experience", icon: Award },
   { number: "20,000+", label: "Happy Patients", icon: Users },
   { number: "4", label: "Published Books", icon: BookOpen },
   { number: "500+", label: "Global Lectures", icon: Star }
@@ -223,7 +223,7 @@ const featuredVideos = [
 const whyChooseUs = [
   {
     icon: "👩‍⚕️",
-    title: "25+ Years Experience",
+    title: "26+ Years Experience",
     description: "Leading expert in aesthetic dermatology"
   },
   {
@@ -370,7 +370,7 @@ export default function HomePage() {
                 className="flex flex-wrap gap-8 pt-4"
               >
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-800">25+</div>
+                  <div className="text-3xl font-bold text-gray-800">26+</div>
                   <div className="text-sm text-gray-600">Years Experience</div>
                 </div>
                 <div className="text-center">
