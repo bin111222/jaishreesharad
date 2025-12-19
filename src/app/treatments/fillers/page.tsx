@@ -55,31 +55,38 @@ const aftercare = [
 const treatmentAreas = [
   {
     name: "Lip Augmentation",
-    description: "Thin lips can be given a sexy pout with fillers. When injected precisely along the lip margins and body, the lips become plumper yet natural. Results last ~8–10 months.",
+    description: "Dr. Jaishree’s approach to lip enhancement with hyaluronic acid fillers focuses on preserving the natural lip shape while enhancing hydration, definition, and youthful freshness without compromising softness or natural movement. The result is elegant, well-balanced lips with no duck lips and no exaggerated volume.",
     duration: "30-45 min",
     results: "8-10 months",
     benefit: "Natural-looking fuller lips"
   },
   {
-    name: "Cheek Enhancement",
-    description: "Adding high cheekbones with fillers can create a prominent, glamorous contour. Restores lost volume and provides a natural lift to the midface.",
+    name: "Chin & Jaw Contouring",
+    description: "Chin and jawline enhancement can be achieved with hyaluronic acid fillers. In men, Dr. Jaishree focuses on creating a square jawline and a strong, robust chin, enhancing structure and projection for a more masculine profile. In women, a small or retruded chin can be subtly improved to restore balance and enhance the facial profile, while maintaining softness, femininity, and natural contours without a sharp or artificial look. This gender-specific approach ensures natural, well-proportioned results never overdone.",
     duration: "45-60 min",
     results: "12-18 months",
-    benefit: "Enhanced facial structure"
+    benefit: "Better facial proportions"
   },
   {
     name: "Tear Trough (Under-Eye)",
-    description: "Sunken under-eyes (tear troughs), puffiness or dark circles can be treated with soft fillers to lift the sunken area and reduce shadows.",
+    description: "Do people often say you look tired or not fresh, even when you feel fine? Sunken or hollow under-eyes can cast shadows, making the eyes appear tired or dark.A small amount of hyaluronic acid filler, placed precisely, can soften hollows and restore a brighter, rested, and refreshed appearance without puffiness or an artificial look. Less is more is Dr Jaishree's mantra.",
     duration: "30-45 min",
     results: "9-12 months",
     benefit: "Reduced dark circles and tired appearance"
   },
   {
-    name: "Nasolabial Folds",
-    description: "Deep laugh lines (nasolabial folds) can be smoothed with strategic filler placement to restore volume and reduce the appearance of lines.",
+    name: "Cheek & Smile Lines",
+    description: "Loss of cheek support can make the face look gaunt and accentuate laugh lines. Dr. Jaishree restores strategic cheek support with hyaluronic acid fillers to soften laugh lines and rebalance the face without apple cheeks or excess volume. The result is a naturally refreshed, well-supported appearance.",
+    duration: "45-60 min",
+    results: "12-18 months",
+    benefit: "Enhanced structure & smoother lines"
+  },
+  {
+    name: "Forehead & Temples",
+    description: "Restore volume to hollow temples and smooth forehead contours to balance facial proportions and provide a subtle brow lift.",
     duration: "30-45 min",
     results: "12-18 months",
-    benefit: "Smoother smile lines"
+    benefit: "Balanced upper face"
   },
   {
     name: "Non-Surgical Nose Job",
@@ -87,13 +94,6 @@ const treatmentAreas = [
     duration: "30-45 min",
     results: "12-18 months",
     benefit: "Improved nose shape without surgery"
-  },
-  {
-    name: "Chin & Jaw Contouring",
-    description: "Chin augmentation and jaw contouring can enhance facial proportions and create a more defined jawline for a balanced appearance.",
-    duration: "45-60 min",
-    results: "12-18 months",
-    benefit: "Better facial proportions"
   }
 ];
 
