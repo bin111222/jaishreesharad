@@ -10,7 +10,7 @@ const teamMembers = [
     role: "Founder & Medical Director",
     credentials: "MBBS, DDV, IFAAD, International Society for Dermatologic and Aesthetic Surgery, Fellowship in Cosmetic Dermatology (USA), Fellowship in Lasers (Bangkok)",
     expertise: "Cosmetic Dermatology, Anti-aging, Aesthetic Dermatology",
-    experience: "25+ years",
+    experience: "26 years",
     branch: "Khar and Vashi Branch",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/team/jaishree.webp",
     description: "Internationally renowned cosmetic dermatologist of India with international training and recognition. Board Member of ISDS, International Mentor for ASDS, and author of four bestselling books."
@@ -24,16 +24,6 @@ const teamMembers = [
     branch: "Vashi Branch",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/team/saujanya.webp",
     description: "Dr. Saujanya leads the Vashi branch with expertise in aesthetic procedures and is committed to delivering exceptional patient care."
-  },
-  {
-    name: "Dr. Fauzia Siddique",
-    role: "Cosmetologist",
-
-    expertise: "Patient Care, Pre & Post-treatment",
-    experience: "10+ years",
-    branch: "Khar Branch",
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/5.webp",
-    description: "Dr. Siddique works closely with the team to ensure optimal patient care and manages pre and post-treatment protocols with precision."
   },
   {
     name: "Dr. Drishti Rajdeh",
@@ -52,6 +42,15 @@ const teamMembers = [
     branch: "Khar Branch and KEM Hospital",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/5.webp",
     description: "Dr. Shetty specializes in clinical dermatology and provides comprehensive skin analysis and treatment recommendations for patients."
+  },
+  {
+    name: "Dr. Janhvi Patel",
+    role: "Assistant Dermatologist",
+    credentials: "MBBS, MD (Dermatology)",
+    expertise: "Aesthetic Dermatology",
+    branch: "Khar Branch",
+    image: "",
+    description: "Joining the team on January 1st to provide expert dermatological care and aesthetic treatments."
   }
 ];
 
@@ -60,41 +59,25 @@ const supportStaff = [
     name: "Rubina",
     role: "Therapist",
     expertise: "Laser Treatments, Skin Care Procedures",
-    experience: "Khar Branch",
     branch: "Khar",
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/5.webp"
   },
   {
-    name: "Maheen",
+    name: "Renu",
     role: "Therapist",
     expertise: "Aesthetic Treatments, Patient Care",
-    experience: "Khar Branch",
     branch: "Khar",
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/5.webp"
   },
   {
-    name: "Pooja Gurav",
-    role: "Senior Therapist",
-    expertise: "Laser Safety, Treatment Protocols",
-    experience: "Vashi Branch",
-    branch: "Vashi",
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/pooja.webp"
-  },
-  {
-    name: "Snehal Gole",
+    name: "Snehal",
     role: "Therapist",
     expertise: "Skin Care, Patient Support",
-    experience: "Vashi Branch",
     branch: "Vashi",
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/snehal.webp"
   },
   {
-    name: "Nageshwari Wanga",
+    name: "Puja",
     role: "Therapist",
     expertise: "Treatment Support, Hygiene Standards",
-    experience: "Vashi Branch",
     branch: "Vashi",
-    image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/staff/nageshwari.webp"
   }
 ];
 
@@ -374,28 +357,10 @@ export default function TeamPage() {
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   className="bg-white rounded-xl p-6 text-center hover:shadow-md transition-all duration-300"
                 >
-                  <div className="w-36 h-36 bg-gradient-to-br from-pastel-green to-pastel-pink rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
-                    <img 
-                      src={staff.image}
-                      alt={staff.name}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.currentTarget.style.display = 'none';
-                        e.currentTarget.parentElement!.innerHTML = `
-                          <div class="w-full h-full bg-gradient-to-br from-pastel-green to-pastel-pink rounded-full flex items-center justify-center">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                            </svg>
-                          </div>
-                        `;
-                      }}
-                    />
-                  </div>
                   <h3 className="font-semibold text-gray-800 mb-2">{staff.name}</h3>
                   <p className="text-pastel-pink text-sm font-medium mb-1">{staff.role}</p>
                   <p className="text-blue-600 text-xs font-medium mb-2">{staff.branch} Branch</p>
                   <p className="text-sm text-gray-600 mb-2">{staff.expertise}</p>
-                  <p className="text-xs text-gray-500">{staff.experience}</p>
                 </motion.div>
               ))}
             </div>

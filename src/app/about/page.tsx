@@ -237,7 +237,8 @@ const editorialBoard = [
   "Journal of Cutaneous and Aesthetic Surgery",
   "Dermatologic Therapy",
   "Annals of Dermatology",
-  "Journal of Applied Cosmetology"
+  "Journal of Applied Cosmetology",
+  "European Medical Journal"
 ];
 
 const pastPositions = [
@@ -330,9 +331,20 @@ export default function AboutPage() {
               <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-800">
                 Meet Dr. Jaishree Sharad
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                A globally renowned <strong>cosmetic dermatologist</strong>, medical director of <strong>Skinfinitii Aesthetic Skin & Laser Clinic (Mumbai)</strong>, and a sought-after <strong>international speaker</strong>. Known as the dermatologist to Bollywood and business elites.
-              </p>
+              <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
+                <p>
+                  Dr. Jaishree Sharad is one of India’s most celebrated and leading cosmetic dermatologists, based in Mumbai, with over 26 years of experience in aesthetic and clinical dermatology. She is globally acclaimed for her expertise, innovation, and ethical, science-driven approach to skin health and anti-ageing medicine.
+                </p>
+                <p>
+                  Over the years, Dr. Jaishree Sharad has touched the lives of thousands—from Bollywood personalities, sports professionals, and political leaders to individuals from all walks of life. Her work is guided by a strong philosophy of helping people feel confident in their own skin, while bringing refined, evidence-based cosmetic dermatology to India.
+                </p>
+                <p>
+                  She is an international trainer in anti-ageing treatments, including Botox and dermal fillers, and has delivered over 500 lectures at national and international forums. She has also conducted more than 300 hands-on workshops, mentoring dermatologists across the world.
+                </p>
+                <p>
+                  A TEDx speaker and author, Dr. Jaishree Sharad is known for her ability to bridge science, aesthetics, and human psychology, making complex dermatological concepts accessible and meaningful to both professionals and the public.
+                </p>
+              </div>
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-1">
                   <Star className="w-5 h-5 text-yellow-400 fill-current" />
@@ -341,7 +353,7 @@ export default function AboutPage() {
                 </div>
                 <div className="w-px h-6 bg-gray-300" />
                 <div className="text-gray-700">
-                  <span className="font-semibold">25+</span> years experience
+                  <span className="font-semibold">26</span> years experience
                 </div>
               </div>
             </motion.div>
@@ -354,7 +366,7 @@ export default function AboutPage() {
             >
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
                 <img 
-                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/10.webp" 
+                  src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/12.webp" 
                   alt="Dr. Jaishree Sharad - Professional Portrait" 
                   className="w-full h-full object-cover"
                 />
@@ -455,34 +467,10 @@ export default function AboutPage() {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               Education & Credentials
             </h2>
-            <p className="text-xl text-gray-600">
-              Extensive training and qualifications in dermatology and aesthetic medicine
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Dr Jaishree completed her MBBS in 1995 from the Mahatma Gandhi Institute of Medical Sciences (MGIMS), Sevagram, followed by a postgraduate degree in Dermatology in 1999 from Mumbai. To further advance her expertise, she pursued a fellowship in Laser Surgery from Bangkok and a fellowship in Cosmetic Dermatology from the USA. She has trained under some of the world’s most eminent leaders in aesthetic dermatology, including Dr. Steve Mandy, Dr. Zoe Draelos, Dr. Leslie Baumann, Dr. Rebecca Fitzgerald (USA), Dr. Gerhard Sattler (Germany), Dr Niwat Polnikorn ( Bangkok), Dr Satish Savant ( Mumbai). Over the past 26 years, she has remained deeply committed to continuous learning, regularly attending international workshops every year to ensure her practice reflects the most current and globally accepted standards of dermatology.
             </p>
           </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {credentials.map((credential, index) => (
-              <motion.div
-                key={credential.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-lg text-center"
-              >
-                <div className="w-16 h-16 bg-pastel-green rounded-full flex items-center justify-center mx-auto mb-6">
-                  <GraduationCap className="w-8 h-8 text-gray-800" />
-                </div>
-                <h3 className="font-display text-xl font-semibold text-gray-800 mb-2">
-                  {credential.title}
-                </h3>
-                <p className="text-gray-600 mb-2">{credential.institution}</p>
-                <p className="text-pastel-pink font-semibold mb-2">{credential.year}</p>
-                {credential.note && (
-                  <p className="text-gray-500 text-sm">{credential.note}</p>
-                )}
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 

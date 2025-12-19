@@ -278,7 +278,7 @@ const patientTestimonials = [
 const stats = [
   { number: "5", label: "Rating", icon: Star },
   { number: "20,000+", label: "Happy Patients", icon: Users },
-  { number: "25+", label: "Years Experience", icon: Award },
+  { number: "26", label: "Years Experience", icon: Award },
   { number: "99%", label: "Happiness Rate", icon: Heart }
 ];
 
