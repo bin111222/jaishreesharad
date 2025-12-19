@@ -99,8 +99,8 @@ export default function Footer() {
                 
                 <div className="flex items-baseline space-x-3">
                   <Mail className="w-5 h-5 text-pastel-pink flex-shrink-0 mt-1" />
-                  <a href="mailto:contactus@gmail.com" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
-                    contactus@gmail.com
+                  <a href="mailto:doctorjaishree@gmail.com" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
+                    doctorjaishree@gmail.com
                   </a>
                 </div>
                 
@@ -226,7 +226,7 @@ export default function Footer() {
                 rel="noopener noreferrer" 
                 className="text-pastel-pink hover:text-pastel-green transition-colors font-medium"
               >
-                1942studio.com
+                1942 Studio
               </a>
             </p>
           </div>
@@ -234,7 +234,7 @@ export default function Footer() {
           {/* Emergency Note */}
           <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
             <p className="text-sm text-red-700 text-center">
-              <strong>Emergency:</strong> For urgent medical concerns, please call your nearest emergency services or visit the nearest hospital.
+              <strong>Important:</strong> For urgent medical concerns, please call your nearest emergency services or visit the nearest hospital.
             </p>
           </div>
         </div>
