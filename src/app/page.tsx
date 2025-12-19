@@ -4,10 +4,22 @@ import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { ArrowRight, Play, Star, Award, Users, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import CustomInstagramFeed from "@/components/CustomInstagramFeed";
-import { CircularTestimonials } from "@/components/ui/circular-testimonials";
-import AwardsSection from "@/components/AwardsSection";
 import { useState, useEffect } from "react";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+
+// Dynamic imports for heavy components
+const CustomInstagramFeed = dynamic(() => import("@/components/CustomInstagramFeed"), { 
+  loading: () => <div className="py-20 text-center text-gray-500">Loading Social Feed...</div>,
+  ssr: false 
+});
+const CircularTestimonials = dynamic(() => import("@/components/ui/circular-testimonials"), { 
+  loading: () => <div className="py-20 text-center text-gray-500">Loading Testimonials...</div>,
+  ssr: false 
+});
+const AwardsSection = dynamic(() => import("@/components/AwardsSection"), {
+  loading: () => <div className="h-96 bg-gray-50 animate-pulse rounded-xl"></div>
+});
 
 // Real data from content bible
 const featuredTreatments = [
@@ -37,30 +49,6 @@ const featuredTreatments = [
     downtime: "2-3 days",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/liquidfacelift/1.webp",
     href: "/treatments/liquid-facelift"
-  }
-];
-
-const testimonials = [
-  {
-    id: 1,
-    quote: "When someone like Jaishree enters your life, you feel like you have won the skin battle! … your skin's BFF for life.",
-    name: "Karan Johar",
-    treatment: "Director",
-    rating: 5
-  },
-  {
-    id: 2,
-    quote: "Great skin doesn't happen by chance, it happens by appointment … she's the reason I look into the mirror!",
-    name: "Ranbir Kapoor",
-    treatment: "Actor",
-    rating: 5
-  },
-  {
-    id: 3,
-    quote: "There is no one I trust more to take care of my skin … I always go to her for the best and the right advice.",
-    name: "Sonam Kapoor",
-    treatment: "Actor",
-    rating: 5
   }
 ];
 
@@ -110,31 +98,6 @@ const stats = [
   { number: "4", label: "Published Books", icon: BookOpen },
   { number: "500+", label: "Global Lectures", icon: Star }
 ];
-
-const mediaHighlights = [
-  {
-    title: "Vogue India",
-    type: "Magazine",
-    year: "2023"
-  },
-  {
-    title: "NDTV",
-    type: "TV Network",
-    year: "2025"
-  },
-  {
-    title: "Forbes India",
-    type: "Magazine",
-    year: "Featured"
-  },
-  {
-    title: "India Today",
-    type: "Magazine",
-    year: "2023"
-  }
-];
-
-
 
 const featuredVideos = [
   {
@@ -308,11 +271,12 @@ export default function HomePage() {
     <Layout>
       {/* Hero Section - Redesigned for Maximum Impact */}
       <section className="relative min-h-screen bg-gradient-to-br from-white via-gray-50 to-pastel-pink/5 overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-pastel-pink/20 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-pastel-green/20 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-pastel-pink/5 to-pastel-green/5 rounded-full blur-3xl"></div>
+        {/* Background Elements - Simplified for Mobile */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="hidden sm:block absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-pastel-pink/20 to-transparent rounded-full blur-3xl opacity-60"></div>
+          <div className="hidden sm:block absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-pastel-green/20 to-transparent rounded-full blur-3xl opacity-60"></div>
+          {/* Reduced center blur for performance */}
+          <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-pastel-pink/5 to-pastel-green/5 rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-6">
@@ -320,16 +284,16 @@ export default function HomePage() {
             
             {/* Left Content - Enhanced Typography & Layout */}
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="lg:col-span-7 space-y-8"
             >
               {/* Badge */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 border border-pastel-pink/20 px-4 py-2 rounded-full"
               >
                 <div className="w-2 h-2 bg-pastel-pink rounded-full"></div>
@@ -338,9 +302,9 @@ export default function HomePage() {
 
               {/* Main Headline */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.3 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
                 className="space-y-4"
               >
                 <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.9]">
@@ -354,9 +318,9 @@ export default function HomePage() {
 
               {/* Subtitle */}
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
                 className="text-xl sm:text-2xl text-gray-600 leading-relaxed max-w-2xl"
               >
                 Experience the perfect blend of <span className="font-semibold text-gray-800">medical expertise</span> and <span className="font-semibold text-pastel-pink">artistic vision</span> with Dr. Jaishree Sharad's revolutionary approach to aesthetic dermatology.
@@ -364,9 +328,9 @@ export default function HomePage() {
 
               {/* Stats Row */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.7 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
                 className="flex flex-wrap gap-8 pt-4"
               >
                 <div className="text-center">
@@ -385,9 +349,9 @@ export default function HomePage() {
 
               {/* CTA Buttons */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.9 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
                 className="flex flex-col sm:flex-row gap-4 pt-4"
               >
                 <Link
@@ -409,9 +373,9 @@ export default function HomePage() {
 
               {/* Trust Indicators */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.1 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
                 className="flex items-center space-x-6 pt-8"
               >
                 <div className="flex items-center space-x-2">
@@ -429,42 +393,54 @@ export default function HomePage() {
               </motion.div>
             </motion.div>
 
-            {/* Right Content - Hero Image with Floating Elements */}
+            {/* Right Content - Hero Image Slideshow */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="lg:col-span-5 relative"
             >
               <div className="relative">
                 {/* Main Hero Image Slideshow */}
-                <div className="relative aspect-[5/7] rounded-3xl overflow-hidden shadow-2xl">
+                <div className="relative aspect-[5/7] rounded-3xl overflow-hidden shadow-2xl bg-gray-100 will-change-transform">
                   {heroSlideshow.map((slide, index) => (
-                    <motion.img
+                    <div
                       key={slide.id}
-                      src={slide.image}
-                      alt={`Dr. Jaishree Sharad - ${slide.author}`}
-                      className="absolute inset-0 w-full h-full object-cover"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: index === currentSlide ? 1 : 0 }}
-                      transition={{ duration: 1.2 }}
-                    />
+                      className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+                        index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
+                      }`}
+                    >
+                      {/* Only render image if it's current, previous, or next to save memory */}
+                      {Math.abs(index - currentSlide) <= 1 || (index === 0 && currentSlide === heroSlideshow.length - 1) || (index === heroSlideshow.length - 1 && currentSlide === 0) ? (
+                        <Image
+                          src={slide.image}
+                          alt={`Dr. Jaishree Sharad - ${slide.author}`}
+                          fill
+                          priority={index === 0}
+                          sizes="(max-width: 768px) 100vw, 40vw"
+                          className="object-cover"
+                          quality={85}
+                        />
+                      ) : null}
+                    </div>
                   ))}
                   
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
                   
                   {/* Navigation Arrows */}
                   <button
                     onClick={prevSlide}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10  backdrop-blur-sm rounded-full flex items-center justify-center text-gray-700 hover: transition-all duration-200 shadow-lg"
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10  backdrop-blur-sm rounded-full flex items-center justify-center text-gray-700 hover: transition-all duration-200 shadow-lg bg-white/50 hover:bg-white/80"
+                    aria-label="Previous slide"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   
                   <button
                     onClick={nextSlide}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10  backdrop-blur-sm rounded-full flex items-center justify-center text-gray-700 hover: transition-all duration-200 shadow-lg"
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10  backdrop-blur-sm rounded-full flex items-center justify-center text-gray-700 hover: transition-all duration-200 shadow-lg bg-white/50 hover:bg-white/80"
+                    aria-label="Next slide"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>
@@ -478,6 +454,7 @@ export default function HomePage() {
                         className={`w-2 h-2 rounded-full transition-all duration-200 ${
                           index === currentSlide ? 'bg-white w-6' : 'bg-white/30'
                         }`}
+                        aria-label={`Go to slide ${index + 1}`}
                       />
                     ))}
                   </div>
@@ -486,17 +463,17 @@ export default function HomePage() {
                 {/* Floating Testimonial Card */}
                 <motion.div
                   key={currentSlide}
-                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  initial={{ opacity: 0, scale: 0.9, y: 10 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 max-w-xs"
+                  transition={{ duration: 0.4 }}
+                  className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 max-w-xs z-10 hidden sm:block"
                 >
                   <div className="flex items-start space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-pastel-pink to-pink-100 rounded-full flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-to-br from-pastel-pink to-pink-100 rounded-full flex items-center justify-center flex-shrink-0">
                       <Star className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-700 font-medium">"{heroSlideshow[currentSlide].testimonial}"</p>
+                      <p className="text-sm text-gray-700 font-medium line-clamp-3">"{heroSlideshow[currentSlide].testimonial}"</p>
                       <p className="text-xs text-gray-500 mt-1">- {heroSlideshow[currentSlide].author}</p>
                     </div>
                   </div>
@@ -504,10 +481,10 @@ export default function HomePage() {
 
                 {/* Floating Stats Card */}
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  initial={{ opacity: 0, scale: 0.9, y: 10 }}
                   animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 1.4 }}
-                  className="absolute -top-6 -right-6 bg-gradient-to-r from-pastel-green to-green-400 text-white rounded-2xl p-4 shadow-xl"
+                  transition={{ duration: 0.6, delay: 1 }}
+                  className="absolute -top-6 -right-6 bg-gradient-to-r from-pastel-green to-green-400 text-white rounded-2xl p-4 shadow-xl hidden sm:block"
                 >
                   <div className="text-center">
                     <div className="text-2xl font-bold">{heroSlideshow[currentSlide].rating}</div>
@@ -531,7 +508,7 @@ export default function HomePage() {
       {/* Stats Section - Enhanced with Animations */}
       <section className="py-16 sm:py-20 bg-gray-50 relative overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 25% 25%, #f472b6 2px, transparent 2px), radial-gradient(circle at 75% 75%, #86efac 2px, transparent 2px)`,
             backgroundSize: '50px 50px'
@@ -540,69 +517,47 @@ export default function HomePage() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8"
           >
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20, scale: 0.8 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.15, duration: 0.8, type: "spring", stiffness: 100 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{ 
-                  y: -8, 
-                  scale: 1.05,
-                  transition: { duration: 0.3 }
+                  y: -5, 
+                  transition: { duration: 0.2 }
                 }}
                 className="text-center group cursor-pointer"
               >
-                <motion.div 
+                <div 
                   className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-pastel-pink to-pink-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300"
-                  whileHover={{ 
-                    rotate: 360,
-                    transition: { duration: 0.6, ease: "easeInOut" }
-                  }}
-                  animate={{ 
-                    y: [0, -5, 0],
-                    transition: { 
-                      duration: 3, 
-                      repeat: Infinity, 
-                      delay: index * 0.5,
-                      ease: "easeInOut"
-                    }
-                  }}
                 >
                   <motion.div
-                    whileHover={{ scale: 1.2 }}
-                    transition={{ duration: 0.3 }}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.2 }}
                   >
                     <stat.icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                   </motion.div>
-                </motion.div>
+                </div>
                 
-                <motion.div 
+                <div 
                   className="text-3xl sm:text-4xl font-bold text-gray-800 mb-2 sm:mb-3"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.15 + 0.3, duration: 0.6 }}
                 >
                   {stat.number}
-                </motion.div>
+                </div>
                 
-                <motion.div 
+                <div 
                   className="text-sm sm:text-base text-gray-600 font-medium"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.15 + 0.5, duration: 0.6 }}
                 >
                   {stat.label}
-                </motion.div>
+                </div>
                 
                 {/* Subtle glow effect on hover */}
                 <div className="absolute inset-0 bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
@@ -616,10 +571,10 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="space-y-12"
           >
             <div className="text-center">
@@ -635,19 +590,22 @@ export default function HomePage() {
               {featuredTreatments.map((treatment, index) => (
                 <motion.div
                   key={treatment.id}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2, duration: 0.6 }}
-                  whileHover={{ y: -10 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  whileHover={{ y: -5 }}
                   className="group"
                 >
                   <Link href={treatment.href}>
-                    <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-                      <div className="aspect-video relative overflow-hidden">
-                        <img 
+                    <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col">
+                      <div className="aspect-video relative overflow-hidden bg-gray-100">
+                        <Image 
                           src={treatment.image}
                           alt={`${treatment.title} - Dr. Jaishree Sharad`}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 right-4">
@@ -657,8 +615,8 @@ export default function HomePage() {
                         </div>
                       </div>
                       
-                      <div className="p-6">
-                        <p className="text-gray-600 mb-4 leading-relaxed">
+                      <div className="p-6 flex-1 flex flex-col">
+                        <p className="text-gray-600 mb-4 leading-relaxed flex-1">
                           {treatment.description}
                         </p>
                         
@@ -667,7 +625,7 @@ export default function HomePage() {
                           <span>Downtime: {treatment.downtime}</span>
                         </div>
                         
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between mt-auto">
                           <span className="text-pastel-pink font-semibold group-hover:text-pastel-pink/80 transition-colors">
                             Learn More
                           </span>
@@ -682,9 +640,10 @@ export default function HomePage() {
             
             {/* View All Treatments Button */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.5 }}
               className="text-center pt-8"
             >
               <Link
@@ -699,15 +658,14 @@ export default function HomePage() {
         </div>
       </section>
 
-
-
       {/* Video Testimonials Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="space-y-12"
           >
             <div className="text-center">
@@ -723,23 +681,26 @@ export default function HomePage() {
               {featuredVideos.map((video, index) => (
                 <motion.div
                   key={video.id}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.2, duration: 0.6 }}
-                  whileHover={{ y: -10, scale: 1.02 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  whileHover={{ y: -5 }}
                   className="group cursor-pointer"
                 >
                   <a 
                     href={`https://www.youtube.com/watch?v=${video.videoId}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+                    className="block bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col"
                   >
-                    <div className="aspect-video relative overflow-hidden">
-                      <img 
+                    <div className="aspect-video relative overflow-hidden bg-gray-200">
+                      <Image 
                         src={video.thumbnail}
                         alt={video.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div>
                       
@@ -765,11 +726,11 @@ export default function HomePage() {
                       </div>
                     </div>
                     
-                    <div className="p-6">
-                      <h3 className="font-display text-lg font-semibold text-gray-800 mb-2 group-hover:text-pastel-pink transition-colors">
+                    <div className="p-6 flex-1">
+                      <h3 className="font-display text-lg font-semibold text-gray-800 mb-2 group-hover:text-pastel-pink transition-colors line-clamp-2">
                         {video.title}
                       </h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
                         {video.description}
                       </p>
                     </div>
@@ -780,9 +741,10 @@ export default function HomePage() {
             
             {/* View More Videos Button */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.5 }}
               className="text-center pt-8"
             >
               <Link
@@ -798,15 +760,16 @@ export default function HomePage() {
       </section>
 
       {/* Social Media Feed */}
-              <CustomInstagramFeed maxPosts={6} showHeader={true} />
+      <CustomInstagramFeed maxPosts={6} showHeader={true} />
 
       {/* Why Choose Skinfinitii Section */}
       <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="space-y-8"
           >
             <div className="text-center">
@@ -824,8 +787,9 @@ export default function HomePage() {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  whileHover={{ y: -4, scale: 1.02 }}
+                  whileHover={{ y: -4 }}
                   className="group cursor-pointer"
                 >
                   <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 h-full">
@@ -885,9 +849,10 @@ export default function HomePage() {
       <section className="py-12 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="space-y-8 sm:space-y-12"
           >
             <div className="text-center">
@@ -932,7 +897,6 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
 
     </Layout>
   );

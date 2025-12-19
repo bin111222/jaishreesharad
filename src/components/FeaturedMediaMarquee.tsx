@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Marquee } from "@/components/ui/marquee";
 import { Play, ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 const featuredMedia = [
   {
@@ -90,17 +91,26 @@ export function FeaturedMediaMarquee() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.1, delay: index * 0.02 }}
-              className="flex-shrink-0 mx-4 group"
+              className="flex-shrink-0 mx-4 group relative"
             >
-              <div className="w-64 h-48 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-150 hover:scale-105">
-                <div className="relative h-32 bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20">
+              <div className="w-64 h-48 bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-150 hover:scale-105 relative">
+                <div className="relative h-32 bg-gray-100">
+                  <Image
+                    src={media.image}
+                    alt={media.title}
+                    fill
+                    sizes="256px"
+                    className="object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-pastel-pink/20 to-pastel-green/20 mix-blend-overlay"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full flex items-center justify-center">
-                      <Play className="w-6 h-6 text-white drop-shadow-lg" />
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center bg-white/80 backdrop-blur-sm shadow-md group-hover:scale-110 transition-transform duration-300">
+                      <Play className="w-5 h-5 text-pastel-pink fill-current" />
                     </div>
                   </div>
-                  <div className="absolute top-3 right-3">
-                    <span className="px-2 py-1 bg-pastel-pink text-white text-xs font-semibold rounded-full">
+                  <div className="absolute top-2 right-2">
+                    <span className="px-2 py-0.5 bg-white/90 backdrop-blur-md text-gray-800 text-[10px] font-bold uppercase tracking-wider rounded-sm shadow-sm border border-gray-100">
                       {media.type}
                     </span>
                   </div>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Instagram, Heart, MessageCircle, ExternalLink, Calendar, Play } from "lucide-react";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 interface InstagramPost {
   id: string;
@@ -183,19 +184,16 @@ export default function SocialMediaFeed({ maxPosts = 3, showHeader = true }: Soc
               whileHover={{ y: -5 }}
               className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group"
             >
-              <div className="relative aspect-square overflow-hidden">
+              <div className="relative aspect-square overflow-hidden bg-gray-100">
                 {/* Try to load actual image, fallback to placeholder */}
                 {post.media_url && post.media_url.startsWith('http') ? (
-                  <img
+                  <Image
                     src={post.media_url}
-                    alt="Instagram post"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    onError={(e) => {
-                      // Fallback to placeholder if image fails to load
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      target.nextElementSibling?.classList.remove('hidden');
-                    }}
+                    alt={post.caption || "Instagram post"}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    unoptimized // Instagram CDN domains vary, so we skip optimization to avoid config errors
                   />
                 ) : null}
                 
