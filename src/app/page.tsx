@@ -144,7 +144,7 @@ const featuredVideos = [
     thumbnail: "https://img.youtube.com/vi/CIMz59wF4Mk/maxresdefault.jpg",
     videoId: "CIMz59wF4Mk",
     category: "Featured",
-    duration: "0:00"
+    duration: "58:00"
   },
   {
     id: 2,
@@ -162,7 +162,7 @@ const featuredVideos = [
     thumbnail: "https://img.youtube.com/vi/SUVB4uTtP1Q/maxresdefault.jpg",
     videoId: "SUVB4uTtP1Q",
     category: "Featured",
-    duration: "0:00"
+    duration: "55:00"
   },
   {
     id: 4,
@@ -751,9 +751,11 @@ export default function HomePage() {
                       </div>
                       
                       {/* Duration Badge */}
-                      <div className="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm font-medium">
-                        {video.duration}
-                      </div>
+                      {video.duration !== "0:00" && (
+                        <div className="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm font-medium">
+                          {video.duration}
+                        </div>
+                      )}
                       
                       {/* Category Badge */}
                       <div className="absolute bottom-4 left-4">

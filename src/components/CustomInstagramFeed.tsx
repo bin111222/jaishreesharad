@@ -24,33 +24,33 @@ interface CustomInstagramFeedProps {
 const manualInstagramPosts: InstagramPost[] = [
   {
     id: "post1",
-    media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/2.webp",
-    permalink: "https://www.instagram.com/drjaishreesharad/",
-    caption: "Transform your skin with our advanced treatments. Book your consultation today! ✨ #Dermatology #SkinCare #DrJaishreeSharad #Skinfinitii #BollywoodDermatologist",
-    media_type: "IMAGE",
-    timestamp: "2024-01-15T10:30:00Z",
-    like_count: 1247,
-    comments_count: 89
+    media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/3.webp",
+    permalink: "https://www.instagram.com/p/DFJ4pGqT4eM/",
+    caption: "Here’s a fact: Skincare isn’t just for women. Men have skin too! 😉 And just like women, men deal with acne, pigmentation, sun damage, and aging. A simple routine—cleanser, moisturizer, and sunscreen—can make a huge difference. Don’t ignore your skin, gentlemen! 🧴✨ #MenSkincare #SkincareForAll #HealthySkin #DrJaishreeSharad",
+    media_type: "VIDEO",
+    timestamp: "2025-01-23T10:30:00Z",
+    like_count: 3241,
+    comments_count: 189
   },
   {
     id: "post2",
-    media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/3.webp",
-    permalink: "https://www.instagram.com/drjaishreesharad/",
-    caption: "Natural beauty starts with healthy skin. Our PRP therapy stimulates your body's own healing factors. 🌟 #PRPTherapy #NaturalHealing #DrJaishreeSharad #Skinfinitii",
+    media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/dermalfillers/1.webp",
+    permalink: "https://www.instagram.com/p/DFHQJ8fz1vK/",
+    caption: "Is your skin looking dull despite doing everything right? It might be 'Glycation'. Sugar molecules attach to collagen, making it stiff and prone to breakage. This leads to wrinkles and loss of elasticity. Cut down on refined sugar for a youthful glow! 🍬🚫 #SugarFace #AntiAging #Glycation #HealthySkin",
     media_type: "IMAGE",
-    timestamp: "2024-01-14T15:45:00Z",
-    like_count: 892,
-    comments_count: 67
+    timestamp: "2025-01-21T15:45:00Z",
+    like_count: 2156,
+    comments_count: 134
   },
   {
     id: "post3",
-    media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/4.webp",
-    permalink: "https://www.instagram.com/drjaishreesharad/",
-    caption: "Laser treatments for precise skin rejuvenation. Advanced technology for optimal results. 🔬 #LaserTreatment #SkinRejuvenation #DrJaishreeSharad #Skinfinitii",
-    media_type: "IMAGE",
-    timestamp: "2024-01-13T12:20:00Z",
-    like_count: 1567,
-    comments_count: 123
+    media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/1.webp",
+    permalink: "https://www.instagram.com/p/DFEw5Yfz8jL/",
+    caption: "Let's talk about dark circles. They aren't always caused by lack of sleep! Genetics, allergies, and thinning skin play a huge role. While eye creams help hydrate, treatments like fillers or lasers might be needed for structural hollowing. Consult your derm! 👁️✨ #DarkCircles #UnderEyeCare #Dermatology #Skinfinitii",
+    media_type: "VIDEO",
+    timestamp: "2025-01-19T12:20:00Z",
+    like_count: 4532,
+    comments_count: 267
   }
 ];
 
@@ -85,10 +85,15 @@ export default function CustomInstagramFeed({ maxPosts = 3, showHeader = true }:
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center space-x-2 mb-4">
+            <a
+              href="https://www.instagram.com/drjaishreesharad"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 mb-4 hover:opacity-80 transition-opacity"
+            >
               <Instagram className="w-6 h-6 text-pink-800" />
               <span className="text-pink-800 font-semibold">@drjaishreesharad</span>
-            </div>
+            </a>
             <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
               Follow Our Journey
             </h2>
@@ -106,7 +111,8 @@ export default function CustomInstagramFeed({ maxPosts = 3, showHeader = true }:
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.6 }}
               whileHover={{ y: -5 }}
-              className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group"
+              className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer"
+              onClick={() => window.open("https://www.instagram.com/drjaishreesharad", "_blank")}
             >
               <div className="relative aspect-square overflow-hidden">
                 {/* Instagram Post Image */}

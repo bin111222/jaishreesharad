@@ -93,9 +93,9 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-18 md:h-20 lg:h-24 w-full">
           {/* Logo Group */}
           <Link href="/" className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 lg:space-x-6 group flex-shrink-0">
-            <div className="flex items-center space-x-0.5 sm:space-x-1 md:space-x-1.5 lg:space-x-2 transition-shadow duration-150">
+            <div className="flex items-center space-x-2 sm:space-x-2 md:space-x-3 lg:space-x-4 transition-shadow duration-150">
               {/* Logo 1 - Symbol */}
-              <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 flex items-center justify-center">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 flex items-center justify-center">
                 <img 
                   src="/logo1.png" 
                   alt="Skinfinitii Logo Symbol" 
@@ -103,7 +103,7 @@ export default function Header() {
                 />
               </div>
               {/* Logo 2 - Text */}
-              <div className="w-20 h-10 sm:w-24 sm:h-12 md:w-28 md:h-14 lg:w-40 lg:h-20 flex items-center justify-center">
+              <div className="w-28 h-10 sm:w-32 sm:h-12 md:w-40 md:h-14 lg:w-48 lg:h-20 flex items-center justify-center">
                 <img 
                   src="/logo2.png" 
                   alt="Skinfinitii Logo Text" 
@@ -144,7 +144,7 @@ export default function Header() {
                 <div className="flex items-center justify-center">
                   <div className="flex items-center space-x-1">
                     {/* Logo 1 - Symbol */}
-                    <div className="w-10 h-10 flex items-center justify-center">
+                    <div className="w-12 h-12 flex items-center justify-center">
                       <img 
                         src="/logo1.png" 
                         alt="Skinfinitii Logo Symbol" 
@@ -152,7 +152,7 @@ export default function Header() {
                       />
                     </div>
                     {/* Logo 2 - Text */}
-                    <div className="w-36 h-18 flex items-center justify-center">
+                    <div className="w-40 h-16 flex items-center justify-center">
                       <img 
                         src="/logo2.png" 
                         alt="Skinfinitii Logo Text" 

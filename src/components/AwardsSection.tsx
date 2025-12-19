@@ -147,13 +147,6 @@ export default function AwardsSection() {
                 </div>
               </div>
               
-              {/* Floating badge */}
-              <div className="absolute -top-3 -right-3 bg-gradient-to-r from-pastel-green to-green-400 text-white px-3 py-1.5 rounded-full shadow-lg">
-                <div className="flex items-center space-x-1.5">
-                  <Calendar className="w-3 h-3" />
-                  <span className="text-xs font-medium">2023</span>
-                </div>
-              </div>
             </div>
           </motion.div>
 
