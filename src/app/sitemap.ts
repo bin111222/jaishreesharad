@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.drjaishreesharad.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.jaishreesharad.com'
 
   // Static routes
   const routes = [
@@ -55,3 +55,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [...routes, ...treatmentRoutes]
 }
+
