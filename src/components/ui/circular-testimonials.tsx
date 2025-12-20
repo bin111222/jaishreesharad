@@ -97,7 +97,7 @@ export const CircularTestimonials = ({
     if (autoplay) {
       autoplayIntervalRef.current = setInterval(() => {
         setActiveIndex((prev) => (prev + 1) % testimonialsLength);
-      }, 5000);
+      }, 3000);
     }
     return () => {
       if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
@@ -140,7 +140,7 @@ export const CircularTestimonials = ({
         opacity: 1,
         pointerEvents: "auto",
         transform: `translateX(0px) translateY(0px) scale(1) rotateY(0deg)`,
-        transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+        transition: "all 0.5s cubic-bezier(.4,2,.3,1)",
       };
     }
     if (isLeft) {
@@ -149,7 +149,7 @@ export const CircularTestimonials = ({
         opacity: 1,
         pointerEvents: "auto",
         transform: `translateX(-${gap}px) translateY(-${maxStickUp}px) scale(0.85) rotateY(15deg)`,
-        transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+        transition: "all 0.5s cubic-bezier(.4,2,.3,1)",
       };
     }
     if (isRight) {
@@ -158,7 +158,7 @@ export const CircularTestimonials = ({
         opacity: 1,
         pointerEvents: "auto",
         transform: `translateX(${gap}px) translateY(-${maxStickUp}px) scale(0.85) rotateY(-15deg)`,
-        transition: "all 0.8s cubic-bezier(.4,2,.3,1)",
+        transition: "all 0.5s cubic-bezier(.4,2,.3,1)",
       };
     }
     // Hide all other images
@@ -237,7 +237,7 @@ export const CircularTestimonials = ({
                     transition={{
                       duration: 0.12,
                       ease: "easeInOut",
-                      delay: 0.025 * i,
+                      delay: 0.015 * i,
                     }}
                     style={{ display: "inline-block" }}
                   >

@@ -254,7 +254,7 @@ export default function HomePage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlideshow.length);
-    }, 5000); // Change slide every 5 seconds
+    }, 3000); // Change slide every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -286,14 +286,14 @@ export default function HomePage() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
               className="lg:col-span-7 space-y-8"
             >
               {/* Badge */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 border border-pastel-pink/20 px-4 py-2 rounded-full"
               >
                 <div className="w-2 h-2 bg-pastel-pink rounded-full"></div>
@@ -304,7 +304,7 @@ export default function HomePage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 className="space-y-4"
               >
                 <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.9]">
@@ -320,7 +320,7 @@ export default function HomePage() {
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
+                transition={{ duration: 0.4, delay: 0.3 }}
                 className="text-xl sm:text-2xl text-gray-600 leading-relaxed max-w-2xl"
               >
                 Experience the perfect blend of <span className="font-semibold text-gray-800">medical expertise</span> and <span className="font-semibold text-pastel-pink">artistic vision</span> with Dr. Jaishree Sharad's revolutionary approach to aesthetic dermatology.
@@ -330,7 +330,7 @@ export default function HomePage() {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                transition={{ duration: 0.4, delay: 0.4 }}
                 className="flex flex-wrap gap-8 pt-4"
               >
                 <div className="text-center">
@@ -351,7 +351,7 @@ export default function HomePage() {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
+                transition={{ duration: 0.4, delay: 0.5 }}
                 className="flex flex-col sm:flex-row gap-4 pt-4"
               >
                 <Link
@@ -375,7 +375,7 @@ export default function HomePage() {
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                transition={{ duration: 0.4, delay: 0.6 }}
                 className="flex items-center space-x-6 pt-8"
               >
                 <div className="flex items-center space-x-2">
@@ -397,7 +397,7 @@ export default function HomePage() {
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
               className="lg:col-span-5 relative"
             >
               <div className="relative">
@@ -406,7 +406,7 @@ export default function HomePage() {
                   {heroSlideshow.map((slide, index) => (
                     <div
                       key={slide.id}
-                      className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+                      className={`absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out ${
                         index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
                       }`}
                     >

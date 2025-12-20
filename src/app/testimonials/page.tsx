@@ -577,11 +577,15 @@ export default function TestimonialsPage() {
             className="space-y-8 sm:space-y-12"
           >
             <div className="text-center">
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              <span className="inline-block px-4 py-1.5 mb-4 text-xs font-semibold tracking-wider text-pastel-pink uppercase bg-pastel-pink/10 rounded-full">
+                Trusted by the Best
+              </span>
+              <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">
                 Celebrity Testimonials
               </h2>
-              <p className="text-xl text-gray-600">
-                Trusted by Bollywood and business elites
+              <div className="w-24 h-1 bg-gradient-to-r from-pastel-pink to-pastel-green mx-auto mb-6 rounded-full"></div>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Discover why Bollywood's biggest stars and business elites trust Dr. Jaishree Sharad with their skin.
               </p>
             </div>
 
