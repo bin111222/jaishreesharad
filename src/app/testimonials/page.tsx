@@ -10,104 +10,104 @@ const celebrityTestimonialsData = [
   {
     quote: "When someone like Jaishree enters your life, you feel like you have won the skin battle! … your skin's BFF for life.",
     name: "Karan Johar",
-    designation: "Director, in Skin Rules",
+    designation: "Director, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/karan.webp"
   },
   {
     quote: "I get dark circles when I don’t sleep . . . I get sunburnt and my skin peels when I spend the day on the beach . . . I break out into pimples and acne when I’m stressed . . . But as a film star, I’ve gotta always look like I’ve walked out of a magazine cover! That’s when I realized great skin doesn’t happen by chance, it happens by appointment . . . Dr Jaishree is my one-stop shop. Forget the camera, she’s the reason I look into the mirror!",
     name: "Ranbir Kapoor",
-    designation: "Actor",
+    designation: "Actor, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/ranbir.webp"
   },
   {
     quote: "There is no one I trust more to take care of my skin … I always go to her for the best and the right advice.",
     name: "Sonam Kapoor",
-    designation: "Actor",
+    designation: "Actor, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/sonam.webp"
   },
   {
     quote: "Jaishree is my instant cure for any skin problem … she is 'Dr Solve It' for me.",
     name: "Varun Dhawan",
-    designation: "Actor",
+    designation: "Actor, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/varun.webp"
   },
 
   {
     quote: "Jaishree is so knowledgeable … there is no one better than her to write a book on skincare.",
     name: "Farah Khan",
-    designation: "Director",
+    designation: "Director, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/farah.webp"
   },
   {
     quote: "Jaishree taught me the importance of loving my skin and nourishing it—that less is always more.",
     name: "Athiya Shetty",
-    designation: "Actor",
+    designation: "Actor, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/athiya.webp"
   },
   {
     quote: "The peels she has done on my skin have worked wonders … stem cell PRP helped my hair loss issues.",
     name: "Amyra Dastur",
-    designation: "Actor",
+    designation: "Actor, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/amyra.webp"
   },
   {
     quote: "From the word go she made me comfortable and confident in my own skin … always leave the clinic revitalized.",
     name: "Aadar Jain",
-    designation: "Actor",
+    designation: "Actor, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/aadar.webp"
   },
   {
     quote: "Jaishree will always be available and ready to help … she's just a call away.",
     name: "Elli AvrRam",
-    designation: "Actor",
+    designation: "Actor, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/elli.webp"
   },
   {
     quote: "You're the best doc, thank you for helping me out with my skin.",
     name: "Karan Kapadia",
-    designation: "Actor",
+    designation: "Actor, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/karankapadia.webp"
   },
   {
     quote: "She simplified skincare for me … I deeply admire her positive energy and warmth.",
     name: "Sobhita Dhulipala",
-    designation: "Actor",
+    designation: "Actor, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/shobhita.webp"
   },
   {
     quote: "Healthy and glowing skin is very important … Skin tips from Dr J and basic peels changed the way my skin looks.",
     name: "Priya Banerjee",
-    designation: "Actor",
+    designation: "Actor, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/priya.webp"
   },
   {
     quote: "Love J! She is the best.",
     name: "Shekhar Ravjiani",
-    designation: "Music Composer",
+    designation: "Music Composer, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/shekhar.webp"
   },
   {
     quote: "I switched make-up brands … with regular clean-ups, my skin has been better. She never pushes products.",
     name: "Kalyani Priyadarshan",
-    designation: "Actor",
+    designation: "Actor, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/kalyani.webp"
   },
   {
     quote: "She is one person I can truly trust with closed eyes … thank you for always putting up with me.",
     name: "Riddhima Kapoor",
-    designation: "Actor",
+    designation: "Actor, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/riddhima.webp"
   },
   {
     quote: "Such a warm and positive person … her smile and kindness make you feel good before treatment.",
     name: "Iulia Vantur",
-    designation: "Actor",
+    designation: "Actor, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/iulia.webp"
   },
   {
     quote: "Instead of pimples, now I smile with dimples … she did her magic.",
     name: "Amit Sadh",
-    designation: "Actor",
+    designation: "Actor, as published in Skin Rules",
     src: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/testimonials/amit.webp"
   }
 ];
@@ -483,7 +483,7 @@ export default function TestimonialsPage() {
                 
                 <div>
                   <div className="font-semibold text-lg text-gray-800">Amitabh Bachchan</div>
-                  <div className="text-pastel-pink font-medium">Actor, in Skin Rules</div>
+                  <div className="text-pastel-pink font-medium">Actor, as published in Skin Rules</div>
                   <div className="text-sm text-gray-600 mt-1">Trusted Dr. Jaishree for decades</div>
                 </div>
               </div>
@@ -590,7 +590,7 @@ skin. And for that I am super grateful
             
             <div>
               <div className="font-semibold text-xl text-gray-800">Alia Bhatt</div>
-              <div className="text-pastel-pink">Actor, in Skin Care Answer Book</div>
+              <div className="text-pastel-pink">Actor, as published in The Skincare Answer Book</div>
             </div>
             
             <div className="flex items-center justify-center space-x-1">

@@ -33,6 +33,7 @@ interface CircularTestimonialsProps {
   autoplay?: boolean;
   colors?: Colors;
   fontSizes?: FontSizes;
+  hideImages?: boolean;
 }
 
 function calculateGap(width: number) {
@@ -51,6 +52,7 @@ export const CircularTestimonials = ({
   autoplay = true,
   colors = {},
   fontSizes = {},
+  hideImages = false,
 }: CircularTestimonialsProps) => {
   // Color & font config
   const colorName = colors.name ?? "#000";
@@ -177,22 +179,23 @@ export const CircularTestimonials = ({
 
   return (
     <div className="testimonial-container">
-      <div className="testimonial-grid">
-        {/* Images */}
-        <div className="image-container" ref={imageContainerRef}>
-          {testimonials.map((testimonial, index) => (
-            <img
-              key={testimonial.src}
-              src={testimonial.src}
-              alt={testimonial.name}
-              className="testimonial-image"
-              data-index={index}
-              style={getImageStyle(index)}
-            />
-          ))}
-        </div>
+      <div className={`testimonial-grid ${hideImages ? 'no-images' : ''}`}>
+        {!hideImages && (
+          <div className="image-container" ref={imageContainerRef}>
+            {testimonials.map((testimonial, index) => (
+              <img
+                key={testimonial.src}
+                src={testimonial.src}
+                alt={testimonial.name}
+                className="testimonial-image"
+                data-index={index}
+                style={getImageStyle(index)}
+              />
+            ))}
+          </div>
+        )}
         {/* Content */}
-        <div className="testimonial-content">
+        <div className={`testimonial-content ${hideImages ? 'centered-content' : ''}`}>
           <AnimatePresence mode="wait">
             <motion.div
               key={activeIndex}
@@ -244,7 +247,7 @@ export const CircularTestimonials = ({
               </motion.p>
             </motion.div>
           </AnimatePresence>
-          <div className="arrow-buttons">
+          <div className={`arrow-buttons ${hideImages ? 'centered-arrows' : ''}`}>
             <button
               className="arrow-button prev-button"
               onClick={handlePrev}
@@ -282,6 +285,12 @@ export const CircularTestimonials = ({
           display: grid;
           gap: 2rem;
         }
+        .testimonial-grid.no-images {
+          grid-template-columns: 1fr;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
         .image-container {
           position: relative;
           width: 100%;
@@ -301,6 +310,12 @@ export const CircularTestimonials = ({
           flex-direction: column;
           justify-content: space-between;
         }
+        .testimonial-content.centered-content {
+          text-align: center;
+          align-items: center;
+          max-width: 800px;
+          margin: 0 auto;
+        }
         .name {
           font-weight: bold;
           margin-bottom: 0.25rem;
@@ -315,6 +330,10 @@ export const CircularTestimonials = ({
           display: flex;
           gap: 1rem;
           padding-top: 1.5rem;
+        }
+        .arrow-buttons.centered-arrows {
+          justify-content: center;
+          margin-top: 1rem;
         }
         .arrow-button {
           width: 2.5rem;
@@ -332,7 +351,7 @@ export const CircularTestimonials = ({
         }
         @media (min-width: 768px) {
           .testimonial-grid {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: ${hideImages ? '1fr' : '1fr 1fr'};
             gap: 3rem;
           }
           .image-container {
