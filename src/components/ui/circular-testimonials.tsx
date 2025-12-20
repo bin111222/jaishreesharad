@@ -309,6 +309,7 @@ export const CircularTestimonials = ({
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          min-height: 17rem;
         }
         .testimonial-content.centered-content {
           text-align: center;
@@ -333,7 +334,8 @@ export const CircularTestimonials = ({
         }
         .arrow-buttons.centered-arrows {
           justify-content: center;
-          margin-top: 1rem;
+          margin-top: 0.5rem;
+          padding-top: 0.5rem;
         }
         .arrow-button {
           width: 2.5rem;

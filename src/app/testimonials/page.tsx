@@ -112,6 +112,81 @@ const celebrityTestimonialsData = [
   }
 ];
 
+const textOnlyTestimonials = [
+  {
+    quote: "There are doctors and then comes somebody like Dr Jaishree who works miracles. And that magic comes from being a super human being who genuinely feels for her patients and treats them like a friend!",
+    name: "Karan Oberoi",
+    designation: "Actor, Anchor, Singer, as published in Skin Talks",
+    src: "placeholder1"
+  },
+  {
+    quote: "At this point Jaishree is more a friend than a Doctor, because after only a couple of visits, she fixed any need I had for a dermatologist. She got me from extremely troubled skin, to near perfect skin, and taught me how to keep it that way.",
+    name: "Bilal Amrohi",
+    designation: "Actor, as published in Skin Talks",
+    src: "placeholder2"
+  },
+  {
+    quote: "When I went to Dr Jaishree with my troubled skin, she promised me a clear skin in 9 - 10 months. Not only did she rid my skin of acne and scars in just 2 months but I had never seen my skin glow the way it did.",
+    name: "Anusha Mani",
+    designation: "Singer, as published in Skin Talks",
+    src: "placeholder3"
+  },
+  {
+    quote: "For me Dr Jaishree is the kind of doctor you can trust. She takes time understanding my skin, and would sooner advise me to do less than do more. My skin is close to the ideal I’m trying to achieve!",
+    name: "Monica Dogra",
+    designation: "Singer, Actor, as published in Skin Talks",
+    src: "placeholder4"
+  },
+  {
+    quote: "She is the best doctor in the world! I wouldn’t go to anyone else. Fantastic dermatologist, an amazing person and my best friend.",
+    name: "Namrata Dutt Kumar",
+    designation: "Trustee, Nargis Dutt Foundation, as published in Skin Rules",
+    src: "placeholder5"
+  },
+  {
+    quote: "Dr Jaishree Sharad is my one-stop solution for good skin. Skinfiniti is her temple that she runs with utmost devotion and dedication. She is my friend, confidante, dermatologist and an amazing, compassionate human being.",
+    name: "Vishakha Singh",
+    designation: "Actor, Producer, as published in Skin Talks",
+    src: "placeholder6"
+  },
+  {
+    quote: "I believe that if the quality of your skin is good, it will obviously look young and fresh. I trust Dr J and am very comfortable with giving my skin in her hands because I know whatever she will do will be safe and good for my skin.",
+    name: "Andy Kumar",
+    designation: "VJ, Actor, as published in Skin Talks",
+    src: "placeholder7"
+  },
+  {
+    quote: "It has been more than ten years and Jaishree is the only dermatologist I trust with any skin issue—not only me but my family and friends too.",
+    name: "Ehsaan Noorani",
+    designation: "Music Composer, as published in Skin Rules",
+    src: "placeholder8"
+  },
+  {
+    quote: "My friend Jaishree says coffee bean is an excellent antioxidant, hence helps in reducing mild cellulite. Olive oil moisturises and together they scrub without damaging the skin barrier.",
+    name: "Ileana D'Cruz",
+    designation: "Actor, as published in Skin Talks",
+    src: "placeholder9"
+  },
+  {
+    quote: "Love J! She is the best.",
+    name: "Shekhar Ravjiani",
+    designation: "Musician, as published in Skin Rules",
+    src: "placeholder10"
+  },
+  {
+    quote: "My face was like a pepperoni pizza full of zits when I first came to Dr J. She helped me get rid of my zits and get a clear, flawless skin. I still come to her regularly for my clean ups.",
+    name: "Prateik Babbar",
+    designation: "Actor, as published in Skin Talks",
+    src: "placeholder11"
+  },
+  {
+    quote: "What can I say about Jaishree Sharad? As a person she is one of the loveliest people I know... I can tell you that my face has never looked better and it’s all thanks to her.",
+    name: "Yasmin Karachiwala",
+    designation: "Celebrity Fitness Expert, as published in Skin Rules",
+    src: "placeholder12"
+  }
+];
+
 const patientTestimonials = [
   {
     id: 1,
@@ -525,6 +600,48 @@ export default function TestimonialsPage() {
                 fontSizes={{
                   name: "1.75rem",
                   designation: "1rem",
+                  quote: "1.125rem",
+                }}
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* More Praise (Text-Only) */}
+      <section className="py-12 sm:py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="space-y-8 sm:space-y-12"
+          >
+            <div className="text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                More Praise for Dr. Jaishree
+              </h2>
+              <p className="text-xl text-gray-600">
+                Words of appreciation from our valued circle
+              </p>
+            </div>
+
+            <div className="flex justify-center">
+              <CircularTestimonials
+                testimonials={textOnlyTestimonials}
+                autoplay={true}
+                hideImages={true}
+                colors={{
+                  name: "#1f2937",
+                  designation: "#6b7280",
+                  testimony: "#374151",
+                  arrowBackground: "#BACEB0",
+                  arrowForeground: "#ffffff",
+                  arrowHoverBackground: "#A8C09A",
+                }}
+                fontSizes={{
+                  name: "1.5rem",
+                  designation: "0.875rem",
                   quote: "1.125rem",
                 }}
               />
