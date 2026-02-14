@@ -7,6 +7,40 @@ import { ImageAutoSlider } from "@/components/ui/image-auto-slider";
 import Image from "next/image";
 
 const mediaCoverage = [
+  // 2026 Highlights
+  {
+    year: "2026",
+    items: [
+      {
+        title: "Vogue India — Why swimmers actually have the most efficient skincare routine",
+        outlet: "Vogue India",
+        type: "Magazine Feature",
+        date: "January 13, 2026",
+        description: "Dr. Jaishree explains how swimmer skincare is grounded in epidermal physiology: barrier protection, moisturisation, and photoprotection over elaborate routines.",
+        icon: Newspaper,
+        link: "https://www.vogue.in/content/why-swimmers-actually-have-the-most-efficient-skincare-routine"
+      },
+      {
+        title: "Robb Report India — Beyond the Facelift: 5 Non-Surgical Treatments For Anti-Ageing Skin",
+        outlet: "Robb Report India",
+        type: "Expert Article",
+        date: "January 13, 2026",
+        description: "Dr. Sharad weighs in on exosome therapy and HIFU, urging caution on emerging treatments and highlighting prevention as the future of anti-ageing.",
+        icon: Newspaper,
+        link: "https://www.robbreportindia.com/style/fashion-and-beauty/non-surgical-treatments-anti-ageing-young-looking-skin"
+      },
+      {
+        title: "Tweak India — Urea: the uncool skincare ingredient that actually works",
+        outlet: "Tweak India",
+        type: "Expert Article",
+        date: "January 30, 2026",
+        description: "Dr. Jaishree on urea as a humectant, its role in the Natural Moisturising Factor, and how concentration dictates hydration vs. exfoliation benefits.",
+        icon: Newspaper,
+        link: "https://tweakindia.com/beauty/urea-the-uncool-skincare-ingredient-that-actually-works/"
+      }
+    ]
+  },
+
   // 2025 Highlights
   {
     year: "2025",
@@ -56,6 +90,24 @@ const mediaCoverage = [
         description: "Dr. Jaishree discusses the rise of skinimalism and the shift from extensive skincare routines to mindful, condensed beauty rituals.",
         icon: Newspaper,
         link: "https://www.vogue.in/content/is-lazy-luxe-a-skinimalism-reset-or-just-another-beauty-trend-in-2025"
+      },
+      {
+        title: "The Established — Beauty and wellness industry trends shaping India's next phase",
+        outlet: "The Established",
+        type: "Magazine Feature",
+        date: "December 26, 2025",
+        description: "Dr. Jaishree on metabolic beauty: optimising the body's internal metabolic machinery and mitochondrial health for skin repair and regeneration.",
+        icon: Newspaper,
+        link: "https://www.theestablished.com/self/beauty/beauty-and-wellness-industry-trends-2026-10944224"
+      },
+      {
+        title: "Vogue Arabia — How to Pick the Best Skincare Active Ingredients for Your Bodycare Routine",
+        outlet: "Vogue Arabia",
+        type: "Expert Article",
+        date: "December 23, 2025",
+        description: "Dr. Sharad's prescription for bodycare actives: formats and ingredients for acne, dryness, pigmentation, and sensitive skin.",
+        icon: Newspaper,
+        link: "https://www.voguearabia.com/article/skincare-active-ingredients-for-your-bodycare-routine"
       }
     ]
   },
@@ -573,7 +625,7 @@ export default function MediaPage() {
             className="text-center mb-16"
           >
             <h2 className="font-display text-3xl font-bold text-gray-800 mb-4">
-              Selected Media Coverage (2018-2025)
+              Selected Media Coverage (2018-2026)
             </h2>
             <p className="text-lg text-gray-600">
               Featured appearances across television, print, digital media, and podcasts
