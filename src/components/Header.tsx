@@ -58,18 +58,22 @@ export default function Header() {
       
       // Check if scrolled past threshold
       setIsScrolled(currentScrollY > 10);
-      
-      // Header visibility logic for desktop only
-      if (window.innerWidth >= 1280) { // xl breakpoint
-        if (currentScrollY > lastScrollY && currentScrollY > 100) {
-          // Scrolling down - hide header
-          setIsHeaderVisible(false);
-        } else if (currentScrollY < lastScrollY) {
-          // Scrolling up - show header
-          setIsHeaderVisible(true);
-        }
-      } else {
-        // On mobile/tablet, always show header
+
+      // While the mobile menu is open, keep the header visible.
+      if (isMobileMenuOpen) {
+        setIsHeaderVisible(true);
+        setLastScrollY(currentScrollY);
+        return;
+      }
+
+      // Header visibility logic (all breakpoints)
+      if (currentScrollY <= 20) {
+        setIsHeaderVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down - hide header
+        setIsHeaderVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up - show header
         setIsHeaderVisible(true);
       }
       
@@ -78,7 +82,7 @@ export default function Header() {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, [isMobileMenuOpen, lastScrollY]);
 
   return (
     <motion.header 
@@ -90,23 +94,23 @@ export default function Header() {
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
       <div className="max-w-7xl mx-auto px-2 sm:px-3 md:px-4 lg:px-6">
-        <div className="flex items-center justify-between h-16 sm:h-18 md:h-20 lg:h-24 w-full">
+        <div className="flex items-center justify-between h-16 sm:h-20 md:h-20 lg:h-24 w-full">
           {/* Logo Group */}
-          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 lg:space-x-6 group flex-shrink-0">
-            <div className="flex items-center space-x-2 sm:space-x-2 md:space-x-3 lg:space-x-4 transition-shadow duration-150">
+          <Link href="/" className="flex items-center space-x-0.5 sm:space-x-0.5 md:space-x-1 lg:space-x-1 group flex-shrink-0">
+            <div className="flex items-center space-x-0.5 sm:space-x-0.5 md:space-x-1 lg:space-x-1 transition-shadow duration-150">
               {/* Logo 1 - Symbol */}
-              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 flex items-center justify-center">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-14 md:h-14 lg:w-16 lg:h-16 flex items-center justify-center">
                 <img 
                   src="/logo1.png" 
-                  alt="Skinfinitii Logo Symbol" 
+                  alt="The Jaishree Sharad Clinic Logo Symbol" 
                   className="w-full h-full object-contain"
                 />
               </div>
               {/* Logo 2 - Text */}
-              <div className="w-28 h-10 sm:w-32 sm:h-12 md:w-40 md:h-14 lg:w-48 lg:h-20 flex items-center justify-center">
+              <div className="w-44 h-12 sm:w-52 sm:h-14 md:w-52 md:h-16 lg:w-64 lg:h-24 flex items-center justify-center">
                 <img 
                   src="/logo2.png" 
-                  alt="Skinfinitii Logo Text" 
+                  alt="The Jaishree Sharad Clinic Logo Text" 
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -144,18 +148,18 @@ export default function Header() {
                 <div className="flex items-center justify-center">
                   <div className="flex items-center space-x-1">
                     {/* Logo 1 - Symbol */}
-                    <div className="w-12 h-12 flex items-center justify-center">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
                       <img 
                         src="/logo1.png" 
-                        alt="Skinfinitii Logo Symbol" 
+                        alt="The Jaishree Sharad Clinic Logo Symbol" 
                         className="w-full h-full object-contain"
                       />
                     </div>
                     {/* Logo 2 - Text */}
-                    <div className="w-40 h-16 flex items-center justify-center">
+                    <div className="w-56 h-24 sm:w-64 sm:h-28 flex items-center justify-center">
                       <img 
                         src="/logo2.png" 
-                        alt="Skinfinitii Logo Text" 
+                        alt="The Jaishree Sharad Clinic Logo Text" 
                         className="w-full h-full object-contain"
                       />
                     </div>

@@ -46,7 +46,7 @@ const manualInstagramPosts: InstagramPost[] = [
     id: "post3",
     media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/botox/1.webp",
     permalink: "https://www.instagram.com/p/DFEw5Yfz8jL/",
-    caption: "Let's talk about dark circles. They aren't always caused by lack of sleep! Genetics, allergies, and thinning skin play a huge role. While eye creams help hydrate, treatments like fillers or lasers might be needed for structural hollowing. Consult your derm! 👁️✨ #DarkCircles #UnderEyeCare #Dermatology #Skinfinitii",
+    caption: "Let's talk about dark circles. They aren't always caused by lack of sleep! Genetics, allergies, and thinning skin play a huge role. While eye creams help hydrate, treatments like fillers or lasers might be needed for structural hollowing. Consult your derm! 👁️✨ #DarkCircles #UnderEyeCare #Dermatology",
     media_type: "VIDEO",
     timestamp: "2025-01-19T12:20:00Z",
     like_count: 4532,

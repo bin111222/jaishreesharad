@@ -72,7 +72,7 @@ Replace the posts with your latest Instagram content:
   id: "post1",
   media_url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/instagram/latest-post.webp",
   permalink: "https://www.instagram.com/p/ABC123xyz/",
-  caption: "Amazing results from our latest treatment! ✨ #Skinfinitii #DrJaishreeSharad",
+  caption: "Amazing results from our latest treatment! ✨ #DrJaishreeSharad",
   media_type: "IMAGE",
   timestamp: "2024-01-20T14:30:00Z",
   like_count: 2156,

@@ -31,7 +31,7 @@ export default function Footer() {
               <div className="w-25 h-24 flex items-center justify-center">
                 <img 
                   src="/Translogo.png" 
-                  alt="Skinfinitii - Aesthetic Skin & Laser Clinic" 
+                  alt="The Jaishree Sharad Clinic" 
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -212,7 +212,7 @@ export default function Footer() {
         <div className="border-t border-gray-200 mt-12 pt-8">
           <div className="flex justify-center items-center">
             <div className="text-sm text-gray-500">
-              © {new Date().getFullYear()} Skinfinitii Aesthetic Skin & Laser Clinic. All rights reserved.
+              © {new Date().getFullYear()} The Jaishree Sharad Clinic. All rights reserved.
             </div>
           </div>
           

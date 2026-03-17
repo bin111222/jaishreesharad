@@ -762,7 +762,7 @@ export default function HomePage() {
       {/* Social Media Feed */}
       <CustomInstagramFeed maxPosts={6} showHeader={true} />
 
-      {/* Why Choose Skinfinitii Section */}
+      {/* Why Choose The Jaishree Sharad Clinic Section */}
       <section className="py-12 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -774,7 +774,7 @@ export default function HomePage() {
           >
             <div className="text-center">
               <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-800 mb-3">
-                Why Choose Skinfinitii?
+                Why Choose The Jaishree Sharad Clinic?
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Medical expertise, cutting-edge technology, and personalized care

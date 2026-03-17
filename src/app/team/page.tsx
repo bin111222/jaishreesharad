@@ -119,7 +119,7 @@ export default function TeamPage() {
             className="text-center space-y-6"
           >
             <h1 className="font-display text-4xl md:text-6xl font-bold text-white">
-              Team Skinfinitii
+              Team The Jaishree Sharad Clinic
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
               A multidisciplinary team of dermatologists, aesthetic physicians, therapists, and nurses 
@@ -423,7 +423,7 @@ export default function TeamPage() {
             </h2>
             
             <p className="text-xl text-gray-600">
-              Meet our team and discover why Skinfinitii is trusted by celebrities and patients worldwide.
+              Meet our team and discover why The Jaishree Sharad Clinic is trusted by celebrities and patients worldwide.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

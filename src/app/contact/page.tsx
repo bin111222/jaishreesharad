@@ -29,7 +29,7 @@ const contactMethods = [
 
 const clinicLocations = [
   {
-    name: "Skinfinitii (Khar, Mumbai) - Aesthetic Skin and Laser Clinic",
+    name: "The Jaishree Sharad Clinic (Khar, Mumbai) - Centre for Skin Longevity and Aesthetics",
     address: "601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052",
     phone: "+91 22 4181 9000",
     whatsapp: "+91 92 2321 9419",
@@ -40,7 +40,7 @@ const clinicLocations = [
     description: "Our flagship center with all laser facilities. Easily accessible via S.V. Road, near Khar Railway Station (West). Parking available in the building."
   },
   {
-    name: "Skinfinitii (Vashi, Navi Mumbai) - Aesthetic Skin and Laser Clinic",
+    name: "The Jaishree Sharad Clinic (Vashi, Navi Mumbai) - Centre for Skin Longevity and Aesthetics",
     address: "105, Satra Plaza, Palm Beach Road, Sector 19D, Vashi, Navi Mumbai 400 703",
     phone: "+91 22 4283 2000",
     whatsapp: "+91 97 6969 1957",
@@ -96,7 +96,7 @@ export default function ContactPage() {
               >
                 <img 
                   src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/clinic/kharclinic.webp?updatedAt=1756228095321"
-                  alt="Skinfinitii Khar Clinic"
+                  alt="The Jaishree Sharad Clinic - Khar"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -124,7 +124,7 @@ export default function ContactPage() {
               >
                 <img 
                   src="https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/clinic/vashiclinic.webp?updatedAt=1756228095170"
-                  alt="Skinfinitii Vashi Clinic"
+                  alt="The Jaishree Sharad Clinic - Vashi"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>

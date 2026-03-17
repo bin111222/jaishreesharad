@@ -17,10 +17,10 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Skinfinitii - Aesthetic Skin & Laser Clinic | Dr. Jaishree Sharad",
-    template: "%s | Skinfinitii"
+    default: "The Jaishree Sharad Clinic | Dr. Jaishree Sharad",
+    template: "%s | The Jaishree Sharad Clinic"
   },
-  description: "Skinfinitii - Leading aesthetic skin & laser clinic in Mumbai. Expert in injectables, skin treatments, and non-surgical procedures. Book your consultation today.",
+  description: "The Jaishree Sharad Clinic - Centre for skin longevity and aesthetics in Mumbai. Expert in injectables, skin treatments, and non-surgical procedures. Book your consultation today.",
   keywords: [
     "dermatologist",
     "aesthetic physician", 
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "/",
-    title: "Skinfinitii - Aesthetic Skin & Laser Clinic | Dr. Jaishree Sharad",
-    description: "Skinfinitii - Leading aesthetic skin & laser clinic in Mumbai. Expert in injectables, skin treatments, and non-surgical procedures.",
-    siteName: "Skinfinitii",
+    title: "The Jaishree Sharad Clinic | Dr. Jaishree Sharad",
+    description: "The Jaishree Sharad Clinic - Centre for skin longevity and aesthetics in Mumbai. Expert in injectables, skin treatments, and non-surgical procedures.",
+    siteName: "The Jaishree Sharad Clinic",
     images: [
       {
         url: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%201.webp",
@@ -63,8 +63,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Skinfinitii - Aesthetic Skin & Laser Clinic | Dr. Jaishree Sharad",
-    description: "Skinfinitii - Leading aesthetic skin & laser clinic in Mumbai. Expert in injectables, skin treatments, and non-surgical procedures.",
+    title: "The Jaishree Sharad Clinic | Dr. Jaishree Sharad",
+    description: "The Jaishree Sharad Clinic - Centre for skin longevity and aesthetics in Mumbai. Expert in injectables, skin treatments, and non-surgical procedures.",
     images: ["https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/jaishree/%201.webp"],
   },
   robots: {

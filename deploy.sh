@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Skinfinitii Website Deployment Script
-echo "🚀 Starting Skinfinitii website deployment..."
+# The Jaishree Sharad Clinic Website Deployment Script
+echo "🚀 Starting The Jaishree Sharad Clinic website deployment..."
 
 # Check if Node.js is installed
 if ! command -v node &> /dev/null; then

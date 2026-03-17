@@ -467,7 +467,7 @@ export default function SkinQuiz() {
                 <div className="w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 flex items-center justify-center">
                   <img 
                     src="/logo1.png" 
-                    alt="Skinfinitii Logo Symbol" 
+                    alt="The Jaishree Sharad Clinic Logo Symbol" 
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -475,7 +475,7 @@ export default function SkinQuiz() {
                 <div className="w-16 h-12 sm:w-20 sm:h-16 lg:w-25 lg:h-20 flex items-center justify-center">
                   <img 
                     src="/logo2.png" 
-                    alt="Skinfinitii Logo Text" 
+                    alt="The Jaishree Sharad Clinic Logo Text" 
                     className="w-full h-full object-contain"
                   />
                 </div>

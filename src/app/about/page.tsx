@@ -39,7 +39,7 @@ const credentials = [
 const currentPositions = [
   {
     title: "Director",
-    organization: "Skinfinitii Aesthetic Skin & Laser Center, Mumbai",
+    organization: "The Jaishree Sharad Clinic, Mumbai",
     type: "Current",
     icon: Building2,
     iconColor: "bg-pastel-pink",

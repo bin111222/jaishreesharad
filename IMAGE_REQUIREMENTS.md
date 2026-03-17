@@ -10,7 +10,7 @@ Gallery Image 6 - Team working together
 Hero Image - Dr. Jaishree Sharad professional portrait
 Philosophy Image 1 - Dr. Jaishree working with patient
 Philosophy Image 2 - Clinic interior (treatment room)
-Philosophy Image 3 - Clinic exterior (Skinfinitii building)
+Philosophy Image 3 - Clinic exterior (The Jaishree Sharad Clinic building)
 👥 TEAM PAGE (10 images)
 Dr. Jaishree Sharad - Professional headshot
 Dr. Priya Sharma - Professional headshot

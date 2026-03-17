@@ -1,6 +1,6 @@
-# Skinfinitii - Aesthetic Skin & Laser Clinic
+# The Jaishree Sharad Clinic
 
-A premium, fast, and maintenance-light portfolio and treatments website for Dr. Jaishree Sharad's Skinfinitii clinic.
+A premium, fast, and maintenance-light portfolio and treatments website for Dr. Jaishree Sharad's clinic.
 
 ## 🚀 Quick Deploy
 
@@ -91,7 +91,7 @@ website/
 - **Fast Performance** - Optimized for speed
 - **SEO Optimized** - Meta tags and structured data
 - **Interactive Elements** - Animations and micro-interactions
-- **Professional Branding** - Skinfinitii logo and colors
+- **Professional Branding** - Clinic logo and colors
 
 ### 🎯 Treatment Pages
 1. Botox
@@ -164,9 +164,9 @@ YOUTUBE_API_KEY=your_api_key
 ## 📞 Support
 
 For deployment support or questions:
-- Email: support@skinfinitii.com
+- Email: support@jaishreesharad.com
 - Phone: +91 22 2655 XXXX
 
 ## 📄 License
 
-© 2024 Skinfinitii. All rights reserved.
+© 2024 The Jaishree Sharad Clinic. All rights reserved.
