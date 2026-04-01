@@ -154,7 +154,7 @@ export default function PaymentPage() {
       const data = await response.json();
 
       if (!response.ok) {
-        setServerMessage(data?.error || "Unable to create payment link.");
+        setServerMessage(data?.error || "Unable to create payment link. Try again later.");
         return;
       }
 
