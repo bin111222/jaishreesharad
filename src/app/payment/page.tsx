@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Layout from "@/components/Layout";
 import { Copy, ExternalLink, Link as LinkIcon, MessageCircle } from "lucide-react";
 
@@ -43,11 +43,32 @@ function normalizePhone(value: string) {
 }
 
 export default function PaymentPage() {
+  const [isCheckingAuth, setIsCheckingAuth] = useState(true);
+  const [isAuthorized, setIsAuthorized] = useState(false);
+  const [password, setPassword] = useState("");
+  const [authError, setAuthError] = useState("");
+  const [isUnlocking, setIsUnlocking] = useState(false);
   const [form, setForm] = useState<FormState>(initialState);
   const [copied, setCopied] = useState("");
   const [isCreating, setIsCreating] = useState(false);
   const [serverMessage, setServerMessage] = useState("");
   const [showLogs, setShowLogs] = useState(false);
+
+  useEffect(() => {
+    const checkAccess = async () => {
+      try {
+        const response = await fetch("/api/payment/access", { cache: "no-store" });
+        const data = await response.json();
+        setIsAuthorized(Boolean(data?.authorized));
+      } catch {
+        setAuthError("Unable to verify access. Please refresh and try again.");
+      } finally {
+        setIsCheckingAuth(false);
+      }
+    };
+
+    checkAccess();
+  }, []);
 
   const payload = useMemo(() => {
     const amountInPaise = Math.round(Number(form.amount || 0) * 100);
@@ -149,10 +170,66 @@ export default function PaymentPage() {
     }
   };
 
+  const handleUnlock = async () => {
+    setAuthError("");
+    if (!password.trim()) {
+      setAuthError("Please enter the password.");
+      return;
+    }
+
+    setIsUnlocking(true);
+    try {
+      const response = await fetch("/api/payment/access", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password: password.trim() }),
+      });
+      const data = await response.json();
+      if (!response.ok || !data?.authorized) {
+        setAuthError(data?.error || "Incorrect password.");
+        return;
+      }
+      setIsAuthorized(true);
+      setPassword("");
+    } catch {
+      setAuthError("Unable to unlock right now. Please try again.");
+    } finally {
+      setIsUnlocking(false);
+    }
+  };
+
   return (
     <Layout>
       <section className="py-16 bg-gradient-to-br from-pastel-pink/10 via-white to-pastel-green/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          {isCheckingAuth ? (
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+              <p className="text-gray-700">Checking access...</p>
+            </div>
+          ) : !isAuthorized ? (
+            <div className="max-w-md mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+              <h1 className="font-display text-2xl font-bold text-gray-800">Internal Payment Access</h1>
+              <p className="text-sm text-gray-600 mt-2">Enter password to view the payment page.</p>
+              <div className="mt-6 space-y-3">
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Enter password"
+                  className="w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pastel-pink"
+                />
+                <button
+                  type="button"
+                  onClick={handleUnlock}
+                  disabled={isUnlocking}
+                  className="w-full rounded-lg bg-pastel-pink text-white px-4 py-2 text-sm font-medium hover:bg-pastel-pink/90 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
+                >
+                  {isUnlocking ? "Unlocking..." : "Unlock"}
+                </button>
+                {authError ? <p className="text-sm text-red-600">{authError}</p> : null}
+              </div>
+            </div>
+          ) : (
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
             <div className="p-8 border-b border-gray-100">
               <h1 className="font-display text-3xl font-bold text-gray-800">Internal Payment Link Builder</h1>
@@ -305,6 +382,7 @@ export default function PaymentPage() {
               </div>
             </div>
           </div>
+          )}
         </div>
       </section>
     </Layout>
