@@ -18,18 +18,6 @@ type FormState = {
   paymentLinkUrl: string;
 };
 
-type PaymentLinkItem = {
-  id: string;
-  short_url: string;
-  status: string;
-  amount: number;
-  amount_paid?: number;
-  currency: string;
-  customer?: { name?: string; contact?: string; email?: string };
-  reference_id?: string;
-  created_at?: number;
-};
-
 const initialState: FormState = {
   amount: "",
   currency: "INR",
@@ -65,9 +53,6 @@ export default function PaymentPage() {
   const [isCreating, setIsCreating] = useState(false);
   const [serverMessage, setServerMessage] = useState("");
   const [showLogs, setShowLogs] = useState(false);
-  const [paymentLinks, setPaymentLinks] = useState<PaymentLinkItem[]>([]);
-  const [isLoadingLinks, setIsLoadingLinks] = useState(false);
-  const [linksError, setLinksError] = useState("");
 
   useEffect(() => {
     const checkAccess = async () => {
@@ -177,7 +162,6 @@ export default function PaymentPage() {
       if (data.short_url) {
         await copyText(data.short_url, "payment-link");
       }
-      await fetchPaymentLinks();
       setServerMessage("Payment link created successfully.");
     } catch {
       setServerMessage("Unable to create payment link right now.");
@@ -214,52 +198,6 @@ export default function PaymentPage() {
     }
   };
 
-  const fetchPaymentLinks = async () => {
-    setLinksError("");
-    setIsLoadingLinks(true);
-    try {
-      const response = await fetch("/api/razorpay/payment-link", { cache: "no-store" });
-      const data = await response.json();
-      if (!response.ok) {
-        setLinksError(data?.error || "Unable to fetch payment links.");
-        return;
-      }
-      setPaymentLinks(Array.isArray(data?.items) ? data.items : []);
-    } catch {
-      setLinksError("Unable to fetch payment links.");
-    } finally {
-      setIsLoadingLinks(false);
-    }
-  };
-
-  useEffect(() => {
-    if (isAuthorized) {
-      fetchPaymentLinks();
-    }
-  }, [isAuthorized]);
-
-  const formatMoney = (amountInPaise: number, currencyCode: string) => {
-    const safeAmount = Number.isFinite(amountInPaise) ? amountInPaise : 0;
-    return new Intl.NumberFormat("en-IN", {
-      style: "currency",
-      currency: currencyCode || "INR",
-      maximumFractionDigits: 2,
-    }).format(safeAmount / 100);
-  };
-
-  const formatDate = (unix?: number) => {
-    if (!unix) return "-";
-    return new Date(unix * 1000).toLocaleString("en-IN");
-  };
-
-  const getStatusTone = (status: string) => {
-    const normalized = status.toLowerCase();
-    if (normalized === "paid") return "bg-green-100 text-green-700";
-    if (normalized === "cancelled" || normalized === "expired") return "bg-red-100 text-red-700";
-    if (normalized === "partially_paid") return "bg-yellow-100 text-yellow-700";
-    return "bg-gray-100 text-gray-700";
-  };
-
   return (
     <Layout>
       <section className="py-16 bg-gradient-to-br from-pastel-pink/10 via-white to-pastel-green/10">
@@ -292,7 +230,6 @@ export default function PaymentPage() {
               </div>
             </div>
           ) : (
-          <div className="space-y-6">
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
             <div className="p-8 border-b border-gray-100">
               <h1 className="font-display text-3xl font-bold text-gray-800">Internal Payment Link Builder</h1>
@@ -444,82 +381,6 @@ export default function PaymentPage() {
                 ) : null}
               </div>
             </div>
-          </div>
-          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-            <div className="p-6 border-b border-gray-100 flex items-center justify-between">
-              <h2 className="font-display text-2xl font-bold text-gray-800">Recent Payments</h2>
-              <button
-                type="button"
-                onClick={fetchPaymentLinks}
-                disabled={isLoadingLinks}
-                className="text-sm px-3 py-2 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 disabled:opacity-50"
-              >
-                {isLoadingLinks ? "Refreshing..." : "Refresh"}
-              </button>
-            </div>
-            <div className="p-6">
-              {linksError ? <p className="text-sm text-red-600 mb-4">{linksError}</p> : null}
-              {isLoadingLinks && paymentLinks.length === 0 ? (
-                <p className="text-sm text-gray-600">Loading payment links...</p>
-              ) : paymentLinks.length === 0 ? (
-                <p className="text-sm text-gray-600">No payment links found yet.</p>
-              ) : (
-                <div className="overflow-x-auto">
-                  <table className="min-w-full text-sm">
-                    <thead>
-                      <tr className="text-left text-gray-500 border-b border-gray-100">
-                        <th className="py-2 pr-4">Date</th>
-                        <th className="py-2 pr-4">Customer</th>
-                        <th className="py-2 pr-4">Amount</th>
-                        <th className="py-2 pr-4">Paid</th>
-                        <th className="py-2 pr-4">Status</th>
-                        <th className="py-2 pr-4">Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {paymentLinks.map((item) => (
-                        <tr key={item.id} className="border-b border-gray-50">
-                          <td className="py-3 pr-4 whitespace-nowrap">{formatDate(item.created_at)}</td>
-                          <td className="py-3 pr-4">
-                            <div className="font-medium text-gray-800">{item.customer?.name || "-"}</div>
-                            <div className="text-xs text-gray-500">{item.customer?.contact || item.customer?.email || "-"}</div>
-                          </td>
-                          <td className="py-3 pr-4 whitespace-nowrap">{formatMoney(item.amount, item.currency)}</td>
-                          <td className="py-3 pr-4 whitespace-nowrap">
-                            {formatMoney(item.amount_paid || 0, item.currency)}
-                          </td>
-                          <td className="py-3 pr-4">
-                            <span className={`inline-flex px-2 py-1 rounded-full text-xs font-medium ${getStatusTone(item.status)}`}>
-                              {item.status || "pending"}
-                            </span>
-                          </td>
-                          <td className="py-3 pr-4">
-                            <div className="flex gap-2">
-                              <a
-                                href={item.short_url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-md bg-gray-800 text-white hover:bg-gray-700"
-                              >
-                                Open <ExternalLink className="w-3 h-3" />
-                              </a>
-                              <button
-                                type="button"
-                                onClick={() => copyText(item.short_url, item.id)}
-                                className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-md border border-gray-200 bg-white hover:bg-gray-50"
-                              >
-                                {copied === item.id ? "Copied" : "Copy"} <Copy className="w-3 h-3" />
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
-            </div>
-          </div>
           </div>
           )}
         </div>

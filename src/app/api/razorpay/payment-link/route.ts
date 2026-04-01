@@ -18,57 +18,12 @@ type PaymentLinkPayload = {
   notes?: Record<string, string | undefined>;
 };
 
-function getAuthHeader() {
-  const keyId = process.env.RAZORPAY_KEY_ID;
-  const keySecret = process.env.RAZORPAY_KEY_SECRET;
-
-  if (!keyId || !keySecret) {
-    return null;
-  }
-
-  return Buffer.from(`${keyId}:${keySecret}`).toString("base64");
-}
-
-export async function GET() {
-  try {
-    const authHeader = getAuthHeader();
-    if (!authHeader) {
-      return NextResponse.json(
-        { error: "Razorpay credentials are not configured on the server." },
-        { status: 500 }
-      );
-    }
-
-    const response = await fetch("https://api.razorpay.com/v1/payment_links?count=20&skip=0", {
-      method: "GET",
-      headers: {
-        Authorization: `Basic ${authHeader}`,
-        "Content-Type": "application/json",
-      },
-      cache: "no-store",
-    });
-
-    const data = await response.json();
-    if (!response.ok) {
-      return NextResponse.json(
-        { error: data?.error?.description || "Failed to fetch payment links.", details: data },
-        { status: response.status }
-      );
-    }
-
-    return NextResponse.json({
-      items: Array.isArray(data?.items) ? data.items : [],
-    });
-  } catch (error) {
-    console.error("Razorpay payment links fetch error:", error);
-    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
-  }
-}
-
 export async function POST(request: Request) {
   try {
-    const authHeader = getAuthHeader();
-    if (!authHeader) {
+    const keyId = process.env.RAZORPAY_KEY_ID;
+    const keySecret = process.env.RAZORPAY_KEY_SECRET;
+
+    if (!keyId || !keySecret) {
       return NextResponse.json(
         { error: "Razorpay credentials are not configured on the server." },
         { status: 500 }
@@ -84,6 +39,7 @@ export async function POST(request: Request) {
       );
     }
 
+    const authHeader = Buffer.from(`${keyId}:${keySecret}`).toString("base64");
     const response = await fetch("https://api.razorpay.com/v1/payment_links", {
       method: "POST",
       headers: {
