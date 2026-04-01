@@ -108,6 +108,7 @@ export default function PaymentPage() {
       "",
       "Please complete the payment at your earliest convenience.",
       "Thank you.",
+      "The Jaishree Sharad Clinic"
     ];
     return lines.join("\n");
   }, [form]);
