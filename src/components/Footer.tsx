@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock, MessageCircle, Instagram, Youtube, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Instagram, Youtube, Facebook, Twitter, Linkedin } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const quickLinks = [
@@ -68,8 +68,14 @@ export default function Footer() {
                   </div>
                   <div className="flex items-baseline space-x-3">
                     <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
-                    <a href="tel:+919223219419" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      +91 92 2321 9419 (Mobile)
+                    <a href="https://wa.me/919223219419" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      +91 92 2321 9419 (Mobile/WhatsApp)
+                    </a>
+                  </div>
+                  <div className="flex items-baseline space-x-3">
+                    <Mail className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                    <a href="mailto:skinfinitikhar@gmail.com" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      skinfinitikhar@gmail.com
                     </a>
                   </div>
                 </div>
@@ -93,29 +99,21 @@ export default function Footer() {
                   </div>
                   <div className="flex items-baseline space-x-3">
                     <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
-                    <a href="tel:+919769691957" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      +91 97 6969 1957 (Mobile)
+                    <a href="https://wa.me/919769691957" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      +91 97 6969 1957 (Mobile/WhatsApp)
+                    </a>
+                  </div>
+                  <div className="flex items-baseline space-x-3">
+                    <Mail className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                    <a href="mailto:skinfinitivashi@gmail.com" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      skinfinitivashi@gmail.com
                     </a>
                   </div>
                 </div>
               </div>
               
-              {/* Contact Information */}
+              {/* Instagram */}
               <div className="space-y-3 pt-2">
-                <div className="flex items-baseline space-x-3">
-                  <MessageCircle className="w-5 h-5 text-pastel-pink flex-shrink-0 mt-1" />
-                  <a href="https://wa.me/919769691952" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
-                    WhatsApp Helpline: +91 97 6969 1952
-                  </a>
-                </div>
-                
-                <div className="flex items-baseline space-x-3">
-                  <Mail className="w-5 h-5 text-pastel-pink flex-shrink-0 mt-1" />
-                  <a href="mailto:doctorjaishree@gmail.com" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
-                    doctorjaishree@gmail.com
-                  </a>
-                </div>
-                
                 <div className="flex items-baseline space-x-3">
                   <Instagram className="w-5 h-5 text-pastel-pink flex-shrink-0 mt-1" />
                   <a href="https://instagram.com/drjaishreesharad" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
@@ -184,7 +182,6 @@ export default function Footer() {
           <div>
             <h4 className="font-display font-semibold text-gray-800 mb-4">Follow Us</h4>
             
-            {/* Social Links */}
             <div className="mb-6">
               <p className="text-sm text-gray-600 mb-3">Follow us on social media</p>
               <div className="flex space-x-3">
@@ -206,7 +203,7 @@ export default function Footer() {
             {/* WhatsApp CTA */}
             <div>
               <a
-                href="https://wa.me/919769691952?text=Hi%20Dr.%20Jaishree,%20I%20would%20like%20to%20book%20a%20consultation"
+                href="https://wa.me/919769691957?text=Hi%20Dr.%20Jaishree,%20I%20would%20like%20to%20book%20a%20consultation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-pastel-green text-white font-medium rounded-lg hover:bg-pastel-green/80 transition-colors duration-200 text-sm"
