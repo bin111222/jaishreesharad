@@ -27,11 +27,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand & Contact */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-3">
+            <Link href="/" className="flex items-center space-x-2 mb-4">
               <div className="w-25 h-20 flex items-center justify-center">
-                <img 
-                  src="/Translogo.png" 
-                  alt="The Jaishree Sharad Clinic" 
+                <img
+                  src="/Translogo.png"
+                  alt="The Jaishree Sharad Clinic"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -39,79 +39,75 @@ export default function Footer() {
 
             <div className="space-y-4">
               {/* Skinfiniti */}
-              <div className="flex items-start space-x-2">
+              <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-pastel-pink mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-sm text-gray-700 font-semibold leading-tight">Skinfiniti</p>
+                  <p className="text-sm font-semibold text-gray-700 leading-tight">Skinfiniti</p>
                   <p className="text-xs text-gray-500 italic leading-tight">Proprietor Dr Jaishree Sharad Sharma</p>
                   <p className="text-xs text-gray-500 leading-snug mt-0.5">105, Satra Plaza, Palm Beach Road, above HDFC Bank, Vashi, Navi Mumbai, Thane, Maharashtra, 400703</p>
                 </div>
               </div>
 
               {/* Khar Clinic */}
-              <div>
-                <div className="flex items-start space-x-2 mb-1">
-                  <MapPin className="w-4 h-4 text-pastel-pink mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-sm text-gray-700 font-medium leading-tight">Khar Clinic</p>
-                    <p className="text-xs text-gray-500 leading-snug">601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052</p>
-                  </div>
-                </div>
-                <div className="pl-6 space-y-0.5">
-                  <div className="flex items-center space-x-2">
-                    <Phone className="w-3.5 h-3.5 text-pastel-pink flex-shrink-0" />
-                    <a href="tel:+912241819000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      022-41819000 (Landline)
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Phone className="w-3.5 h-3.5 text-pastel-pink flex-shrink-0" />
-                    <a href="https://wa.me/919223219419" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      +91 92 2321 9419 (Mobile/WhatsApp)
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Mail className="w-3.5 h-3.5 text-pastel-pink flex-shrink-0" />
-                    <a href="mailto:skinfinitikhar@gmail.com" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      skinfinitikhar@gmail.com
-                    </a>
+              <div className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-pastel-pink mt-0.5 flex-shrink-0" />
+                <div className="min-w-0">
+                  <p className="text-sm font-medium text-gray-700 leading-tight">Khar Clinic</p>
+                  <p className="text-xs text-gray-500 leading-snug">601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052</p>
+                  <div className="mt-1.5 space-y-1">
+                    <div className="flex items-center gap-1.5">
+                      <Phone className="w-3 h-3 text-pastel-pink flex-shrink-0" />
+                      <a href="tel:+912241819000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                        022-41819000 (Landline)
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Phone className="w-3 h-3 text-pastel-pink flex-shrink-0" />
+                      <a href="https://wa.me/919223219419" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                        +91 92 2321 9419 (Mobile/WhatsApp)
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Mail className="w-3 h-3 text-pastel-pink flex-shrink-0" />
+                      <a href="mailto:skinfinitikhar@gmail.com" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                        skinfinitikhar@gmail.com
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Vashi Clinic */}
-              <div>
-                <div className="flex items-start space-x-2 mb-1">
-                  <MapPin className="w-4 h-4 text-pastel-pink mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-sm text-gray-700 font-medium leading-tight">Vashi Clinic</p>
-                    <p className="text-xs text-gray-500 leading-snug">105, Satra Plaza, Palm Beach Road, above HDFC Bank, Vashi, Navi Mumbai, Thane, Maharashtra, 400703</p>
-                  </div>
-                </div>
-                <div className="pl-6 space-y-0.5">
-                  <div className="flex items-center space-x-2">
-                    <Phone className="w-3.5 h-3.5 text-pastel-pink flex-shrink-0" />
-                    <a href="tel:+912242832000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      022-42832000 (Landline)
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Phone className="w-3.5 h-3.5 text-pastel-pink flex-shrink-0" />
-                    <a href="https://wa.me/919769691957" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      +91 97 6969 1957 (Mobile/WhatsApp)
-                    </a>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <Mail className="w-3.5 h-3.5 text-pastel-pink flex-shrink-0" />
-                    <a href="mailto:skinfinitivashi@gmail.com" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      skinfinitivashi@gmail.com
-                    </a>
+              <div className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 text-pastel-pink mt-0.5 flex-shrink-0" />
+                <div className="min-w-0">
+                  <p className="text-sm font-medium text-gray-700 leading-tight">Vashi Clinic</p>
+                  <p className="text-xs text-gray-500 leading-snug">105, Satra Plaza, Palm Beach Road, above HDFC Bank, Vashi, Navi Mumbai, Thane, Maharashtra, 400703</p>
+                  <div className="mt-1.5 space-y-1">
+                    <div className="flex items-center gap-1.5">
+                      <Phone className="w-3 h-3 text-pastel-pink flex-shrink-0" />
+                      <a href="tel:+912242832000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                        022-42832000 (Landline)
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Phone className="w-3 h-3 text-pastel-pink flex-shrink-0" />
+                      <a href="https://wa.me/919769691957" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                        +91 97 6969 1957 (Mobile/WhatsApp)
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Mail className="w-3 h-3 text-pastel-pink flex-shrink-0" />
+                      <a href="mailto:skinfinitivashi@gmail.com" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                        skinfinitivashi@gmail.com
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
 
               {/* Instagram */}
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center gap-2">
                 <Instagram className="w-4 h-4 text-pastel-pink flex-shrink-0" />
                 <a href="https://instagram.com/drjaishreesharad" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
                   @drjaishreesharad
@@ -177,7 +173,7 @@ export default function Footer() {
           {/* Social Links */}
           <div>
             <h4 className="font-display font-semibold text-gray-800 mb-4">Follow Us</h4>
-            
+
             <div className="mb-6">
               <p className="text-sm text-gray-600 mb-3">Follow us on social media</p>
               <div className="flex space-x-3">
@@ -218,22 +214,22 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} The Jaishree Sharad Clinic. All rights reserved.
             </div>
           </div>
-          
+
           {/* Design Credit */}
           <div className="mt-3 text-center">
             <p className="text-sm text-gray-500">
               Designed with ❤️ by{" "}
-              <a 
-                href="https://1942studio.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://1942studio.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-pastel-pink hover:text-pastel-green transition-colors font-medium"
               >
                 1942 Studio
               </a>
             </p>
           </div>
-          
+
           {/* Emergency Note */}
           <div className="mt-3 p-3 bg-red-50 border border-red-200 rounded-lg">
             <p className="text-sm text-red-700 text-center">
