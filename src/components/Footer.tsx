@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand & Contact */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
+            <Link href="/" className="flex items-center space-x-2 mb-4">
               <div className="w-25 h-24 flex items-center justify-center">
                 <img 
                   src="/Translogo.png" 
@@ -36,54 +36,59 @@ export default function Footer() {
                 />
               </div>
             </Link>
+
+            {/* Brand Name */}
+            <div className="mb-6">
+              <p className="text-sm text-gray-700 font-semibold">Skinfiniti</p>
+              <p className="text-xs text-gray-500 italic">Proprietor Dr Jaishree Sharad Sharma</p>
+            </div>
             
             <div className="space-y-6">
-              {/* Skinfiniti - Vashi Branch */}
+              {/* Khar Clinic */}
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-sm text-gray-700 font-medium">Skinfiniti</p>
-                    <p className="text-xs text-gray-500 italic">Proprietor Dr Jaishree Sharad Sharma</p>
-                    <p className="text-xs text-gray-500">105, Satra Plaza, Palm Beach Road, above HDFC Bank, Vashi, Navi Mumbai, Thane, Maharashtra, 400703</p>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-baseline space-x-3">
-                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
-                    <a href="tel:+912227800000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      +91 22 2780 0000 (Landline)
-                    </a>
-                  </div>
-                  <div className="flex items-baseline space-x-3">
-                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
-                    <a href="tel:+919769691957" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      +91 97 6969 1957 (Mobile)
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Khar Branch */}
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-sm text-gray-700 font-medium">Khar Branch</p>
+                    <p className="text-sm text-gray-700 font-medium">Khar Clinic</p>
                     <p className="text-xs text-gray-500">601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052</p>
                   </div>
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-baseline space-x-3">
                     <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
-                    <a href="tel:+912224000000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      +91 22 2400 0000 (Landline)
+                    <a href="tel:+912242832000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      022-42832000 (Landline)
                     </a>
                   </div>
                   <div className="flex items-baseline space-x-3">
                     <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
                     <a href="tel:+919223219419" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
                       +91 92 2321 9419 (Mobile)
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Vashi Clinic */}
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-sm text-gray-700 font-medium">Vashi Clinic</p>
+                    <p className="text-xs text-gray-500">105, Satra Plaza, Palm Beach Road, above HDFC Bank, Vashi, Navi Mumbai, Thane, Maharashtra, 400703</p>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-baseline space-x-3">
+                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                    <a href="tel:+912241819000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      022-41819000 (Landline)
+                    </a>
+                  </div>
+                  <div className="flex items-baseline space-x-3">
+                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                    <a href="tel:+919769691957" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      +91 97 6969 1957 (Mobile)
                     </a>
                   </div>
                 </div>
@@ -112,8 +117,6 @@ export default function Footer() {
                   </a>
                 </div>
               </div>
-              
-             
             </div>
           </div>
 
