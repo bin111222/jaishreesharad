@@ -37,13 +37,19 @@ export default function Footer() {
               </div>
             </Link>
 
-            {/* Brand Name */}
-            <div className="mb-6">
-              <p className="text-sm text-gray-700 font-semibold">Skinfiniti</p>
-              <p className="text-xs text-gray-500 italic">Proprietor Dr Jaishree Sharad Sharma</p>
-            </div>
-            
             <div className="space-y-6">
+              {/* Skinfiniti */}
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-sm text-gray-700 font-semibold">Skinfiniti</p>
+                    <p className="text-xs text-gray-500 italic">Proprietor Dr Jaishree Sharad Sharma</p>
+                    <p className="text-xs text-gray-500">105, Satra Plaza, Palm Beach Road, above HDFC Bank, Vashi, Navi Mumbai, Thane, Maharashtra, 400703</p>
+                  </div>
+                </div>
+              </div>
+
               {/* Khar Clinic */}
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
@@ -56,8 +62,8 @@ export default function Footer() {
                 <div className="space-y-2">
                   <div className="flex items-baseline space-x-3">
                     <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
-                    <a href="tel:+912242832000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      022-42832000 (Landline)
+                    <a href="tel:+912241819000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      022-41819000 (Landline)
                     </a>
                   </div>
                   <div className="flex items-baseline space-x-3">
@@ -81,8 +87,8 @@ export default function Footer() {
                 <div className="space-y-2">
                   <div className="flex items-baseline space-x-3">
                     <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
-                    <a href="tel:+912241819000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      022-41819000 (Landline)
+                    <a href="tel:+912242832000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      022-42832000 (Landline)
                     </a>
                   </div>
                   <div className="flex items-baseline space-x-3">
