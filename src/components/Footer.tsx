@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ElementType, ReactNode } from "react";
 import { Phone, Mail, MapPin, MessageCircle, Instagram, Youtube, Facebook, Twitter, Linkedin } from "lucide-react";
 
 const quickLinks = [
@@ -19,23 +20,44 @@ const socialLinks = [
   { name: "LinkedIn", href: "https://linkedin.com/in/drjaishreesharad", icon: Linkedin },
 ];
 
-function ContactRow({ icon: Icon, href, children, external }: {
-  icon: React.ElementType;
+function ContactRow({
+  icon: Icon,
+  href,
+  children,
+  external,
+}: {
+  icon: ElementType;
   href: string;
-  children: React.ReactNode;
+  children: ReactNode;
   external?: boolean;
 }) {
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "14px 1fr", gap: "0 6px", alignItems: "center", marginTop: "4px" }}>
-      <Icon style={{ width: 12, height: 12, color: "var(--pastel-pink, #e8a4b8)", flexShrink: 0 }} />
-      <a
-        href={href}
-        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-        className="text-xs text-gray-600 hover:text-pastel-pink transition-colors"
-      >
-        {children}
-      </a>
-    </div>
+    <a
+      href={href}
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        gap: "5px",
+        marginTop: "4px",
+        fontSize: "11px",
+        color: "#6b7280",
+        textDecoration: "none",
+      }}
+    >
+      <Icon
+        style={{
+          width: 12,
+          height: 12,
+          minWidth: 12,
+          color: "#e8a4b8",
+          display: "block",
+          flexShrink: 0,
+        }}
+      />
+      <span>{children}</span>
+    </a>
   );
 }
 
