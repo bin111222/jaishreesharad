@@ -38,32 +38,7 @@ export default function Footer() {
             </Link>
             
             <div className="space-y-6">
-              {/* Khar Branch */}
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-sm text-gray-700 font-medium">Khar Branch</p>
-                    <p className="text-xs text-gray-500">601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052</p>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-baseline space-x-3">
-                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
-                    <a href="tel:+912224000000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      +91 22 2400 0000 (Landline)
-                    </a>
-                  </div>
-                  <div className="flex items-baseline space-x-3">
-                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
-                    <a href="tel:+919223219419" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
-                      +91 92 2321 9419 (Mobile)
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Vashi Branch - Skinfiniti */}
+              {/* Skinfiniti - Vashi Branch */}
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
@@ -84,6 +59,31 @@ export default function Footer() {
                     <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
                     <a href="tel:+919769691957" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
                       +91 97 6969 1957 (Mobile)
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Khar Branch */}
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-sm text-gray-700 font-medium">Khar Branch</p>
+                    <p className="text-xs text-gray-500">601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052</p>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-baseline space-x-3">
+                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                    <a href="tel:+912224000000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      +91 22 2400 0000 (Landline)
+                    </a>
+                  </div>
+                  <div className="flex items-baseline space-x-3">
+                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                    <a href="tel:+919223219419" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
+                      +91 92 2321 9419 (Mobile)
                     </a>
                   </div>
                 </div>
