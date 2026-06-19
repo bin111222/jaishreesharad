@@ -23,12 +23,12 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand & Contact */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-4">
-              <div className="w-25 h-24 flex items-center justify-center">
+            <Link href="/" className="flex items-center space-x-2 mb-3">
+              <div className="w-25 h-20 flex items-center justify-center">
                 <img 
                   src="/Translogo.png" 
                   alt="The Jaishree Sharad Clinic" 
@@ -37,43 +37,41 @@ export default function Footer() {
               </div>
             </Link>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {/* Skinfiniti */}
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-sm text-gray-700 font-semibold">Skinfiniti</p>
-                    <p className="text-xs text-gray-500 italic">Proprietor Dr Jaishree Sharad Sharma</p>
-                    <p className="text-xs text-gray-500">105, Satra Plaza, Palm Beach Road, above HDFC Bank, Vashi, Navi Mumbai, Thane, Maharashtra, 400703</p>
-                  </div>
+              <div className="flex items-start space-x-2">
+                <MapPin className="w-4 h-4 text-pastel-pink mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-sm text-gray-700 font-semibold leading-tight">Skinfiniti</p>
+                  <p className="text-xs text-gray-500 italic leading-tight">Proprietor Dr Jaishree Sharad Sharma</p>
+                  <p className="text-xs text-gray-500 leading-snug mt-0.5">105, Satra Plaza, Palm Beach Road, above HDFC Bank, Vashi, Navi Mumbai, Thane, Maharashtra, 400703</p>
                 </div>
               </div>
 
               {/* Khar Clinic */}
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="flex items-start space-x-2 mb-1">
+                  <MapPin className="w-4 h-4 text-pastel-pink mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-sm text-gray-700 font-medium">Khar Clinic</p>
-                    <p className="text-xs text-gray-500">601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052</p>
+                    <p className="text-sm text-gray-700 font-medium leading-tight">Khar Clinic</p>
+                    <p className="text-xs text-gray-500 leading-snug">601-604, Prabhat Chambers, S V Road, Khar (West), Mumbai 400 052</p>
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <div className="flex items-baseline space-x-3">
-                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                <div className="pl-6 space-y-0.5">
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-3.5 h-3.5 text-pastel-pink flex-shrink-0" />
                     <a href="tel:+912241819000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
                       022-41819000 (Landline)
                     </a>
                   </div>
-                  <div className="flex items-baseline space-x-3">
-                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-3.5 h-3.5 text-pastel-pink flex-shrink-0" />
                     <a href="https://wa.me/919223219419" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
                       +91 92 2321 9419 (Mobile/WhatsApp)
                     </a>
                   </div>
-                  <div className="flex items-baseline space-x-3">
-                    <Mail className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                  <div className="flex items-center space-x-2">
+                    <Mail className="w-3.5 h-3.5 text-pastel-pink flex-shrink-0" />
                     <a href="mailto:skinfinitikhar@gmail.com" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
                       skinfinitikhar@gmail.com
                     </a>
@@ -82,44 +80,42 @@ export default function Footer() {
               </div>
 
               {/* Vashi Clinic */}
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
+              <div>
+                <div className="flex items-start space-x-2 mb-1">
+                  <MapPin className="w-4 h-4 text-pastel-pink mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-sm text-gray-700 font-medium">Vashi Clinic</p>
-                    <p className="text-xs text-gray-500">105, Satra Plaza, Palm Beach Road, above HDFC Bank, Vashi, Navi Mumbai, Thane, Maharashtra, 400703</p>
+                    <p className="text-sm text-gray-700 font-medium leading-tight">Vashi Clinic</p>
+                    <p className="text-xs text-gray-500 leading-snug">105, Satra Plaza, Palm Beach Road, above HDFC Bank, Vashi, Navi Mumbai, Thane, Maharashtra, 400703</p>
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <div className="flex items-baseline space-x-3">
-                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                <div className="pl-6 space-y-0.5">
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-3.5 h-3.5 text-pastel-pink flex-shrink-0" />
                     <a href="tel:+912242832000" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
                       022-42832000 (Landline)
                     </a>
                   </div>
-                  <div className="flex items-baseline space-x-3">
-                    <Phone className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-3.5 h-3.5 text-pastel-pink flex-shrink-0" />
                     <a href="https://wa.me/919769691957" target="_blank" rel="noopener noreferrer" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
                       +91 97 6969 1957 (Mobile/WhatsApp)
                     </a>
                   </div>
-                  <div className="flex items-baseline space-x-3">
-                    <Mail className="w-4 h-4 text-pastel-pink flex-shrink-0 mt-1" />
+                  <div className="flex items-center space-x-2">
+                    <Mail className="w-3.5 h-3.5 text-pastel-pink flex-shrink-0" />
                     <a href="mailto:skinfinitivashi@gmail.com" className="text-xs text-gray-600 hover:text-pastel-pink transition-colors">
                       skinfinitivashi@gmail.com
                     </a>
                   </div>
                 </div>
               </div>
-              
+
               {/* Instagram */}
-              <div className="space-y-3 pt-2">
-                <div className="flex items-baseline space-x-3">
-                  <Instagram className="w-5 h-5 text-pastel-pink flex-shrink-0 mt-1" />
-                  <a href="https://instagram.com/drjaishreesharad" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
-                    @drjaishreesharad
-                  </a>
-                </div>
+              <div className="flex items-center space-x-2">
+                <Instagram className="w-4 h-4 text-pastel-pink flex-shrink-0" />
+                <a href="https://instagram.com/drjaishreesharad" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-700 hover:text-pastel-pink transition-colors">
+                  @drjaishreesharad
+                </a>
               </div>
             </div>
           </div>
@@ -216,7 +212,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-200 mt-12 pt-8">
+        <div className="border-t border-gray-200 mt-8 sm:mt-12 pt-6 sm:pt-8">
           <div className="flex justify-center items-center">
             <div className="text-sm text-gray-500">
               &copy; {new Date().getFullYear()} The Jaishree Sharad Clinic. All rights reserved.
@@ -224,7 +220,7 @@ export default function Footer() {
           </div>
           
           {/* Design Credit */}
-          <div className="mt-4 text-center">
+          <div className="mt-3 text-center">
             <p className="text-sm text-gray-500">
               Designed with ❤️ by{" "}
               <a 
@@ -239,7 +235,7 @@ export default function Footer() {
           </div>
           
           {/* Emergency Note */}
-          <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+          <div className="mt-3 p-3 bg-red-50 border border-red-200 rounded-lg">
             <p className="text-sm text-red-700 text-center">
               <strong>Important:</strong> For urgent medical concerns, please call your nearest emergency services or visit the nearest hospital.
             </p>
