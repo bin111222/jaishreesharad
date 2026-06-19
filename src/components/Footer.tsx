@@ -63,13 +63,14 @@ export default function Footer() {
                 </div>
               </div>
               
-              {/* Vashi Branch */}
+              {/* Vashi Branch - Skinfiniti */}
               <div className="space-y-3">
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-pastel-pink mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-sm text-gray-700 font-medium">Vashi Branch</p>
-                    <p className="text-xs text-gray-500">105, Satra Plaza, Palm Beach Road, Sector 19D, Vashi, Navi Mumbai 400 703</p>
+                    <p className="text-sm text-gray-700 font-medium">Skinfiniti</p>
+                    <p className="text-xs text-gray-500 italic">Proprietor Dr Jaishree Sharad Sharma</p>
+                    <p className="text-xs text-gray-500">105, Satra Plaza, Palm Beach Road, above HDFC Bank, Vashi, Navi Mumbai, Thane, Maharashtra, 400703</p>
                   </div>
                 </div>
                 <div className="space-y-2">
@@ -212,7 +213,7 @@ export default function Footer() {
         <div className="border-t border-gray-200 mt-12 pt-8">
           <div className="flex justify-center items-center">
             <div className="text-sm text-gray-500">
-              © {new Date().getFullYear()} The Jaishree Sharad Clinic. All rights reserved.
+              &copy; {new Date().getFullYear()} The Jaishree Sharad Clinic. All rights reserved.
             </div>
           </div>
           
