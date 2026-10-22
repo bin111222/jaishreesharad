@@ -32,6 +32,7 @@ const navigation = [
       { name: "Exilis", href: "/treatments/exilis" },
       { name: "EndyMed", href: "/treatments/endymed" },
       { name: "HIFU Treatment", href: "/treatments/hifu" },
+      { name: "XERF", href: "/treatments/xerf" },
       { name: "Body Treatments", href: "/treatments/body" },
       { name: "PRP Therapy", href: "/treatments/prp-therapy" },
       { name: "Bridal Care", href: "/treatments/bridal" }

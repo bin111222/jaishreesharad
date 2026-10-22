@@ -39,6 +39,7 @@ export const treatmentCategories: TreatmentCategory[] = [
       {
         title: "B. Non-Surgical Lifting & Tightening",
         treatments: [
+          { name: "XERF", description: "Dual-frequency monopolar radiofrequency for skin tightening and lifting", href: "/treatments/xerf" },
           { name: "HIFU", description: "High-intensity focused ultrasound for skin tightening", href: "/treatments/hifu" },
           { name: "EndyMed 3DEEP RF", description: "Advanced radiofrequency for comprehensive skin tightening", href: "/treatments/endymed" },
           { name: "Forma RF", description: "Radiofrequency treatment for skin rejuvenation", href: "/treatments/forma-rf" },
@@ -186,6 +187,7 @@ export const treatmentCategories: TreatmentCategory[] = [
     description: "Non-surgical body shaping and fat reduction",
     image: "https://ik.imagekit.io/jaishreeskinfinitii/websiteimages/cryolipolysis/1.webp",
     treatments: [
+      { name: "XERF", description: "Dual-frequency radiofrequency tightening for the abdomen and upper arms", href: "/treatments/xerf" },
       { name: "CoolSculpting", description: "Cryolipolysis for targeted fat reduction", href: "/treatments/cryolipolysis" },
       { name: "HIFU Body", description: "High-intensity focused ultrasound for body tightening", href: "/treatments/hifu" },
       { name: "RF Body Tightening", description: "Radiofrequency for body skin tightening", href: "/treatments/exilis" }
