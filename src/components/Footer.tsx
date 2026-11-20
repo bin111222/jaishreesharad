@@ -69,7 +69,7 @@ export default function Footer() {
 
           {/* Brand & Contact */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-4">
+            <Link href="/" className="flex items-center space-x-2 mb-2">
               <div className="w-25 h-20 flex items-center justify-center">
                 <img
                   src="/Translogo.png"
@@ -78,6 +78,7 @@ export default function Footer() {
                 />
               </div>
             </Link>
+            <p className="text-xs text-gray-500 mb-4">MCI Registration No. 79805</p>
 
             <div className="space-y-4">
 

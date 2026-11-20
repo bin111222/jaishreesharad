@@ -139,7 +139,7 @@ const BookTestimonials = ({ bookTitle, testimonials, isOpen, onClose }: BookTest
                         <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-2 sm:px-3 py-1 rounded-full">
                           <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-black" />
                           <span className="text-black text-xs sm:text-sm font-medium">
-                            {testimonials.length} testimonials
+                            {testimonials.length} excerpts
                           </span>
                         </div>
                         <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-2 sm:px-3 py-1 rounded-full">
@@ -183,7 +183,7 @@ const BookTestimonials = ({ bookTitle, testimonials, isOpen, onClose }: BookTest
                           transition={{ duration: 1.5, repeat: Infinity }}
                           className="w-1 h-1 bg-pastel-pink rounded-full"
                         />
-                        <span>Scroll to explore all testimonials</span>
+                        <span>Scroll to explore all excerpts</span>
                         <motion.div
                           animate={{ y: [0, 4, 0] }}
                           transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
@@ -202,7 +202,7 @@ const BookTestimonials = ({ bookTitle, testimonials, isOpen, onClose }: BookTest
                       <div className="inline-flex items-center space-x-2 sm:space-x-3 bg-white/50 backdrop-blur-sm rounded-full px-4 sm:px-6 py-2 sm:py-3 shadow-lg border border-white/20 mb-4 sm:mb-6">
                         <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-pastel-pink" />
                         <span className="text-gray-700 font-medium text-sm sm:text-base">
-                          {testimonials.length} Amazing Testimonials
+                          {testimonials.length} Excerpts
                         </span>
                       </div>
                       <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">

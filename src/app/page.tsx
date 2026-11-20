@@ -14,7 +14,7 @@ const CustomInstagramFeed = dynamic(() => import("@/components/CustomInstagramFe
   ssr: false 
 });
 const CircularTestimonials = dynamic(() => import("@/components/ui/circular-testimonials"), { 
-  loading: () => <div className="py-20 text-center text-gray-500">Loading Testimonials...</div>,
+  loading: () => <div className="py-20 text-center text-gray-500">Loading excerpts...</div>,
   ssr: false 
 });
 const AwardsSection = dynamic(() => import("@/components/AwardsSection"), {
@@ -94,7 +94,7 @@ const circularTestimonials = [
 
 const stats = [
   { number: "26", label: "Years Experience", icon: Award },
-  { number: "20,000+", label: "Happy Patients", icon: Users },
+  { number: "2", label: "Clinic Locations", icon: Users },
   { number: "4", label: "Published Books", icon: BookOpen },
   { number: "500+", label: "Global Lectures", icon: Star }
 ];
@@ -187,7 +187,7 @@ const whyChooseUs = [
   {
     icon: "👩‍⚕️",
     title: "26 Years Experience",
-    description: "Leading expert in aesthetic dermatology"
+    description: "Aesthetic dermatologist, Mumbai"
   },
   {
     icon: "🔬",
@@ -338,8 +338,8 @@ export default function HomePage() {
                   <div className="text-sm text-gray-600">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-800">50K+</div>
-                  <div className="text-sm text-gray-600">Happy Patients</div>
+                  <div className="text-3xl font-bold text-gray-800">3</div>
+                  <div className="text-sm text-gray-600">Skincare Books</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-gray-800">15+</div>
@@ -479,23 +479,6 @@ export default function HomePage() {
                   </div>
                 </motion.div>
 
-                {/* Floating Stats Card */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9, y: 10 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1 }}
-                  className="absolute -top-6 -right-6 bg-gradient-to-r from-pastel-green to-green-400 text-white rounded-2xl p-4 shadow-xl hidden sm:block"
-                >
-                  <div className="text-center">
-                    <div className="text-2xl font-bold">{heroSlideshow[currentSlide].rating}</div>
-                    <div className="text-xs opacity-90">Patient Rating</div>
-                    <div className="flex justify-center mt-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-3 h-3 fill-current" />
-                      ))}
-                    </div>
-                  </div>
-                </motion.div>
               </div>
             </motion.div>
           </div>
@@ -821,7 +804,7 @@ export default function HomePage() {
                   Ready to Experience the Difference?
                 </h3>
                 <p className="text-gray-600 mb-4 max-w-xl mx-auto text-sm">
-                  Join thousands of satisfied patients who have transformed their skin and confidence
+                  Book a consultation to discuss a treatment plan.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <Link
@@ -856,11 +839,11 @@ export default function HomePage() {
             className="space-y-8 sm:space-y-12"
           >
             <div className="text-center">
-              <h2 className="font-display text-4xl font-bold text-gray-800 mb-4">
-                What Our Patients Say
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                Excerpts originally published in Dr. Jaishree Sharad’s three skincare books.
               </h2>
               <p className="text-xl text-gray-600">
-                Real stories from celebrities and patients who trust Dr. Jaishree
+                Skin Rules, Skin Talks, and The Skincare Answer Book.
               </p>
             </div>
             
@@ -891,7 +874,7 @@ export default function HomePage() {
                 href="/testimonials"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-pastel-pink to-pink-100 text-white font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300 text-lg"
               >
-                <span>View All Testimonials</span>
+                <span>Read the Excerpts</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>

@@ -2,8 +2,7 @@
 
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { Star, Quote, Users, Award, Heart } from "lucide-react";
-import { TestimonialsColumn, testimonials } from "@/components/ui/testimonials-columns-1";
+import { Quote, Award } from "lucide-react";
 import { CircularTestimonials } from "@/components/ui/circular-testimonials";
 
 const celebrityTestimonialsData = [
@@ -351,10 +350,7 @@ const patientTestimonials = [
 ];
 
 const stats = [
-  { number: "5", label: "Rating", icon: Star },
-  { number: "20,000+", label: "Happy Patients", icon: Users },
-  { number: "26", label: "Years Experience", icon: Award },
-  { number: "99%", label: "Happiness Rate", icon: Heart }
+  { number: "26", label: "Years Experience", icon: Award }
 ];
 
 export default function TestimonialsPage() {
@@ -369,19 +365,12 @@ export default function TestimonialsPage() {
             transition={{ duration: 0.4 }}
             className="text-center space-y-4 sm:space-y-6"
           >
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-gray-800">
-              Patient Testimonials
+            <h1 className="font-display text-3xl md:text-5xl font-bold text-gray-800">
+              Excerpts originally published in Dr. Jaishree Sharad’s three skincare books.
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Trusted by Patients Next Door to Icons on Stage
+            Skin Rules, Skin Talks, and The Skincare Answer Book.
             </p>
-            <div className="flex items-center justify-center space-x-4 text-gray-600">
-              <Star className="w-6 h-6 text-yellow-400 fill-current" />
-              <span className="text-lg">5.0 Average Rating</span>
-              <span>•</span>
-              <Users className="w-6 h-6" />
-              <span className="text-lg">1000+ Happy Patients</span>
-            </div>
             
             {/* Celebrity Gallery */}
             <motion.div
@@ -499,7 +488,7 @@ export default function TestimonialsPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            className="flex justify-center"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -531,10 +520,10 @@ export default function TestimonialsPage() {
           >
             <div>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                Featured Testimonial
+                Featured Excerpt
               </h2>
               <p className="text-xl text-gray-600">
-                A special story from one of our special clients
+                As published in Skin Rules
               </p>
             </div>
             
@@ -549,12 +538,6 @@ export default function TestimonialsPage() {
                 <blockquote className="text-xl md:text-2xl text-gray-800 italic leading-relaxed">
                   "This gem of a book is a comprehensive compilation that will take you from the essentials of self-preservation to the most complex layered technology services available, and everything in between"
                 </blockquote>
-                
-                <div className="flex items-center justify-center space-x-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
                 
                 <div>
                   <div className="font-semibold text-lg text-gray-800">Amitabh Bachchan</div>
@@ -577,15 +560,12 @@ export default function TestimonialsPage() {
             className="space-y-8 sm:space-y-12"
           >
             <div className="text-center">
-              <span className="inline-block px-4 py-1.5 mb-4 text-xs font-semibold tracking-wider text-pastel-pink uppercase bg-pastel-pink/10 rounded-full">
-                Trusted by the Best
-              </span>
               <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                Celebrity Testimonials
+                From the Books
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-pastel-pink to-pastel-green mx-auto mb-6 rounded-full"></div>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                Discover why Bollywood's biggest stars and business elites trust Dr. Jaishree Sharad with their skin.
+                As published in her skincare books.
               </p>
             </div>
 
@@ -626,7 +606,7 @@ export default function TestimonialsPage() {
                 More Praise for Dr. Jaishree
               </h2>
               <p className="text-xl text-gray-600">
-                Words of appreciation from our valued circle
+                As published in Skin Rules and Skin Talks.
               </p>
             </div>
 
@@ -654,34 +634,7 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Patient Stories - New Scrolling Testimonials */}
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="space-y-8 sm:space-y-12"
-          >
-            <div className="text-center">
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                Patient Stories
-              </h2>
-              <p className="text-xl text-gray-600">
-                Real experiences from our valued patients
-              </p>
-            </div>
-
-            <div className="flex justify-center gap-6 mt-6 sm:mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
-              <TestimonialsColumn testimonials={testimonials.slice(0, 3)} duration={15} />
-              <TestimonialsColumn testimonials={testimonials.slice(3, 6)} className="hidden md:block" duration={19} />
-              <TestimonialsColumn testimonials={testimonials.slice(6, 9)} className="hidden lg:block" duration={17} />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Featured Testimonial */}
+      {/* Featured Excerpt */}
       <section className="py-12 sm:py-20 bg-gradient-to-r from-pastel-green/10 to-pastel-pink/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -713,12 +666,6 @@ skin. And for that I am super grateful
               <div className="font-semibold text-xl text-gray-800">Alia Bhatt</div>
               <div className="text-pastel-pink">Actor, as published in The Skincare Answer Book</div>
             </div>
-            
-            <div className="flex items-center justify-center space-x-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-              ))}
-            </div>
           </motion.div>
         </div>
       </section>
@@ -733,12 +680,11 @@ skin. And for that I am super grateful
             className="space-y-6 sm:space-y-8"
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-800">
-              Join Our Happy Patients
+              Book a Consultation
             </h2>
             
             <p className="text-xl text-gray-600">
-              Experience the same level of care and expertise that has earned us 
-              a 5.0 rating from thousands of satisfied patients.
+              Book a consultation to discuss a treatment plan.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

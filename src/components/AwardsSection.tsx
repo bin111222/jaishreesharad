@@ -253,10 +253,10 @@ export default function AwardsSection() {
         >
           <div className="bg-gradient-to-r from-pastel-pink/10 to-pastel-green/10 rounded-xl p-6 border border-pastel-pink/20">
             <h3 className="font-display text-xl font-semibold text-gray-900 mb-3">
-              Trusted by Thousands
+              Book a Consultation
             </h3>
             <p className="text-gray-700 mb-4 max-w-2xl mx-auto text-sm">
-              Join the thousands of patients who have experienced Dr. Jaishree's expertise and commitment to excellence in aesthetic dermatology.
+              Book a consultation to discuss a treatment plan.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link 

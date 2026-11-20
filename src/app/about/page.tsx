@@ -331,12 +331,13 @@ export default function AboutPage() {
               <h1 className="font-display text-4xl md:text-5xl font-bold text-gray-800">
                 Meet Dr. Jaishree Sharad
               </h1>
+              <p className="text-sm font-medium text-gray-700">MCI Registration No. 79805</p>
               <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
                 <p>
-                  Dr. Jaishree Sharad is one of India’s most celebrated and leading cosmetic dermatologists, based in Mumbai, with over 26 years of experience in aesthetic and clinical dermatology. She is globally acclaimed for her expertise, innovation, and ethical, science-driven approach to skin health and anti-ageing medicine.
+                  Dr. Jaishree Sharad is a cosmetic dermatologist based in Mumbai, with over 26 years of experience in aesthetic and clinical dermatology. She is globally acclaimed for her expertise, innovation, and ethical, science-driven approach to skin health and anti-ageing medicine.
                 </p>
                 <p>
-                  Over the years, Dr. Jaishree Sharad has touched the lives of thousands—from Bollywood personalities, sports professionals, and political leaders to individuals from all walks of life. Her work is guided by a strong philosophy of helping people feel confident in their own skin, while bringing refined, evidence-based cosmetic dermatology to India.
+                  Her work includes care for people from many walks of life. Her work is guided by a strong philosophy of helping people feel confident in their own skin, while bringing refined, evidence-based cosmetic dermatology to India.
                 </p>
                 <p>
                   She is an international trainer in anti-ageing treatments, including Botox and dermal fillers, and has delivered over 500 lectures at national and international forums. She has also conducted more than 300 hands-on workshops, mentoring dermatologists across the world.
@@ -345,16 +346,8 @@ export default function AboutPage() {
                   A TEDx speaker and author, Dr. Jaishree Sharad is known for her ability to bridge science, aesthetics, and human psychology, making complex dermatological concepts accessible and meaningful to both professionals and the public.
                 </p>
               </div>
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-1">
-                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  <span className="text-gray-700 font-semibold">5.0</span>
-                  <span className="text-gray-500">(thousands of reviews)</span>
-                </div>
-                <div className="w-px h-6 bg-gray-300" />
-                <div className="text-gray-700">
-                  <span className="font-semibold">26</span> years experience
-                </div>
+              <div className="text-gray-700">
+                <span className="font-semibold">26</span> years experience
               </div>
             </motion.div>
             
@@ -912,8 +905,7 @@ export default function AboutPage() {
           </h2>
           
           <p className="text-xl text-gray-600 mb-8">
-            Book your consultation and experience the expertise of a leading dermatologist 
-            who has transformed thousands of lives.
+            Book a consultation to discuss a treatment plan.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -160,7 +160,7 @@ export function SkinfinitiiNavigationMenu() {
               navigationMenuTriggerStyle(),
               "text-gray-800 hover:text-pastel-pink transition-colors text-sm md:text-base"
             )}>
-              Testimonials
+              Book Excerpts
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

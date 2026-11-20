@@ -2,7 +2,7 @@
 
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { ArrowRight, Clock, User, Star, CheckCircle, AlertTriangle, Calendar, Zap } from "lucide-react";
+import { ArrowRight, Clock, User, CheckCircle, AlertTriangle, Calendar, Zap } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -106,10 +106,6 @@ export default function ExilisPage() {
                 <div className="flex items-center space-x-2 text-gray-600">
                   <User className="w-5 h-5" />
                   <span>Dr. Jaishree</span>
-                </div>
-                <div className="flex items-center space-x-2 text-gray-600">
-                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                  <span>5.0 (180+ reviews)</span>
                 </div>
               </div>
               

@@ -261,7 +261,7 @@ export default function BooksPage() {
                         className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-pastel-pink to-pink-100 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-200 hover:scale-105"
                       >
                         <MessageCircle className="w-4 h-4" />
-                        <span>View Testimonials ({getTestimonialsByBook(book.title).length})</span>
+                        <span>View Excerpts ({getTestimonialsByBook(book.title).length})</span>
                       </button>
                     )}
                   </div>
@@ -397,7 +397,7 @@ export default function BooksPage() {
                             className="group/testimonial inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-pastel-pink/20 to-pastel-green/20 text-pastel-pink font-medium rounded-full hover:from-pastel-pink/30 hover:to-pastel-green/30 hover:scale-105 transition-all duration-200 text-sm border border-pastel-pink/30"
                           >
                             <MessageCircle className="w-3 h-3 group-hover/testimonial:scale-110 transition-transform duration-200" />
-                            <span>View Testimonials ({getTestimonialsByBook(book.title).length})</span>
+                            <span>View Excerpts ({getTestimonialsByBook(book.title).length})</span>
                           </button>
                         )}
                       </div>
