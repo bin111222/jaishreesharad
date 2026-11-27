@@ -485,6 +485,32 @@ export default function HomePage() {
         </div>
       </section>
 
+      <a
+        href="https://www.cosmopolitan.in/beauty/features/story/what-is-xerf-inside-the-skin-tightening-treatment-priyanka-chopra-jonas-reportedly-loves-1479490-2026-11-25"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group block border-y border-gray-200/80 bg-white hover:bg-gray-50 transition-colors"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-3.5 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-3 min-w-0">
+            <span className="shrink-0 inline-flex items-center rounded-full bg-pastel-pink/15 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-pink-700">
+              Cosmopolitan
+            </span>
+            <p className="text-sm text-gray-700 truncate">
+              <span className="sm:hidden">Dr. Sharad on XERF</span>
+              <span className="hidden sm:inline">
+                <span className="text-gray-400 mr-2">25 Nov 2026</span>
+                Dr. Jaishree Sharad on XERF, the skin-tightening treatment
+              </span>
+            </p>
+          </div>
+          <span className="shrink-0 inline-flex items-center gap-1.5 text-sm font-medium text-gray-800 group-hover:text-pastel-pink transition-colors">
+            <span className="hidden sm:inline">Read the feature</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+          </span>
+        </div>
+      </a>
+
       {/* Awards & Recognition Section */}
       <AwardsSection />
 
